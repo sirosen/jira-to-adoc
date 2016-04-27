@@ -9,7 +9,9 @@ $summary
 *Status:* $status
 
 === Description
+__________________________
 $description
+__________________________
 
 === Comments
 $comments

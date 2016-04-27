@@ -70,7 +70,8 @@ def format_issue(issue, template_str):
             return 'Anonymous'
 
     comment_string = '\n'.join(
-        '{} - {}:: {}'.format(
+        ('{} - {}::\n__________________________\n'
+         '{}\n__________________________\n').format(
             get_comment_author(c),
             ensure_ascii(c['created'][:10]),
             ensure_ascii(c['body']))

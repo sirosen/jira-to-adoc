@@ -1,3 +1,5 @@
+from __future__ import print_function
+import sys
 import base64
 import os
 import subprocess
@@ -11,7 +13,8 @@ def get_jira_credentials():
     Gets the jira server, username, and password.
     Returns these values as a 3-tuple in that order
     """
-    jira_username = raw_input('Please enter your JIRA username: ').strip()
+    print('Please enter your JIRA username: ', file=sys.stderr, end='')
+    jira_username = raw_input().strip()
     jira_password = getpass("Please enter your JIRA password: ")
     return (jira_username, jira_password)
 
