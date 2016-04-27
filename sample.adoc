@@ -1,0 +1,42 @@
+= Past Issues
+:toc:
+:toclevels: 1
+:toc-title:
+
+== Globus Websites/GWEB-208
+
+=== Summary
+CI site: adjust template.php file for new related profile blocks
+
+=== Details
+*Type:* Task
+
+*Status:* Closed 4/30/14
+
+*Resolution:* Work Complete
+
+=== Description
+CI site: adjust template.php file for new related profile blocks 
+- need to change so the read more icon has the corresponding RA color
+
+=== Comments
+Teresa Sutton - 4/28/14:: noticed some blocks still aren't fixed. Need to go through block by block on dev to make sure all have been added to the template.php file
+Teresa Sutton - 3/5/14:: this would be some older comment
+
+== Globus Websites/GWEB-200
+
+=== Summary
+Vothgroup: add styling for new block on front
+
+=== Details
+*Type:* Task
+
+*Status:* Closed 3/17/14
+
+*Resolution:* Work Complete
+
+=== Description
+need to add styling for new research news block on front
+
+=== Comments
+There are no comments yet on this issue.

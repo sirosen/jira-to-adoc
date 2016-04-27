@@ -1,0 +1,15 @@
+== Globus Toolkit/$issue_id
+
+=== Summary
+$summary
+
+=== Details
+*Type:* $type
+
+*Status:* $status
+
+=== Description
+$description
+
+=== Comments
+$comments
