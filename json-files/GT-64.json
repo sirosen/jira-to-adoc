@@ -1,0 +1,172 @@
+{
+  "key": "GT-64", 
+  "fields": {
+    "comment": {
+      "total": 0, 
+      "startAt": 0, 
+      "comments": [], 
+      "maxResults": 0
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "Joe Bester", 
+      "name": "bester", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "bester@mcs.anl.gov", 
+      "key": "bester", 
+      "active": true, 
+      "timeZone": "America/New_York"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100bv4:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-64/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": null, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "1923", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@b15c38", 
+    "summary": "Investigate thread safety of GRAM service", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 172800, 
+      "percent": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-64/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": 172800, 
+    "progress": {
+      "progress": 0, 
+      "total": 172800, 
+      "percent": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2012-05-02T15:32:38.550-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "The RPMs generated using the nordugrid patches build everything threaded. There is a suspected bug in the SEG which causes deadlock [GRAM-139]. The job manager and clients have not been tested with threads as part of the release process, so there may be other issues. The task here is to compile and run the tests with threads and try to locate the problems that occur using the existing tests with threaded clients and service implementations. As issues are discovered other bug issues should be added to jira. The tests runs should include the protocol, client, and job manager test suites built with threads, configured with fork and some other LRM, in both cases with and without SEG enabled.", 
+    "reporter": {
+      "displayName": "Joe Bester", 
+      "name": "bester", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "bester@mcs.anl.gov", 
+      "key": "bester", 
+      "active": true, 
+      "timeZone": "America/New_York"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": 172800, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": 172800, 
+    "created": "2010-03-12T08:57:02.987-0600", 
+    "versions": [], 
+    "resolutiondate": null, 
+    "workratio": 0, 
+    "aggregatetimespent": null, 
+    "timetracking": {
+      "originalEstimateSeconds": 172800, 
+      "remainingEstimate": "1w 3d", 
+      "remainingEstimateSeconds": 172800, 
+      "originalEstimate": "1w 3d"
+    }, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10324", 
+        "id": "10324", 
+        "name": "GRAM"
+      }
+    ], 
+    "issuetype": {
+      "name": "Task", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/3", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11058&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11058, 
+      "id": "3", 
+      "description": "A task that needs to be done."
+    }, 
+    "resolution": null, 
+    "timeestimate": 172800
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/11383", 
+  "id": "11383", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

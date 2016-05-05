@@ -1,0 +1,159 @@
+{
+  "key": "GT-285", 
+  "fields": {
+    "comment": {
+      "total": 0, 
+      "startAt": 0, 
+      "comments": [], 
+      "maxResults": 0
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "Raj Kettimuthu", 
+      "name": "kettimut", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=kettimut", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "kettimut@mcs.anl.gov", 
+      "key": "kettimut", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100nw0:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-285/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": null, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "3871", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@6b7ae5", 
+    "summary": "Special handling for filenames with spaces in the GridFTP transfer log format", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-285/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2012-09-28T13:14:05.120-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "Here is the note from Charles Bacon from ALCF:\n\nOn Sep 27, 2012, at 1:28 PM, Charles Bacon wrote:\n\nThere is no special handling for filenames that contain spaces, which breaks most CSV parsers.  I'm stuck using a regex to parse it, which is (I measured) about 20 times slower.  It would be nice if you ran whatever the standard \"I need to enclose this value in delimeters because it has a weird character in it\" that CSV parsers expect.  Jamming quotes around it is perfect, but I forget what you're supposed to do when the thing you're enclosing contains the enclosing character itself.\n\nJust blowing off steam, feel free to file this into the bitbucket.  I'm just parsing about 2.5GB of xferlogs from ALCF, and the filename with spaces didn't show up until the 3.1millionth row or so, just about when I thought I was done.  :-)", 
+    "reporter": {
+      "displayName": "Raj Kettimuthu", 
+      "name": "kettimut", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=kettimut", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "kettimut@mcs.anl.gov", 
+      "key": "kettimut", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2012-09-28T13:14:05.120-0500", 
+    "versions": [], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [], 
+    "issuetype": {
+      "name": "Task", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/3", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11058&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11058, 
+      "id": "3", 
+      "description": "A task that needs to be done."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/19345", 
+  "id": "19345", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

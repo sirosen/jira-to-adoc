@@ -1,0 +1,372 @@
+{
+  "key": "GT-382", 
+  "fields": {
+    "comment": {
+      "total": 4, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "This issue has been fixed.  The globus_ftp_control-4.6 update package is now available at http://www.globus.org/toolkit/advisories.html", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-04-03T19:08:36.775-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/20657/comment/21716", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-04-03T19:08:36.775-0500", 
+          "id": "21716"
+        }, 
+        {
+          "body": "I am unable to build the contents of that tar archive against the contents\nof /usr/local/globus-5.2.4.  How should I be applying this against the\n5.2.4 source tree?\n\nbells% ./configure --prefix=/usr/local/globus-5.2.4 --with-flavor=gcc64dbg\nchecking whether to enable maintainer-specific portions of Makefiles... no\nERROR: Flavor gcc64dbg has not been installed\n\nbells% ls /usr/local/globus-5.2.4/share/globus\naclocal  config.guess  globus-args-parser-header     globus-build-env-noflavor.sh  globus-gram-protocol-constants.sh globus-sh-tools.sh       gpt-bootstrap.sh  packages\namdir    flavors       globus-bootstrap.sh           globus-gass-cache-util.pl     globus-job-manager-script.pl globus-sh-tools-vars.sh  gram-audit        sftp-server\nbundles  gcc64dbg      globus-build-env-gcc64dbg.sh  globus_gram_job_manager       globus-script-initializer gpt                      gridftp-ssh       ssh-keysign\n", 
+          "updateAuthor": {
+            "displayName": "cruff@ucar.edu", 
+            "name": "cruff@ucar.edu", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=cruff%40ucar.edu", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "cruff@ucar.edu", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-04-04T09:50:19.499-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/20657/comment/21721", 
+          "author": {
+            "displayName": "cruff@ucar.edu", 
+            "name": "cruff@ucar.edu", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=cruff%40ucar.edu", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "cruff@ucar.edu", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-04-04T09:50:19.499-0500", 
+          "id": "21721"
+        }, 
+        {
+          "body": "Craig,\nSee section \"Installing updates from source\" at http://www.globus.org/toolkit/advisories.html\n\nBut you should first set your environment variable to point to the installed package\n\nExample:\n export GLOBUS_LOCATION=/usr/local/globus-5.2.4\n export GPT_LOCATION=/usr/local/globus-5.2.4\n export PATH=$PATH:$GLOBUS_LOCATION/bin:$GLOBUS_LOCATION/sbin\n \n gpt-build -update globus_ftp_control-4.6.tar.gz gcc64dbg", 
+          "updateAuthor": {
+            "displayName": "David Carver", 
+            "name": "dcarver", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=dcarver", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "dcarver@tacc.utexas.edu", 
+            "key": "dcarver", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-04-05T14:30:00.119-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/20657/comment/21727", 
+          "author": {
+            "displayName": "David Carver", 
+            "name": "dcarver", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=dcarver", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "dcarver@tacc.utexas.edu", 
+            "key": "dcarver", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-04-05T14:30:00.119-0500", 
+          "id": "21727"
+        }, 
+        {
+          "body": "Ah, thanks.  I didn't even notice the text above the table nor that there was something below it.  It would be helpful if an INSTALL instructions file was included inside the update.", 
+          "updateAuthor": {
+            "displayName": "cruff@ucar.edu", 
+            "name": "cruff@ucar.edu", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=cruff%40ucar.edu", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "cruff@ucar.edu", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-04-05T14:41:29.279-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/20657/comment/21728", 
+          "author": {
+            "displayName": "cruff@ucar.edu", 
+            "name": "cruff@ucar.edu", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=cruff%40ucar.edu", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "cruff@ucar.edu", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-04-05T14:41:29.279-0500", 
+          "id": "21728"
+        }
+      ], 
+      "maxResults": 4
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "cruff@ucar.edu", 
+      "name": "cruff@ucar.edu", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=cruff%40ucar.edu", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "cruff@ucar.edu", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|10170o:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-382/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Mike Link", 
+      "name": "mlink", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mlink@mcs.anl.gov", 
+      "key": "mlink", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": "1_*:*_1_*:*_5802629_*|*_5_*:*_1_*:*_0", 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@1136caf", 
+    "summary": "globus-url-copy GT 5.2.4 fails data transfers with server side error whereas GT 5.2.3 works fine", 
+    "customfield_10288": "2013-04-03T19:08:36.775-0500", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-382/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [
+      {
+        "archived": false, 
+        "name": "Sprint 2013-04-09", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11154", 
+        "releaseDate": "2013-04-09", 
+        "released": true, 
+        "id": "11154", 
+        "description": ""
+      }
+    ], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [
+      {
+        "mimeType": "application/octet-stream", 
+        "created": "2013-04-03T17:31:54.173-0500", 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/11044", 
+        "filename": "globus-url-copy-5.2.4-debug", 
+        "content": "https://globus.atlassian.net/secure/attachment/11044/globus-url-copy-5.2.4-debug", 
+        "id": "11044", 
+        "size": 6142
+      }, 
+      {
+        "mimeType": "application/octet-stream", 
+        "created": "2013-04-03T17:31:54.206-0500", 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/11045", 
+        "filename": "server-log", 
+        "content": "https://globus.atlassian.net/secure/attachment/11045/server-log", 
+        "id": "11045", 
+        "size": 5831
+      }
+    ], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "Done", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+        "id": 3, 
+        "key": "done", 
+        "colorName": "green"
+      }, 
+      "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+      "id": "5", 
+      "name": "Resolved"
+    }, 
+    "updated": "2013-04-22T08:45:35.208-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "All attempts to transfer files fail using the GT 5.2.4 version of globus-url-copy when the GT 5.2.3 version succeeds using the same user proxy cert.  I've attached debug output from the globus-url-copy and the server side.  The client was built with:\n\n./configure\nmake gridftp gsi-myproxy", 
+    "reporter": {
+      "displayName": "cruff@ucar.edu", 
+      "name": "cruff@ucar.edu", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=cruff%40ucar.edu", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "cruff@ucar.edu", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": "GridFTP server (GT 5.2.3 or 5.2.4) on RHEL 5.8\nglobus-url-copy (GT 5.2.4) on CentOS 6.4 or OpenSuse 12.2", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2013-04-03T17:31:54.149-0500", 
+    "versions": [
+      {
+        "archived": false, 
+        "name": "5.2.4", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11066", 
+        "releaseDate": "2013-02-13", 
+        "released": true, 
+        "id": "11066", 
+        "description": ""
+      }
+    ], 
+    "resolutiondate": "2013-04-03T19:08:36.763-0500", 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": {
+      "self": "https://globus.atlassian.net/rest/api/2/resolution/1", 
+      "id": "1", 
+      "name": "Fixed", 
+      "description": "A fix for this issue is checked into the tree and tested."
+    }, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/20657", 
+  "id": "20657", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

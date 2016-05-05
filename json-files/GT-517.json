@@ -1,0 +1,226 @@
+{
+  "key": "GT-517", 
+  "fields": {
+    "comment": {
+      "total": 1, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "Needed for GT6.", 
+          "updateAuthor": {
+            "displayName": "Jason Alt", 
+            "name": "jasonalt", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=jasonalt", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "jalt@ncsa.illinois.edu", 
+            "key": "jasonalt", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2015-01-08T15:51:19.980-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/23048/comment/29670", 
+          "author": {
+            "displayName": "Jason Alt", 
+            "name": "jasonalt", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=jasonalt", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "jalt@ncsa.illinois.edu", 
+            "key": "jasonalt", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2015-01-08T15:51:19.980-0600", 
+          "id": "29670"
+        }
+      ], 
+      "maxResults": 1
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "Jason Alt", 
+      "name": "jasonalt", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=jasonalt", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "jalt@ncsa.illinois.edu", 
+      "key": "jasonalt", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100nh4:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-517/watchers", 
+      "watchCount": 1, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Mike Link", 
+      "name": "mlink", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mlink@mcs.anl.gov", 
+      "key": "mlink", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "3804", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@b54338", 
+    "summary": "Decouple restart and perf markers", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-517/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2015-01-08T15:51:19.980-0600", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "GridFTP's DSI interface allows for the DSI to send information on the bytes it has received so that the server can report perf markers and restart markers back to the client. This interface is implemented in a single function call globus_gridftp_server_update_bytes_written() which records information used for both restart and perf markers. Although this is successful for standard file systems, the same is not true for HPSS. In HPSS, restart markers (successfully written ranges) are not available until the end of the transfer. Waiting until the end of the transfer to us update_byte_written() would result in the client believing the transfer is hung.\n\nInstead, this function needs to be broken into to portions for DSI's like HPSS so that restart markers (ranges successfully written) and perf markers (bytes written) can be reported separately. I have patched our local libglobus_gridftp_server.so with the following changes:\n\nglobus_gridftp_server.h:\n/*\n * update bytes\n *\n * This should be called during a recv(), after each successful write\n * to the storage system.\n */\nvoid\nglobus_gridftp_server_update_bytes_written(\n    globus_gfs_operation_t              op,\n    globus_off_t                        offset,\n    globus_off_t                        length);\n\n/*\n * update total byte counts written; used for perf markers\n */\nvoid\nglobus_gridftp_server_update_bytes_recvd(\n    globus_gfs_operation_t              op,\n    globus_off_t                        length);\n\n\nglobus_i_gfs_data.c:\n\nvoid\nglobus_gridftp_server_update_bytes_recvd(\n    globus_gfs_operation_t              op,\n    globus_off_t                        length)\n{\n    GlobusGFSName(globus_gridftp_server_update_bytes_recvd);\n    GlobusGFSDebugEnter();\n\n    globus_l_gfs_data_alive(op->session_handle);\n\n    globus_mutex_lock(&op->session_handle->mutex);\n    {\n        op->recvd_bytes += length;\n    }\n    globus_mutex_unlock(&op->session_handle->mutex);\n\n    GlobusGFSDebugExit();\n}\n\nvoid\nglobus_gridftp_server_update_range_recvd(\n    globus_gfs_operation_t              op,\n    globus_off_t                        offset,\n    globus_off_t                        length)\n{\n    GlobusGFSName(globus_gridftp_server_update_range_recvd);\n    GlobusGFSDebugEnter();\n\n    globus_l_gfs_data_alive(op->session_handle);\n\n    globus_mutex_lock(&op->session_handle->mutex);\n    {\n        globus_range_list_insert(\n            op->recvd_ranges, offset + op->transfer_delta, length);\n    }\n    globus_mutex_unlock(&op->session_handle->mutex);\n\n    GlobusGFSDebugExit();\n}\n", 
+    "reporter": {
+      "displayName": "Jason Alt", 
+      "name": "jasonalt", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=jasonalt", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "jalt@ncsa.illinois.edu", 
+      "key": "jasonalt", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": "GridFTP DSI", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2014-02-06T12:52:53.985-0600", 
+    "versions": [
+      {
+        "archived": false, 
+        "name": "5.2.5", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11388", 
+        "releaseDate": "2013-06-17", 
+        "released": true, 
+        "id": "11388", 
+        "description": ""
+      }
+    ], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "Improvement", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/4", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/issuetypes/defect.png", 
+      "subtask": false, 
+      "id": "4", 
+      "description": "An improvement or enhancement to an existing feature or task."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/23048", 
+  "id": "23048", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

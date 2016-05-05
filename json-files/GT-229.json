@@ -1,0 +1,454 @@
+{
+  "key": "GT-229", 
+  "fields": {
+    "comment": {
+      "total": 7, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "Set up a mingw32 build env on linux.  Mattias already makes a windows build with deps up to globus-url-copy, so minimal changes were needed to the base libs.  I believe he builds via rpms using a seperate mingw spec file for each package.  This isn't natural to me yet (at least while editing and debugging), so I worked out the build process using our standard tools (make-packages/gpt).  Majority of the server edits so far are ifdefs and redefines, with real code changes to handle the functions we're ignoring which were previously assumed to never fail.  For the most part I'm trying to avoid #ifdef blocks in the main program flow, and instead stub out the functions that need to work differently.\n\nI currently have it building successfully and running a simple transfer.  Listings will work when I finish the win compatible readdir func.", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2011-03-24T01:56:36.434-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/13619/comment/13922", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2011-03-24T01:56:36.434-0500", 
+          "id": "13922"
+        }, 
+        {
+          "body": "How are you handling path / drive translation.  What does / get you.   /~/ should be easy, using HOME or HOMEPATH/HOMEDRIVE.  / is the rub.  ", 
+          "updateAuthor": {
+            "displayName": "Karl Pickett", 
+            "name": "karl", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=karl", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "kjp@ci.uchicago.edu", 
+            "key": "karl", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2011-03-24T10:27:55.297-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/13619/comment/13929", 
+          "author": {
+            "displayName": "Karl Pickett", 
+            "name": "karl", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=karl", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "kjp@ci.uchicago.edu", 
+            "key": "karl", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2011-03-24T10:27:55.297-0500", 
+          "id": "13929"
+        }, 
+        {
+          "body": "Yeah, thats something we need to look at.  By default / is the base of the working dir drive, and other drives are available via //./X:/path.  That may be workable in a lot of situations (unlikely to need to server data from multiple drives?), but we'd probably want to work out some virtual mappings that the user can configure (which is a feature linux users wanted too).  ~ is planned.", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2011-03-24T10:46:09.507-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/13619/comment/13930", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2011-03-24T10:46:09.507-0500", 
+          "id": "13930"
+        }, 
+        {
+          "body": "I've got single user functionality just about fully working.  The listing seems to be the tricky part at this point, as the readdir support in mingw is very just slow, or perhaps just buggy the way we use it.  I've started implementing listing using native win32 calls (findfirstfile/findnextfile), and at that point I think this stage would be complete.\n\nHome directory support is working, but the default path situation is the same as in the prior comment.  A virtual mapping feature will help here but that isn't really specific to windows.\n\nOutside the scope of this jira, we had a GSOC project proposal to implement native win32 support for the features we're disabling, but it didn't get any serious responses.", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2011-04-15T14:16:13.028-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/13619/comment/13993", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2011-04-15T14:16:38.253-0500", 
+          "id": "13993"
+        }, 
+        {
+          "body": "Done pending testing for LTA use.", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2011-05-10T09:23:28.710-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/13619/comment/14197", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2011-05-10T09:23:28.710-0500", 
+          "id": "14197"
+        }, 
+        {
+          "body": "my drive letter solution didn't work with GO, it only appeared to work because of a bug in a url library that GO was using.  need to fix.", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-06-19T10:14:33.688-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/13619/comment/19291", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-06-19T10:14:33.688-0500", 
+          "id": "19291"
+        }, 
+        {
+          "body": "Added virtual base dir of / containing the avalible drive letters and fixed a few issues related to that and path restrictions.", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-06-19T10:15:01.103-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/13619/comment/19292", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-06-19T10:15:01.103-0500", 
+          "id": "19292"
+        }
+      ], 
+      "maxResults": 7
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "Mike Link", 
+      "name": "mlink", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mlink@mcs.anl.gov", 
+      "key": "mlink", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|101tb4:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-229/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Mike Link", 
+      "name": "mlink", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mlink@mcs.anl.gov", 
+      "key": "mlink", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": "1_*:*_1_*:*_4088514698_*|*_5_*:*_2_*:*_35081464985_*|*_4_*:*_1_*:*_27408", 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@581a99", 
+    "summary": "GridFTP server windows native build", 
+    "customfield_10288": "2011-03-24T10:27:55.297-0500", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-229/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [
+      {
+        "archived": false, 
+        "name": "Sprint 2012-06-19", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/10921", 
+        "releaseDate": "2012-06-19", 
+        "released": true, 
+        "id": "10921", 
+        "description": ""
+      }
+    ], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "Done", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+        "id": 3, 
+        "key": "done", 
+        "colorName": "green"
+      }, 
+      "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+      "id": "5", 
+      "name": "Resolved"
+    }, 
+    "updated": "2012-06-19T10:16:56.554-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "Partially port and build gridftp server for windows.  Ignore the process handling such as fork and chroot, ignore user and file handling issues such as setuid/getuid and *pwent/*grent.  The server will run only as a single process (should be inetd-able), and only with permissions of the user running the process.  File listings and stats will have no ownership or permissions info.  Transfers, security, sync, etc, should all be fully functional, and it should do everything needed for the LTA.", 
+    "reporter": {
+      "displayName": "Mike Link", 
+      "name": "mlink", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mlink@mcs.anl.gov", 
+      "key": "mlink", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2011-03-24T01:41:34.015-0500", 
+    "versions": [], 
+    "resolutiondate": "2012-06-19T10:15:01.090-0500", 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "New Feature", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/2", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11051&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11051, 
+      "id": "2", 
+      "description": "A new feature of the product, which has yet to be developed."
+    }, 
+    "resolution": {
+      "self": "https://globus.atlassian.net/rest/api/2/resolution/1", 
+      "id": "1", 
+      "name": "Fixed", 
+      "description": "A fix for this issue is checked into the tree and tested."
+    }, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/13619", 
+  "id": "13619", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

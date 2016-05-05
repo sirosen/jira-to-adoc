@@ -1,0 +1,230 @@
+{
+  "key": "GT-49", 
+  "fields": {
+    "comment": {
+      "total": 0, 
+      "startAt": 0, 
+      "comments": [], 
+      "maxResults": 0
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "Joe Bester", 
+      "name": "bester", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "bester@mcs.anl.gov", 
+      "key": "bester", 
+      "active": true, 
+      "timeZone": "America/New_York"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100c4o:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-49/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": null, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "1966", 
+    "issuelinks": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/issueLink/11430", 
+        "inwardIssue": {
+          "fields": {
+            "status": {
+              "statusCategory": {
+                "name": "To Do", 
+                "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+                "id": 2, 
+                "key": "new", 
+                "colorName": "blue-gray"
+              }, 
+              "description": "The issue is open and ready for the assignee to start work on it.", 
+              "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+              "id": "1", 
+              "name": "Open"
+            }, 
+            "priority": {
+              "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+              "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+              "name": "Major", 
+              "id": "3"
+            }, 
+            "issuetype": {
+              "name": "Improvement", 
+              "self": "https://globus.atlassian.net/rest/api/2/issuetype/4", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/issuetypes/defect.png", 
+              "subtask": false, 
+              "id": "4", 
+              "description": "An improvement or enhancement to an existing feature or task."
+            }, 
+            "summary": "softenv extensions for GRAM5"
+          }, 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/11149", 
+          "id": "11149", 
+          "key": "GT-84"
+        }, 
+        "type": {
+          "outward": "depends on", 
+          "inward": "is depended on by", 
+          "self": "https://globus.atlassian.net/rest/api/2/issueLinkType/10010", 
+          "id": "10010", 
+          "name": "Dependency"
+        }, 
+        "id": "11430"
+      }
+    ], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@de0517", 
+    "summary": "GRAM Fork LRM's softenv implementation doesn't work without SEG", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-49/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2012-05-09T13:43:15.947-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "The softenv implementation for fork only occurs in the fork-starter code path, so it won't work for job managers where the SEG is not used for fork.", 
+    "reporter": {
+      "displayName": "Joe Bester", 
+      "name": "bester", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "bester@mcs.anl.gov", 
+      "key": "bester", 
+      "active": true, 
+      "timeZone": "America/New_York"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2011-08-12T12:12:21.857-0500", 
+    "versions": [
+      {
+        "archived": false, 
+        "name": "5.2.1", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/10922", 
+        "releaseDate": "2012-04-26", 
+        "released": true, 
+        "id": "10922"
+      }, 
+      {
+        "archived": false, 
+        "name": "5.0.5", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/10923", 
+        "releaseDate": "2012-03-08", 
+        "released": true, 
+        "id": "10923"
+      }
+    ], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10324", 
+        "id": "10324", 
+        "name": "GRAM"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/15454", 
+  "id": "15454", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

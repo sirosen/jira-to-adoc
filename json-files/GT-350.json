@@ -1,0 +1,241 @@
+{
+  "key": "GT-350", 
+  "fields": {
+    "comment": {
+      "total": 1, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "Fixed all leaks with sharing code.  \nFixed a long time leak with mode S pasv and some LOSF cases.\nFixed a long time leak with errors on generic commands with striping.\nFixed a bunch of config initialization leaks.", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-01-14T08:25:42.485-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/20044/comment/20970", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-01-14T08:25:42.485-0600", 
+          "id": "20970"
+        }
+      ], 
+      "maxResults": 1
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "Mike Link", 
+      "name": "mlink", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mlink@mcs.anl.gov", 
+      "key": "mlink", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|101a0g:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-350/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Mike Link", 
+      "name": "mlink", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mlink@mcs.anl.gov", 
+      "key": "mlink", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": "1_*:*_1_*:*_156231_*|*_5_*:*_1_*:*_0", 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@1eaf0d9", 
+    "summary": "Various memory leaks in gridftp server", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-350/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [
+      {
+        "archived": false, 
+        "name": "Sprint 2013-01-14", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11037", 
+        "releaseDate": "2013-01-14", 
+        "released": true, 
+        "id": "11037", 
+        "description": ""
+      }, 
+      {
+        "archived": false, 
+        "name": "5.2.4", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11066", 
+        "releaseDate": "2013-02-13", 
+        "released": true, 
+        "id": "11066", 
+        "description": ""
+      }
+    ], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "Done", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+        "id": 3, 
+        "key": "done", 
+        "colorName": "green"
+      }, 
+      "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+      "id": "5", 
+      "name": "Resolved"
+    }, 
+    "updated": "2013-01-14T08:25:42.486-0600", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "There are a few memory leaks in new code, as well as some older edge/error cases.", 
+    "reporter": {
+      "displayName": "Mike Link", 
+      "name": "mlink", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mlink@mcs.anl.gov", 
+      "key": "mlink", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2013-01-14T08:23:06.259-0600", 
+    "versions": [], 
+    "resolutiondate": "2013-01-14T08:25:42.463-0600", 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": {
+      "self": "https://globus.atlassian.net/rest/api/2/resolution/1", 
+      "id": "1", 
+      "name": "Fixed", 
+      "description": "A fix for this issue is checked into the tree and tested."
+    }, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/20044", 
+  "id": "20044", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

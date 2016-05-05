@@ -1,0 +1,289 @@
+{
+  "key": "GT-309", 
+  "fields": {
+    "comment": {
+      "total": 2, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "you may want to only allow this command once.  GO will only send it once per session, at the very beginning.", 
+          "updateAuthor": {
+            "displayName": "Karl Pickett", 
+            "name": "karl", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=karl", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "kjp@ci.uchicago.edu", 
+            "key": "karl", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-10-25T14:32:26.071-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19478/comment/20406", 
+          "author": {
+            "displayName": "Karl Pickett", 
+            "name": "karl", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=karl", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "kjp@ci.uchicago.edu", 
+            "key": "karl", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-10-25T14:32:26.071-0500", 
+          "id": "20406"
+        }, 
+        {
+          "body": "appears to be working well in 5.2.3s", 
+          "updateAuthor": {
+            "displayName": "Karl Pickett", 
+            "name": "karl", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=karl", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "kjp@ci.uchicago.edu", 
+            "key": "karl", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-11-01T11:38:16.461-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19478/comment/20472", 
+          "author": {
+            "displayName": "Karl Pickett", 
+            "name": "karl", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=karl", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "kjp@ci.uchicago.edu", 
+            "key": "karl", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-11-01T11:38:16.461-0500", 
+          "id": "20472"
+        }
+      ], 
+      "maxResults": 2
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "Karl Pickett", 
+      "name": "karl", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=karl", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "kjp@ci.uchicago.edu", 
+      "key": "karl", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100nu8:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-309/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": null, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "3863", 
+    "issuelinks": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/issueLink/12223", 
+        "inwardIssue": {
+          "fields": {
+            "status": {
+              "statusCategory": {
+                "name": "Done", 
+                "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+                "id": 3, 
+                "key": "done", 
+                "colorName": "green"
+              }, 
+              "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+              "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+              "id": "5", 
+              "name": "Resolved"
+            }, 
+            "priority": {
+              "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+              "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+              "name": "Major", 
+              "id": "3"
+            }, 
+            "issuetype": {
+              "name": "New Feature", 
+              "self": "https://globus.atlassian.net/rest/api/2/issuetype/2", 
+              "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11051&avatarType=issuetype", 
+              "subtask": false, 
+              "avatarId": 11051, 
+              "id": "2", 
+              "description": "A new feature of the product, which has yet to be developed."
+            }, 
+            "summary": "Sharing Demo for SC"
+          }, 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19437", 
+          "id": "19437", 
+          "key": "KOA-2289"
+        }, 
+        "type": {
+          "outward": "depends on", 
+          "inward": "is depended on by", 
+          "self": "https://globus.atlassian.net/rest/api/2/issueLinkType/10010", 
+          "id": "10010", 
+          "name": "Dependency"
+        }, 
+        "id": "12223"
+      }
+    ], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@199b1e6", 
+    "summary": "gridftp: new SITE CHROOT command", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-309/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2012-11-01T11:38:16.463-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "We want a 'soft chroot', for input and output paths (error messages).  Or, turning off paths in error messages may also work, because GO doesn't push recursive operations to the server and shows the path itself in errors.   Perhaps if that was an option?  (SITE echo_file_names_in_errors_for_non_recursive_comands=0 for GO?)\n\nThis is lower priority for demo than SITE RP, but I think it's still wanted - if not by SC, then soon after.", 
+    "reporter": {
+      "displayName": "Karl Pickett", 
+      "name": "karl", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=karl", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "kjp@ci.uchicago.edu", 
+      "key": "karl", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2012-10-22T09:38:54.966-0500", 
+    "versions": [], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "New Feature", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/2", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11051&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11051, 
+      "id": "2", 
+      "description": "A new feature of the product, which has yet to be developed."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/19478", 
+  "id": "19478", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

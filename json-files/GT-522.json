@@ -1,0 +1,274 @@
+{
+  "key": "GT-522", 
+  "fields": {
+    "comment": {
+      "total": 2, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "This was fixed in the 5.2.5 release, which it seems you only partially have.  The specific fix was in globus-gridftp-server-control 2.10, which was released at the same time as globus-gridftp-server 6.37.  It looks like 2.10 is currently in epel.  \n\nWe don't directly control when updates make it into epel, but it would be strange for those two versions to be part of the same install.  Did you update only the globus-gridftp-server package at some point?", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2014-03-17T19:37:53.600-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/23385/comment/24364", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2014-03-17T19:37:53.600-0500", 
+          "id": "24364"
+        }, 
+        {
+          "body": "You are right. After I encountered the problem, I did update Globus in order to make sure it was at the latest and greatest before diagnosing the problem. But looking at the history on that machine, I only did a yum update of globus-gridftp-server-progs; globus-gridftp-server-control did not get updated.\n\nWe'll do a full Globus update and verify that the problem is gone. Thanks.", 
+          "updateAuthor": {
+            "displayName": "Jason Alt", 
+            "name": "jasonalt", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=jasonalt", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "jalt@ncsa.illinois.edu", 
+            "key": "jasonalt", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2014-03-17T20:56:52.918-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/23385/comment/24365", 
+          "author": {
+            "displayName": "Jason Alt", 
+            "name": "jasonalt", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=jasonalt", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "jalt@ncsa.illinois.edu", 
+            "key": "jasonalt", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2014-03-17T20:56:52.918-0500", 
+          "id": "24365"
+        }
+      ], 
+      "maxResults": 2
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "Jason Alt", 
+      "name": "jasonalt", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=jasonalt", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "jalt@ncsa.illinois.edu", 
+      "key": "jasonalt", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100ne8:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-522/watchers", 
+      "watchCount": 1, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Mike Link", 
+      "name": "mlink", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mlink@mcs.anl.gov", 
+      "key": "mlink", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "3791", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@16b7a7e", 
+    "summary": "GridFTP server hangs indefinitely during 3rd party transfer when remote services does not connect", 
+    "customfield_10288": "2014-03-17T19:37:53.600-0500", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-522/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [
+      {
+        "archived": false, 
+        "name": "Sprint 2014-03-31", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11647", 
+        "releaseDate": "2014-03-30", 
+        "released": true, 
+        "id": "11647", 
+        "description": ""
+      }
+    ], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/critical.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/2", 
+      "name": "Critical", 
+      "id": "2"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2014-03-17T20:56:52.924-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "A GO transfer is hitting permission denied on a remote endpoint which is causing GridFTP processes on our end to linger. These lingering GridFTP processes add up and eventually xinetd will not allow any more instances of the GridFTP server. The hang occurs during a STOR operation; the remote server never connects (presumably because it has returned EPERM on RETR).\n\nStack Trace:\n(gdb) thread apply all where\n\nThread 6 (Thread 0x2aaab0954700 (LWP 31355)):\n#0  0x00002aaaadf9a43c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0\n#1  0x00002aaaadae11af in globus_l_thread_pool_thread_start (user_arg=<value optimized out>)\n    at globus_thread_pool.c:263\n#2  0x00002aaab035103b in thread_starter (temparg=<value optimized out>) at globus_thread_pthreads.c:285\n#3  0x00002aaaadf96851 in start_thread () from /lib64/libpthread.so.0\n#4  0x00002aaaaecfa6dd in clone () from /lib64/libc.so.6\n\nThread 5 (Thread 0x2aaab0b55700 (LWP 31356)):\n#0  0x00002aaaadf9a7bb in pthread_cond_timedwait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0\n#1  0x00002aaab0351589 in globus_l_pthread_cond_timedwait (cv=0x2aaaadcf7888, mut=0x2aaaadcf7860,\n    abstime=0x2aaab0b54d20) at globus_thread_pthreads.c:768\n#2  0x00002aaaadac92df in globus_l_callback_thread_poll (user_arg=0x2aaaadcf7820)\n    at globus_callback_threads.c:2487\n#3  0x00002aaaadae10dd in globus_l_thread_pool_thread_start (user_arg=0x609fe0) at globus_thread_pool.c:222\n#4  0x00002aaab035103b in thread_starter (temparg=<value optimized out>) at globus_thread_pthreads.c:285\n#5  0x00002aaaadf96851 in start_thread () from /lib64/libpthread.so.0\n#6  0x00002aaaaecfa6dd in clone () from /lib64/libc.so.6\n\nThread 4 (Thread 0x2aaabc301700 (LWP 31357)):\n#0  0x00002aaaaecf32c3 in select () from /lib64/libc.so.6\n#1  0x00002aaaad063630 in globus_l_xio_system_poll (user_args=<value optimized out>)\n    at globus_xio_system_select.c:1346\n#2  0x00002aaaadac8e72 in globus_l_callback_thread_callback (user_arg=0x617230) at globus_callback_threads.c:2248\n#3  0x00002aaaadae10dd in globus_l_thread_pool_thread_start (user_arg=0x2aaab4000bf0) at globus_thread_pool.c:222\n#4  0x00002aaab035103b in thread_starter (temparg=<value optimized out>) at globus_thread_pthreads.c:285\n#5  0x00002aaaadf96851 in start_thread () from /lib64/libpthread.so.0\n#6  0x00002aaaaecfa6dd in clone () from /lib64/libc.so.6\n\nThread 3 (Thread 0x2aaabd164700 (LWP 31361)):\n#0  0x00002aaaadf9e2a5 in sigwait () from /lib64/libpthread.so.0\n#1  0x00002aaaadaca07b in globus_l_callback_thread_signal_poll (user_arg=0x2aaabd163ddc)\n    at globus_callback_threads.c:2868\n#2  0x00002aaab0350ea8 in globus_l_pthread_thread_cancellable_func (\n    func=0x2aaaadaca000 <globus_l_callback_thread_signal_poll>, func_arg=0x2aaabd163ddc,\n    cleanup_func=0x2aaaadac8810 <globus_l_callback_signal_thread_cleanup>, cleanup_arg=0x2aaabd163ddc,\n    execute_cleanup=1) at globus_thread_pthreads.c:888\n#3  0x00002aaaadac94cd in globus_l_callback_thread_signal_poll_wrapper (user_arg=<value optimized out>)\n    at globus_callback_threads.c:2944\n#4  0x00002aaab035103b in thread_starter (temparg=<value optimized out>) at globus_thread_pthreads.c:285\n#5  0x00002aaaadf96851 in start_thread () from /lib64/libpthread.so.0\n#6  0x00002aaaaecfa6dd in clone () from /lib64/libc.so.6\n\nThread 2 (Thread 0x2aaabcd3c700 (LWP 31362)):\n#0  0x00002aaaadf9a7bb in pthread_cond_timedwait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0\n#1  0x00002aaab0351589 in globus_l_pthread_cond_timedwait (cv=0x2aaaadcf7888, mut=0x2aaaadcf7860,\n    abstime=0x2aaabcd3bd20) at globus_thread_pthreads.c:768\n#2  0x00002aaaadac92df in globus_l_callback_thread_poll (user_arg=0x2aaaadcf7820)\n    at globus_callback_threads.c:2487\n#3  0x00002aaaadae10dd in globus_l_thread_pool_thread_start (user_arg=0x2aaab4034030) at globus_thread_pool.c:222\n#4  0x00002aaab035103b in thread_starter (temparg=<value optimized out>) at globus_thread_pthreads.c:285\n#5  0x00002aaaadf96851 in start_thread () from /lib64/libpthread.so.0\n#6  0x00002aaaaecfa6dd in clone () from /lib64/libc.so.6\n\nThread 1 (Thread 0x2aaab034cfc0 (LWP 31353)):\n#0  0x00002aaaadf9a43c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0\n#1  0x00000000004059ce in ?? ()\n#2  0x00002aaaaec31cdd in __libc_start_main () from /lib64/libc.so.6\n#3  0x0000000000403009 in ?? ()\n#4  0x00007fffffffea98 in ?? ()\n#5  0x000000000000001c in ?? ()\n\nThread 4 is at globus_xio_system_select.c:1346:\n\nglobus_l_xio_system_poll()\n        ....\n        nready = select(\n            num,\n            globus_l_xio_system_ready_reads,\n            globus_l_xio_system_ready_writes,\n            GLOBUS_NULL,\n            (time_left_is_infinity ? GLOBUS_NULL : &time_left));\n\n(gdb) thread 4\n[Switching to thread 4 (Thread 0x2aaabc301700 (LWP 31357))]#0  0x00002aaaaecf32c3 in select ()\n   from /lib64/libc.so.6\n(gdb) up\n#1  0x00002aaaad063630 in globus_l_xio_system_poll (user_args=<value optimized out>)\n    at globus_xio_system_select.c:1346\n1346            nready = select(\n(gdb) print time_left_is_infinity\n$1 = 1\n(gdb) print num\n$2 = 9\nglobus_l_xio_system_read_operations[0]\n$3 = (globus_i_xio_system_op_info_t *) 0x0\n(gdb) print globus_l_xio_system_read_operations[1]\n$4 = (globus_i_xio_system_op_info_t *) 0x0\n(gdb) print globus_l_xio_system_read_operations[2]\n$5 = (globus_i_xio_system_op_info_t *) 0x0\n(gdb) print globus_l_xio_system_read_operations[3]\n$6 = (globus_i_xio_system_op_info_t *) 0x0\n(gdb) print globus_l_xio_system_read_operations[4]\n$7 = (globus_i_xio_system_op_info_t *) 0x0\n(gdb) print globus_l_xio_system_read_operations[5]\n$8 = (globus_i_xio_system_op_info_t *) 0x0\n(gdb) print globus_l_xio_system_read_operations[6]\n$9 = (globus_i_xio_system_op_info_t *) 0x0\n(gdb) print globus_l_xio_system_read_operations[7]\n$10 = (globus_i_xio_system_op_info_t *) 0x0\n(gdb) print globus_l_xio_system_read_operations[8]\n$11 = (globus_i_xio_system_op_info_t *) 0x2aaab8013370\n(gdb) print globus_l_xio_system_read_operations[8][0]\n$12 = {type = GLOBUS_I_XIO_SYSTEM_OP_ACCEPT, state = GLOBUS_I_XIO_SYSTEM_OP_PENDING, op = 0x2aaab8013630,\n  handle = 0x2aaab800d480, error = 0x0, user_arg = 0x2aaab8011c50, nbytes = 0, waitforbytes = 1, offset = 0,\n  sop = {non_data = {callback = 0x2aaaad082a20 <globus_l_xio_tcp_system_accept_cb>, out_fd = 0x2aaab8011c58},\n    data = {callback = 0x2aaaad082a20 <globus_l_xio_tcp_system_accept_cb>, start_iov = 0x2aaab8011c58,\n      start_iovc = 0, iov = 0x0, iovc = 0, addr = 0x0, flags = 0}}}\n\n\nie01$lsof -p 31353\nCOMMAND     PID    USER   FD   TYPE      DEVICE SIZE/OFF                NODE NAME\nglobus-gr 31353 arnoldg  cwd    DIR        0,28      640               30976 /\nglobus-gr 31353 arnoldg  rtd    DIR        0,28      640               30976 /\nglobus-gr 31353 arnoldg  txt    REG        0,28    35760           164340244 /usr/sbin/globus-gridftp-server\nglobus-gr 31353 arnoldg  mem    REG        0,28   154464               40768 /lib64/ld-2.12.so\nglobus-gr 31353 arnoldg  mem    REG        0,28   440504           164340225 /usr/lib64/libglobus_gridftp_server.so.6.0.38\nglobus-gr 31353 arnoldg  mem    REG        0,28   161168               59623 /usr/lib64/libglobus_ftp_control.so.1.3.6\nglobus-gr 31353 arnoldg  mem    REG        0,28   104712               59638 /usr/lib64/libglobus_io.so.3.6.4\nglobus-gr 31353 arnoldg  mem    REG        0,28   165656               59628 /usr/lib64/libglobus_gridftp_server_control.so.0.2.9\nglobus-gr 31353 arnoldg  mem    REG        0,28     9624               59636 /usr/lib64/libglobus_gssapi_error.so.2.2.1\nglobus-gr 31353 arnoldg  mem    REG        0,28    57680               59635 /usr/lib64/libglobus_gss_assist.so.3.5.9\nglobus-gr 31353 arnoldg  mem    REG        0,28    13328               59619 /usr/lib64/libglobus_authz.so.0.2.2\nglobus-gr 31353 arnoldg  mem    REG        0,28   127768               59637 /usr/lib64/libglobus_gssapi_gsi.so.4.6.8\nglobus-gr 31353 arnoldg  mem    REG        0,28    73104               59633 /usr/lib64/libglobus_gsi_proxy_core.so.0.6.2\nglobus-gr 31353 arnoldg  mem    REG        0,28    70336           164340212 /usr/lib64/libglobus_gsi_credential.so.1.5.0\nglobus-gr 31353 arnoldg  mem    REG        0,28    48136               59630 /usr/lib64/libglobus_gsi_callback.so.0.4.6\nglobus-gr 31353 arnoldg  mem    REG        0,28    39496               59639 /usr/lib64/libglobus_oldgaa.so.0.4.6\nglobus-gr 31353 arnoldg  mem    REG        0,28    52240               59634 /usr/lib64/libglobus_gsi_sysconfig.so.1.4.3\nglobus-gr 31353 arnoldg  mem    REG        0,28    23232               59631 /usr/lib64/libglobus_gsi_cert_utils.so.0.8.5\nglobus-gr 31353 arnoldg  mem    REG        0,28    15976               59644 /usr/lib64/libglobus_usage.so.0.3.1\nglobus-gr 31353 arnoldg  mem    REG        0,28    10512               59640 /usr/lib64/libglobus_openssl.so.0.3.2\nglobus-gr 31353 arnoldg  mem    REG        0,28    29352               59626 /usr/lib64/libglobus_gfork.so.0.3.2\nglobus-gr 31353 arnoldg  mem    REG        0,28   429928               59645 /usr/lib64/libglobus_xio.so.0.3.5\nglobus-gr 31353 arnoldg  mem    REG        0,28    18800               59641 /usr/lib64/libglobus_openssl_error.so.0.2.1\nglobus-gr 31353 arnoldg  mem    REG        0,28    19640               59620 /usr/lib64/libglobus_callout.so.0.2.4\nglobus-gr 31353 arnoldg  mem    REG        0,28     4864               59629 /usr/lib64/libglobus_gsi_authz_callout_error.so.0.2.2\nglobus-gr 31353 arnoldg  mem    REG        0,28    19296               59642 /usr/lib64/libglobus_proxy_ssl.so.1.3.1\nglobus-gr 31353 arnoldg  mem    REG        0,28   298600               59621 /usr/lib64/libglobus_common.so.0.14.10\nglobus-gr 31353 arnoldg  mem    REG        0,28   595800               40834 /lib64/libm-2.12.so\nglobus-gr 31353 arnoldg  mem    REG        0,28   142464               40862 /lib64/libpthread-2.12.so\nglobus-gr 31353 arnoldg  mem    REG        0,28   437016           164340124 /usr/lib64/libssl.so.1.0.1e\nglobus-gr 31353 arnoldg  mem    REG        0,28  1950976           164340122 /usr/lib64/libcrypto.so.1.0.1e\nglobus-gr 31353 arnoldg  mem    REG        0,28    19536               40797 /lib64/libdl-2.12.so\nglobus-gr 31353 arnoldg  mem    REG        0,28    88600               40880 /lib64/libz.so.1.2.3\nglobus-gr 31353 arnoldg  mem    REG        0,28  1912432               40784 /lib64/libc-2.12.so\nglobus-gr 31353 arnoldg  mem    REG        0,28    36880               59750 /usr/lib64/libltdl.so.7.2.1\nglobus-gr 31353 arnoldg  mem    REG        0,28   269472               40814 /lib64/libgssapi_krb5.so.2.2\nglobus-gr 31353 arnoldg  mem    REG        0,28   912944               40826 /lib64/libkrb5.so.3.3\nglobus-gr 31353 arnoldg  mem    REG        0,28    14664               40789 /lib64/libcom_err.so.2.1\nglobus-gr 31353 arnoldg  mem    REG        0,28   178952               40824 /lib64/libk5crypto.so.3.1\nglobus-gr 31353 arnoldg  mem    REG        0,28    43696               40827 /lib64/libkrb5support.so.0.1\nglobus-gr 31353 arnoldg  mem    REG        0,28    10192               40825 /lib64/libkeyutils.so.1.3\nglobus-gr 31353 arnoldg  mem    REG        0,28   110960               40865 /lib64/libresolv-2.12.so\nglobus-gr 31353 arnoldg  mem    REG        0,28   122040               40867 /lib64/libselinux.so.1\nglobus-gr 31353 arnoldg  mem    REG        0,28    16640               59643 /usr/lib64/libglobus_thread_pthread.so.0.14.10\nglobus-gr 31353 arnoldg  mem    REG        0,28    61704               59647 /usr/lib64/libglobus_xio_gsi_driver.so.0.2.3\nglobus-gr 31353 arnoldg  mem    REG        0,28    19664               59649 /usr/lib64/libglobus_xio_pipe_driver.so.0.2.2\nglobus-gr 31353 arnoldg  mem    REG        0,28    65928               40845 /lib64/libnss_files-2.12.so\nglobus-gr 31353 arnoldg  mem    REG        0,28    27424               40844 /lib64/libnss_dns-2.12.so\nglobus-gr 31353 arnoldg  mem    REG        0,28    90784               40807 /lib64/libgcc_s-4.4.6-20120305.so.1\nglobus-gr 31353 arnoldg  mem    REG        0,28   400051               64382 /usr/local/gridftp_lustre_dsi_r701/libglobus_gridftp_server_lustre.so.0.0.0\nglobus-gr 31353 arnoldg  mem    REG        0,28   182802               64414 /usr/local/gridmap_callout_1.3/libgridmap_callout.so\nglobus-gr 31353 arnoldg  mem    REG        0,28   305984               40829 /lib64/libldap-2.4.so.2.5.6\nglobus-gr 31353 arnoldg  mem    REG        0,28    55848               40850 /lib64/libpam.so.0.82.2\nglobus-gr 31353 arnoldg  mem    REG        0,28    60512               40828 /lib64/liblber-2.4.so.2.5.6\nglobus-gr 31353 arnoldg  mem    REG        0,28   242112               59877 /usr/lib64/libssl3.so\nglobus-gr 31353 arnoldg  mem    REG        0,28   181168               59869 /usr/lib64/libsmime3.so\nglobus-gr 31353 arnoldg  mem    REG        0,28  1288016               59796 /usr/lib64/libnss3.so\nglobus-gr 31353 arnoldg  mem    REG        0,28   154456               59802 /usr/lib64/libnssutil3.so\nglobus-gr 31353 arnoldg  mem    REG        0,28    14560               40857 /lib64/libplds4.so\nglobus-gr 31353 arnoldg  mem    REG        0,28    18720               40856 /lib64/libplc4.so\nglobus-gr 31353 arnoldg  mem    REG        0,28   240592               40842 /lib64/libnspr4.so\nglobus-gr 31353 arnoldg  mem    REG        0,28   106160               59863 /usr/lib64/libsasl2.so.2.0.23\nglobus-gr 31353 arnoldg  mem    REG        0,28   113096               40780 /lib64/libaudit.so.1.0.0\nglobus-gr 31353 arnoldg  mem    REG        0,28    40400               40790 /lib64/libcrypt-2.12.so\nglobus-gr 31353 arnoldg  mem    REG        0,28   383504               40805 /lib64/libfreebl3.so\nglobus-gr 31353 arnoldg  mem    REG        0,28    44328               40847 /lib64/libnss_ldap.so.2\nglobus-gr 31353 arnoldg    0u  sock         0,6      0t0           164352086 can't identify protocol\nglobus-gr 31353 arnoldg    1u  sock         0,6      0t0           164352086 can't identify protocol\nglobus-gr 31353 arnoldg    2u   CHR         1,3      0t0                3829 /dev/null\nglobus-gr 31353 arnoldg    3r  FIFO         0,8      0t0           164352091 pipe\nglobus-gr 31353 arnoldg    4w  FIFO         0,8      0t0           164352091 pipe\nglobus-gr 31353 arnoldg    5w   CHR         1,3      0t0                3829 /dev/null\nglobus-gr 31353 arnoldg    6w   CHR         1,3      0t0                3829 /dev/null\nglobus-gr 31353 arnoldg    7u  IPv4   164352100      0t0                 UDP *:41535\nglobus-gr 31353 arnoldg    8u  IPv4   164352162      0t0                 TCP *:47853 (LISTEN)\nglobus-gr 31353 arnoldg    9w   REG 1590,444806        0 1125442682274034226 /mnt/b/projects/staff/bw_seas/arnoldg/xt-cle3.1/cp2k/2.4/cnl3.1_gnu4.6.2/test.log\n\nOnly 'live' TCP port is port 47853 which is a response to PASV.\n\nie01$rpm -qa |grep globus\nglobus-gsi-openssl-error-2.1-11.el6.x86_64\nglobus-gssapi-gsi-10.8-1.el6.x86_64\nglobus-authz-callout-error-2.2-8.el6.x86_64\nglobus-xio-pipe-driver-2.2-6.el6.x86_64\nglobus-gram-job-manager-pbs-debuginfo-1.6-4.el6.x86_64\nglobus-gass-transfer-debuginfo-7.2-7.el6.x86_64\nglobus-gridftp-server-control-debuginfo-2.9-2.el6.x86_64\nglobus-gridmap-eppn-callout-debuginfo-0.4-1.el6.x86_64\nglobus-gfork-debuginfo-3.2-6.el6.x86_64\nglobus-xio-popen-driver-debuginfo-2.3-6.el6.x86_64\nglobus-xio-debuginfo-3.5-1.el6.x86_64\nglobus-gridftp-5.2.2-1.el6.x86_64\nglobus-gsi-callback-4.6-1.el6.x86_64\nglobus-xio-gsi-driver-2.3-8.el6.x86_64\nglobus-xio-popen-driver-2.3-6.el6.x86_64\nglobus-gsi-cert-utils-progs-8.5-2.el6.x86_64\nglobus-common-debuginfo-14.10-1.el6.x86_64\nglobus-gsi-cert-utils-debuginfo-8.5-2.el6.x86_64\nglobus-gram-job-manager-condor-debuginfo-1.4-3.el6.x86_64\nglobus-gram-job-manager-sge-debuginfo-1.7-1.el6.x86_64\nglobus-gram-client-debuginfo-12.4-7.el6.x86_64\nglobus-ftp-client-debuginfo-7.5-1.el6.x86_64\nglobus-gsi-credential-6.0-2.el6.x86_64\nglobus-usage-3.1-9.el6.x86_64\nglobus-openssl-module-3.2-7.el6.x86_64\nglobus-gss-assist-8.9-1.el6.x86_64\nglobus-io-9.4-2.el6.x86_64\nglobus-gass-transfer-7.2-7.el6.x86_64\nglobus-xioperf-debuginfo-3.1-6.el6.x86_64\nglobus-rsl-debuginfo-9.1-11.el6.x86_64\nglobus-openssl-module-debuginfo-3.2-7.el6.x86_64\nglobus-gsi-proxy-core-debuginfo-6.2-7.el6.x86_64\nglobus-gatekeeper-debuginfo-9.15-1.el6.x86_64\nglobus-gram-protocol-debuginfo-11.3-7.el6.x86_64\nglobus-gss-assist-debuginfo-8.9-1.el6.x86_64\nglobus-ftp-client-7.5-1.el6.x86_64\nglobus-gss-assist-progs-8.9-1.el6.x86_64\nglobus-scheduler-event-generator-debuginfo-4.7-3.el6.x86_64\nglobus-gram-job-manager-callout-error-debuginfo-2.1-11.el6.x86_64\nglobus-usage-debuginfo-3.1-9.el6.x86_64\nglobus-gass-copy-debuginfo-8.6-3.el6.x86_64\nglobus-gridftp-server-6.38-1.el6.x86_64\nglobus-common-14.10-1.el6.x86_64\nglobus-gsi-cert-utils-8.5-2.el6.x86_64\nglobus-gsi-proxy-core-6.2-7.el6.x86_64\nglobus-xio-3.5-1.el6.x86_64\nglobus-ftp-control-4.6-1.el6.x86_64\nglobus-gfork-3.2-6.el6.x86_64\nglobus-gass-copy-8.6-3.el6.x86_64\nglobus-gridmap-callout-error-debuginfo-1.2-9.el6.x86_64\nglobus-gsi-credential-debuginfo-5.6-1.el6.x86_64\nglobus-gsi-callback-debuginfo-4.6-1.el6.x86_64\nglobus-gssapi-gsi-debuginfo-10.8-1.el6.x86_64\nglobus-gass-cache-debuginfo-8.1-9.el6.x86_64\nglobus-gass-server-ez-debuginfo-4.3-5.el6.x86_64\nglobus-gram-job-manager-fork-debuginfo-1.5-8.el6.x86_64\nglobus-gsi-openssl-error-debuginfo-2.1-11.el6.x86_64\nglobus-callout-debuginfo-2.4-1.el6.x86_64\nglobus-gram-job-manager-debuginfo-13.53-1.el6.x86_64\nglobus-io-debuginfo-9.4-2.el6.x86_64\nglobus-gram-job-manager-lsf-debuginfo-1.1-1.el6.x86_64\nglobus-gridftp-server-debuginfo-6.37-1.el6.x86_64\nglobus-gridftp-server-progs-6.38-1.el6.x86_64\nglobus-proxy-utils-5.1-1.el6.x86_64\nglobus-gsi-sysconfig-5.3-5.el6.x86_64\nglobus-gssapi-error-4.1-11.el6.x86_64\nglobus-common-progs-14.10-1.el6.x86_64\nglobus-gass-copy-progs-8.6-3.el6.x86_64\nglobus-gssapi-error-debuginfo-4.1-11.el6.x86_64\nglobus-gsi-proxy-ssl-debuginfo-4.1-11.el6.x86_64\nglobus-authz-callout-error-debuginfo-2.2-8.el6.x86_64\nglobus-gsi-sysconfig-debuginfo-5.3-5.el6.x86_64\nglobus-authz-debuginfo-2.2-8.el6.x86_64\nglobus-gram-client-tools-debuginfo-10.4-4.el6.x86_64\nglobus-gsi-proxy-ssl-4.1-11.el6.x86_64\nglobus-callout-2.4-1.el6.x86_64\nglobus-authz-2.2-8.el6.x86_64\nglobus-gridftp-server-control-2.9-2.el6.x86_64\nglobus-xio-gsi-driver-debuginfo-2.3-8.el6.x86_64\nglobus-gass-cache-program-debuginfo-5.2-2.el6.x86_64\nglobus-gridmap-verify-myproxy-callout-debuginfo-1.2-2.el6.x86_64\nglobus-proxy-utils-debuginfo-5.1-1.el6.x86_64\nglobus-ftp-control-debuginfo-4.6-1.el6.x86_64\nglobus-xio-pipe-driver-debuginfo-2.2-6.el6.x86_64\n", 
+    "reporter": {
+      "displayName": "Jason Alt", 
+      "name": "jasonalt", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=jasonalt", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "jalt@ncsa.illinois.edu", 
+      "key": "jasonalt", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": "RHEL 6.4, X86_64", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2014-03-16T17:58:16.715-0500", 
+    "versions": [
+      {
+        "archived": false, 
+        "name": "5.2.5", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11388", 
+        "releaseDate": "2013-06-17", 
+        "released": true, 
+        "id": "11388", 
+        "description": ""
+      }
+    ], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/23385", 
+  "id": "23385", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

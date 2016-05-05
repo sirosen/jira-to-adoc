@@ -1,0 +1,657 @@
+{
+  "key": "GT-568", 
+  "fields": {
+    "comment": {
+      "total": 11, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "Additional information provided by the reporter in the original GGUS ticket:\r\n\r\n$ globus-url-copy -versions\r\nglobus-url-copy: 9.11 (1408739578-85)\r\nglobus_ftp_client_restart_plugin: 8.12 (1408739578-85)\r\nglobus_ftp_client_debug_plugin: 8.12 (1408739578-85)\r\nglobus_ftp_client_perf_plugin: 8.12 (1408739578-85)\r\nglobus_ftp_client_throughput_plugin: 8.12 (1408739578-85)\r\nglobus_xio_popen: 3.5 (1408739578-85)\r\nglobus_ftp_control: 5.11 (1408739578-85)\r\nglobus_ftp_client: 8.12 (1408739578-85)\r\nglobus_xio_gsi: 3.5 (1408739578-85)\r\nglobus_xio_tcp: 4.14 (1408739578-85)\r\nglobus_xio_system_select: 4.14 (1408739578-85)\r\nglobus_xio_file: 4.14 (1408739578-85)\r\nglobus_xio: 4.14 (1408739578-85)\r\nglobus_io: 10.11 (1408739578-85)\r\nglobus_gsi_callback_module: 5.5 (1408739578-85)\r\nglobus_credential: 7.6 (1408739578-85)\r\nglobus_gsi_proxy: 7.6 (1408739578-85)\r\nglobus_gsi_openssl_error: 3.4 (1408739578-85)\r\nglobus_openssl: 4.5 (1408739578-85)\r\nglobus_gsi_gssapi: 11.12 (1408739578-85)\r\nglobus_sysconfig: 6.7 (1408739578-85)\r\nglobus_callout_module: 3.12 (1408739578-85)\r\nglobus_gss_assist: 10.11 (1408739578-85)\r\nglobus_i_gass_transfer_http: 8.7 (1408739578-85)\r\nglobus_extension_module: 15.25 (1409949382-85)\r\nglobus_callback_nonthreaded: 15.25 (1409949382-85)\r\nglobus_callback: 15.25 (1409949382-85)\r\nglobus_object: 15.25 (1409949382-85)\r\nglobus_error: 15.25 (1409949382-85)\r\nglobus_common: 15.25 (1409949382-85)\r\nglobus_gass_transfer: 8.7 (1408739578-85)\r\nglobus_gass_copy: 9.11 (1408739578-85)\r\nglobus_thread_common: 15.25 (1409949382-85)\r\nglobus_thread_none: 15.25 (1409949382-85)\r\nglobus_thread: <no version>\r\n\r\n220 srm.glite.ecdf.ed.ac.uk GridFTP Server 6.38 (gcc64, 1382984154-83) [Globus Toolkit 5.2.5] ready\r\n220 dc2-grid-23.brunel.ac.uk GridFTP Server 7.11 (gcc64, 1408739578-85) [Globus Toolkit 6.0] ready. \r\n\r\n$ rpm -qf /usr/bin/globus-url-copy\r\nglobus-gass-copy-progs-9.11-1.el6.x86_64\r\n$ globus-version\r\n6.0\r\n$ globus-url-copy -version\r\nglobus-url-copy: 9.11\r\n$ uname -a\r\nLinux v6ui00.grid.hep.ph.ic.ac.uk 2.6.32-431.20.3.el6.x86_64 #1 SMP Thu Jun 19 21:14:45 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux\r\n", 
+          "updateAuthor": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "created": "2014-10-23T23:27:55.419-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/25870/comment/28437", 
+          "author": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "updated": "2014-10-23T23:27:55.419-0500", 
+          "id": "28437"
+        }, 
+        {
+          "body": "There was a comment regarding the update on GGUS:\r\nhttps://ggus.eu/index.php?mode=ticket_info&ticket_id=109089\r\n\r\nHi,\r\n\r\nI installed globus-ftp-client-8.19-1.el6 and the latest version of FTS, 3.2.32, but I'm still seeing errors such as the following when transferring files between an IPv4 and dual-stack endpoint:\r\n\r\nWed Feb 25 14:33:09 2015 ERROR TRANSFER globus_ftp_client: the server responded with an error 500 'eprt |2|2001:630:12:580:92E2:BAFF:FE20:1CBC|21762|': command not und\r\n\r\nI saw some others with the error \"500-glob\" in the same place. I don't know why the error messages are getting so truncated.\r\n\r\nRegards,\r\nSimon\r\n\r\n[~mlink] could you comment?\r\n", 
+          "updateAuthor": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "created": "2015-02-25T11:15:39.975-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/25870/comment/30283", 
+          "author": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "updated": "2015-02-25T11:15:39.975-0600", 
+          "id": "30283"
+        }, 
+        {
+          "body": "Is this the same sort of transfer as the one in the original report?  A transfer between two servers, source ipv4 to destination ipv6?  If so, the source is a FTP server that doesn't support the EPRT command -- but is it possible that it was contacted on a ipv6 address?\r\n", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2015-03-03T15:16:23.806-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/25870/comment/30384", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2015-03-03T15:16:23.806-0600", 
+          "id": "30384"
+        }, 
+        {
+          "body": "A reply was added to the GGUS ticket:\r\n\r\nHi,\r\n\r\nYes, these transfers are the same as the original report: source is IPv4, destination is dual-stack... The source must have connected over IPv4, none of the sources involved have IPv6 addresses. The destination almost certainly connected over IPv6. The following list describes the various combinations of source/dest:\r\n\r\nSource / Dest -> Result\r\nIPv4 / IPv4 -> Works\r\nIPv4 / IPv6 -> Fails\r\nIPv6 / IPv4 -> Works\r\nIPv6 / IPv6 -> Untested recently, but used to work\r\n\r\nThe source servers we are using are all the production SEs around the grid... They probably don't support the EPRT command, but they shouldn't need to (and even if they did, passing them an IPv6 address would seem to be the wrong behavior anyway).\r\n\r\nIf you want to do any testing, our dual-stack FTS server is at https://fts00.grid.hep.ph.ic.ac.uk:8449/ (transfer port is standard 8443)... We have a dual-stack SE at gfe02.grid.hep.ph.ic.ac.uk which supports dteam and IPv6 testbed VOs.\r\n\r\nRegards,\r\nSimon\r\n", 
+          "updateAuthor": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "created": "2015-03-04T10:40:57.147-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/25870/comment/30387", 
+          "author": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "updated": "2015-03-04T10:45:56.429-0600", 
+          "id": "30387"
+        }, 
+        {
+          "body": "I believe the problem is that the first patch was still treating an IPV4 mapped address as an IPV6 address.  I've committed a fix for globus-ftp-client-8.20 to correctly handle that case.", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2015-03-04T15:14:28.053-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/25870/comment/30388", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2015-03-04T15:14:28.053-0600", 
+          "id": "30388"
+        }, 
+        {
+          "body": "Feedback from GGUS:\r\n\r\nSimon Fayer 2015-03-11 12:04:\r\n\r\nHi,\r\n\r\nThis seems to now work in the IPv4 -> Dual-stack case, unfortunately it seems IPv6 - IPv6 transfers are now broken.\r\n\r\nWhen transferring between two IPv6 only hosts, it appears the gsiftp endpoint addresses are getting mangled:\r\n\r\nWed Mar 11 11:22:13 2015 INFO [1426072933797] BTH SRM PREPARE:ENTER\r\nWed Mar 11 11:22:14 2015 INFO [1426072934531] SRC GFAL2::PLUGINS::SRM SRM:GET Got TURL srm://t2dpm1-v6.physics.ox.ac.uk:8446/srm/managerv2?SFN=/dpm/physics.ox.ac.uk/home/dteam/generated/2014-08-29/file53159295-b603-4741-a3f3-535edf360ce8 => gsiftp://t2dpm1-v6.physics.ox.ac.uk/t2dpm1-v6.physics.ox.ac.uk:/dpm/pool1/dteam/2014-08-29/file53159295-b603-4741-a3f3-535edf360ce8.10928.0\r\nWed Mar 11 11:22:15 2015 INFO [1426072935374] DST GFAL2::PLUGINS::SRM SRM:PUT Got TURL srm://v6se00.grid.hep.ph.ic.ac.uk:8446/srm/managerv2?SFN=/dpm/grid.hep.ph.ic.ac.uk/home/dteam/dtr-test-31222 => gsiftp://v6se00.grid.hep.ph.ic.ac.uk/v6se00.grid.hep.ph.ic.ac.uk:/srv/pool00/dteam/2015-03-11/dtr-test-31222.1231466.0\r\nWed Mar 11 11:22:15 2015 INFO [1426072935374] BTH SRM PREPARE:EXIT\r\nWed Mar 11 11:22:15 2015 INFO [1426072935375] BTH GSIFTP TRANSFER:ENTER (2001:630:441:905::6f:0) gsiftp://t2dpm1-v6.physics.ox.ac.uk/t2dpm1-v6.physics.ox.ac.uk:/dpm/pool1/dteam/2014-08-29/file53159295-b603-4741-a3f3-535edf360ce8.10928.0 => (2001:630:12:580:216:3eff:fe7f:14b:0) gsiftp://v6se00.grid.hep.ph.ic.ac.uk/v6se00.grid.hep.ph.ic.ac.uk:/srv/pool00/dteam/2015-03-11/dtr-test-31222.1231466.0\r\nWed Mar 11 11:22:17 2015 ERROR TRANSFER globus_ftp_client: the server responded with an error 500 500-500 Command failed. 500- : globus_libc_addr_to_contact_string f\r\n\r\nRegards,\r\nSimon \r\n\r\nSimon Fayer 2015-03-11 12:20:\r\n\r\nHmm, it actually seems to be mangling some dual-stack and IPv4 only ones too, but not all of them... Perhaps this is a new bug?\r\n\r\nRegards,\r\nSimon\r\n\r\nZdenek Salvet 2015-03-11 15:07:\r\n\r\nHi Simon,\r\nthe most interesting last message is truncated in your last post. Do you have more?\r\n\r\nSimon Fayer 2015-03-11 15:12:\r\n\r\nUnfortunately not... All of the interesting log lines seem to be truncated in the log files themselves (I suspect this will be a major problem for tracking down future errors). I don't know whether it's globus or FTS that's causing the truncation, but I suspect the latter.\r\n\r\nRegards,\r\nSimon\r\n", 
+          "updateAuthor": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "created": "2015-03-11T14:25:29.283-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/25870/comment/30416", 
+          "author": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "updated": "2015-03-11T14:25:29.283-0500", 
+          "id": "30416"
+        }, 
+        {
+          "body": "Can you attempt to reproduce with globus-url-copy as in the original report?  I can't see how any recent changes could result in rewriting urls in that way.", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2015-03-11T16:19:02.795-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/25870/comment/30417", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2015-03-11T16:19:02.795-0500", 
+          "id": "30417"
+        }, 
+        {
+          "body": "More feedback from GGUS:\r\n\r\nDuncan Rand 2015-03-12 12:08:\r\n\r\n$ rpm -qa|grep globus-ftp-client\r\nglobus-ftp-client-8.20-1.el6.i686\r\nglobus-ftp-client-devel-8.20-1.el6.x86_64\r\nglobus-ftp-client-8.20-1.el6.x86_64\r\n\r\n$ env|grep GLOBUS\r\nGLOBUS_IO_IPV6=TRUE\r\nGLOBUS_TCP_PORT_RANGE=20000,25000\r\nGLOBUS_FTP_CLIENT_IPV6=TRUE\r\n\r\nipv4 --> dual-stack\r\n\r\n$ globus-url-copy gsiftp://heplnx236.pp.rl.ac.uk/pnfs/pp.rl.ac.uk/data/dteam/generated/2014-07-12/file8c1a0130-9d6d-4c97-9d56-9969bd84b696 gsiftp://sedsk63.grid.hep.ph.ic.ac.uk:2811//pnfs/hep.ph.ic.ac.uk/data/dteam/dtr-test-$$;echo $?\r\n0\r\n\r\nipv6 --> ipv6\r\n\r\n$ globus-url-copy gsiftp://t2dpm1-v6.physics.ox.ac.uk/dpm/physics.ox.ac.uk/home/dteam/generated/2014-08-29/file53159295-b603-4741-a3f3-535edf360ce8 gsiftp://v6se00.grid.hep.ph.ic.ac.uk/dpm/grid.hep.ph.ic.ac.uk/home/dteam/dtr-test-$$;echo $?\r\n0\r\n\r\nMattias Ellert 2015-03-11 21:28:\r\n\r\n[ellert@localhost ~]$ host t2dpm1-v6.physics.ox.ac.uk\r\nt2dpm1-v6.physics.ox.ac.uk has IPv6 address 2001:630:441:905::6f\r\n[ellert@localhost ~]$ host v6se00.grid.hep.ph.ic.ac.uk\r\nv6se00.grid.hep.ph.ic.ac.uk has IPv6 address 2001:630:12:580:216:3eff:fe7f:14b\r\n\r\nHowever, in the log you quote it says 2001:630:441:905::6f:0 and 2001:630:12:580:216:3eff:fe7f:14b:0 with an extra :0 appended. If this 0 is supposed to mean \"undefined port\" the IPv6 address should be in [ brackets ] i.e. [2001:630:441:905::6f]:0. Is this just a bad rendering in the log or is this string used for something important?\r\n\r\nMattias Ellert 2015-03-16 09:52:\r\n\r\nAs far as I can tell, the strings with the :0 appended to the numerical IPv6 addresses without enclosing the IPv6 address in square brackets is not an issue with the globus ftp client library, but with the gfal2 library. See function return_hostname in source file src/plugins/gridftp/gridftp_filecopy.cpp in the gfal2 sources. If these strings are used only for creating log messages or if they are used for something else that affects the functionality of the code is not fully clear to me. Though it looks like most calls to return_hostname are used only for writing log messages.\r\n", 
+          "updateAuthor": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "created": "2015-03-16T05:04:40.379-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/25870/comment/30426", 
+          "author": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "updated": "2015-03-16T05:04:40.379-0500", 
+          "id": "30426"
+        }, 
+        {
+          "body": "From the last comments quoted from the GGUS ticket it looks like it works as expefted when gloubs-url-copy is used as the client. The weird logging messages with the :0 appended to the IPv6 numeric address are not from globus, but from gfal2. The only remaining issue is the origin of the last quoted message from the log, but it seems to be a bit mangled and incomplete, so what it is trying to say is unclear.\r\n", 
+          "updateAuthor": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "created": "2015-03-16T05:10:11.390-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/25870/comment/30427", 
+          "author": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "updated": "2015-03-16T05:10:11.390-0500", 
+          "id": "30427"
+        }, 
+        {
+          "body": "More feedback from GGUS:\r\n\r\nMattias Ellert 2015-03-17 13:18\r\n\r\nIf I try to summarize.\r\n\r\nThe issue reported in ticket #109576 (IPv4 only SE <-> Dual stack SE interoperability problems using globus-url-copy) - which was merged with this ticket - has been fixed according to update #34 in this ticket.\r\n\r\nThe original issue reported in this thread - the use of PASV/PORT and EPSV/EPRT respectively with the wrong kind of IP addresses - seems to also be fixed with the latest update.\r\n\r\nLater comments have reported bad rendering of numerical IPv6 addresses in log messages - which is unrelated to the original issue and can be attributed to a different software component.\r\n\r\nAlso reported in later comments is an issue with log messages that appear truncated or scrambled and therefore not easily interpretable. These messages looks different from the error messages in the original report. So this looks like a different issue.\r\n\r\nIf the originally reported issue was fixed I suggest that this ticket is closed, and that new tickets are created for the other issues reported in the comments. These should then be assigned to relevant components.\r\n\r\nWhat do you think?\r\n\r\nMattias Ellert 2015-03-24 10:25:\r\n\r\nA week ago I suggested closing this ticket since as far as I could tell the originally reported issues have been fixed. There has so far not been any feedback on this suggestion. If there are no objections within the next few days I will go ahead and close. But feedback stating agreement to the proposal would also be welcome.\r\n\r\nMattias Ellert 2015-03-30 08:43\r\n\r\nSince there were no objections to my proposal to close this bug report I will now close it. On the other hand noone provided support for the proposal either.\r\nIf you experience the originally reported issue again, please reopen the ticket. If you still experince some of the unrelated issues that were mentioned in some of the comments in this ticket please open new separate tickets for these.\r\nThe globus-ftp-client-8.20-1 updates were pushed to EPEL stable on 2015-03-25.\r\n\r\n(Ticket marked \"solved\".)\r\n", 
+          "updateAuthor": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "created": "2015-03-30T03:51:14.008-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/25870/comment/30580", 
+          "author": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "updated": "2015-03-30T03:51:14.008-0500", 
+          "id": "30580"
+        }, 
+        {
+          "body": "The GGUS ticket has been marked \"verified\" by the original reporter.", 
+          "updateAuthor": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "created": "2015-04-04T12:24:39.949-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/25870/comment/30627", 
+          "author": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "updated": "2015-04-04T12:24:39.949-0500", 
+          "id": "30627"
+        }
+      ], 
+      "maxResults": 11
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": [
+      "com.atlassian.greenhopper.service.sprint.Sprint@b545ea[id=41,rapidViewId=6,state=CLOSED,name=Sprint 2014-12-01,startDate=2014-11-12T09:45:00.000-06:00,endDate=2014-12-01T09:45:00.000-06:00,completeDate=2015-12-22T08:42:20.097-06:00,sequence=41]"
+    ], 
+    "creator": {
+      "displayName": "Mattias Ellert", 
+      "name": "ellert", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mattias.ellert@fysast.uu.se", 
+      "key": "ellert", 
+      "active": true, 
+      "timeZone": "Europe/Stockholm"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [
+      "GridFTP", 
+      "IGE", 
+      "gridftp"
+    ], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|zq5pwa:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-568/watchers", 
+      "watchCount": 2, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Mike Link", 
+      "name": "mlink", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mlink@mcs.anl.gov", 
+      "key": "mlink", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": "1_*:*_1_*:*_14551464133_*|*_5_*:*_1_*:*_0", 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@70138a", 
+    "summary": "IPv4 only SE <-> Dual stack SE interoperability problems using globus-url-copy", 
+    "customfield_10288": "2015-03-03T15:16:23.806-0600", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-568/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [
+      {
+        "archived": false, 
+        "name": "GT 6.0", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11389", 
+        "releaseDate": "2014-09-11", 
+        "released": false, 
+        "id": "11389", 
+        "description": ""
+      }
+    ], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [
+      {
+        "mimeType": "text/plain", 
+        "author": {
+          "displayName": "Mattias Ellert", 
+          "name": "ellert", 
+          "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+          "avatarUrls": {
+            "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+            "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+            "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+            "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+          }, 
+          "emailAddress": "mattias.ellert@fysast.uu.se", 
+          "key": "ellert", 
+          "active": true, 
+          "timeZone": "Europe/Stockholm"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/13965", 
+        "created": "2014-10-23T23:19:48.988-0500", 
+        "filename": "globus-url-copy-1.txt", 
+        "content": "https://globus.atlassian.net/secure/attachment/13965/globus-url-copy-1.txt", 
+        "id": "13965", 
+        "size": 8809
+      }, 
+      {
+        "mimeType": "text/plain", 
+        "author": {
+          "displayName": "Mattias Ellert", 
+          "name": "ellert", 
+          "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+          "avatarUrls": {
+            "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+            "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+            "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+            "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+          }, 
+          "emailAddress": "mattias.ellert@fysast.uu.se", 
+          "key": "ellert", 
+          "active": true, 
+          "timeZone": "Europe/Stockholm"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/13964", 
+        "created": "2014-10-23T23:19:48.972-0500", 
+        "filename": "globus-url-copy-2.txt", 
+        "content": "https://globus.atlassian.net/secure/attachment/13964/globus-url-copy-2.txt", 
+        "id": "13964", 
+        "size": 8925
+      }
+    ], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "Done", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+        "id": 3, 
+        "key": "done", 
+        "colorName": "green"
+      }, 
+      "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+      "id": "5", 
+      "name": "Resolved"
+    }, 
+    "updated": "2015-04-10T09:24:13.047-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "Originally reported in GGUS: https://ggus.eu/index.php?mode=ticket_info&ticket_id=109576\r\n\r\nWe are unable to copy a file from an IPv4-only SE to a dual-stack SE, e.g.\r\n\r\n$ export GLOBUS_IO_IPV6=TRUE\r\n$ export GLOBUS_FTP_CLIENT_IPV6=TRUE\r\n$ globus-url-copy gsiftp://srm.glite.ecdf.ed.ac.uk/dpm/ecdf.ed.ac.uk/home/dteam/generated/2014-09-21/file89244586-e79c-41c8-b20c-99ed40051c2e gsiftp://dc2-grid-23.brunel.ac.uk:2811/dpm/brunel.ac.uk/home/dteam/testfile-$$\r\n\r\nerror: globus_ftp_client: the server responded with an error\r\n500 500-Command failed. : globus_ftp_control_data_write failed.\r\n500-globus_ftp_control_data_write(): Handle not in proper state. PORT\r\n500 End.\r\n\r\nnote the copy works when the IPv6 flags are not set:\r\n\r\n$ unset GLOBUS_FTP_CLIENT_IPV6\r\n$ unset GLOBUS_IO_IPV6\r\n$ globus-url-copy gsiftp://srm.glite.ecdf.ed.ac.uk/dpm/ecdf.ed.ac.uk/home/dteam/generated/2014-09-21/file89244586-e79c-41c8-b20c-99ed40051c2e gsiftp://dc2-grid-23.brunel.ac.uk:2811/dpm/brunel.ac.uk/home/dteam/testfile-$$\r\n$\r\n\r\nWe think globus-url-copy is picking the IPv6 address family for the data channel when the SE at one end is IPv4 only. This problem makes it seemingly impossible to run a production dual-stack SE at the moment because it affects FTS3 servers if the FTS3 server is also IPv6 enabled (please see ggus ticket #109089). More detailed debug output is attached.\r\n", 
+    "reporter": {
+      "displayName": "Mattias Ellert", 
+      "name": "ellert", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mattias.ellert@fysast.uu.se", 
+      "key": "ellert", 
+      "active": true, 
+      "timeZone": "Europe/Stockholm"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": "CentOS release 6.5 (Final)", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2014-10-23T23:19:48.960-0500", 
+    "versions": [], 
+    "resolutiondate": "2015-04-10T09:24:12.982-0500", 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": {
+      "self": "https://globus.atlassian.net/rest/api/2/resolution/1", 
+      "id": "1", 
+      "name": "Fixed", 
+      "description": "A fix for this issue is checked into the tree and tested."
+    }, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/25870", 
+  "id": "25870", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

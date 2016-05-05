@@ -1,0 +1,367 @@
+{
+  "key": "GT-160", 
+  "fields": {
+    "comment": {
+      "total": 4, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "Also, drop pre-ws name from the docs.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2010-03-23T13:46:05.481-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/11223/comment/11205", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2010-03-23T13:46:05.481-0500", 
+          "id": "11205"
+        }, 
+        {
+          "body": "Here is an example of LRM troubleshooting doc to add.\n\nStep 1: make sure the perl file is valid perl / runs ok:\n\n% perl -I$GLOBUS_LOCATION/lib/perl $GLOBUS_LOCATION/lib/perl/Globus/GRAM/JobManager/pbs.pm\n\nStep 2: run the jm command by hand to see if you get better errors\n\n(Assumes step 1 worked)\n\nAdd (save_job_description = yes) to your RSL and submit the job.  This will leave a perl file in your home directory that you can run with the job manager script. That file is called gram_$unique.pl where $unique is a string of characters unique for each job. Pass that to the script to see what's going on:\n\n$GLOBUS_LOCATION/libexec/globus-job-manager-script.pl -m pbs -f ~/gram_UNIQUE.pl -c submit\n", 
+          "updateAuthor": {
+            "displayName": "Stuart Martin", 
+            "name": "smartin", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=smartin", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "smartin@mcs.anl.gov", 
+            "key": "smartin", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2011-09-16T14:30:57.925-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/11223/comment/16136", 
+          "author": {
+            "displayName": "Stuart Martin", 
+            "name": "smartin", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=smartin", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "smartin@mcs.anl.gov", 
+            "key": "smartin", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2011-09-16T14:30:57.925-0500", 
+          "id": "16136"
+        }, 
+        {
+          "body": "Attached current updates but haven't committed yet. The Perl, RVF, Configuration sections are more-or-less complete, but the SEG section is not started (though I've written the SEG module but not tested it yet). Probably also should have a packaging section.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2012-01-06T13:49:35.321-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/11223/comment/17580", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2012-01-06T13:49:35.321-0600", 
+          "id": "17580"
+        }, 
+        {
+          "body": "I've finished the SEG module documentation and committed the tutorial to the 5.2.2 gram5 developer document. Would be nice to have some packaging stuff there and more info about the APIs, but it's an improvement to what we had.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2012-07-25T07:39:16.366-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/11223/comment/19582", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2012-07-25T07:39:16.366-0500", 
+          "id": "19582"
+        }
+      ], 
+      "maxResults": 4
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "Stuart Martin", 
+      "name": "smartin", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=smartin", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "smartin@mcs.anl.gov", 
+      "key": "smartin", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100bjk:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-160/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Joe Bester", 
+      "name": "bester", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "bester@mcs.anl.gov", 
+      "key": "bester", 
+      "active": true, 
+      "timeZone": "America/New_York"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": "1_*:*_1_*:*_77227518275_*|*_5_*:*_1_*:*_0", 
+    "customfield_10280": "1871", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@45dd7", 
+    "summary": "improve the GRAM LRM adapter doc", 
+    "customfield_10288": "2010-03-23T13:46:05.481-0500", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-160/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [
+      {
+        "archived": false, 
+        "name": "Sprint 2012-07-31", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/10959", 
+        "releaseDate": "2012-07-31", 
+        "released": true, 
+        "id": "10959", 
+        "description": ""
+      }
+    ], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [
+      {
+        "mimeType": "application/octet-stream", 
+        "author": {
+          "displayName": "Joe Bester", 
+          "name": "bester", 
+          "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+          "avatarUrls": {
+            "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+            "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+            "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+            "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+          }, 
+          "emailAddress": "bester@mcs.anl.gov", 
+          "key": "bester", 
+          "active": true, 
+          "timeZone": "America/New_York"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/10793", 
+        "created": "2012-01-06T13:49:35.303-0600", 
+        "filename": "gram-lrma-adapter-tutorial.diff", 
+        "content": "https://globus.atlassian.net/secure/attachment/10793/gram-lrma-adapter-tutorial.diff", 
+        "id": "10793", 
+        "size": 92831
+      }
+    ], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "Done", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+        "id": 3, 
+        "key": "done", 
+        "colorName": "green"
+      }, 
+      "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+      "id": "5", 
+      "name": "Resolved"
+    }, 
+    "updated": "2012-07-25T07:39:16.376-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "I just noticed that we still have ws-gram on these pages:\n\thttp://www.globus.org/toolkit/docs/5.0/5.0.0/execution/gram5/developer/scheduler-tutorial.html\n\nWe need to review and update the documentation here.\n  - Remove and WS GRAM details.\n  - Remove the resource publishing section.\n  - Add an overview section that describes in more details the issues with interfacing GRAM with an LRM.\n  - Add a requirements section?  e.g. a host where the LRM commands and log file (for SEG) is available.\n  - Change to use terms consistently.  e.g. LRM instead of scheduler.\n  - should be more clear the steps required to complete the adapter.\n     + step 1, step 2, ...", 
+    "reporter": {
+      "displayName": "Stuart Martin", 
+      "name": "smartin", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=smartin", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "smartin@mcs.anl.gov", 
+      "key": "smartin", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2010-02-12T10:33:58.103-0600", 
+    "versions": [], 
+    "resolutiondate": "2012-07-25T07:39:16.334-0500", 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10324", 
+        "id": "10324", 
+        "name": "GRAM"
+      }
+    ], 
+    "issuetype": {
+      "name": "Improvement", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/4", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/issuetypes/defect.png", 
+      "subtask": false, 
+      "id": "4", 
+      "description": "An improvement or enhancement to an existing feature or task."
+    }, 
+    "resolution": {
+      "self": "https://globus.atlassian.net/rest/api/2/resolution/6", 
+      "id": "6", 
+      "name": "Work Complete", 
+      "description": "The work for this JIRA has been completed as specified."
+    }, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/11223", 
+  "id": "11223", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

@@ -1,0 +1,292 @@
+{
+  "key": "GT-437", 
+  "fields": {
+    "comment": {
+      "total": 1, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "This patch is included in 5.2.5", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2013-11-07T12:24:01.248-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/21489/comment/23377", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2013-11-07T12:24:01.248-0600", 
+          "id": "23377"
+        }
+      ], 
+      "maxResults": 1
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "helmut", 
+      "name": "helmut", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=helmut", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "helmut", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [
+      "IGE"
+    ], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|1013mw:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-437/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Joe Bester", 
+      "name": "bester", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "bester@mcs.anl.gov", 
+      "key": "bester", 
+      "active": true, 
+      "timeZone": "America/New_York"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": "1_*:*_1_*:*_9796923866_*|*_5_*:*_1_*:*_0", 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@cae176", 
+    "summary": "grid-proxy-init broken for PKCS12 files with CA certificates", 
+    "customfield_10288": "2013-11-07T12:24:01.248-0600", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 1200, 
+      "percent": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-437/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [
+      {
+        "archived": false, 
+        "name": "5.2.5", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11388", 
+        "releaseDate": "2013-06-17", 
+        "released": true, 
+        "id": "11388", 
+        "description": ""
+      }, 
+      {
+        "archived": false, 
+        "name": "Sprint 2013-10-14", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11587", 
+        "releaseDate": "2013-10-14", 
+        "released": true, 
+        "id": "11587", 
+        "description": ""
+      }
+    ], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": 1200, 
+    "progress": {
+      "progress": 0, 
+      "total": 1200, 
+      "percent": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "Done", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+        "id": 3, 
+        "key": "done", 
+        "colorName": "green"
+      }, 
+      "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+      "id": "5", 
+      "name": "Resolved"
+    }, 
+    "updated": "2013-11-07T12:24:01.251-0600", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "See also: https://rt.ige-project.eu/rt/Ticket/Display.html?id=245\n\nOften PKCS12 files contain not only the user cert and key but also the CA chain certificates. Unless ordered in a specific way, grid-proxy-init fails. Single PKCS12 keystore with user cert and key + ca certificate is commonly distributed by CAs, e.g. in France. \n\nEGCF/IGE analyzed the source code of grid-proxy-init and found that a small coding mistake renders the function of the code dysfunctional. The reason it doesn't work is a bug in the source (the cert stack counter decrements too fast for it's own good), and the following match fixes it:\n\n*** gsi/credential/source/library/globus_gsi_credential.c.org 2013-07-15\n22:18:40.000000000 +0200\n--- gsi/credential/source/library/globus_gsi_credential.c 2013-07-15\n22:19:03.000000000 +0200\n***************\n*** 1580,1586 ****\ngoto exit;\n}\n\n! for(i = 0 ; i < sk_X509_num(pkcs12_certs); i++)\n{\nhandle->cert = sk_X509_pop(pkcs12_certs);\n\n--- 1580,1588 ----\ngoto exit;\n}\n\n! j = sk_X509_num(pkcs12_certs);\n!\n! for(i = 0 ; i < j; i++)\n{\nhandle->cert = sk_X509_pop(pkcs12_certs);\n\nThe code was there forever, but the way it was expressed means that\nsk_X509_num(pkcs12_certs) is decrementing whilst the loop is running, because\nthe certs are popped from the pkcs12_certs stack. You just need to iterate over\nthe complete depth of the initial stack.\n\nSince EGCF here provides a very easy solution, can you please try to get this into the GT5.2.5 release?\n\nThanks\nHelmut", 
+    "reporter": {
+      "displayName": "helmut", 
+      "name": "helmut", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=helmut", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "helmut", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": 1200, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": 1200, 
+    "created": "2013-07-17T04:01:57.387-0500", 
+    "versions": [
+      {
+        "archived": false, 
+        "name": "5.2.2", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/10904", 
+        "releaseDate": "2012-07-24", 
+        "released": true, 
+        "id": "10904"
+      }, 
+      {
+        "archived": false, 
+        "name": "5.2.1", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/10922", 
+        "releaseDate": "2012-04-26", 
+        "released": true, 
+        "id": "10922"
+      }, 
+      {
+        "archived": false, 
+        "name": "5.0.5", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/10923", 
+        "releaseDate": "2012-03-08", 
+        "released": true, 
+        "id": "10923"
+      }, 
+      {
+        "archived": false, 
+        "name": "5.2.3", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/10963", 
+        "releaseDate": "2012-12-03", 
+        "released": true, 
+        "id": "10963"
+      }, 
+      {
+        "archived": false, 
+        "name": "5.2.4", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11066", 
+        "releaseDate": "2013-02-13", 
+        "released": true, 
+        "id": "11066", 
+        "description": ""
+      }
+    ], 
+    "resolutiondate": "2013-11-07T12:24:01.204-0600", 
+    "workratio": 0, 
+    "aggregatetimespent": null, 
+    "timetracking": {
+      "originalEstimateSeconds": 1200, 
+      "remainingEstimate": "20m", 
+      "remainingEstimateSeconds": 1200, 
+      "originalEstimate": "20m"
+    }, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10326", 
+        "id": "10326", 
+        "name": "GSI"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": {
+      "self": "https://globus.atlassian.net/rest/api/2/resolution/1", 
+      "id": "1", 
+      "name": "Fixed", 
+      "description": "A fix for this issue is checked into the tree and tested."
+    }, 
+    "timeestimate": 1200
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/21489", 
+  "id": "21489", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

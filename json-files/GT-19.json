@@ -1,0 +1,404 @@
+{
+  "key": "GT-19", 
+  "fields": {
+    "comment": {
+      "total": 5, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "Thanks Brian.  We talked about this recently and expect to work on it shortly after the 5.2.1 release.", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-03-29T15:06:59.430-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17946/comment/18582", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-03-29T15:06:59.430-0500", 
+          "id": "18582"
+        }, 
+        {
+          "body": "Just curious if any progress has been made on getting the UDT XIO driver packaged. Manually building libglobus_xio_udt_driver.so works, but it would be nice to be able to use an RPM instead.", 
+          "updateAuthor": {
+            "displayName": "nickbertrand", 
+            "name": "nickbertrand", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=nickbertrand", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "nickbertrand", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-04-24T13:47:11.343-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17946/comment/21885", 
+          "author": {
+            "displayName": "nickbertrand", 
+            "name": "nickbertrand", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=nickbertrand", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "nickbertrand", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-04-24T13:47:11.343-0500", 
+          "id": "21885"
+        }, 
+        {
+          "body": "I haven't heard much myself.  Mike?\n\nOSG is still interested in this.", 
+          "updateAuthor": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-04-24T14:56:39.084-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17946/comment/21891", 
+          "author": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-04-24T14:56:39.084-0500", 
+          "id": "21891"
+        }, 
+        {
+          "body": "In case there was a question, OSG is still interested in this!\n\nThanks,\n\nBrian", 
+          "updateAuthor": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-10-22T15:14:53.247-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17946/comment/23266", 
+          "author": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-10-22T15:14:53.247-0500", 
+          "id": "23266"
+        }, 
+        {
+          "body": "This is included in GT 5.2.5", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2013-11-07T12:23:03.004-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17946/comment/23376", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2013-11-07T12:23:03.004-0600", 
+          "id": "23376"
+        }
+      ], 
+      "maxResults": 5
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "bbockelm", 
+      "name": "bbockelm", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "bbockelm", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|101lcw:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-19/watchers", 
+      "watchCount": 3, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Joe Bester", 
+      "name": "bester", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "bester@mcs.anl.gov", 
+      "key": "bester", 
+      "active": true, 
+      "timeZone": "America/New_York"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": "1_*:*_1_*:*_50818958839_*|*_5_*:*_1_*:*_0", 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@5fc15a", 
+    "summary": "RPM packaging for UDT driver", 
+    "customfield_10288": "2012-03-29T15:06:59.430-0500", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-19/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [
+      {
+        "archived": false, 
+        "name": "5.2.5", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11388", 
+        "releaseDate": "2013-06-17", 
+        "released": true, 
+        "id": "11388", 
+        "description": ""
+      }, 
+      {
+        "archived": false, 
+        "name": "Sprint 2013-10-28", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11588", 
+        "releaseDate": "2013-10-28", 
+        "released": true, 
+        "id": "11588", 
+        "description": ""
+      }
+    ], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [
+      {
+        "mimeType": "application/octet-stream", 
+        "created": "2012-03-29T09:00:24.222-0500", 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/10850", 
+        "filename": "udt.spec", 
+        "content": "https://globus.atlassian.net/secure/attachment/10850/udt.spec", 
+        "id": "10850", 
+        "size": 1377
+      }
+    ], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "Done", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+        "id": 3, 
+        "key": "done", 
+        "colorName": "green"
+      }, 
+      "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+      "id": "5", 
+      "name": "Resolved"
+    }, 
+    "updated": "2013-11-07T12:23:03.024-0600", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "We have some colleagues who would benefit from using UDT (they have a high-bandwidth link, but a relatively high rate of packet loss).  Currently, OSG doesn't ship UDT because RPM support is missing in Globus.\n\nI started an email thread about it a few months back, but I don't think it ever resulted in a ticket.  One sticking point was an RPM of UDT itself.  I have a spec file, attached, that packages UDT.\n\nOnce that was done, I got lost in the depths of Globus packaging and wasn't able to get a UDT plugin for GridFTP built.", 
+    "reporter": {
+      "displayName": "bbockelm", 
+      "name": "bbockelm", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "bbockelm", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2012-03-29T09:00:24.187-0500", 
+    "versions": [], 
+    "resolutiondate": "2013-11-07T12:23:02.936-0600", 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }, 
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10328", 
+        "id": "10328", 
+        "name": "XIO"
+      }
+    ], 
+    "issuetype": {
+      "name": "New Feature", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/2", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11051&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11051, 
+      "id": "2", 
+      "description": "A new feature of the product, which has yet to be developed."
+    }, 
+    "resolution": {
+      "self": "https://globus.atlassian.net/rest/api/2/resolution/1", 
+      "id": "1", 
+      "name": "Fixed", 
+      "description": "A fix for this issue is checked into the tree and tested."
+    }, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/17946", 
+  "id": "17946", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

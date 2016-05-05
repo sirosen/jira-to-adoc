@@ -1,0 +1,374 @@
+{
+  "key": "GT-496", 
+  "fields": {
+    "comment": {
+      "total": 7, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "Hi Craig,\n\nHow are your servers configured?  There was an issue with this in the past, but only with a striped or split configuration, and that should be fixed.", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2014-02-13T13:36:23.089-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22916/comment/24031", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2014-02-13T13:36:23.089-0600", 
+          "id": "24031"
+        }, 
+        {
+          "body": "We were using a split configuration, but disabled that to start testing the sharing feature.  Even after disabling it, the xferlog still contains entries like this:\n\nDATE=20140213191944.136513 HOST=gridftp01.ucar.edu PROG=globus-gridftp-server NL.EVNT=FTP_INFO START=20140213191944.136048 USER=zcao FILE=/glade/scratch/zcao/20140214/1995/case3/SZ0215.opt BUFFER=65536 BLOCK=4194304 NBYTES=0 VOLUME=/ STREAMS=2 STRIPES=1 DEST=[0.0.0.0] TYPE=STOR CODE=226\n\nThis is the contents of the currently active configuration file:\n\ndaemon 1\ndetach 1\nhostname gridftp01.ucar.edu\nport 2811\nauth_level 2\nlog_level ERROR,WARN,INFO\n#log_level ALL\nlog_module stdio:buffer=0\nlog_filemode 0644\nlog_single /var/log/gridftp/gridftp.log\nlog_transfer /var/log/gridftp/xferlog\nuse_home_dirs 1\nhome_dir /glade/scratch/$USER\nbanner_file /etc/grid-security/gridftp-banner\nlogin_msg_file /etc/grid-security/gridftp-login-msg\nrestrict_paths rw/glade,rw/data\ndisable_usage_stats 1\nstripe_blocksize 4194304\nblocksize 4194304\nsharing_dn      \"/C=US/O=Globus Consortium/OU=Globus Online/OU=Transfer User/CN=__transfer__\"\nsharing_rp RW/data/share\n$X509_USER_CERT \"/etc/grid-security/hostcert.pem\"\n$X509_USER_KEY \"/etc/grid-security/hostkey.pem\"\n$X509_CERT_DIR \"/etc/grid-security/certificates\"\n", 
+          "updateAuthor": {
+            "displayName": "cruff@ucar.edu", 
+            "name": "cruff@ucar.edu", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=cruff%40ucar.edu", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "cruff@ucar.edu", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2014-02-13T13:44:29.595-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22916/comment/24033", 
+          "author": {
+            "displayName": "cruff@ucar.edu", 
+            "name": "cruff@ucar.edu", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=cruff%40ucar.edu", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "cruff@ucar.edu", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2014-02-13T13:44:29.595-0600", 
+          "id": "24033"
+        }, 
+        {
+          "body": "I'm able to reproduce this.  When a data connection with multiple streams is reused for multiple transfers, the subsequent transfers will report 0.0.0.0.  Only the first transfer of a connection with any number of streams and all transfers with using 1 stream are reported correctly.\n\nA globus-ftp-control package update with the fix should be available next week.\n\nThanks for reporting this.", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2014-02-13T15:34:15.331-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22916/comment/24035", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2014-02-13T15:34:15.331-0600", 
+          "id": "24035"
+        }, 
+        {
+          "body": "Hi Mike,\r\n\r\n1. Do you know if the patch got already in version 4.7-1 of globes-ftp-control?\r\n\r\n2. Is it possible that I have a look at the patch?\r\n\r\nThanks,\r\n\r\nEdgar", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22916/comment/26434", 
+          "updated": "2014-06-26T11:18:05.115-0500", 
+          "id": "26434", 
+          "created": "2014-06-26T11:18:05.115-0500"
+        }, 
+        {
+          "body": "Hi Mike, \r\n\r\n1. Do you know if the patch got already in version 4.7-1 of globes-ftp-control? \r\n\r\n2. Is it possible that I have a look at the patch? \r\n\r\nThanks, \r\n\r\nEdgar\r\nOSG Software Team", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22916/comment/26435", 
+          "updated": "2014-06-26T11:19:08.500-0500", 
+          "id": "26435", 
+          "created": "2014-06-26T11:19:08.500-0500"
+        }, 
+        {
+          "body": "Hi Mike, \r\n\r\n1. Do you know if the patch got already in version 4.7-1 of globes-ftp-control? \r\n\r\n2. Is it possible that I have a look at the patch? \r\n\r\nThanks, \r\n\r\nEdgar\r\nOSG Software Team", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22916/comment/26436", 
+          "updated": "2014-06-26T11:20:36.723-0500", 
+          "id": "26436", 
+          "created": "2014-06-26T11:20:36.723-0500"
+        }, 
+        {
+          "body": "Hi Edgar,\r\n\r\nThe fix is in globus-ftp-control 4.8.   I added the source update package to http://toolkit.globus.org/toolkit/advisories.html \r\n\r\nThe small patch is at: https://github.com/globus/globus-toolkit/commit/fb9aed8f5bc8a3883c53453552f940ae99e2d048\r\n\r\nMike", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2014-07-02T15:31:03.801-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22916/comment/26513", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2014-07-02T15:31:03.801-0500", 
+          "id": "26513"
+        }
+      ], 
+      "maxResults": 7
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "cruff@ucar.edu", 
+      "name": "cruff@ucar.edu", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=cruff%40ucar.edu", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "cruff@ucar.edu", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100neg:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-496/watchers", 
+      "watchCount": 1, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Mike Link", 
+      "name": "mlink", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mlink@mcs.anl.gov", 
+      "key": "mlink", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": "1_*:*_1_*:*_12360213946_*|*_5_*:*_1_*:*_0", 
+    "customfield_10280": "3792", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@a57bf4", 
+    "summary": "GridFTP server frequently fails to log the remote IP address for transfers", 
+    "customfield_10288": "2014-02-13T13:36:23.089-0600", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-496/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [
+      {
+        "archived": false, 
+        "name": "Sprint 2014-02-17", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11644", 
+        "releaseDate": "2014-02-16", 
+        "released": true, 
+        "id": "11644", 
+        "description": ""
+      }
+    ], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "Done", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+        "id": 3, 
+        "key": "done", 
+        "colorName": "green"
+      }, 
+      "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+      "id": "5", 
+      "name": "Resolved"
+    }, 
+    "updated": "2014-07-02T15:31:03.801-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "We've noticed that the GridFTP server is frequently failing to log an IP address for the remote side of data transfers.  Examining the log for today shows that over all about 45% of transfers are reported as \"DEST=[0.0.0.0]\", and 99.3% of STOR transfers did so.  This obviously makes it impossible to categorize the set of remote sites using our GridFTP service.  For a while I thought it was related to Globus Online vs other transfer management methods, but that does not appear to be the case.  I can't imagine that the getpeername system calls are failing.\n\nDo you have any suggestions for pinning this down? ", 
+    "reporter": {
+      "displayName": "cruff@ucar.edu", 
+      "name": "cruff@ucar.edu", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=cruff%40ucar.edu", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "cruff@ucar.edu", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": "RHEL 6.2", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2014-01-21T11:53:00.710-0600", 
+    "versions": [
+      {
+        "archived": false, 
+        "name": "5.2.5", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11388", 
+        "releaseDate": "2013-06-17", 
+        "released": true, 
+        "id": "11388", 
+        "description": ""
+      }
+    ], 
+    "resolutiondate": "2014-06-13T14:16:34.642-0500", 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": {
+      "self": "https://globus.atlassian.net/rest/api/2/resolution/1", 
+      "id": "1", 
+      "name": "Fixed", 
+      "description": "A fix for this issue is checked into the tree and tested."
+    }, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/22916", 
+  "id": "22916", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

@@ -1,0 +1,945 @@
+{
+  "key": "GT-156", 
+  "fields": {
+    "comment": {
+      "total": 20, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "I think it's relevant - it may not be the *most active* job-managers, but those using gliteWMS instances that appear to trim the maximum proxy validity.  For example,\n\n[root@red-gw1 ~]# grep gram.proxy_expire.end /var/log/globus/gram_*.log*\n/var/log/globus/gram_lcgadmin.log-20120311:ts=2012-03-10T23:39:24.153378Z id=909 event=gram.proxy_expire.end level=WARN msg=\"Proxy expired, stopping job manager\"\n/var/log/globus/gram_uscmsPool1288.log-20120311:ts=2012-03-10T15:31:12.465138Z id=29545 event=gram.proxy_expire.end level=WARN msg=\"Proxy expired, stopping job manager\"\n/var/log/globus/gram_uscmsPool2652.log-20120311:ts=2012-03-11T02:48:28.713039Z id=26159 event=gram.proxy_expire.end level=WARN msg=\"Proxy expired, stopping job manager\"\n/var/log/globus/gram_uscmsPool2752.log-20120311:ts=2012-03-10T23:58:20.666248Z id=30703 event=gram.proxy_expire.end level=WARN msg=\"Proxy expired, stopping job manager\"\n\nWhen the proxy expires, the manager tries to shut down.  It appears to not be able to do this successfully (honestly, I don't think I've ever seen a g-j-m shut down).\n\nIf a new request is made against a stopped manager, even with a valid proxy, the manager stays stopped.", 
+          "updateAuthor": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-03-11T14:40:34.466-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17753/comment/18391", 
+          "author": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-03-11T14:40:34.466-0500", 
+          "id": "18391"
+        }, 
+        {
+          "body": "To reproduce:\n\n1) voms-proxy-init -valid 0:11\n2) globus-job-run $HOSTNAME:/jobmanager-fork `which sleep` 10m  (you'll have to hack globus-job-run for it to allow such a short proxy)\n3) Background the globus-job-run process (Ctrl+Z)\n4) Wait 1 minute.  The job-manager will notice the proxy expires and queues up a message for the sleeping globus-job-run instance.  This can't be delivered, of course, because it is SIGSTOP'd.\n5) Start a new \"globus-job-run\" instance.  In the log, you'll get the following message:\n\nts=2012-03-11T20:03:49.516689Z id=5813 event=gram.add_request.end level=WARN gramid=/16217943208034520401/12470985504822659492/ status=-130 reason=\"the job manager was sent a stop signal (job is still running)\" \n\nHowever, *this doesn't get sent to the second client*.  The client hangs forever and is never informed it has been ignored.\n\nI'll be attaching a patch shortly.  I still think there are issues with clients that \"just go away\" that prevent shutdown.\n", 
+          "updateAuthor": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-03-11T15:40:42.886-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17753/comment/18392", 
+          "author": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-03-11T15:40:42.886-0500", 
+          "id": "18392"
+        }, 
+        {
+          "body": "There's a timeout in the IO library (90 seconds) so the callback contact not being reachable should not affect things. There are other things that might affect it (staging or streaming, maybe) that I still need to investigate.\n\nRegarding the patch, it looks to me like the last section of the patch doesn't actually do anything, does it? It's a duplicate of the default case. The register oneshot in the 2nd to last section is a little worrisome to me. I think in that case, the job manager already has some outstanding thing that will trigger the job state machine elsewhere.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2012-03-12T14:04:00.882-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17753/comment/18401", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2012-03-12T14:04:00.882-0500", 
+          "id": "18401"
+        }, 
+        {
+          "body": "Hi Joe - \n\nIn the last hunk, the response_code defaults to:\n\nresponse_code = request->failure_code\n\nHowever, we're looking at the case where globus_gram_job_manager_add_request fails, so request->failure_code is never touched - instead, we want to look at the rc from globus_gram_job_manager_add_request.\n\nIn the end, I'm beginning to think a better course is to set \"manager->done = GLOBUS_TRUE\" immediately and let the next client be responsible for restarting jobs from the save state.  Where do we benefit from \"cleaning up nicely\" in a shutdown?\n\nBrian", 
+          "updateAuthor": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-03-12T21:01:59.584-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17753/comment/18408", 
+          "author": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-03-12T21:01:59.584-0500", 
+          "id": "18408"
+        }, 
+        {
+          "body": "Check again, the code you are patching is switching on request->failure_code, so it's really not any different than the default case.\n\nThe key thing is to keep handling the script functions until whatever is in progress has its result state change stored. That could include staging or job startup.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2012-03-14T11:27:54.966-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17753/comment/18436", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2012-03-14T11:27:54.966-0500", 
+          "id": "18436"
+        }, 
+        {
+          "body": "Hi Joe,\n\nOk, I see what you mean.  Likely, we need separate error handling to set the failures appropriately.\n\nOf course, these very unlikely cases: to reach this code, one needs a valid proxy.  Prior to calling the function, the first hunk will set manager->stop to false if there is a valid proxy.  I suppose we could still catch the malloc issue.", 
+          "updateAuthor": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-03-14T11:35:49.706-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17753/comment/18437", 
+          "author": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-03-14T11:35:49.706-0500", 
+          "id": "18437"
+        }, 
+        {
+          "body": "I think I've found a spot where GRAM can wait for up to the two-phase commit timeout plus the gram protocol connect timeout when trying to shut down when a proxy expires. During that time, the job manager won't accept any proxy refresh or job submissions, even restarts with a new proxy. I'll try to get a patch for that Monday.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2012-03-23T14:15:13.119-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17753/comment/18517", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2012-03-23T14:15:13.119-0500", 
+          "id": "18517"
+        }, 
+        {
+          "body": "Hi Joe,\n\nI don't think that's it.  We just found another instance where a g-j-m remaining on for 10 hours after it initiated shutdown.\n\nIs there any need to shutdown at all?  Why not just have it send SIGKILL to itself?\n\nBrian", 
+          "updateAuthor": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-04-24T07:20:37.319-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17753/comment/18772", 
+          "author": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-04-24T07:20:37.319-0500", 
+          "id": "18772"
+        }, 
+        {
+          "body": "There might be things in progress like job submits or cancels where if we sigkill we could lose some state returned from a script. I still haven't seen any logs or state info about what the job manager is up to, so it's hard for me to debug this.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2012-04-24T08:18:24.383-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17753/comment/18773", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2012-04-24T08:18:24.383-0500", 
+          "id": "18773"
+        }, 
+        {
+          "body": "Yes - we are unable to run production CEs at anything above WARNING for a long time.  I can give you the logs, but they're mostly empty.\n\nWe'll try running them at TRACE for a day at a time and see if we can catch this in action.", 
+          "updateAuthor": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-04-24T08:38:45.605-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17753/comment/18774", 
+          "author": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-04-24T08:38:45.605-0500", 
+          "id": "18774"
+        }, 
+        {
+          "body": "Hi Joe,\n\nI feel stuck on this one.  I can't provide the information you need without reverting the OSG hack to kill the job-manager; I can't revert the hack because it ends up being errors exposed to users.\n\nAn idea - we can probably make progress if I could reliably trigger a shutdown.  What if we try this:\n\nhttps://globus.atlassian.net/browse/GT-71\n\nand/or give me a handle to trigger a shutdown via a Unix signal?  This way, during working hours, I could possibly replicate the issue while you are logged in to the machine.\n\nBrian", 
+          "updateAuthor": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-05-10T13:18:58.445-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17753/comment/18945", 
+          "author": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-05-10T13:18:58.445-0500", 
+          "id": "18945"
+        }, 
+        {
+          "body": "Actually, I think I might revert the patch anyway.  I just poked through some logs and found that, even with it, there are some job-managers that are in shutting-down state for many hours.  So, something else must be at fault.  I'll attach a core file momentarily.", 
+          "updateAuthor": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-05-10T13:23:26.390-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17753/comment/18946", 
+          "author": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-05-10T13:23:26.390-0500", 
+          "id": "18946"
+        }, 
+        {
+          "body": "Core file is too big to attach.  Here's a link: http://pages.cs.wisc.edu/~bbockelm/uscmsPool1500-globus-job-manager.core.gz\n\nThe associated binaries and debug symbols are here: https://koji-hub.batlab.org/koji/buildinfo?buildID=1695", 
+          "updateAuthor": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-05-10T13:27:44.691-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17753/comment/18947", 
+          "author": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-05-10T13:27:44.691-0500", 
+          "id": "18947"
+        }, 
+        {
+          "body": "Ah-ha!  I looked again at the original message:\n\nts=2012-03-08T10:10:45.928806Z id=24514 event=gram.signal.end level=WARN gramid=/16217969582761169661/5881249661246812557/ signal=\"7\" jmstate=GLOBUS_GRAM_JOB_MANAGER_STATE_STOP msg=\"Invalid query\" status=-94 reason=\"the jobmanager does not accept any new requests (shutting down)\" \n\nThis is *not* the same thing as:\n\nts=2012-03-11T02:48:28.713039Z id=26159 event=gram.proxy_expire.end level=WARN msg=\"Proxy expired, stopping job manager\"\n\nor\n\nts=2012-03-11T20:03:49.516689Z id=5813 event=gram.add_request.end level=WARN gramid=/16217943208034520401/12470985504822659492/ status=-130 reason=\"the job manager was sent a stop signal (job is still running)\" \n\nThe original error message is from globus_l_gram_job_manager_query_stop_manager when Condor-G tries to stop a job when the request is in FILE_CLEAN_UP, SCRATCH_CLEAN_UP, CACHE_CLEAN_UP, DONE, FAILED_DONE, FAILED, FAILED_FILE_CLEAN_UP, FAILED_SCRATCH_CLEAN_UP, FAILED_CACHE_CLEAN_UP, or FAILED_CLOSE_OUTPUT state.\n\nWhile we may have chased down a real bug for when the proxy expired, I think this is just a poor choice of return code / error message and can be (mostly) ignored.\n\nThis might indicate some unexpected Condor-G issue; I don't know if it gracefully handles job-managers that refuse to stop.\n\nJoe - if you agree with this diagnosis, I'm ready to close this ticket.", 
+          "updateAuthor": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-05-10T13:48:59.144-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17753/comment/18950", 
+          "author": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-05-10T13:48:59.144-0500", 
+          "id": "18950"
+        }, 
+        {
+          "body": "It's not only when the client tries to stop the job manager. Prior to my patches, any attempt to send a signal (including proxy refresh) after proxy expiration has been triggered would fail, and submitting jobs (event with a fresher proxy) would also fail until the job manager has terminated. My patches address most of this, though I think there might be some other issues with jobs that get stopped and then a proxy is refreshed not getting into a running state again until a client intervenes.\n\nI guess it would be helpful if you see the bad behavior (processes remaining in shutdown for a long time) with the last tarball and I gave you (and not the allow-manager-restart.patch) as it contains my patches for this issue.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2012-05-10T14:01:49.257-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17753/comment/18951", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2012-05-10T14:01:49.257-0500", 
+          "id": "18951"
+        }, 
+        {
+          "body": "Yeah - the reason why I had kept the allow-manager-restart patch is that I still saw issues after your patches.  However, upon closer inspection, the issues were all due to the client trying to stop the job-manager.\n\nBasically, there was a bad log message and a bug.  You fixed the bug, but I still saw the bad log message, and thought the bug was not fixed.\n\nI've reverted the allow-manager-restart patch and am rebuilding the RPM, and I'll upgrade all our local CEs.  Assuming everything is happy on our site, we can release the new RPM on Tuesday.", 
+          "updateAuthor": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-05-10T14:13:35.751-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17753/comment/18952", 
+          "author": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-05-10T14:13:35.751-0500", 
+          "id": "18952"
+        }, 
+        {
+          "body": "I'm getting confused now. I thought the report was that the job manager process is not exiting. Is that still the case or not?\n\nThe message\n\nts=2012-03-08T10:10:45.928806Z id=24514 event=gram.signal.end level=WARN gramid=/16217969582761169661/5881249661246812557/ signal=\"7\" jmstate=GLOBUS_GRAM_JOB_MANAGER_STATE_STOP msg=\"Invalid query\" status=-94 reason=\"the jobmanager does not accept any new requests (shutting down)\" \n\nis from a stdio update signal, not a stop request. It is being rejected because either a stop request came in for that job (client explicitly paused things) or the proxy expiration callback was triggered. In either case, the client should be able to fix that particular job and effect the stdio update by submitting a restart request (perhaps after the submitting side has updated its proxy).", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2012-05-11T10:23:49.764-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17753/comment/18965", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2012-05-11T10:23:49.764-0500", 
+          "id": "18965"
+        }, 
+        {
+          "body": "Hi Joe,\n\nFrom the logs, there was no proxy expiration for this case.  I think the original bug is actually fixed, and the subsequent instances of this log message are a red-herring.\n\nDoes Jaime have a JIRA account?  It would be nice to know if Condor-G has somehow gotten itself into an unrecoverable loop because it does not handle this response code.\n\nBrian", 
+          "updateAuthor": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-05-11T10:31:54.703-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17753/comment/18966", 
+          "author": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-05-11T10:31:54.703-0500", 
+          "id": "18966"
+        }, 
+        {
+          "body": "I just added Jaime as a watcher on this issue.", 
+          "updateAuthor": {
+            "displayName": "Stuart Martin", 
+            "name": "smartin", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=smartin", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "smartin@mcs.anl.gov", 
+            "key": "smartin", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-05-11T11:14:05.655-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17753/comment/18967", 
+          "author": {
+            "displayName": "Stuart Martin", 
+            "name": "smartin", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=smartin", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "smartin@mcs.anl.gov", 
+            "key": "smartin", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-05-11T11:14:05.655-0500", 
+          "id": "18967"
+        }, 
+        {
+          "body": "I'm going to mark this as done/incomplete, since I don't have a reproducible test case for this behavior and it's not been commented on for a few months.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2012-07-26T11:33:06.675-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17753/comment/19594", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2012-07-26T11:33:06.675-0500", 
+          "id": "19594"
+        }
+      ], 
+      "maxResults": 20
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "bbockelm", 
+      "name": "bbockelm", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "bbockelm", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100cfc:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-156/watchers", 
+      "watchCount": 2, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Joe Bester", 
+      "name": "bester", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "bester@mcs.anl.gov", 
+      "key": "bester", 
+      "active": true, 
+      "timeZone": "America/New_York"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": "1_*:*_1_*:*_12099672404_*|*_5_*:*_1_*:*_0", 
+    "customfield_10280": "2014", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@5cab7f", 
+    "summary": "globus-job-manager unable to shutdown", 
+    "customfield_10288": "2012-03-12T14:04:00.882-0500", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-156/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [
+      {
+        "archived": false, 
+        "name": "Sprint 2012-07-31", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/10959", 
+        "releaseDate": "2012-07-31", 
+        "released": true, 
+        "id": "10959", 
+        "description": ""
+      }
+    ], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/critical.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/2", 
+      "name": "Critical", 
+      "id": "2"
+    }, 
+    "timespent": null, 
+    "attachment": [
+      {
+        "mimeType": "text/plain", 
+        "created": "2012-03-11T15:43:12.424-0500", 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/10841", 
+        "filename": "allow-manager-restart.patch", 
+        "content": "https://globus.atlassian.net/secure/attachment/10841/allow-manager-restart.patch", 
+        "id": "10841", 
+        "size": 2568
+      }
+    ], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "Done", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+        "id": 3, 
+        "key": "done", 
+        "colorName": "green"
+      }, 
+      "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+      "id": "5", 
+      "name": "Resolved"
+    }, 
+    "updated": "2012-07-26T11:33:06.691-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "We've noticed that a few job-managers will get into a state where they believe they are shutting down, but never shutdown.  The symptom is that all jobs for that user fail and we get this message repeatedly in the log:\n\nts=2012-03-08T10:10:45.928806Z id=24514 event=gram.signal.end level=WARN gramid=/16217969582761169661/5881249661246812557/ signal=\"7\" jmstate=GLOBUS_GRAM_JOB_MANAGER_STATE_STOP msg=\"Invalid query\" status=-94 reason=\"the jobmanager does not accept any new requests (shutting down)\" \nts=2012-03-08T10:10:45.928901Z id=24514 event=gram.query.end level=ERROR gramid=/16217969582761169661/5881249661246812557/ uri=\"/16217969582761169661/5881249661246812557/\" msg=\"Error processing query\" status=-94 reason=\"the jobmanager does not accept any new requests (shutting down) \n\nThis will go on indefinitely until a admin intervenes and manually kills the g-j-m.  Jobs from other users will continue to work: it appears this is specific to a jobmanager.\n\nAs this appears to hit the most active job-managers, it is blocking these CEs from doing useful work when it happens.", 
+    "reporter": {
+      "displayName": "bbockelm", 
+      "name": "bbockelm", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "bbockelm", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2012-03-08T09:31:54.298-0600", 
+    "versions": [], 
+    "resolutiondate": "2012-07-26T11:33:06.646-0500", 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10324", 
+        "id": "10324", 
+        "name": "GRAM"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": {
+      "self": "https://globus.atlassian.net/rest/api/2/resolution/4", 
+      "id": "4", 
+      "name": "Incomplete", 
+      "description": "The problem is not completely described."
+    }, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/17753", 
+  "id": "17753", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

@@ -1,0 +1,429 @@
+{
+  "key": "GT-398", 
+  "fields": {
+    "comment": {
+      "total": 6, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "Sorry, there's a typo in that last sentence. The option that allows the transfer to succeed is \"-nodcau\".", 
+          "updateAuthor": {
+            "displayName": "skymoo", 
+            "name": "skymoo", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=skymoo", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "skymoo", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-05-23T12:23:08.590-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/21098/comment/22129", 
+          "author": {
+            "displayName": "skymoo", 
+            "name": "skymoo", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=skymoo", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "skymoo", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-05-23T12:23:08.590-0500", 
+          "id": "22129"
+        }, 
+        {
+          "body": "I think this is actually issue GT-366.", 
+          "updateAuthor": {
+            "displayName": "skymoo", 
+            "name": "skymoo", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=skymoo", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "skymoo", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-05-23T21:41:47.755-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/21098/comment/22133", 
+          "author": {
+            "displayName": "skymoo", 
+            "name": "skymoo", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=skymoo", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "skymoo", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-05-23T21:41:47.755-0500", 
+          "id": "22133"
+        }, 
+        {
+          "body": "This is indeed GT-366, applying the advisory results in successful transfer. This issue can be closed.", 
+          "updateAuthor": {
+            "displayName": "skymoo", 
+            "name": "skymoo", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=skymoo", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "skymoo", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-05-24T13:50:59.940-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/21098/comment/22141", 
+          "author": {
+            "displayName": "skymoo", 
+            "name": "skymoo", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=skymoo", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "skymoo", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-05-24T13:50:59.940-0500", 
+          "id": "22141"
+        }, 
+        {
+          "body": "Actually I spoke to soon, transfers using \"-p 1\", and higher, fail with:\n\n[ram@liquid ~]$ globus-url-copy -p 1 gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat  file:///Users/ram/\n^C\nCancelling copy...\n\n[ram@liquid ~]$ globus-url-copy -p 1 -dbg gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat  file:///Users/ram/\ndebug: starting to get gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat\ndebug: connecting to gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat\ndebug: response from gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\n220 ldas-pcdev1.ligo.caltech.edu GridFTP Server 6.10 (gcc64, 1334324800-83) [Globus Toolkit 5.2.0] ready.\n\ndebug: authenticating with gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat\ndebug: response from gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\n230 User ram logged in.\n\ndebug: sending command to gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\nSITE HELP\n\ndebug: response from gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\n214-The following commands are recognized:\n    ALLO    APPE    REST    CWD     CDUP    DCAU    EPSV    FEAT\n    ERET    MDTM    STAT    ESTO    HELP    LIST    MODE    NLST\n    MLSC    MLSD    PASV    RNFR    MLSR    MLST    NOOP    OPTS\n    STOR    PASS    PBSZ    PORT    PROT    SITE    EPRT    RETR\n    SPOR    MFMT    SCKS    TREV    PWD     QUIT    SBUF    SIZE\n    SPAS    STRU    SYST    RNTO    TYPE    USER    LANG    MKD\n    RMD     DELE    CKSM    DCSC\n214 End\n\ndebug: sending command to gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\nFEAT\n\ndebug: response from gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\n211-Extensions supported\n DCSC P,D\n MFMT\n AUTHZ_ASSERT\n MLSR\n MLSC\n UTF8\n LANG EN\n DCAU\n PARALLEL\n SIZE\n MLST Type*;Size*;Modify*;Perm*;Charset;UNIX.mode*;UNIX.owner*;UNIX.uid*;UNIX.group*;UNIX.gid*;Unique*;UNIX.slink*;X.count;\n ERET\n ESTO\n SPAS\n SPOR\n REST STREAM\n MDTM\n PASV AllowDelayed;\n211 End.\n\ndebug: sending command to gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\nSITE CLIENTINFO scheme=gsiftp;appname=\"globus-url-copy\";appver=\"8.6 (gcc64dbg, 1342633606-83) [Globus Toolkit 5.2.4]\";\ndebug: response from gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\n250 OK.\n\ndebug: sending command to gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\nTYPE I\ndebug: response from gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\n200 Type set to I.\n\ndebug: sending command to gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\nMODE E\n\ndebug: response from gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\n200 Mode set to E.\n\ndebug: sending command to gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\nOPTS RETR Parallelism=1,1,1;\n\ndebug: response from gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\n200 OPTS Command Successful.\n\ndebug: sending command to gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\nPBSZ 1048576\n\ndebug: response from gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\n200 PBSZ=1048576\n\ndebug: sending command to gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\nPORT 192,168,1,107,216,163\n\ndebug: response from gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\n200 PORT Command successful.\n\ndebug: sending command to gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\nRETR /home/tzs/MaxEntWork/ER2/rawwave.mat\n\ndebug: response from gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\n500-Command failed. : callback failed.\n500-globus_xio: Unable to connect to 192.168.1.107:55459\n500-globus_xio: System error in connect: Connection timed out\n500-globus_xio: A system call failed: Connection timed out\n500 End.\n\ndebug: fault on connection to gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat: globus_ftp_client: the server responded with an error\ndebug: data callback, error globus_ftp_client: the server responded with an error, buffer 0x100a17000, length 0, offset=0, eof=true\ndebug: operation complete\n\nerror: globus_ftp_client: the server responded with an error\n500 500-Command failed. : callback failed.\n500-globus_xio: Unable to connect to 192.168.1.107:55459\n500-globus_xio: System error in connect: Connection timed out\n500-globus_xio: A system call failed: Connection timed out\n500 End.\n\n[ram@liquid ~]$", 
+          "updateAuthor": {
+            "displayName": "skymoo", 
+            "name": "skymoo", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=skymoo", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "skymoo", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-05-25T18:35:51.110-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/21098/comment/22146", 
+          "author": {
+            "displayName": "skymoo", 
+            "name": "skymoo", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=skymoo", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "skymoo", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-05-25T18:35:51.110-0500", 
+          "id": "22146"
+        }, 
+        {
+          "body": "Nevermind, this seems to be a combination of firewall and NAT issues.", 
+          "updateAuthor": {
+            "displayName": "skymoo", 
+            "name": "skymoo", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=skymoo", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "skymoo", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-05-27T21:28:57.456-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/21098/comment/22147", 
+          "author": {
+            "displayName": "skymoo", 
+            "name": "skymoo", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=skymoo", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "skymoo", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-05-27T21:28:57.456-0500", 
+          "id": "22147"
+        }, 
+        {
+          "body": "Thanks for following up Adam.  Let us know if you find any issues.", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-06-04T09:53:33.659-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/21098/comment/22211", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-06-04T09:53:33.659-0500", 
+          "id": "22211"
+        }
+      ], 
+      "maxResults": 6
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "skymoo", 
+      "name": "skymoo", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=skymoo", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "skymoo", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [
+      "GridFTP"
+    ], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|1015g0:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-398/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Mike Link", 
+      "name": "mlink", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mlink@mcs.anl.gov", 
+      "key": "mlink", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": "1_*:*_1_*:*_1028682340_*|*_5_*:*_1_*:*_0", 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@e2708", 
+    "summary": "Unable to transfer files using globus-url-copy without using -noedcu option", 
+    "customfield_10288": "2013-06-04T09:53:33.659-0500", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-398/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [
+      {
+        "archived": false, 
+        "name": "Sprint 2013-06-04", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11166", 
+        "releaseDate": "2013-06-04", 
+        "released": true, 
+        "id": "11166", 
+        "description": ""
+      }
+    ], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "Done", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+        "id": 3, 
+        "key": "done", 
+        "colorName": "green"
+      }, 
+      "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+      "id": "5", 
+      "name": "Resolved"
+    }, 
+    "updated": "2013-06-04T13:22:01.750-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "I'm having problems using globus-url-copy to copy a file from a linux gsiftp server to my Mac OS X 10.8 laptop. I'm using gt-5.2.4 compiled using:\n\nGLOBUS_LOCATION=/opt/ldg\nFLAVOUR=gcc64dbg\n\n./configure --prefix=${GLOBUS_LOCATION} \\\n  --with-gsiopensshargs=\"--without-openssl-header-check --sbindir=${GLOBUS_LOCATION}/sbin/ssh.d --sysconfdir=${GLOBUS_LOCATION}/etc/ssh --with-globus=${GLOBUS_LOCATION} --with-globus-flavor=${FLAVOUR}\" \\\n  --with-flavor=${FLAVOUR}\n\nCPPFLAGS=\"-I$GLOBUS_LOCATION/include\" LDFLAGS=\"-L$GLOBUS_LOCATION/lib\" make globus-gsi globus_gass_copy globus_usage globus-resource-management-client gsi-openssh gsi-myproxy\n\nAnd then using the command:\n\n$ globus-url-copy -dbg gsiftp://server/path/to/file/to/transfer file:///Users/ram/\n\nresults in the error:\n\nram@mimir ~]$ globus-url-copy -dbg gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat  file:///Users/ram/\ndebug: starting to get gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat\ndebug: connecting to gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat\ndebug: response from gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\n220 ldas-pcdev1.ligo.caltech.edu GridFTP Server 6.10 (gcc64, 1334324800-83) [Globus Toolkit 5.2.0] ready.\n\ndebug: authenticating with gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat\ndebug: response from gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\n230 User ram logged in.\n\ndebug: sending command to gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\nSITE HELP\n\ndebug: response from gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\n214-The following commands are recognized:\n    ALLO    APPE    REST    CWD     CDUP    DCAU    EPSV    FEAT\n    ERET    MDTM    STAT    ESTO    HELP    LIST    MODE    NLST\n    MLSC    MLSD    PASV    RNFR    MLSR    MLST    NOOP    OPTS\n    STOR    PASS    PBSZ    PORT    PROT    SITE    EPRT    RETR\n    SPOR    MFMT    SCKS    TREV    PWD     QUIT    SBUF    SIZE\n    SPAS    STRU    SYST    RNTO    TYPE    USER    LANG    MKD\n    RMD     DELE    CKSM    DCSC\n214 End\n\ndebug: sending command to gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\nFEAT\n\ndebug: response from gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\n211-Extensions supported\n DCSC P,D\n MFMT\n AUTHZ_ASSERT\n MLSR\n MLSC\n UTF8\n LANG EN\n DCAU\n PARALLEL\n SIZE\n MLST Type*;Size*;Modify*;Perm*;Charset;UNIX.mode*;UNIX.owner*;UNIX.uid*;UNIX.group*;UNIX.gid*;Unique*;UNIX.slink*;X.count;\n ERET\n ESTO\n SPAS\n SPOR\n REST STREAM\n MDTM\n PASV AllowDelayed;\n211 End.\n\ndebug: sending command to gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\nSITE CLIENTINFO scheme=gsiftp;appname=\"globus-url-copy\";appver=\"8.6 (gcc64dbg, 1342633606-83) [Globus Toolkit 5.2.4]\";\ndebug: response from gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\n250 OK.\n\ndebug: sending command to gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\nTYPE I\ndebug: response from gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\n200 Type set to I.\n\ndebug: sending command to gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\nPBSZ 1048576\n\ndebug: response from gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\n200 PBSZ=1048576\n\ndebug: sending command to gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\nPASV\n\ndebug: response from gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\n227 Entering Passive Mode (131,215,115,249,157,191)\n\ndebug: sending command to gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\nRETR /home/tzs/MaxEntWork/ER2/rawwave.mat\n\ndebug: response from gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\n500-Command failed. : callback failed.\n500-globus_gsi_gssapi: Error with gss credential handle\n500-globus_credential: Valid credentials could not be found in any of the possible locations specified by the credential search order.\n500-Valid credentials could not be found in any of the possible locations specified by the credential search order.\n500-Attempt 1\n500-globus_credential: Error reading host credential\n500-globus_sysconfig: Error with certificate filename\n500-globus_sysconfig: Error with certificate filename\n500-globus_sysconfig: File is not owned by current user: /etc/grid-security/hostcert.pem is not owned by current user\n500-Attempt 2\n500-globus_credential: Error reading proxy credential\n500-globus_sysconfig: Could not find a valid proxy certificate file location\n500-globus_sysconfig: Error with key filename\n500-globus_sysconfig: File does not exist: /tmp/x509up_u4142 is not a valid file\n500-Attempt 3\n500-globus_credential: Error reading user credential\n500-globus_credential: Key is password protected: GSI does not currently support password protected private keys.\n500-OpenSSL Error: pem_pkey.c:109: in library: PEM routines, function PEM_READ_BIO_PRIVATEKEY: bad password read\n500 End.\n\ndebug: fault on connection to gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat: globus_ftp_client: the server responded with an error\ndebug: data callback, error globus_ftp_client: the server responded with an error, buffer 0x11023c000, length 0, offset=0, eof=true\ndebug: operation complete\n\nerror: globus_ftp_client: the server responded with an error\n500 500-Command failed. : callback failed.\n500-globus_gsi_gssapi: Error with gss credential handle\n500-globus_credential: Valid credentials could not be found in any of the possible locations specified by the credential search order.\n500-Valid credentials could not be found in any of the possible locations specified by the credential search order.\n500-Attempt 1\n500-globus_credential: Error reading host credential\n500-globus_sysconfig: Error with certificate filename\n500-globus_sysconfig: Error with certificate filename\n500-globus_sysconfig: File is not owned by current user: /etc/grid-security/hostcert.pem is not owned by current user\n500-Attempt 2\n500-globus_credential: Error reading proxy credential\n500-globus_sysconfig: Could not find a valid proxy certificate file location\n500-globus_sysconfig: Error with key filename\n500-globus_sysconfig: File does not exist: /tmp/x509up_u4142 is not a valid file\n500-Attempt 3\n500-globus_credential: Error reading user credential\n500-globus_credential: Key is password protected: GSI does not currently support password protected private keys.\n500-OpenSSL Error: pem_pkey.c:109: in library: PEM routines, function PEM_READ_BIO_PRIVATEKEY: bad password read\n500 End.\n$\n\nIf I specify the number of parallel transfers to use, i.e. \"-p 1\" then it again results in a similar error:\n\n[ram@mimir ~]$ globus-url-copy -dbg -p 1 gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat  file:///Users/ram/\ndebug: starting to get gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat\ndebug: connecting to gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat\ndebug: response from gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\n220 ldas-pcdev1.ligo.caltech.edu GridFTP Server 6.10 (gcc64, 1334324800-83) [Globus Toolkit 5.2.0] ready.\n\ndebug: authenticating with gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat\ndebug: response from gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\n230 User ram logged in.\n\ndebug: sending command to gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\nSITE HELP\n\ndebug: response from gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\n214-The following commands are recognized:\n    ALLO    APPE    REST    CWD     CDUP    DCAU    EPSV    FEAT\n    ERET    MDTM    STAT    ESTO    HELP    LIST    MODE    NLST\n    MLSC    MLSD    PASV    RNFR    MLSR    MLST    NOOP    OPTS\n    STOR    PASS    PBSZ    PORT    PROT    SITE    EPRT    RETR\n    SPOR    MFMT    SCKS    TREV    PWD     QUIT    SBUF    SIZE\n    SPAS    STRU    SYST    RNTO    TYPE    USER    LANG    MKD\n    RMD     DELE    CKSM    DCSC\n214 End\n\ndebug: sending command to gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\nFEAT\n\ndebug: response from gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\n211-Extensions supported\n DCSC P,D\n MFMT\n AUTHZ_ASSERT\n MLSR\n MLSC\n UTF8\n LANG EN\n DCAU\n PARALLEL\n SIZE\n MLST Type*;Size*;Modify*;Perm*;Charset;UNIX.mode*;UNIX.owner*;UNIX.uid*;UNIX.group*;UNIX.gid*;Unique*;UNIX.slink*;X.count;\n ERET\n ESTO\n SPAS\n SPOR\n REST STREAM\n MDTM\n PASV AllowDelayed;\n211 End.\n\ndebug: sending command to gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\nSITE CLIENTINFO scheme=gsiftp;appname=\"globus-url-copy\";appver=\"8.6 (gcc64dbg, 1342633606-83) [Globus Toolkit 5.2.4]\";\ndebug: response from gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\n250 OK.\n\ndebug: sending command to gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\nTYPE I\ndebug: response from gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\n200 Type set to I.\n\ndebug: sending command to gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\nMODE E\n\ndebug: response from gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\n200 Mode set to E.\n\ndebug: sending command to gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\nOPTS RETR Parallelism=1,1,1;\n\ndebug: response from gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\n200 OPTS Command Successful.\n\ndebug: sending command to gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\nPBSZ 1048576\n\ndebug: response from gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\n200 PBSZ=1048576\n\ndebug: sending command to gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\nPORT 129,89,61,162,221,177\n\ndebug: response from gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\n200 PORT Command successful.\n\ndebug: sending command to gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\nRETR /home/tzs/MaxEntWork/ER2/rawwave.mat\n\ndebug: response from gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat:\n500-Command failed. : callback failed.\n500-globus_gsi_gssapi: Error with gss credential handle\n500-globus_credential: Valid credentials could not be found in any of the possible locations specified by the credential search order.\n500-Valid credentials could not be found in any of the possible locations specified by the credential search order.\n500-Attempt 1\n500-globus_credential: Error reading host credential\n500-globus_sysconfig: Error with certificate filename\n500-globus_sysconfig: Error with certificate filename\n500-globus_sysconfig: File is not owned by current user: /etc/grid-security/hostcert.pem is not owned by current user\n500-Attempt 2\n500-globus_credential: Error reading proxy credential\n500-globus_sysconfig: Could not find a valid proxy certificate file location\n500-globus_sysconfig: Error with key filename\n500-globus_sysconfig: File does not exist: /tmp/x509up_u4142 is not a valid file\n500-Attempt 3\n500-globus_credential: Error reading user credential\n500-globus_credential: Key is password protected: GSI does not currently support password protected private keys.\n500-OpenSSL Error: pem_pkey.c:109: in library: PEM routines, function PEM_READ_BIO_PRIVATEKEY: bad password read\n500 End.\n\ndebug: fault on connection to gsiftp://ldas-pcdev1.ligo.caltech.edu/home/tzs/MaxEntWork/ER2/rawwave.mat: globus_ftp_client: the server responded with an error\ndebug: data callback, error globus_ftp_client: the server responded with an error, buffer 0x10c5c6000, length 0, offset=0, eof=true\ndebug: operation complete\n\nerror: globus_ftp_client: the server responded with an error\n500 500-Command failed. : callback failed.\n500-globus_gsi_gssapi: Error with gss credential handle\n500-globus_credential: Valid credentials could not be found in any of the possible locations specified by the credential search order.\n500-Valid credentials could not be found in any of the possible locations specified by the credential search order.\n500-Attempt 1\n500-globus_credential: Error reading host credential\n500-globus_sysconfig: Error with certificate filename\n500-globus_sysconfig: Error with certificate filename\n500-globus_sysconfig: File is not owned by current user: /etc/grid-security/hostcert.pem is not owned by current user\n500-Attempt 2\n500-globus_credential: Error reading proxy credential\n500-globus_sysconfig: Could not find a valid proxy certificate file location\n500-globus_sysconfig: Error with key filename\n500-globus_sysconfig: File does not exist: /tmp/x509up_u4142 is not a valid file\n500-Attempt 3\n500-globus_credential: Error reading user credential\n500-globus_credential: Key is password protected: GSI does not currently support password protected private keys.\n500-OpenSSL Error: pem_pkey.c:109: in library: PEM routines, function PEM_READ_BIO_PRIVATEKEY: bad password read\n500 End.\n$\n\nTherefore I believe this effects both passive and extended mode.\n\nThe only workaround that has been found it to \"turn off data channel authentication for ftp transfers\", i.e. pass the \"-noedcu\" option, then the transfer occurs without issue.", 
+    "reporter": {
+      "displayName": "skymoo", 
+      "name": "skymoo", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=skymoo", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "skymoo", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": "Mac OS X 10.8 Client, Linux server", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2013-05-23T12:09:11.433-0500", 
+    "versions": [
+      {
+        "archived": false, 
+        "name": "5.2.4", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11066", 
+        "releaseDate": "2013-02-13", 
+        "released": true, 
+        "id": "11066", 
+        "description": ""
+      }
+    ], 
+    "resolutiondate": "2013-06-04T09:53:53.745-0500", 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": {
+      "self": "https://globus.atlassian.net/rest/api/2/resolution/3", 
+      "id": "3", 
+      "name": "Duplicate", 
+      "description": "The problem is a duplicate of an existing issue."
+    }, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/21098", 
+  "id": "21098", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

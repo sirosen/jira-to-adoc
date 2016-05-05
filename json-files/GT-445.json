@@ -1,0 +1,329 @@
+{
+  "key": "GT-445", 
+  "fields": {
+    "comment": {
+      "total": 1, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "This is fixed in 5.2.5", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2013-11-07T12:50:24.419-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/21563/comment/23380", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2013-11-07T12:50:24.419-0600", 
+          "id": "23380"
+        }
+      ], 
+      "maxResults": 1
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "Mattias Ellert", 
+      "name": "ellert", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mattias.ellert@fysast.uu.se", 
+      "key": "ellert", 
+      "active": true, 
+      "timeZone": "Europe/Stockholm"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|1013aw:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-445/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Joe Bester", 
+      "name": "bester", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "bester@mcs.anl.gov", 
+      "key": "bester", 
+      "active": true, 
+      "timeZone": "America/New_York"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": "1_*:*_1_*:*_8829782860_*|*_5_*:*_1_*:*_0", 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@17a6171", 
+    "summary": "Doxygen fixes", 
+    "customfield_10288": "2013-11-07T12:50:24.419-0600", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-445/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [
+      {
+        "archived": false, 
+        "name": "5.2.5", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11388", 
+        "releaseDate": "2013-06-17", 
+        "released": true, 
+        "id": "11388", 
+        "description": ""
+      }, 
+      {
+        "archived": false, 
+        "name": "Sprint 2013-10-14", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11587", 
+        "releaseDate": "2013-10-14", 
+        "released": true, 
+        "id": "11587", 
+        "description": ""
+      }
+    ], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/minor.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/4", 
+      "name": "Minor", 
+      "id": "4"
+    }, 
+    "timespent": null, 
+    "attachment": [
+      {
+        "mimeType": "text/x-patch", 
+        "author": {
+          "displayName": "Mattias Ellert", 
+          "name": "ellert", 
+          "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+          "avatarUrls": {
+            "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+            "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+            "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+            "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+          }, 
+          "emailAddress": "mattias.ellert@fysast.uu.se", 
+          "key": "ellert", 
+          "active": true, 
+          "timeZone": "Europe/Stockholm"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/11304", 
+        "created": "2013-07-28T09:07:22.102-0500", 
+        "filename": "globus-gsi-cert-utils-doxygen.patch", 
+        "content": "https://globus.atlassian.net/secure/attachment/11304/globus-gsi-cert-utils-doxygen.patch", 
+        "id": "11304", 
+        "size": 570
+      }, 
+      {
+        "mimeType": "text/x-patch", 
+        "author": {
+          "displayName": "Mattias Ellert", 
+          "name": "ellert", 
+          "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+          "avatarUrls": {
+            "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+            "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+            "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+            "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+          }, 
+          "emailAddress": "mattias.ellert@fysast.uu.se", 
+          "key": "ellert", 
+          "active": true, 
+          "timeZone": "Europe/Stockholm"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/11305", 
+        "created": "2013-07-28T09:07:22.153-0500", 
+        "filename": "globus-gssapi-gsi-doxygen.patch", 
+        "content": "https://globus.atlassian.net/secure/attachment/11305/globus-gssapi-gsi-doxygen.patch", 
+        "id": "11305", 
+        "size": 935
+      }, 
+      {
+        "mimeType": "text/x-patch", 
+        "author": {
+          "displayName": "Mattias Ellert", 
+          "name": "ellert", 
+          "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+          "avatarUrls": {
+            "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+            "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+            "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+            "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+          }, 
+          "emailAddress": "mattias.ellert@fysast.uu.se", 
+          "key": "ellert", 
+          "active": true, 
+          "timeZone": "Europe/Stockholm"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/11306", 
+        "created": "2013-07-28T09:07:22.155-0500", 
+        "filename": "globus-xio-doxygen.patch", 
+        "content": "https://globus.atlassian.net/secure/attachment/11306/globus-xio-doxygen.patch", 
+        "id": "11306", 
+        "size": 1136
+      }
+    ], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "Done", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+        "id": 3, 
+        "key": "done", 
+        "colorName": "green"
+      }, 
+      "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+      "id": "5", 
+      "name": "Resolved"
+    }, 
+    "updated": "2013-11-07T12:50:24.442-0600", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "The attached patches fixes some doxygen issues in globus-gsi-cert-utils, globus-gssapi-gsi and globus-xio.", 
+    "reporter": {
+      "displayName": "Mattias Ellert", 
+      "name": "ellert", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mattias.ellert@fysast.uu.se", 
+      "key": "ellert", 
+      "active": true, 
+      "timeZone": "Europe/Stockholm"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2013-07-28T09:07:21.584-0500", 
+    "versions": [
+      {
+        "archived": false, 
+        "name": "5.2.4", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11066", 
+        "releaseDate": "2013-02-13", 
+        "released": true, 
+        "id": "11066", 
+        "description": ""
+      }
+    ], 
+    "resolutiondate": "2013-11-07T12:50:24.392-0600", 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10326", 
+        "id": "10326", 
+        "name": "GSI"
+      }, 
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10328", 
+        "id": "10328", 
+        "name": "XIO"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": {
+      "self": "https://globus.atlassian.net/rest/api/2/resolution/1", 
+      "id": "1", 
+      "name": "Fixed", 
+      "description": "A fix for this issue is checked into the tree and tested."
+    }, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/21563", 
+  "id": "21563", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

@@ -1,0 +1,284 @@
+{
+  "key": "GT-136", 
+  "fields": {
+    "comment": {
+      "total": 3, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "I've written some xslt files to pull necessary information out of GPT metadata to use pkg-config internally.  This obviously introduces a dependency on some xslt processor being present, but I think this can be scoped to bootstrap-only.", 
+          "updateAuthor": {
+            "displayName": "Eric Blau", 
+            "name": "blau", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=blau", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "blau@mcs.anl.gov", 
+            "key": "blau", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2011-07-12T10:12:19.575-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/11468/comment/15057", 
+          "author": {
+            "displayName": "Eric Blau", 
+            "name": "blau", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=blau", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "blau@mcs.anl.gov", 
+            "key": "blau", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2011-07-12T10:12:19.575-0500", 
+          "id": "15057"
+        }, 
+        {
+          "body": "Made some progress, still some issues to be worked out.  xslt can happen at bootstrap, need to get the right detection of xslt processors figured out.", 
+          "updateAuthor": {
+            "displayName": "Eric Blau", 
+            "name": "blau", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=blau", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "blau@mcs.anl.gov", 
+            "key": "blau", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2011-08-02T09:41:08.777-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/11468/comment/15470", 
+          "author": {
+            "displayName": "Eric Blau", 
+            "name": "blau", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=blau", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "blau@mcs.anl.gov", 
+            "key": "blau", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2011-08-02T09:41:08.777-0500", 
+          "id": "15470"
+        }, 
+        {
+          "body": "This is stalled and is definitely going to be a \"would like to do for the future\", as this feature won't be in 5.2.", 
+          "updateAuthor": {
+            "displayName": "Eric Blau", 
+            "name": "blau", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=blau", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "blau@mcs.anl.gov", 
+            "key": "blau", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2011-11-23T09:53:14.845-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/11468/comment/17010", 
+          "author": {
+            "displayName": "Eric Blau", 
+            "name": "blau", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=blau", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "blau@mcs.anl.gov", 
+            "key": "blau", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2011-11-23T09:53:14.845-0600", 
+          "id": "17010"
+        }
+      ], 
+      "maxResults": 3
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "Eric Blau", 
+      "name": "blau", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=blau", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "blau@mcs.anl.gov", 
+      "key": "blau", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100bt4:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-136/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": null, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "1914", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@575d2c", 
+    "summary": "modify GPT_INIT/GLOBUS_INIT macros to allow a build using pkg-config in place of GPT scripts", 
+    "customfield_10288": "2011-07-12T10:12:19.575-0500", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 259200, 
+      "percent": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-136/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": 259200, 
+    "progress": {
+      "progress": 0, 
+      "total": 259200, 
+      "percent": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2012-05-10T15:08:14.229-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "The GPT build-time scripts do three major things.  They do the dependency checking to ensure that all compile time dependencies are met.  They convert the source metadata to binary metadata/filelists.  They assemble the linklines for the package from the dependent package linking information.  The first of these can be worked around by building in a context in which the dependency existence and ordering has been predetermined, such as the new installer model proposed in RIC-90.\n\nOnce each package outputs pkg-config metadata as well as GPT metadata, the linklines should be just as easily assembled using pkg-config as using the GPT script gpt_build_config (called from configure, as found in the GPT_INIT macro).\n\nAltering the GPT_INIT macro to allow the use of pkg-config instead of gpt_build_config would open up the possibility of source builds that do not depend on the presence of an installed GPT.  Backwards compatible behavior could be maintained.\n\nConversion of source to binary GPT metadata could either be handled by an XSLT transformation, or simply ignored in the no-buildtime-GPT scenario.", 
+    "reporter": {
+      "displayName": "Stuart Martin", 
+      "name": "smartin", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=smartin", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "smartin@mcs.anl.gov", 
+      "key": "smartin", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": 259200, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": 259200, 
+    "created": "2010-04-09T14:06:40.390-0500", 
+    "versions": [], 
+    "resolutiondate": null, 
+    "workratio": 0, 
+    "aggregatetimespent": null, 
+    "timetracking": {
+      "originalEstimateSeconds": 259200, 
+      "remainingEstimate": "2w 2d", 
+      "remainingEstimateSeconds": 259200, 
+      "originalEstimate": "2w 2d"
+    }, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10334", 
+        "id": "10334", 
+        "name": "Build & Test"
+      }
+    ], 
+    "issuetype": {
+      "name": "Task", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/3", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11058&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11058, 
+      "id": "3", 
+      "description": "A task that needs to be done."
+    }, 
+    "resolution": null, 
+    "timeestimate": 259200
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/11468", 
+  "id": "11468", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

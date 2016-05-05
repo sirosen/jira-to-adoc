@@ -1,0 +1,154 @@
+{
+  "key": "PM-252", 
+  "fields": {
+    "comment": {
+      "total": 0, 
+      "startAt": 0, 
+      "comments": [], 
+      "maxResults": 0
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "Dan Powers", 
+      "name": "dpowers", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=dpowers", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "dpowers@uchicago.edu", 
+      "key": "dpowers", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|zq5u6q:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/PM-252/watchers", 
+      "watchCount": 1, 
+      "isWatching": false
+    }, 
+    "customfield_10051": null, 
+    "assignee": null, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@473fda", 
+    "summary": "User wants share file in ~/.globus/sharing on an endpoint to get deleted when a share is deleted", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "self": "https://globus.atlassian.net/rest/api/2/project/10560", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10560&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10560&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10560&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10560&avatarId=10011"
+      }, 
+      "id": "10560", 
+      "key": "PM", 
+      "name": "Product Management"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/PM-252/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2015-05-20T14:14:56.777-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "User reports that they would like for the share file that gets created in ~/.globus/sharing on an endpoint when a share is created to be deleted when the share is deleted. \r\n\r\nSee ticket:\r\n\r\nhttps://globusonline.zendesk.com/agent/tickets/303801\r\n\r\n", 
+    "reporter": {
+      "displayName": "Dan Powers", 
+      "name": "dpowers", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=dpowers", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "dpowers@uchicago.edu", 
+      "key": "dpowers", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2015-05-20T11:37:37.501-0500", 
+    "versions": [], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [], 
+    "issuetype": {
+      "name": "Product Feature", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/24", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11040&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11040, 
+      "id": "24", 
+      "description": ""
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/27949", 
+  "id": "27949", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

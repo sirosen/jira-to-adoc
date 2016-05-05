@@ -1,0 +1,308 @@
+{
+  "key": "GT-318", 
+  "fields": {
+    "comment": {
+      "total": 3, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "Hi all,\n\njust added the remainder of the orginal IGE ticket:\n\n\"\n[...]\nguc is not a wrapper here, but just a link to globus-url-copy to save me some keystrokes.\n\nI use this functionality to get the size of a transfer in order to calculate the effective transfer rate. And just for consistency I think \"-do\" should behave the same for one or n files. Could you please fix this? Thanks in advance.\n\nBest regards\nFrank Scheiner\n_______\n[tgftp] <https://github.com/fr4nk5ch31n3r/tgftp/>\n[1] <http://www.globus.org/ftppub/gt5/5.2/5.2.2/packages/deb/debian/6/>\n\"\n\nBest regards\nFrank Scheiner", 
+          "updateAuthor": {
+            "displayName": "frank.scheiner", 
+            "name": "frank.scheiner", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=frank.scheiner", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "frank.scheiner", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-11-15T01:42:34.226-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19720/comment/20596", 
+          "author": {
+            "displayName": "frank.scheiner", 
+            "name": "frank.scheiner", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=frank.scheiner", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "frank.scheiner", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-11-15T01:42:34.226-0600", 
+          "id": "20596"
+        }, 
+        {
+          "body": "Dear all,\n\nI recently also used transfer lists (with \"guc -f <TRANSFER_LIST>\") and there's an issue (when using \"-do\") similar to the already described one in this ticket/issue.\n\nExample:\n\n\"\n$ cat transferList \n\"gsiftp://gridftp.omicron.jupiter:2811/~/my_source_dir/10_128MB\" \"gsiftp://gridftp.omicron.neptune:2811/~/my_destination_dir/10_128MB\" 0,-1 size=134217728;modify=1350743120;mode=0644;\n\"gsiftp://gridftp.omicron.jupiter:2811/~/my_source_dir/11_128MB\" \"gsiftp://gridftp.omicron.neptune:2811/~/my_destination_dir/11_128MB\" 0,-1 size=134217728;modify=1351177826;mode=0644;\n\"gsiftp://gridftp.omicron.jupiter:2811/~/my_source_dir/12_128MB\" \"gsiftp://gridftp.omicron.neptune:2811/~/my_destination_dir/12_128MB\" 0,-1 size=134217728;modify=1351840800;mode=0644;\n\n$  guc -do - -f transferList \n\"gsiftp://gridftp.omicron.jupiter:2811/~/my_source_dir/10_128MB\" \"gsiftp://gridftp.omicron.neptune:2811/~/my_destination_dir/10_128MB\" 0 \n\"gsiftp://gridftp.omicron.jupiter:2811/~/my_source_dir/11_128MB\" \"gsiftp://gridftp.omicron.neptune:2811/~/my_destination_dir/11_128MB\" 0 \n\"gsiftp://gridftp.omicron.jupiter:2811/~/my_source_dir/12_128MB\" \"gsiftp://gridftp.omicron.neptune:2811/~/my_destination_dir/12_128MB\" 0\n\"\n\nIf I omit the additional info after the URLs in the transfer list - which would be the more common case, when users create a transfer list manually - the additional \"0\" is omitted in the output, as for the single file in the initial description.\nUsed tools (guc) and servers (ggs) are the same versions as in the initial description.\n\nBest regards\nFrank Scheiner", 
+          "updateAuthor": {
+            "displayName": "frank.scheiner", 
+            "name": "frank.scheiner", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=frank.scheiner", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "frank.scheiner", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-12-09T10:44:18.336-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19720/comment/20767", 
+          "author": {
+            "displayName": "frank.scheiner", 
+            "name": "frank.scheiner", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=frank.scheiner", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "frank.scheiner", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-12-09T10:44:18.336-0600", 
+          "id": "20767"
+        }, 
+        {
+          "body": "Fixed after 5.2.5.", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2014-01-22T07:30:01.183-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19720/comment/23860", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2014-01-22T07:30:01.183-0600", 
+          "id": "23860"
+        }
+      ], 
+      "maxResults": 3
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "support@ige-project.eu", 
+      "name": "support@ige-project.eu", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=support%40ige-project.eu", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "support@ige-project.eu", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [
+      "GridFTP"
+    ], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|101bnk:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-318/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Mike Link", 
+      "name": "mlink", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mlink@mcs.anl.gov", 
+      "key": "mlink", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": "1_*:*_1_*:*_37507999278_*|*_5_*:*_1_*:*_0", 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@15609de", 
+    "summary": "globus-url-copy (guc) and \"-do\" option inconsistency", 
+    "customfield_10288": "2012-11-15T01:42:34.226-0600", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-318/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [
+      {
+        "archived": false, 
+        "name": "Sprint 2013-12-09", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11601", 
+        "releaseDate": "2013-12-09", 
+        "released": true, 
+        "id": "11601", 
+        "description": ""
+      }
+    ], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "Done", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+        "id": 3, 
+        "key": "done", 
+        "colorName": "green"
+      }, 
+      "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+      "id": "5", 
+      "name": "Resolved"
+    }, 
+    "updated": "2014-01-22T07:30:01.199-0600", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "During testing a new version of [tgftp] I discovered an inconsistency in globus-url-copy (guc) v8.6 (from the GT5.2.2 DEB packages from [1]) when using the \"-do\" option. The problem is, that when \"transferring\" only one file and requesting a dump, this dump does not contain the additional information a normal dump contains, like offset, size, modify timestamp and permissions. Theses additional (and very useful) information is only included, when \"transferring\" at least two files. Please check the following printouts for details:\n\n\"\n$ guc -do - gsiftp://gridftp.omicron.jupiter/~/my_source_dir/1?_128MB gsiftp://gridftp.omicron.neptune/~/my_destination_dir/\n\"gsiftp://gridftp.omicron.jupiter/~/my_source_dir/10_128MB\" \"gsiftp://gridftp.omicron.neptune/~/my_destination_dir/10_128MB\" 0,-1 size=134217728;modify=1350743120;mode=0644;\n\"gsiftp://gridftp.omicron.jupiter/~/my_source_dir/11_128MB\" \"gsiftp://gridftp.omicron.neptune/~/my_destination_dir/11_128MB\" 0,-1 size=134217728;modify=1351177826;mode=0644;\n\n$ guc -do - gsiftp://gridftp.omicron.jupiter/~/my_source_dir/10_128MB gsiftp://gridftp.omicron.neptune/~/my_destination_dir/\n\"gsiftp://gridftp.omicron.jupiter/~/my_source_dir/10_128MB\" \"gsiftp://gridftp.omicron.neptune/~/my_destination_dir/10_128MB\"\n\"", 
+    "reporter": {
+      "displayName": "support@ige-project.eu", 
+      "name": "support@ige-project.eu", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=support%40ige-project.eu", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "support@ige-project.eu", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2012-11-14T04:36:41.923-0600", 
+    "versions": [], 
+    "resolutiondate": "2014-01-22T07:30:01.134-0600", 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": {
+      "self": "https://globus.atlassian.net/rest/api/2/resolution/1", 
+      "id": "1", 
+      "name": "Fixed", 
+      "description": "A fix for this issue is checked into the tree and tested."
+    }, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/19720", 
+  "id": "19720", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

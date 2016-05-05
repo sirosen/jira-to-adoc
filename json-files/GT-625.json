@@ -1,0 +1,317 @@
+{
+  "key": "GT-625", 
+  "fields": {
+    "comment": {
+      "total": 3, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "We don't have a ppc64 host available for testing, and I don't see a very obvious change in the code that would cause a problem, but I took a stab at some changes that may help.\r\n\r\nTry this installer: http://toolkit.globus.org/ftppub/tmp/globus_toolkit-6.0.1433516164n.tar.gz\r\n\r\nIf that has the same issue, please archive the gridftp/server/src and common/source directories from the installer build tree and send to mlink@mcs.anl.gov.\r\n\r\nAdditionally, please set GLOBUS_ERROR_VERBOSE=1 and in the server's enviroment, and send the log generated with the '-l <log file path> -d ALL'  config on both control and data.\r\n\r\nThanks,\r\nMike", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2015-09-03T16:59:01.410-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/29239/comment/32480", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2015-09-03T17:04:29.554-0500", 
+          "id": "32480"
+        }, 
+        {
+          "body": "I fixed GT-627 which I think was the cause of the problem. Can you try this installer:\r\n\r\nhttp://toolkit.globus.org/ftppub/gt6/installers/src/globus_toolkit-6.0.1441801527.tar.gz\r\n\r\nThe only relevant change is in the globus-gssapi-gsi package.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2015-09-09T14:35:21.461-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/29239/comment/32582", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2015-09-09T14:35:21.461-0500", 
+          "id": "32582"
+        }, 
+        {
+          "body": "Based on Joe's comments, I'm marking this one fixed.  Reopen if there is more input.", 
+          "updateAuthor": {
+            "displayName": "Stuart Martin", 
+            "name": "smartin", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=smartin", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "smartin@mcs.anl.gov", 
+            "key": "smartin", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2015-12-22T09:11:42.411-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/29239/comment/33881", 
+          "author": {
+            "displayName": "Stuart Martin", 
+            "name": "smartin", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=smartin", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "smartin@mcs.anl.gov", 
+            "key": "smartin", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2015-12-22T09:11:42.411-0600", 
+          "id": "33881"
+        }
+      ], 
+      "maxResults": 3
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": null, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|zq5v9u:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-625/watchers", 
+      "watchCount": 2, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Joe Bester", 
+      "name": "bester", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "bester@mcs.anl.gov", 
+      "key": "bester", 
+      "active": true, 
+      "timeZone": "America/New_York"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": "1_*:*_1_*:*_10107788941_*|*_5_*:*_1_*:*_0", 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/issueLink/18120", 
+        "outwardIssue": {
+          "fields": {
+            "status": {
+              "statusCategory": {
+                "name": "Done", 
+                "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+                "id": 3, 
+                "key": "done", 
+                "colorName": "green"
+              }, 
+              "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+              "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+              "id": "5", 
+              "name": "Resolved"
+            }, 
+            "priority": {
+              "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+              "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+              "name": "Major", 
+              "id": "3"
+            }, 
+            "issuetype": {
+              "name": "Bug", 
+              "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+              "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+              "subtask": false, 
+              "avatarId": 11043, 
+              "id": "1", 
+              "description": "A problem which impairs or prevents the functions of the product."
+            }, 
+            "summary": "gss_import_cred crash"
+          }, 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/29431", 
+          "id": "29431", 
+          "key": "GT-627"
+        }, 
+        "type": {
+          "outward": "depends on", 
+          "inward": "is depended on by", 
+          "self": "https://globus.atlassian.net/rest/api/2/issueLinkType/10010", 
+          "id": "10010", 
+          "name": "Dependency"
+        }, 
+        "id": "18120"
+      }
+    ], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@b5b121", 
+    "summary": "GT6.0/gridFTP IPC failed under a ppc64 architecture", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-625/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "Done", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+        "id": 3, 
+        "key": "done", 
+        "colorName": "green"
+      }, 
+      "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+      "id": "5", 
+      "name": "Resolved"
+    }, 
+    "updated": "2015-12-22T09:11:42.433-0600", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "A globus-url-copy transfer with a splitted gridFTP configuration (on the same machine) produces the following error:\r\nerror: globus_ftp_client: the server responded with an error\r\n500 Command failed. : IPC failed while attempting to perform request\r\n\r\nThe control and data configuration files are very simple and are as follow:\r\ncat data.conf\r\ndaemon 1\r\ndata_node 1\r\nport xxxx\r\nhostname xxxxxxxx\r\n\r\ncat control.conf\r\ndaemon 1\r\nremote_nodes xxxxxxx:xxxx\r\nport xxxx\r\nhostname xxxxxxx\r\n\r\nA none splitted configuration works properly under this ppc architecture.\r\n\r\nThis splitted configuration is working properly with GT5.2.5 under the same ppc architecture and RHEL6.5 and is also working properly with GT6.0 under a x86_64 and RHEL6.5 (all compiled with pam and gcc64dbg).\r\nSo, the upgrade from GT5.2.5/ppc/RHEL6.5 to GT6.0/ppc/RHEL6.5 cannot be performed.\r\n", 
+    "reporter": null, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": "ppc64\r\nRHEL6.5\r\nGT6.0\r\ncompiled with pam and flavour gcc64dbg", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2015-08-27T10:28:33.493-0500", 
+    "versions": [], 
+    "resolutiondate": "2015-12-22T09:11:42.393-0600", 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": {
+      "self": "https://globus.atlassian.net/rest/api/2/resolution/1", 
+      "id": "1", 
+      "name": "Fixed", 
+      "description": "A fix for this issue is checked into the tree and tested."
+    }, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/29239", 
+  "id": "29239", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

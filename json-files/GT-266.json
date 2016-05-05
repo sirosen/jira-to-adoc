@@ -1,0 +1,429 @@
+{
+  "key": "GT-266", 
+  "fields": {
+    "comment": {
+      "total": 5, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "Some good progress on this.\n\nHTTPS is not working -- the xio http driver will do https when combined with the gsi driver, but I couldn't make it work with standard ssl yet.\n\nGETs are working to paths and data channel.  No partial or ranges/multiple streams yet.\n\nPUTs are working from paths, not data channel yet.  No multipart yet.\n\nmain todos:\n\nPUT DC\nmulti-part PUT\nmulti-stream GET\nfigure out ssl\nFirm up command syntax and doc\n", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-08-13T08:39:48.674-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/18967/comment/19735", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-08-13T08:40:43.667-0500", 
+          "id": "19735"
+        }, 
+        {
+          "body": "PUT DC is working.\n\nI had trouble with the way I was doing PUT and GET from/to the local storage, which wasn't compatible with other dsis (and wouldn't have worked well for parallel gets).  Added some framework to 'fake' a transfer to interact with the dsi interface like a normal transfer would, and now that is working correctly.\n\nRanged gets are working for partial transfers/restarts.  I'm still thinking about parallel gets.  not clear yet about dealing with the multiple connections in the gridftp server code or in the http driver or in a seperate driver, and then the general logic of the transfer.\n\nStill no ssl or multi-part puts-- I have been using fakes3 to test against, which allows me to test locally without ssl, but fakes3 doesn't support POST or multi-part puts, so I have to get ssl working first.\n\nNeed to get a rough doc out to at least give karl something to write a test client against.\n\nCurrently have the following commands:\n\npersistent setting:\nHTTP S3ID <aws id>\nHTTP S3KEY <aws secret key>\n\nper-transfer:\nHTTP RESTART <offset>\nHTTP GET <url> <path | DC>\n\nHTTP PUT <url> <path | DC>\n\n\nwe talked about HTTP HEADER * to set headers.  easy enough but not done yet.  don't recall a specific need, maybe just for setting metadata.\n\n", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-08-27T09:57:41.582-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/18967/comment/19857", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-08-27T09:57:41.582-0500", 
+          "id": "19857"
+        }, 
+        {
+          "body": "At the last sprint review we decide these are the tasks required for an initial version\n\n- HTTP v .1\n\t+ PUT DC (done)\n\t\t- Can't restart\n\t+ figure out ssl\n\t+ Firm up command syntax and doc", 
+          "updateAuthor": {
+            "displayName": "Stuart Martin", 
+            "name": "smartin", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=smartin", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "smartin@mcs.anl.gov", 
+            "key": "smartin", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-09-05T14:22:18.013-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/18967/comment/19978", 
+          "author": {
+            "displayName": "Stuart Martin", 
+            "name": "smartin", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=smartin", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "smartin@mcs.anl.gov", 
+            "key": "smartin", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-09-05T14:22:18.013-0500", 
+          "id": "19978"
+        }, 
+        {
+          "body": "SSL is working.  Ran into some issues with PUT and the expect header once I was able to test against amazon, that is working now.  status/perf markers should also be in this version.  They are working with file transfers, but not yet with DC transfers.  Should be able to wrap this up in another day or two.", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-09-10T10:00:43.139-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/18967/comment/20029", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-09-10T10:00:43.139-0500", 
+          "id": "20029"
+        }, 
+        {
+          "body": "fixed status markers for all modes, so v1 should be complete.", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-09-24T10:13:22.760-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/18967/comment/20139", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-09-24T10:13:22.760-0500", 
+          "id": "20139"
+        }
+      ], 
+      "maxResults": 5
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "Mike Link", 
+      "name": "mlink", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mlink@mcs.anl.gov", 
+      "key": "mlink", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|101fk8:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-266/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Mike Link", 
+      "name": "mlink", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mlink@mcs.anl.gov", 
+      "key": "mlink", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": "1_*:*_1_*:*_38133360829_*|*_5_*:*_1_*:*_0", 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/issueLink/12135", 
+        "inwardIssue": {
+          "fields": {
+            "status": {
+              "statusCategory": {
+                "name": "Done", 
+                "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+                "id": 3, 
+                "key": "done", 
+                "colorName": "green"
+              }, 
+              "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+              "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+              "id": "5", 
+              "name": "Resolved"
+            }, 
+            "priority": {
+              "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+              "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+              "name": "Major", 
+              "id": "3"
+            }, 
+            "issuetype": {
+              "name": "New Feature", 
+              "self": "https://globus.atlassian.net/rest/api/2/issuetype/2", 
+              "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11051&avatarType=issuetype", 
+              "subtask": false, 
+              "avatarId": 11051, 
+              "id": "2", 
+              "description": "A new feature of the product, which has yet to be developed."
+            }, 
+            "summary": "Add HTTP/S3 transfer support to GridFTP v0.2"
+          }, 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19139", 
+          "id": "19139", 
+          "key": "GT-274"
+        }, 
+        "type": {
+          "outward": "depends on", 
+          "inward": "is depended on by", 
+          "self": "https://globus.atlassian.net/rest/api/2/issueLinkType/10010", 
+          "id": "10010", 
+          "name": "Dependency"
+        }, 
+        "id": "12135"
+      }
+    ], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@379156", 
+    "summary": "Add HTTP/S3 transfer support to GridFTP v0.1", 
+    "customfield_10288": "2012-09-05T14:22:18.013-0500", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-266/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [
+      {
+        "archived": false, 
+        "name": "Sprint 2013-10-28", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11588", 
+        "releaseDate": "2013-10-28", 
+        "released": true, 
+        "id": "11588", 
+        "description": ""
+      }
+    ], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "Done", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+        "id": 3, 
+        "key": "done", 
+        "colorName": "green"
+      }, 
+      "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+      "id": "5", 
+      "name": "Resolved"
+    }, 
+    "updated": "2014-07-23T13:14:08.435-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "Need to add GridFTP commands to enable transfers between a GridFTP server and S3.  Additionally, we can use the same commands to use a GridFTP server to facilitate a S3 transfer over the GridFTP data channel.\n\nRough plans for the commands:\n\nHTTP GET url <path | DC> -- transfer url to the specified path, or to the client via the data channel.\nHTTP PUT url <path | DC> -- transfer to the url from the specified path or from the client via the data channel.\n\nPartial gets and multi-part puts should be supported.\n\nOther options including setting headers and auth tokens should be considered.", 
+    "reporter": {
+      "displayName": "Mike Link", 
+      "name": "mlink", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mlink@mcs.anl.gov", 
+      "key": "mlink", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2012-08-13T08:32:04.390-0500", 
+    "versions": [], 
+    "resolutiondate": "2013-10-28T17:08:05.130-0500", 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "New Feature", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/2", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11051&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11051, 
+      "id": "2", 
+      "description": "A new feature of the product, which has yet to be developed."
+    }, 
+    "resolution": {
+      "self": "https://globus.atlassian.net/rest/api/2/resolution/6", 
+      "id": "6", 
+      "name": "Work Complete", 
+      "description": "The work for this JIRA has been completed as specified."
+    }, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/18967", 
+  "id": "18967", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

@@ -1,0 +1,151 @@
+{
+  "key": "GT-621", 
+  "fields": {
+    "comment": {
+      "total": 0, 
+      "startAt": 0, 
+      "comments": [], 
+      "maxResults": 0
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": null, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|zq5uzu:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-621/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Mike Link", 
+      "name": "mlink", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mlink@mcs.anl.gov", 
+      "key": "mlink", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@5a3b01", 
+    "summary": "globus-url-copy with -p changes to active mode instead of passive during get", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-621/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2015-12-22T08:48:35.570-0600", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "This problem is similar to the issue described at the end of GT-398.  Basically, the globus-url-copy passive/active behavior changes when retrieving from remote server (using sshftp but probably occurs in other cases) once the -p option is specified.  Without -p, the server is given the pasv command.  With -p, the server is given the port command so becomes active, which breaks connectivity (1) when the client is not accessible (e.g. behind firewall) and (2) because the wrong ip address is given anyway in the port command (gives local non-routable ip).  You can actually see this behavior in the GT-398 ticket.  The debug output of the first command shows the pasv command.  When -p is used in the second command, the port command is given instead and with a non-routable ip.\r\n\r\nDon't know if there is some setting that disables this behavior (I couldn't see one).  If not, this behavior still exists.  First, without -p, transfer works ok (because the PASV command is given):\r\n\r\n~> globus-url-copy -dbg -c -cd -r -vb sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m file:///home/pkolano/nobak/1m64g/tmp/foo\r\nSource: sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/\r\nDest:   file:///home/pkolano/nobak/1m64g/tmp/\r\n  file.16384m  ->  foo\r\ndebug: starting to get sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m\r\ndebug: connecting to sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m\r\n\r\ndebug: response from sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m:\r\n220 pfe27.nas.nasa.gov GridFTP Server 7.26 (gcc64, 1433516164-85) [Globus Toolkit 6.0.1433516164] ready.\r\n\r\ndebug: authenticating with sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m\r\ndebug: response from sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m:\r\n230 User anonymous logged in.\r\n\r\ndebug: sending command to sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m:\r\nSITE HELP\r\n\r\ndebug: response from sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m:\r\n214-The following commands are recognized:\r\n    ALLO    APPE    REST    CWD     CDUP    DCAU    EPSV    FEAT\r\n    ERET    MDTM    STAT    ESTO    HELP    LIST    MODE    NLST\r\n    MLSC    MLSD    PASV    RNFR    MLSR    MLST    NOOP    OPTS\r\n    STOR    PASS    PBSZ    PORT    PROT    SITE    EPRT    RETR\r\n    SPOR    MFMT    SCKS    TREV    PWD     QUIT    SBUF    SIZE\r\n    SPAS    STRU    SYST    RNTO    TYPE    USER    LANG    MKD\r\n    RMD     DELE    CKSM    DCSC\r\n214 End\r\n\r\ndebug: sending command to sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m:\r\nFEAT\r\n\r\ndebug: response from sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m:\r\n211-Extensions supported\r\n HTTP\r\n DCSC P,D\r\n MFMT\r\n AUTHZ_ASSERT\r\n MLSR\r\n MLSC\r\n UTF8\r\n LANG EN\r\n DCAU\r\n PARALLEL\r\n SIZE\r\n MLST Type*;Size*;Modify*;Perm*;Charset;UNIX.mode*;UNIX.owner*;UNIX.uid*;UNIX.group*;UNIX.gid*;Unique*;UNIX.slink*;X.count;\r\n ERET\r\n ESTO\r\n SPAS\r\n SPOR\r\n REST STREAM\r\n MDTM\r\n PASV AllowDelayed;\r\n211 End.\r\n\r\ndebug: sending command to sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m:\r\nSITE CLIENTINFO scheme=sshftp;appname=\"globus-url-copy\";appver=\"9.15 (gcc64, 1433516164-85) [unknown]\";\r\ndebug: response from sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m:\r\n250 OK.\r\n\r\ndebug: sending command to sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m:\r\nTYPE I\r\ndebug: response from sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m:\r\n200 Type set to I.\r\n\r\ndebug: sending command to sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m:\r\nPASV\r\n\r\ndebug: response from sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m:\r\n227 Entering Passive Mode (129,99,230,58,197,125)\r\n\r\ndebug: sending command to sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m:\r\nRETR /nobackupp5/pkolano/1m64g/file.16384m\r\n\r\ndebug: response from sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m:\r\n150 Beginning transfer.\r\n\r\ndebug: reading into data buffer 0x7ff5bb054010, maximum length 1048576\r\ndebug: data callback, no error, buffer 0x7ff5bb054010, length 1048576, offset=0, eof=false\r\ndebug: reading into data buffer 0x7ff5baf53010, maximum length 1048576\r\ndebug: data callback, no error, buffer 0x7ff5baf53010, length 1048576, offset=1048576, eof=false\r\n...\r\ndebug: operation complete\r\n\r\n############################################################\r\n\r\nOnce -p is used, the transfer no longer works (because now the PORT command is given instead of PASV):\r\n\r\n~> globus-url-copy -p 1 -dbg -c -cd -r -vb sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m file:///home/pkolano/nobak/1m64g/tmp/foo\r\nSource: sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/\r\nDest:   file:///home/pkolano/nobak/1m64g/tmp/\r\n  file.16384m  ->  foo\r\ndebug: starting to get sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m\r\ndebug: connecting to sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m\r\n\r\ndebug: response from sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m:\r\n220 pfe27.nas.nasa.gov GridFTP Server 7.26 (gcc64, 1433516164-85) [Globus Toolkit 6.0.1433516164] ready.\r\n\r\ndebug: authenticating with sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m\r\ndebug: response from sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m:\r\n230 User anonymous logged in.\r\n\r\ndebug: sending command to sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m:\r\nSITE HELP\r\n\r\ndebug: response from sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m:\r\n214-The following commands are recognized:\r\n    ALLO    APPE    REST    CWD     CDUP    DCAU    EPSV    FEAT\r\n    ERET    MDTM    STAT    ESTO    HELP    LIST    MODE    NLST\r\n    MLSC    MLSD    PASV    RNFR    MLSR    MLST    NOOP    OPTS\r\n    STOR    PASS    PBSZ    PORT    PROT    SITE    EPRT    RETR\r\n    SPOR    MFMT    SCKS    TREV    PWD     QUIT    SBUF    SIZE\r\n    SPAS    STRU    SYST    RNTO    TYPE    USER    LANG    MKD\r\n    RMD     DELE    CKSM    DCSC\r\n214 End\r\n\r\ndebug: sending command to sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m:\r\nFEAT\r\n\r\ndebug: response from sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m:\r\n211-Extensions supported\r\n HTTP\r\n DCSC P,D\r\n MFMT\r\n AUTHZ_ASSERT\r\n MLSR\r\n MLSC\r\n UTF8\r\n LANG EN\r\n DCAU\r\n PARALLEL\r\n SIZE\r\n MLST Type*;Size*;Modify*;Perm*;Charset;UNIX.mode*;UNIX.owner*;UNIX.uid*;UNIX.group*;UNIX.gid*;Unique*;UNIX.slink*;X.count;\r\n ERET\r\n ESTO\r\n SPAS\r\n SPOR\r\n REST STREAM\r\n MDTM\r\n PASV AllowDelayed;\r\n211 End.\r\n\r\ndebug: sending command to sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m:\r\nSITE CLIENTINFO scheme=sshftp;appname=\"globus-url-copy\";appver=\"9.15 (gcc64, 1433516164-85) [unknown]\";\r\ndebug: response from sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m:\r\n250 OK.\r\n\r\ndebug: sending command to sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m:\r\nTYPE I\r\ndebug: response from sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m:\r\n200 Type set to I.\r\n\r\ndebug: sending command to sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m:\r\nMODE E\r\n\r\ndebug: response from sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m:\r\n200 Mode set to E.\r\n\r\ndebug: sending command to sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m:\r\nOPTS RETR Parallelism=1,1,1;\r\n\r\ndebug: response from sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m:\r\n200 OPTS Command Successful.\r\n\r\ndebug: sending command to sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m:\r\nPORT 10,1,60,15,140,74\r\n\r\ndebug: response from sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m:\r\n200 PORT Command successful.\r\n\r\ndebug: sending command to sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m:\r\nRETR /nobackupp5/pkolano/1m64g/file.16384m\r\n\r\ndebug: response from sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m:\r\n500-Command failed. : callback failed.\r\n500-globus_xio: Unable to connect to 10.1.60.15:35914\r\n500-globus_xio: System error in connect: No route to host\r\n500-globus_xio: A system call failed: No route to host\r\n500 End.\r\n\r\ndebug: fault on connection to sshftp://pfe27.nas.nasa.gov/nobackupp5/pkolano/1m64g/file.16384m: globus_ftp_client: the server responded with an error\r\ndebug: data callback, error globus_ftp_client: the server responded with an error, buffer 0x7f6989af3010, length 0, offset=0, eof=true\r\ndebug: operation complete\r\n\r\ncontinuing on error: globus_ftp_client: the server responded with an error\r\n500 500-Command failed. : callback failed.\r\n500-globus_xio: Unable to connect to 10.1.60.15:35914\r\n500-globus_xio: System error in connect: No route to host\r\n500-globus_xio: A system call failed: No route to host\r\n500 End.\r\n\r\n\r\n\r\nerror: There was an error with 1 transfer.\r\n", 
+    "reporter": null, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": "using binary linux x86_64 tarball on both ends: http://toolkit.globus.org/ftppub/gt6/installers/linux/globus_toolkit-6.0.1433516164-x86_64-unknown-linux-gnu-Build-98.tar.gz", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2015-08-03T16:24:41.325-0500", 
+    "versions": [], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/28935", 
+  "id": "28935", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

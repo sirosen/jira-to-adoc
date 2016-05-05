@@ -1,0 +1,252 @@
+{
+  "key": "GT-128", 
+  "fields": {
+    "comment": {
+      "total": 1, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "  Easiest approach is GPT metadata wrappers.  Most comprehensive approach is hand coded configure.in rules.  I don't think we can necessarily count on pkg-config files to exist on all systems (several TeraGrid systems do not have pkg-config, nor .pc files for their libraries) on which GT will be built.  I like the globus_openssl approach. ", 
+          "updateAuthor": {
+            "displayName": "Eric Blau", 
+            "name": "blau", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=blau", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "blau@mcs.anl.gov", 
+            "key": "blau", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2010-04-09T14:13:27.248-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/11443/comment/11259", 
+          "author": {
+            "displayName": "Eric Blau", 
+            "name": "blau", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=blau", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "blau@mcs.anl.gov", 
+            "key": "blau", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2010-04-09T14:13:27.248-0500", 
+          "id": "11259"
+        }
+      ], 
+      "maxResults": 1
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "Joe Bester", 
+      "name": "bester", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "bester@mcs.anl.gov", 
+      "key": "bester", 
+      "active": true, 
+      "timeZone": "America/New_York"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100brk:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-128/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": null, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "1907", 
+    "issuelinks": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/issueLink/10538", 
+        "inwardIssue": {
+          "fields": {
+            "status": {
+              "statusCategory": {
+                "name": "To Do", 
+                "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+                "id": 2, 
+                "key": "new", 
+                "colorName": "blue-gray"
+              }, 
+              "description": "The issue is open and ready for the assignee to start work on it.", 
+              "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+              "id": "1", 
+              "name": "Open"
+            }, 
+            "priority": {
+              "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+              "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+              "name": "Major", 
+              "id": "3"
+            }, 
+            "issuetype": {
+              "name": "New Feature", 
+              "self": "https://globus.atlassian.net/rest/api/2/issuetype/2", 
+              "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11051&avatarType=issuetype", 
+              "subtask": false, 
+              "avatarId": 11051, 
+              "id": "2", 
+              "description": "A new feature of the product, which has yet to be developed."
+            }, 
+            "summary": "Implement Globus native packaging plan"
+          }, 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/11324", 
+          "id": "11324", 
+          "key": "GT-122"
+        }, 
+        "type": {
+          "outward": "depends on", 
+          "inward": "is depended on by", 
+          "self": "https://globus.atlassian.net/rest/api/2/issueLinkType/10010", 
+          "id": "10010", 
+          "name": "Dependency"
+        }, 
+        "id": "10538"
+      }
+    ], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@ed2c0b", 
+    "summary": "Add support for using external packages in the installer", 
+    "customfield_10288": "2010-04-09T14:13:27.248-0500", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-128/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2012-05-10T15:08:08.417-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "Some of the packages distributed in GT 5.0.x are just gpt-wrapped versions of external programs. It would be helpful for the native repackaging effort to drop those so that we can better meet native packaging policies and reduce our support overhead.\n\nThere are three main ways I see to do this:\n* Do like we do with globus_openssl in GT 5.0.x where we have gpt packages that are just metadata wrappers around external libraries. The pro for this are that we'd not have to change metadata for dependent packages. The con is that we still have packages to deal with that don't really bring much value.\n* Hand code configure.in rules to detect and use the external libraries in packages that need them. This is done in the globus_openssl package. We'd have to duplicate those configuration rules (which use pkg-config if present, falling back to environment variables falling back to configuration options). \n* Add a prerequisite for pkg-config, and use its autoconf macro packages to handle external dependencies. The pro for this is that we'd get some decent handling of compile and link lines for most everything we depend on and the actual expression of dependencies is quite simple (something like PKG_CHECK_MODULES([LIBXML2], [libxml-2.0]) is all we'd need in the configuration scripts). The con is that we'd add another external dependency.\n\nIt would be helpful to have this work done in such a way that the top-level configuration script for the installer is able to detect missing dependencies prior to trying to build dependent packages. This may be hard to automate, but the number of external dependencies is rather small, so some hard-coding might be ok.", 
+    "reporter": {
+      "displayName": "Stuart Martin", 
+      "name": "smartin", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=smartin", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "smartin@mcs.anl.gov", 
+      "key": "smartin", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2010-04-02T13:30:32.726-0500", 
+    "versions": [], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10334", 
+        "id": "10334", 
+        "name": "Build & Test"
+      }
+    ], 
+    "issuetype": {
+      "name": "Task", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/3", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11058&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11058, 
+      "id": "3", 
+      "description": "A task that needs to be done."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/11443", 
+  "id": "11443", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

@@ -1,0 +1,276 @@
+{
+  "key": "GT-76", 
+  "fields": {
+    "comment": {
+      "total": 1, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "I've committed code to trunk to combine the pbs SEG and perl modules into a single package with a shared configuration file.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2011-08-23T07:05:43.104-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/12085/comment/15822", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2011-08-23T07:05:43.104-0500", 
+          "id": "15822"
+        }
+      ], 
+      "maxResults": 1
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "Joe Bester", 
+      "name": "bester", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "bester@mcs.anl.gov", 
+      "key": "bester", 
+      "active": true, 
+      "timeZone": "America/New_York"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|101y6o:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-76/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Joe Bester", 
+      "name": "bester", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "bester@mcs.anl.gov", 
+      "key": "bester", 
+      "active": true, 
+      "timeZone": "America/New_York"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": "1_*:*_1_*:*_32461768865_*|*_5_*:*_1_*:*_0", 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@ff2cea", 
+    "summary": "Improve pbs packaging", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 21600, 
+      "percent": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-76/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [
+      {
+        "archived": false, 
+        "name": "issue cleanup may 2012", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/10924", 
+        "releaseDate": "2012-05-08", 
+        "released": true, 
+        "id": "10924", 
+        "description": "Instead of polluting a sprint, put old/won't fix issues in this bucket."
+      }
+    ], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": 21600, 
+    "progress": {
+      "progress": 0, 
+      "total": 21600, 
+      "percent": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "Done", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+        "id": 3, 
+        "key": "done", 
+        "colorName": "green"
+      }, 
+      "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+      "id": "5", 
+      "name": "Resolved"
+    }, 
+    "updated": "2012-05-02T15:43:56.803-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "The PBS LRM is implemented across the following files:\nglobus_gram_job_manager_setup_pbs\nglobus_wsrf_gram_service_java_setup_pbs\nglobus_scheduler_event_generator_pbs\nglobus_scheduler_event_generator_pbs_setup\nglobus_scheduler_event_generator_pbs_test\nglobus_scheduler_provider_setup_pbs\n\nThe wsrf and scheduler_provider setup packages can be removed from CVS as they aren't needed for GRAM5.\nThe others can be combined into a single package that provides:\n\n    lib/perl/Globus/GRAM/JobManager/pbs.pm\n    lib/libglobus_seg_pbs_$(GLOBUS_FLAVOR_NAME).la\n    etc/globus-pbs.conf\n    etc/grid-services/jobmanager-pbs\n    sbin/globus-gram-setup-pbs\n\nThe globus-gram-setup-pbs probes for pbs tools and offers command-line options for the other parameters, modifying the globus-pbs.conf file. The pbs.pm file will not be autoconf substituted, but instead will read the config file for values. The setup program can be run as a setup package or via native packaging postinstall support in the rpm/deb. \n\nThe default configuration file should look something like this:\n# Path to mpiexec program to launch mpi2 tasks\n# mpiexec=/usr/bin/mpiexec\n\n# Path to mpirun program to launch older-style mpi tasks\n# mpirun=/usr/bin/mpirun\n\n# Path to qsub program to submit a job to the LRM\n# qsub=/usr/bin/qsub\n\n# Path to qstat program to poll a job's status\n# qstat=/usr/bin/qstat\n\n# Path to the qdel program to cancel a job\n# qdel=/usr/bin/qdel\n\n# Flag indicating whether PBS is configured as a cluster or simple SMP machine\n# cluster=yes\n\n# Number of compute elements per schedulable nodes\n# cpu_per_node=1\n\n# Remote shell program to start executables on different nodes in the\n# $PBS_NODEFILE\n# remote_shell=/usr/bin/ssh\n\n# Path to the softenv installation used to set up the job environment\n# softenv_dir=\n", 
+    "parent": {
+      "fields": {
+        "status": {
+          "statusCategory": {
+            "name": "To Do", 
+            "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+            "id": 2, 
+            "key": "new", 
+            "colorName": "blue-gray"
+          }, 
+          "description": "The issue is open and ready for the assignee to start work on it.", 
+          "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+          "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+          "id": "1", 
+          "name": "Open"
+        }, 
+        "priority": {
+          "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+          "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+          "name": "Major", 
+          "id": "3"
+        }, 
+        "issuetype": {
+          "name": "Task", 
+          "self": "https://globus.atlassian.net/rest/api/2/issuetype/3", 
+          "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11058&avatarType=issuetype", 
+          "subtask": false, 
+          "avatarId": 11058, 
+          "id": "3", 
+          "description": "A task that needs to be done."
+        }, 
+        "summary": "Sanity Check GRAM5 LRM setup packages"
+      }, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/11456", 
+      "id": "11456", 
+      "key": "GT-72"
+    }, 
+    "reporter": {
+      "displayName": "Joe Bester", 
+      "name": "bester", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "bester@mcs.anl.gov", 
+      "key": "bester", 
+      "active": true, 
+      "timeZone": "America/New_York"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": 21600, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": 21600, 
+    "created": "2010-08-12T13:56:14.245-0500", 
+    "versions": [], 
+    "resolutiondate": "2011-08-23T07:05:43.087-0500", 
+    "workratio": 0, 
+    "aggregatetimespent": null, 
+    "timetracking": {
+      "originalEstimateSeconds": 21600, 
+      "remainingEstimate": "1d", 
+      "remainingEstimateSeconds": 21600, 
+      "originalEstimate": "1d"
+    }, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10324", 
+        "id": "10324", 
+        "name": "GRAM"
+      }
+    ], 
+    "issuetype": {
+      "name": "Sub-task", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/7", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11056&avatarType=issuetype", 
+      "subtask": true, 
+      "avatarId": 11056, 
+      "id": "7", 
+      "description": "The sub-task of the issue"
+    }, 
+    "resolution": {
+      "self": "https://globus.atlassian.net/rest/api/2/resolution/6", 
+      "id": "6", 
+      "name": "Work Complete", 
+      "description": "The work for this JIRA has been completed as specified."
+    }, 
+    "timeestimate": 21600
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/12085", 
+  "id": "12085", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

@@ -1,0 +1,266 @@
+{
+  "key": "GT-604", 
+  "fields": {
+    "comment": {
+      "total": 3, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "For more info please see:\r\nhttps://its.cern.ch/jira/browse/DMC-681\r\n", 
+          "updateAuthor": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "created": "2015-10-13T06:51:26.203-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/28230/comment/32980", 
+          "author": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "updated": "2015-10-13T23:50:57.007-0500", 
+          "id": "32980"
+        }, 
+        {
+          "body": "An update has been released, globus-ftp-client-8.25, which will trigger a source connect before attempting to negotiate an ipv6 data connection.\r\n\r\nThanks for the report and investigation.", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2015-10-26T11:03:36.385-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/28230/comment/33183", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2015-10-26T11:03:36.385-0500", 
+          "id": "33183"
+        }, 
+        {
+          "body": "Response from Ulf (CSC, Helsinki):\r\nTested with EPEL6, FTS3 dualstack -> IPv6 only works fine.\r\nWill test further with the whole matrix tomorrow.\r\n\r\nTestat med EPEL6, FTS3 dualstack -> IPv6 only fungerar fint.\r\nSka testa vidare med hela matrisen imorgon.\r\n", 
+          "updateAuthor": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "created": "2015-10-27T16:46:14.568-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/28230/comment/33185", 
+          "author": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "updated": "2015-10-27T16:46:14.568-0500", 
+          "id": "33185"
+        }
+      ], 
+      "maxResults": 3
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": null, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [
+      "GridFTP", 
+      "gridftp"
+    ], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|zq5ufu:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-604/watchers", 
+      "watchCount": 2, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Mike Link", 
+      "name": "mlink", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mlink@mcs.anl.gov", 
+      "key": "mlink", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@1847ea8", 
+    "summary": "IPv6 transfers failing with globus-ftp-client-8.21 (FTS3)", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-604/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/minor.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/4", 
+      "name": "Minor", 
+      "id": "4"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2015-10-27T16:46:14.568-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "Hi,\r\n\r\n* background:\r\nwe are running a FTS3 server as instance for IPv6 tests.\r\n\r\n* problem:\r\nsince updating globus-ftp-client from v8.19 to v8.21 gridftp transfers are failing to IPv6-only sites.\r\n\r\n* investigation so far:\r\nwhile EPSV should be used for IPv6, transfers fall with v8.21 back to PASV mode, which fails for IPv6-only sources/destinations. We narrowed down the problem to globus-ftp-client-8.21-1.el6.x86_64 by downgrading the instance back onto a working state and updating package by package until the transfers fail again. After narrowing down to globus-ftp-client-8.21, we confirmed the dependency by updating all packages to the recent versions so that transfers were failing again. By downgrading globus-ftp-client to v8.19 transfers got running again.\r\n\r\nWe tried to find out, if the current evrsion checks for IPv6 to be enabled in the environment by exporting the env vars\r\n\r\nGLOBUS_IO_IPV6=true\r\nGLOBUS_FTP_CLIENT_IPV6=true\r\n\r\nhowever, gridftp transfers failed with globus-ftp-client-8.21 and these variables present in the fts-server environment.\r\n\r\nSo far it is not clear to us, why the transfers are falling back to the passive mode, i.e., if there is a call for it or if an initial EPSV command gets an error.\r\n\r\nCheers,\r\n  Thomas", 
+    "reporter": null, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": "Scientific Linux 6.2\r\nLinux fts3-kit-02-hepix.gridka.de 2.6.32-504.23.4.el6.x86_64 #1 SMP Tue Jun 9 11:55:03 CDT 2015 x86_64 x86_64 x86_64 GNU/Linux\r\n\r\n> rpm -qa | grep globus\r\nglobus-gass-copy-9.15-1.el6.x86_64\r\nglobus-gsi-callback-5.6-2.el6.x86_64\r\nglobus-callout-3.13-2.el6.x86_64\r\nglobus-gsi-openssl-error-3.5-2.el6.x86_64\r\nglobus-gsi-credential-7.7-2.el6.x86_64\r\nglobus-common-15.29-1.el6.x86_64\r\nglobus-io-11.3-1.el6.x86_64\r\nglobus-gssapi-gsi-11.14-2.el6.x86_64\r\nglobus-gss-assist-10.13-2.el6.x86_64\r\nglobus-gass-transfer-8.8-2.el6.x86_64\r\nglobus-gsi-sysconfig-6.8-2.el6.x86_64\r\nglobus-openssl-module-4.6-2.el6.x86_64\r\nglobus-gssapi-error-5.4-2.el6.x86_64\r\nglobus-ftp-control-6.6-1.el6.x86_64\r\nglobus-xio-5.8-1.el6.x86_64\r\nglobus-ftp-client-8.21-1.el6.x86_64\r\nglobus-gsi-cert-utils-9.10-2.el6.x86_64\r\nglobus-xio-popen-driver-3.5-2.el6.x86_64\r\nglobus-xio-gsi-driver-3.6-2.el6.x86_64\r\nglobus-gsi-proxy-ssl-5.7-2.el6.x86_64\r\nglobus-gsi-proxy-core-7.7-2.el6.x86_64\r\nglobus-gass-copy-progs-9.15-1.el6.x86_64\r\n\r\n> rpm -qa | grep gfal2\r\ngfal2-plugin-xrootd-0.4.0-1.el6.x86_64\r\ngfal2-plugin-http-2.9.3-1.el6.x86_64\r\ngfal2-plugin-dcap-2.9.3-1.el6.x86_64\r\ngfal2-util-1.2.1-1.el6.noarch\r\ngfal2-plugin-file-2.9.3-1.el6.x86_64\r\ngfal2-plugin-rfio-2.9.3-1.el6.x86_64\r\ngfal2-all-2.9.3-1.el6.x86_64\r\ngfal2-plugin-gridftp-2.9.3-1.el6.x86_64\r\ngfal2-plugin-srm-2.9.3-1.el6.x86_64\r\ngfal2-devel-2.9.3-1.el6.x86_64\r\ngfal2-2.9.3-1.el6.x86_64\r\ngfal2-python-1.8.1-1.el6.x86_64\r\ngfal2-plugin-lfc-2.9.3-1.el6.x86_64\r\n\r\n> rpm -qa | grep fts\r\nfts-msg-3.2.33-2.el6.x86_64\r\nfts-libs-3.2.33-2.el6.x86_64\r\nfts-rest-cli-3.2.33-1.el6.noarch\r\nfts-rest-selinux-3.2.33-1.el6.noarch\r\nfts-server-3.2.33-2.el6.x86_64\r\nfts-rest-3.2.33-1.el6.noarch\r\nfts-monitoring-3.2.33-2.el6.noarch\r\nfts-devel-3.2.33-2.el6.x86_64\r\nfts-infosys-3.2.33-2.el6.x86_64\r\nfts-client-3.2.33-2.el6.x86_64\r\nfts-rest-cloud-storage-3.2.33-1.el6.noarch\r\nfts-monitoring-selinux-3.2.33-2.el6.noarch\r\nfts-mysql-debuginfo-3.2.33-2.el6.x86_64\r\nfts-mysql-3.2.33-2.el6.x86_64\r\nfts-rest-oauth2-3.2.33-1.el6.noarch\r\nfts-debuginfo-3.2.33-2.el6.x86_64\r\nfts-python-3.2.33-2.el6.x86_64\r\npython-fts-3.2.33-1.el6.noarch\r\n", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2015-06-15T10:36:44.839-0500", 
+    "versions": [], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/28230", 
+  "id": "28230", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

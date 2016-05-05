@@ -1,0 +1,435 @@
+{
+  "key": "GT-335", 
+  "fields": {
+    "comment": {
+      "total": 6, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "You will always be able to list /, but only allowed paths or their parents should be shown.  If that isn't the case, can you show a specific example?", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-12-06T00:02:06.701-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19847/comment/20736", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-12-06T00:02:06.701-0600", 
+          "id": "20736"
+        }, 
+        {
+          "body": "For this example, the following are set in the server configuration file:\n\nuse_home_dirs 1\nrestrict_paths rw/glade\n\nSince / is explicitly not permitted by the restrict_paths setting, the following is not intuitive behavior, and could potentially leak sensitive information.\n\nUberFTP> open -P 388 gridftp01.ucar.edu\n220-NCAR GLADE GridFTP Service\n...\n230 End.\nUberFTP> cd /\nUberFTP> dir\ndrwxr-xr-x  20     root     root         4096 Apr 19 09:55 .\ndrwxr-xr-x  16     root     root         4096 Apr 19 09:55 ..\n-rw-r--r--   1     root     root            0 Jan  5 09:58 HEREIAM\ndrwxr-xr-x   2     root     root         4096 Apr 19 09:56 bin\ndrwxr-xr-x   6     root     root         1024 Nov 28 10:40 bluefire\ndrwxr-xr-x  19     root     root        65536 May  1 11:11 dasg_proj2\ndrwxr-xr-x   2     root     root         4096 Nov 12 09:30 dev\ndrwxr-xr-x   6     root     root         4096 Dec  5 15:49 etc\ndrwxr-xr-x   3     root     root         4096 Jan  4 14:33 fs\ndrwxr-xr-x  14     root     root         1024 Nov 28 10:02 glade\ndrwxr-xr-x   2     root     root         4096 Dec 14 09:28 gpfs\ndrwxr-xr-x   3     root     root        53248 Sep 28 10:32 home\ndrwxr-xr-x   3     root     root         4096 Dec  5 15:07 lib64\ndrwxr-xr-x   2     root     root         4096 Jan 12 08:55 proc\ndrwxr-xr-x 2771     root     root       262144 Nov 19 12:46 ptmp\ndrwxr-xr-x   2     root     root         4096 Apr 19 09:58 sbin\ndrwxr-xr-x   2     root     root         4096 Dec  5 15:11 tmp\ndrwxr-xr-x   6     root     root         4096 Dec  5 15:04 usr\ndrwxr-xr-x   5     root     root         4096 Sep 21 13:03 var\nUberFTP> get HEREIAM\nHEREIAM: 500 Command failed : Path not allowed.\nUberFTP> cd proc\nproc: 500 Command failed : Path not allowed.\nUberFTP> cd dev\ndev: 500 Command failed : Path not allowed.\nUberFTP> dir home/skel\nhome/skel: 500 Command failed : Path not allowed.\nUberFTP> cd glade/u/home/cruff\nUberFTP> dir\ndrwxr-xr-x   3    cruff     univ        16384 Dec  5 14:02 .\ndrwxr-xr-x 2057     root     root       131072 Dec  5 09:37 ..\n-rw-r--r--   1    cruff     ncar      3198499 Dec  4 11:19 gridftp-parallel-test\nUberFTP> quit\n221 Goodbye.\n", 
+          "updateAuthor": {
+            "displayName": "cruff@ucar.edu", 
+            "name": "cruff@ucar.edu", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=cruff%40ucar.edu", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "cruff@ucar.edu", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-12-06T09:02:26.031-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19847/comment/20737", 
+          "author": {
+            "displayName": "cruff@ucar.edu", 
+            "name": "cruff@ucar.edu", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=cruff%40ucar.edu", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "cruff@ucar.edu", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-12-06T09:02:26.031-0600", 
+          "id": "20737"
+        }, 
+        {
+          "body": "OK, that is a bug -- you should only see /glade in that list.  \n\nI'm not able to reproduce that behavior though.  Is there anything else interesting with your config?", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-12-06T10:28:13.960-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19847/comment/20739", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-12-06T10:28:13.960-0600", 
+          "id": "20739"
+        }, 
+        {
+          "body": "Figured it out.\n\nThe problem is that the documentation does not really make clear the division of labor when using front end and data nodes.  The problem was caused by the fact that the configuration file for the data nodes did not include the restrict_paths setting as used on the control node.  When I added the appropriate restrict_paths to the data node configuration, it behaves as you say it should.  It also wasn't obvious that the directory listing processing was getting pushed to a data node, instead of being performed by the front end.  I suspect a documentation update would be appropriate.\n", 
+          "updateAuthor": {
+            "displayName": "cruff@ucar.edu", 
+            "name": "cruff@ucar.edu", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=cruff%40ucar.edu", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "cruff@ucar.edu", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-12-06T10:54:30.052-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19847/comment/20741", 
+          "author": {
+            "displayName": "cruff@ucar.edu", 
+            "name": "cruff@ucar.edu", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=cruff%40ucar.edu", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "cruff@ucar.edu", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-12-06T10:54:30.052-0600", 
+          "id": "20741"
+        }, 
+        {
+          "body": "Ah.  Thanks for figuring it out.  I'll see what I can do to make it clear, or possibly have the data node inherit the settings from the front end.", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-12-06T11:29:25.730-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19847/comment/20743", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-12-06T11:29:25.730-0600", 
+          "id": "20743"
+        }, 
+        {
+          "body": "Updated documentation to specify that restrict paths should be set on both the front end and data node.", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-01-29T10:28:14.112-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19847/comment/21120", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-01-29T10:28:14.112-0600", 
+          "id": "21120"
+        }
+      ], 
+      "maxResults": 6
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "cruff@ucar.edu", 
+      "name": "cruff@ucar.edu", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=cruff%40ucar.edu", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "cruff@ucar.edu", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|101b14:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-335/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Mike Link", 
+      "name": "mlink", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mlink@mcs.anl.gov", 
+      "key": "mlink", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": "1_*:*_1_*:*_4727272707_*|*_5_*:*_1_*:*_0", 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@cdda95", 
+    "summary": "Root directory still visible for listing even if restrict_paths prohibits it", 
+    "customfield_10288": "2012-12-06T00:02:06.701-0600", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-335/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [
+      {
+        "archived": false, 
+        "name": "5.2.4", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11066", 
+        "releaseDate": "2013-02-13", 
+        "released": true, 
+        "id": "11066", 
+        "description": ""
+      }, 
+      {
+        "archived": false, 
+        "name": "Sprint 2013-01-28", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11097", 
+        "releaseDate": "2013-01-28", 
+        "released": true, 
+        "id": "11097", 
+        "description": ""
+      }
+    ], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "Done", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+        "id": 3, 
+        "key": "done", 
+        "colorName": "green"
+      }, 
+      "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+      "id": "5", 
+      "name": "Resolved"
+    }, 
+    "updated": "2013-01-29T10:28:14.127-0600", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "If the globus-gridftp-server configuration file contains a restrict_paths option that does not include the root directory, it still can be displayed even though you will be unable to transfer files to/from it.  For example, if the configuration file has a line similar to this:\n\nrestrict_paths rw/glade\n\nYou can still display the contents of the root directory with \"globus-url-copy -list gsiftp://server/\" or another client like uberftp with the dir command.\n", 
+    "reporter": {
+      "displayName": "cruff@ucar.edu", 
+      "name": "cruff@ucar.edu", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=cruff%40ucar.edu", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "cruff@ucar.edu", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": "Linux RHEL 5.8", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2012-12-05T17:20:21.431-0600", 
+    "versions": [
+      {
+        "archived": false, 
+        "name": "5.2.3", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/10963", 
+        "releaseDate": "2012-12-03", 
+        "released": true, 
+        "id": "10963"
+      }
+    ], 
+    "resolutiondate": "2013-01-29T10:28:14.100-0600", 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": {
+      "self": "https://globus.atlassian.net/rest/api/2/resolution/1", 
+      "id": "1", 
+      "name": "Fixed", 
+      "description": "A fix for this issue is checked into the tree and tested."
+    }, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/19847", 
+  "id": "19847", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

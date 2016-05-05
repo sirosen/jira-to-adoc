@@ -1,0 +1,999 @@
+{
+  "key": "GT-489", 
+  "fields": {
+    "comment": {
+      "total": 19, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "This patch https://globus.atlassian.net/secure/attachment/11550/impexp.diff\n\n should fix the GRAM issue (or alternately the configuration option -launch_method fork_and_proxy in the gatekeeper configuration).", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2013-12-06T08:47:48.665-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22712/comment/23589", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2013-12-06T08:48:30.642-0600", 
+          "id": "23589"
+        }, 
+        {
+          "body": "I've not been able to duplicate the gridftp issue yet.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2013-12-06T08:49:07.618-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22712/comment/23590", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2013-12-06T08:49:07.618-0600", 
+          "id": "23590"
+        }, 
+        {
+          "body": "It'd help if you could rerun the gridftp command with GLOBUS_GSSAPI_DEBUG_LEVEL=9 environment variable so I can see what's going on. Mike thinks this is probably a client-side issue, so running the globus-url-copy with that should provide some insight.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2013-12-06T11:13:34.611-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22712/comment/23593", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2013-12-06T11:13:34.611-0600", 
+          "id": "23593"
+        }, 
+        {
+          "body": "And additionally set these environment variables for the globus-url-copy test\nGLOBUS_ERROR_OUTPUT=1\nGLOBUS_ERROR_VERBOSE=1", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-12-06T11:17:06.811-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22712/comment/23594", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-12-06T11:18:08.455-0600", 
+          "id": "23594"
+        }, 
+        {
+          "body": "Looks like the globus-url-copy issue is only with GT 5.2.1. I've attached the debug output anyway; globus-url-copy-debug1.txt is the log without GLOBUS_GSSAPI_DEBUG_LEVEL=9, and globus-url-copy-debug2.txt is the log with it.\n", 
+          "updateAuthor": {
+            "displayName": "matyas", 
+            "name": "matyas", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=matyas", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "matyas", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-12-06T11:34:11.379-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22712/comment/23595", 
+          "author": {
+            "displayName": "matyas", 
+            "name": "matyas", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=matyas", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "matyas", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-12-06T11:34:11.379-0600", 
+          "id": "23595"
+        }, 
+        {
+          "body": "I've committed the GSSAPI fix above and will generate new packages with that. I'm inclined to mark the other issue as resolved, though I'm not sure exactly which patch between 5.2.1 and current fixes it.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2013-12-06T12:01:43.826-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22712/comment/23596", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2013-12-06T12:01:43.826-0600", 
+          "id": "23596"
+        }, 
+        {
+          "body": "I rebuilt the globus-gssapi-gsi package with your patch for both 5.2.1 and 5.2.5. Now I'm getting a different error:\n$ globus-job-run localhost/jobmanager-fork-poll /usr/bin/id\nGRAM Job submission failed because an end-of-file was reached\nglobus_xio: An end of file occurred\n (error code 10)\nI'll attach debugging output from 5.2.5.", 
+          "updateAuthor": {
+            "displayName": "matyas", 
+            "name": "matyas", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=matyas", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "matyas", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-12-06T14:28:24.789-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22712/comment/23598", 
+          "author": {
+            "displayName": "matyas", 
+            "name": "matyas", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=matyas", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "matyas", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-12-06T14:28:24.789-0600", 
+          "id": "23598"
+        }, 
+        {
+          "body": "That one looks like a service-side problem. The client is authenticating and then the server is hanging up on it. Can you send the gatekeeper/job manager logs for those?", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2013-12-06T14:40:36.210-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22712/comment/23599", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2013-12-06T14:40:36.210-0600", 
+          "id": "23599"
+        }, 
+        {
+          "body": "Attaching gatekeeper log.\nA jobmanager log didn't get created, but I found this in /var/log/messages:\n\nkernel: globus-job-mana[16372]: segfault at 1400000357 ip 0000003dea8e7500 sp 00007fffa7e11ef0 error 4 in libcrypto.so.1.0.1e[3dea800000+1b5000]", 
+          "updateAuthor": {
+            "displayName": "matyas", 
+            "name": "matyas", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=matyas", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "matyas", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-12-06T16:36:41.714-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22712/comment/23601", 
+          "author": {
+            "displayName": "matyas", 
+            "name": "matyas", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=matyas", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "matyas", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-12-06T16:36:41.714-0600", 
+          "id": "23601"
+        }, 
+        {
+          "body": "That segfault occurs if I take a build of globus-gssapi-gsi that was built against openssl 1.0.0, but run it on a system with openssl 1.0.1.\nUnfortunately, if I build it with openssl 1.0.1 then I can't even install it on a system with openssl 1.0.0 due to shared library version requirements.\n\nI've done a lot of testing of various combinations and I think the easiest way to summarize is to post a table; hope JIRA doesn't mangle it too much.\n(These were all from running globus-job-run)\n\n{code}\n| gssapi-gsi | patch | build openssl | run openssl | outcome                              |\n|------------+-------+---------------+-------------+--------------------------------------|\n|       10.7 | no    |         1.0.0 |       1.0.0 | ok                                   |\n|       10.7 | no    |         1.0.0 |      1.0.1e | FAIL globus-xio error                |\n|       10.7 | yes   |         1.0.0 |       1.0.0 | FAIL globus-xio error                |\n|       10.7 | yes   |         1.0.0 |      1.0.1e | FAIL jobmanager segfault             |\n|       10.7 | no    |        1.0.1e |       1.0.0 | untested presumably does not install |\n|       10.7 | no    |        1.0.1e |      1.0.1e | FAIL hangs forever                   |\n|       10.7 | yes   |        1.0.1e |       1.0.0 | FAIL does not install                |\n|       10.7 | yes   |        1.0.1e |      1.0.1e | FAIL hangs forever                   |\n|      10.10 | no    |         1.0.0 |       1.0.0 | ok                                   |\n|      10.10 | no    |         1.0.0 |      1.0.1e | FAIL globus-xio error                |\n|      10.10 | yes   |         1.0.0 |       1.0.0 | ok                                   |\n|      10.10 | yes   |         1.0.0 |      1.0.1e | FAIL jobmanager segfault             |\n|      10.10 | no    |        1.0.1e |       1.0.0 | FAIL does not install                |\n|      10.10 | no    |        1.0.1e |      1.0.1e | ok                                   |\n|      10.10 | yes   |        1.0.1e |       1.0.0 | FAIL does not install                |\n|      10.10 | yes   |        1.0.1e |      1.0.1e | ok                                   |\n{code}\n\nSome conclusions:\n\n1. If GSSAPI-GSI was built against OpenSSL 1.0.0 then globus-job-run does not work on OpenSSL 1.0.1e.\nIf it's not the \"Token size\" error then it's a jobmanager segfault.\n\n2. If GSSAPI-GSI was built against OpenSSL 1.0.1e then it cannot be installed on a system with OpenSSL 1.0.0.\nThis is a dependency issue due to shared library versions.\n\n3. If GSSAPI-GSI 10.7 was built against OpenSSL 1.0.1e then globus-job-run will hang forever -- patched or unpatched.\n\n4. The patch is not necessary with 10.10: as long as it is rebuilt with OpenSSL 1.0.1e, it will work on OpenSSL 1.0.1e (and no older).\nThe patch breaks 10.7: I get a \"Token size\" error even when GSSAPI-GSI was built with and running on OpenSSL 1.0.0.\n\n", 
+          "updateAuthor": {
+            "displayName": "matyas", 
+            "name": "matyas", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=matyas", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "matyas", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-12-06T20:23:37.612-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22712/comment/23603", 
+          "author": {
+            "displayName": "matyas", 
+            "name": "matyas", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=matyas", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "matyas", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-12-06T20:23:37.612-0600", 
+          "id": "23603"
+        }, 
+        {
+          "body": "Version 10.8 of GSSAPI contains some fixes to work with TLS 1.2, which is probably why your old version doesn't work. Is there any reason for this testing matrix to include 10.7 since we've already fixed bugs in that version?\n\nWould something like this work:\nbuild:\nglobus-gssapi-gsi-1.10-1 build depend/depend on openssl >= 1.0.0 and openssl < 1.0.1\nbuild:\nglobus-gssapi-gsi-1.10-2 build depend/depend on openssl >= 1.0.1\n", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2013-12-09T10:15:41.148-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22712/comment/23604", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2013-12-09T10:15:41.148-0600", 
+          "id": "23604"
+        }, 
+        {
+          "body": "I tested with 10.7 since that's the version that was in GT 5.2.1, which is the version we ship.\nI tried out 10.8 (well, 10.7 with the code changes backported from 10.8) in an otherwise GT 5.2.1 install, but got the same symptoms.\n(Also tried out 10.10 in a 5.2.1 install -- same thing).\n\nI tried your second suggestion. Unfortunately, yum is not smart enough to automatically choose the older version of globus-gssapi-gsi if the requirement isn't met, and it will cause errors on upgrade. If the user knows to explicitly specify the version then it will work, but we can't expect that.", 
+          "updateAuthor": {
+            "displayName": "matyas", 
+            "name": "matyas", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=matyas", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "matyas", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-12-09T16:25:48.620-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22712/comment/23608", 
+          "author": {
+            "displayName": "matyas", 
+            "name": "matyas", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=matyas", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "matyas", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-12-09T16:25:48.620-0600", 
+          "id": "23608"
+        }, 
+        {
+          "body": "I guess I'm not sure what you are expecting from us. We provide a version that works with old ssl will have a new one that works with the new ssl. You're willing to upgrade to an openssl that breaks things but not to a gt that fixes the breakage?", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2013-12-10T08:14:23.072-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22712/comment/23615", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2013-12-10T08:14:23.072-0600", 
+          "id": "23615"
+        }, 
+        {
+          "body": "The openssl upgrade happened on the distro side, and we have no control over it. Actually, we've been telling people to avoid upgrading openssl until we have a fix.\n\nWe're in the process of upgrading to 5.2.5, but that's not something that will be ready and tested this month, let alone this week, so we were hoping for something that can tide the users over until 5.2.5 is ready.\n\nIf possible, we'd also like something that works with both openssl 1.0.0 and 1.0.1e, since some of our users are very conservative and only upgrade software when they absolutely have to, whereas other users aren't.", 
+          "updateAuthor": {
+            "displayName": "matyas", 
+            "name": "matyas", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=matyas", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "matyas", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-12-10T11:38:07.822-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22712/comment/23618", 
+          "author": {
+            "displayName": "matyas", 
+            "name": "matyas", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=matyas", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "matyas", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-12-10T11:38:07.822-0600", 
+          "id": "23618"
+        }, 
+        {
+          "body": "We have some good news to report: using globus-xio-3.6 and globus-xio-gsi-driver-2.4 in an otherwise GT 5.2.1 install fixes gridftp; adding -launch_method fork_and_proxy to the arguments when starting up globus-gatekeeper fixes globus-job-run as well.\n\nHow do you recommend we make fork_and_proxy the default? Right now I just patch the init script; is there a better place for it?", 
+          "updateAuthor": {
+            "displayName": "matyas", 
+            "name": "matyas", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=matyas", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "matyas", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-12-10T20:03:32.538-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22712/comment/23623", 
+          "author": {
+            "displayName": "matyas", 
+            "name": "matyas", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=matyas", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "matyas", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-12-10T20:03:32.538-0600", 
+          "id": "23623"
+        }, 
+        {
+          "body": "I was able to make the globus-gatekeeper work by simply recompiling the GT 5.2.5 globus-gssapi-gsi source unchanged, i.e. without any patch applied, against openssl 1.0.1.\n\nThe globus-gssapi-gsi library if compiled against openssl 1.0.0 but used with openssl 1.0.1 at runtime will not do the same thing as a globus-gssapi-gsi library compiled against openssl 1.0.1. The reason for this is that openssl 1.0.1 uses labelled symbols and will use different versions of some functions in the library if the binary or library that uses the library at runtime was compiled against openssl 1.0.0 or 1.0.1. The globus-gssapi-gsi library is the only globus library that uses any of the versioned symbols from openssl 1.0.1, so it is the only one that needs to be recompiled. It is the only one that has a rpm requires on libcrypto.so.10(OPENSSL_1.0.1)(64bit) when compiled against openssl 1.0.1.\n\nThe recompiled library is available in EPEL testing - https://admin.fedoraproject.org/updates/FEDORA-EPEL-2013-12307/\n\nIf you are installing globus from EPEL and this update works for you please provide karma so that it can be pushed to stable earlier than the 2 week waiting time that is imposed for updated that do not reach the karma threshold.", 
+          "updateAuthor": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "created": "2013-12-11T11:43:17.747-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22712/comment/23628", 
+          "author": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "updated": "2013-12-11T11:43:17.747-0600", 
+          "id": "23628"
+        }, 
+        {
+          "body": "TACC have a user that is seeing this problem with gridftp-6.0 running on Solaris 5.10 (gridftp.ranch.tacc.utexas.edu or gridftp.ranch.tacc.xsede.org)\r\nhttps://portal.xsede.org/group/xup/tickets/-/tickets/33713\r\n\r\nbash-4.1$ cat grid-ftp\r\nservice gsiftp\r\n{\r\n    disable = no\r\n    instances = 50\r\n    socket_type = stream\r\n    protocol = tcp\r\n    per_source = 42\r\n    wait = no\r\n    user = root\r\n    banner_fail = /usr/local/apps/gridftp-6.0/etc/gridftp.full.msg\r\n    env += GLOBUS_HOSTNAME=gridftp1.ranch.tacc.utexas.edu\r\n    env += GLOBUS_TCP_PORT_RANGE=50000,51000\r\n    env += GLOBUS_LOCATION=/usr/local/apps/gridftp-6.0\r\n    env += LD_LIBRARY_PATH=/usr/local/apps/gridftp-6.0/lib:/usr/local/ssl-1.0.0m/lib:/usr/local/lib\r\n    server = /usr/local/apps/gridftp-6.0/sbin/globus-gridftp-server\r\n    server_args = -c /usr/local/apps/gridftp-6.0/etc/gridftp.ranch.conf -fs-whitelist file,popen,ordering -popen-whitelist tar:/bin/tar,md5sum:/usr/bin/md5sum\r\n    log_on_failure += USERID\r\n    nice = 19\r\n}\r\n\r\nI am not sure if the \"+=\" operator is a post or prefix operator.\r\n\r\nbash-4.1$ LD_LIBRARY_PATH=/usr/local/apps/gridftp-6.0/lib:/usr/local/ssl-1.0.0m/lib:/usr/local/lib:$LD_LIBRARY_PATH\r\nbash-4.1$ ldd  /usr/local/apps/gridftp-6.0/sbin/globus-gridftp-server\r\n        libglobus_gridftp_server.so.6 =>         /usr/local/apps/gridftp-6.0/lib/libglobus_gridftp_server.so.6\r\n        libglobus_gfork.so.0 =>  /usr/local/apps/gridftp-6.0/lib/libglobus_gfork.so.0\r\n        libglobus_ftp_control.so.1 =>    /usr/local/apps/gridftp-6.0/lib/libglobus_ftp_control.so.1\r\n        libglobus_io.so.3 =>     /usr/local/apps/gridftp-6.0/lib/libglobus_io.so.3\r\n        libglobus_usage.so.0 =>  /usr/local/apps/gridftp-6.0/lib/libglobus_usage.so.0\r\n        libglobus_gridftp_server_control.so.0 =>         /usr/local/apps/gridftp-6.0/lib/libglobus_gridftp_server_control.so.0\r\n        libglobus_xio.so.0 =>    /usr/local/apps/gridftp-6.0/lib/libglobus_xio.so.0\r\n        libglobus_gssapi_error.so.2 =>   /usr/local/apps/gridftp-6.0/lib/libglobus_gssapi_error.so.2\r\n        libglobus_gss_assist.so.3 =>     /usr/local/apps/gridftp-6.0/lib/libglobus_gss_assist.so.3\r\n        libglobus_authz.so.0 =>  /usr/local/apps/gridftp-6.0/lib/libglobus_authz.so.0\r\n        libglobus_callout.so.0 =>        /usr/local/apps/gridftp-6.0/lib/libglobus_callout.so.0\r\n        libglobus_gssapi_gsi.so.4 =>     /usr/local/apps/gridftp-6.0/lib/libglobus_gssapi_gsi.so.4\r\n        libglobus_gsi_proxy_core.so.0 =>         /usr/local/apps/gridftp-6.0/lib/libglobus_gsi_proxy_core.so.0\r\n        libglobus_gsi_credential.so.1 =>         /usr/local/apps/gridftp-6.0/lib/libglobus_gsi_credential.so.1\r\n        libglobus_gsi_callback.so.0 =>   /usr/local/apps/gridftp-6.0/lib/libglobus_gsi_callback.so.0\r\n        libglobus_oldgaa.so.0 =>         /usr/local/apps/gridftp-6.0/lib/libglobus_oldgaa.so.0\r\n        libglobus_gsi_cert_utils.so.0 =>         /usr/local/apps/gridftp-6.0/lib/libglobus_gsi_cert_utils.so.0\r\n        libglobus_gsi_sysconfig.so.1 =>  /usr/local/apps/gridftp-6.0/lib/libglobus_gsi_sysconfig.so.1\r\n        libglobus_openssl.so.0 =>        /usr/local/apps/gridftp-6.0/lib/libglobus_openssl.so.0\r\n        libglobus_openssl_error.so.0 =>  /usr/local/apps/gridftp-6.0/lib/libglobus_openssl_error.so.0\r\n        libglobus_proxy_ssl.so.1 =>      /usr/local/apps/gridftp-6.0/lib/libglobus_proxy_ssl.so.1\r\n        libglobus_gsi_authz_callout_error.so.0 =>        /usr/local/apps/gridftp-6.0/lib/libglobus_gsi_authz_callout_error.so.0\r\n        libglobus_common.so.0 =>         /usr/local/apps/gridftp-6.0/lib/libglobus_common.so.0\r\n        libnsl.so.1 =>   /lib/libnsl.so.1\r\n        libsocket.so.1 =>        /lib/libsocket.so.1\r\n        libssl.so.1.0.0 =>       /usr/local/ssl-1.0.0m/lib/libssl.so.1.0.0\r\n        libcrypto.so.1.0.0 =>    /usr/local/ssl-1.0.0m/lib/libcrypto.so.1.0.0\r\n        libltdl.so.3 =>  /usr/local/lib/libltdl.so.3\r\n        libdl.so.1 =>    /lib/libdl.so.1\r\n        libc.so.1 =>     /lib/libc.so.1\r\n        libgcc_s.so.1 =>         /usr/local/lib/libgcc_s.so.1\r\n        libmp.so.2 =>    /lib/libmp.so.2\r\n        libmd.so.1 =>    /lib/libmd.so.1\r\n        libsoftcrypto.so.1 =>    /lib/libsoftcrypto.so.1\r\n        libelf.so.1 =>   /lib/libelf.so.1\r\n        libcryptoutil.so.1 =>    /lib/libcryptoutil.so.1\r\n        libz.so.1 =>     /usr/local/lib/libz.so.1\r\n        libz.so.1 (SUNW_1.1) =>  (version not found)\r\n        libm.so.2 =>     /lib/libm.so.2\r\nbash-4.1$ \r\n\r\nOther libssl libraries found.\r\nbash-4.1$  find /usr /lib /opt -name \"libssl.so.1.0.*\" -ls 2> /dev/null\r\n55992    1 lrwxrwxrwx   1 root     root           34 Feb 10 11:18 /usr/lib/amd64/libssl.so.1.0.0 -> ../../../lib/amd64/libssl.so.1.0.0\r\n56031    1 lrwxrwxrwx   1 root     root           25 Feb 10 11:18 /usr/lib/libssl.so.1.0.0 -> ../../lib/libssl.so.1.0.0\r\n51752 1024 -r-xr-xr-x   1 2        bin        338695 Feb 11  2011 /usr/local/ssl/lib/libssl.so.1.0.0\r\n232910 1024 -r-xr-xr-x   1 root     root       371516 Jun  9  2014 /usr/local/ssl-1.0.0m/lib/libssl.so.1.0.0\r\n56017    1 lrwxrwxrwx   1 root     root           31 Feb 10 11:18 /lib/libssl.so.1.0.0 -> openssl/default/libssl.so.1.0.0\r\n55996    1 lrwxrwxrwx   1 root     root           40 Feb 10 11:18 /lib/amd64/libssl.so.1.0.0 -> ../openssl/default/amd64/libssl.so.1.0.0\r\n80602  643 -r-xr-xr-x   1 root     bin        615992 May  5 10:06 /lib/openssl/default/amd64/libssl.so.1.0.0\r\n80597  515 -r-xr-xr-x   1 root     bin        468792 May  5 10:06 /lib/openssl/default/libssl.so.1.0.0\r\n239368 1024 -r-xr-xr-x   1 makeda   G-815144   427336 Dec 13  2013 /opt/splunkforwarder/lib/libssl.so.1.0.0\r\n", 
+          "updateAuthor": {
+            "displayName": "David Carver", 
+            "name": "dcarver", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=dcarver", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "dcarver@tacc.utexas.edu", 
+            "key": "dcarver", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2015-07-27T10:43:25.480-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22712/comment/31989", 
+          "author": {
+            "displayName": "David Carver", 
+            "name": "dcarver", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=dcarver", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "dcarver@tacc.utexas.edu", 
+            "key": "dcarver", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2015-07-27T10:43:25.480-0500", 
+          "id": "31989"
+        }, 
+        {
+          "body": "I don't have permissions to view the xsede ticket.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2015-07-27T11:25:43.278-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22712/comment/31990", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2015-07-27T11:25:43.278-0500", 
+          "id": "31990"
+        }, 
+        {
+          "body": "Joe,\r\nTry it now.\r\nhttps://tickets.xsede.org/Ticket/Display.html?id=33713\r\n\r\n", 
+          "updateAuthor": {
+            "displayName": "David Carver", 
+            "name": "dcarver", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=dcarver", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "dcarver@tacc.utexas.edu", 
+            "key": "dcarver", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2015-07-27T12:13:20.247-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22712/comment/31991", 
+          "author": {
+            "displayName": "David Carver", 
+            "name": "dcarver", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=dcarver", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "dcarver@tacc.utexas.edu", 
+            "key": "dcarver", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2015-07-27T12:13:20.247-0500", 
+          "id": "31991"
+        }
+      ], 
+      "maxResults": 19
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "matyas", 
+      "name": "matyas", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=matyas", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "matyas", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100ng8:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-489/watchers", 
+      "watchCount": 3, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Joe Bester", 
+      "name": "bester", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "bester@mcs.anl.gov", 
+      "key": "bester", 
+      "active": true, 
+      "timeZone": "America/New_York"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "3800", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@13a3c50", 
+    "summary": "xio_gsi errors with OpenSSL 1.0.1e", 
+    "customfield_10288": "2013-12-06T08:47:48.665-0600", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-489/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [
+      {
+        "archived": false, 
+        "name": "Sprint 2014-02-17", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11644", 
+        "releaseDate": "2014-02-16", 
+        "released": true, 
+        "id": "11644", 
+        "description": ""
+      }
+    ], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/critical.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/2", 
+      "name": "Critical", 
+      "id": "2"
+    }, 
+    "timespent": null, 
+    "attachment": [
+      {
+        "mimeType": "text/plain", 
+        "created": "2013-12-06T16:36:41.709-0600", 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/11554", 
+        "filename": "gatekeeper.log", 
+        "content": "https://globus.atlassian.net/secure/attachment/11554/gatekeeper.log", 
+        "id": "11554", 
+        "size": 1614
+      }, 
+      {
+        "mimeType": "text/plain", 
+        "created": "2013-12-05T18:10:26.712-0600", 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/11547", 
+        "filename": "globus-gatekeeper.log", 
+        "content": "https://globus.atlassian.net/secure/attachment/11547/globus-gatekeeper.log", 
+        "id": "11547", 
+        "size": 1604
+      }, 
+      {
+        "mimeType": "text/plain", 
+        "created": "2013-12-06T14:28:50.471-0600", 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/11553", 
+        "filename": "globus-job-run-gt525-debug.txt", 
+        "content": "https://globus.atlassian.net/secure/attachment/11553/globus-job-run-gt525-debug.txt", 
+        "id": "11553", 
+        "size": 67439
+      }, 
+      {
+        "mimeType": "text/plain", 
+        "created": "2013-12-06T11:33:33.430-0600", 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/11551", 
+        "filename": "globus-url-copy-debug1.txt", 
+        "content": "https://globus.atlassian.net/secure/attachment/11551/globus-url-copy-debug1.txt", 
+        "id": "11551", 
+        "size": 10323
+      }, 
+      {
+        "mimeType": "text/plain", 
+        "created": "2013-12-06T11:33:33.433-0600", 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/11552", 
+        "filename": "globus-url-copy-debug2.txt", 
+        "content": "https://globus.atlassian.net/secure/attachment/11552/globus-url-copy-debug2.txt", 
+        "id": "11552", 
+        "size": 121709
+      }, 
+      {
+        "mimeType": "text/plain", 
+        "created": "2013-12-05T18:10:26.729-0600", 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/11548", 
+        "filename": "gram_matyas.log", 
+        "content": "https://globus.atlassian.net/secure/attachment/11548/gram_matyas.log", 
+        "id": "11548", 
+        "size": 3412
+      }, 
+      {
+        "mimeType": "text/plain", 
+        "created": "2013-12-05T18:10:26.733-0600", 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/11549", 
+        "filename": "gridftp-auth.log", 
+        "content": "https://globus.atlassian.net/secure/attachment/11549/gridftp-auth.log", 
+        "id": "11549", 
+        "size": 1420
+      }, 
+      {
+        "mimeType": "application/octet-stream", 
+        "author": {
+          "displayName": "Joe Bester", 
+          "name": "bester", 
+          "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+          "avatarUrls": {
+            "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+            "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+            "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+            "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+          }, 
+          "emailAddress": "bester@mcs.anl.gov", 
+          "key": "bester", 
+          "active": true, 
+          "timeZone": "America/New_York"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/11550", 
+        "created": "2013-12-06T08:47:48.652-0600", 
+        "filename": "impexp.diff", 
+        "content": "https://globus.atlassian.net/secure/attachment/11550/impexp.diff", 
+        "id": "11550", 
+        "size": 1802
+      }
+    ], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2015-07-27T12:13:20.247-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "RHEL 6.5 / Centos 6.5 just came out, with OpenSSL version 1.0.1e. Upgrading to this version causes the following failures with several grid operations:\n{quote}\n$ globus-job-run localhost/jobmanager /usr/bin/id\nglobus_xio_gsi: Token size exceeds limit. Usually happens when someone tries to establish a insecure connection with a secure endpoint, e.g. when someone sends plain HTTP to a HTTPS endpoint without first establishing a SSL session.\n (error code 10)\n{quote}\n{quote}\n$ globus-url-copy  -v file:///etc/virc gsiftp://localhost/tmp/foo\nSource: file:///etc/\nDest:   gsiftp://localhost/tmp/\n  virc  ->  foo\n\nerror: globus_ftp_client: the server responded with an error\n500 500-Command failed. : globus_gridftp_server_file.c:globus_l_gfs_file_server_read_cb:2094:\n500-callback failed.\n500-an end-of-file was reached\n500-globus_xio_gsi.c:globus_l_xio_gsi_read_token_cb:1069:\n500-The GSI XIO driver failed to establish a secure connection. The failure occured during a handshake read.\n500-globus_i_xio_system_common.c:globus_i_xio_system_try_recv:243:\n500-An end of file occurred\n500 End.\n{quote}\nThese are the commands I've tried, though others may be affected.\nDowngrading openssl to 1.0.0 fixes both problems, which is what we are currently telling people to do.\n\nI'm attaching some of the logfiles.\n/var/log/messages shows that I've been successfully authenticated, but doesn't show any errors\n\nI've replicated the problem on both the OSG packages (based on 5.2.1) and the 5.2.5 packages from EPEL.", 
+    "reporter": {
+      "displayName": "matyas", 
+      "name": "matyas", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=matyas", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "matyas", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": "RHEL 6.5, Centos 6.5, SL 6 rolling", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2013-12-05T18:10:26.642-0600", 
+    "versions": [
+      {
+        "archived": false, 
+        "name": "5.2.1", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/10922", 
+        "releaseDate": "2012-04-26", 
+        "released": true, 
+        "id": "10922"
+      }, 
+      {
+        "archived": false, 
+        "name": "5.2.5", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11388", 
+        "releaseDate": "2013-06-17", 
+        "released": true, 
+        "id": "11388", 
+        "description": ""
+      }
+    ], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10328", 
+        "id": "10328", 
+        "name": "XIO"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/22712", 
+  "id": "22712", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

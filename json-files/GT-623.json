@@ -1,0 +1,203 @@
+{
+  "key": "GT-623", 
+  "fields": {
+    "comment": {
+      "total": 1, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "It seems the issue is confusion between the gsi-openssh RPMs from Globus (which contain the HPN patches) versus the gsi-openssh RPMs from EPEL (which don't contain the HPN patches).\r\n\r\nhttp://toolkit.globus.org/ftppub/gt6/stable/rpm/el/7/x86_64/ contains gsi-openssh-5.7-3.el7+gt6.x86_64.rpm. That is the current Globus gsi-openssh RPM that includes the current GSI-OpenSSH release from http://grid.ncsa.illinois.edu/ssh/ which is GSI-OpenSSH 5.7 and contains the HPN patches.\r\n\r\nhttps://apps.fedoraproject.org/packages/gsi-openssh/ contains gsi-openssh-6.6.1p1-2.el7.src.rpm (updated yesterday) which uses an old version of the GSI patch for OpenSSH, without HPN patches, and is maintained independently from Globus.\r\n\r\nI think the short-term fix is to be sure to use the RPMs from Globus if you want the HPN functionality. I think the long-term fix is to eliminate the non-Globus RPMs (which do not contain HPN) from EPEL so this confusion doesn't keep happening.\r\n\r\nI'm updating the title of this issue accordingly.", 
+          "updateAuthor": {
+            "displayName": "Jim Basney", 
+            "name": "basney", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=basney", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "jbasney@ncsa.uiuc.edu", 
+            "key": "basney", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2015-08-07T08:48:52.247-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/28946/comment/32100", 
+          "author": {
+            "displayName": "Jim Basney", 
+            "name": "basney", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=basney", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "jbasney@ncsa.uiuc.edu", 
+            "key": "basney", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2015-08-07T08:48:52.247-0500", 
+          "id": "32100"
+        }
+      ], 
+      "maxResults": 1
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": null, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|zq5v2a:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-623/watchers", 
+      "watchCount": 1, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Mattias Ellert", 
+      "name": "ellert", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mattias.ellert@fysast.uu.se", 
+      "key": "ellert", 
+      "active": true, 
+      "timeZone": "Europe/Stockholm"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@e9ec9b", 
+    "summary": "GSI-OpenSSH in EPEL is missing HPN", 
+    "customfield_10288": "2015-08-07T08:48:52.247-0500", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-623/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2016-03-11T09:56:20.930-0600", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "gsi-openssh-server.x86_64 0:5.7-3.el7+gt6 had the PSC HPN patches included:\r\n\r\n[root@poptart dsimmel]# strings /usr/sbin/gsisshd | grep -i hpn\r\nOpenSSH_6.4p1-hpn14v1 GSI_GSSAPI_GPT_5.7 GSI\r\nHPN Buffer Size: %d\r\nhpndisabled\r\nhpnbuffersize\r\nHPN Disabled: %d, HPN Buffer Size: %d\r\nRemote is NON-HPN aware\r\n\r\ngsi-openssh-server.x86_64 0:6.6.1p1-1.el7 no longer has HPN included. Please build GSI-OpenSSH with the PSC HPN patches included.", 
+    "reporter": {
+      "displayName": "Derek Simmel", 
+      "name": "dsimmel", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=dsimmel", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "dsimmel@psc.edu", 
+      "key": "dsimmel", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": "CentOS 7", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2015-08-06T21:17:11.656-0500", 
+    "versions": [], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10330", 
+        "id": "10330", 
+        "name": "GSI-OpenSSH"
+      }
+    ], 
+    "issuetype": {
+      "name": "Deployment", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/12", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11047&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11047, 
+      "id": "12", 
+      "description": ""
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/28946", 
+  "id": "28946", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

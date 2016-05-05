@@ -1,0 +1,1318 @@
+{
+  "key": "GT-122", 
+  "fields": {
+    "comment": {
+      "total": 0, 
+      "startAt": 0, 
+      "comments": [], 
+      "maxResults": 0
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "Stuart Martin", 
+      "name": "smartin", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=smartin", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "smartin@mcs.anl.gov", 
+      "key": "smartin", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100bqw:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-122/watchers", 
+      "watchCount": 1, 
+      "isWatching": false
+    }, 
+    "assignee": null, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "1904", 
+    "issuelinks": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/issueLink/11429", 
+        "outwardIssue": {
+          "fields": {
+            "status": {
+              "statusCategory": {
+                "name": "Done", 
+                "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+                "id": 3, 
+                "key": "done", 
+                "colorName": "green"
+              }, 
+              "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+              "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+              "id": "5", 
+              "name": "Resolved"
+            }, 
+            "priority": {
+              "iconUrl": "https://globus.atlassian.net/images/icons/priorities/critical.svg", 
+              "self": "https://globus.atlassian.net/rest/api/2/priority/2", 
+              "name": "Critical", 
+              "id": "2"
+            }, 
+            "issuetype": {
+              "name": "Bug", 
+              "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+              "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+              "subtask": false, 
+              "avatarId": 11043, 
+              "id": "1", 
+              "description": "A problem which impairs or prevents the functions of the product."
+            }, 
+            "summary": "globus-rsl package needs to bump major version of shlib"
+          }, 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/15636", 
+          "id": "15636", 
+          "key": "GRAM-248"
+        }, 
+        "type": {
+          "outward": "depends on", 
+          "inward": "is depended on by", 
+          "self": "https://globus.atlassian.net/rest/api/2/issueLinkType/10010", 
+          "id": "10010", 
+          "name": "Dependency"
+        }, 
+        "id": "11429"
+      }, 
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/issueLink/10536", 
+        "outwardIssue": {
+          "fields": {
+            "status": {
+              "statusCategory": {
+                "name": "Done", 
+                "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+                "id": 3, 
+                "key": "done", 
+                "colorName": "green"
+              }, 
+              "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+              "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+              "id": "5", 
+              "name": "Resolved"
+            }, 
+            "priority": {
+              "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+              "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+              "name": "Major", 
+              "id": "3"
+            }, 
+            "issuetype": {
+              "name": "Bug", 
+              "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+              "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+              "subtask": false, 
+              "avatarId": 11043, 
+              "id": "1", 
+              "description": "A problem which impairs or prevents the functions of the product."
+            }, 
+            "summary": "Externalize libxml2 dependency"
+          }, 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/11440", 
+          "id": "11440", 
+          "key": "RIC-72"
+        }, 
+        "type": {
+          "outward": "depends on", 
+          "inward": "is depended on by", 
+          "self": "https://globus.atlassian.net/rest/api/2/issueLinkType/10010", 
+          "id": "10010", 
+          "name": "Dependency"
+        }, 
+        "id": "10536"
+      }, 
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/issueLink/10682", 
+        "outwardIssue": {
+          "fields": {
+            "status": {
+              "statusCategory": {
+                "name": "Done", 
+                "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+                "id": 3, 
+                "key": "done", 
+                "colorName": "green"
+              }, 
+              "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+              "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+              "id": "5", 
+              "name": "Resolved"
+            }, 
+            "priority": {
+              "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+              "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+              "name": "Major", 
+              "id": "3"
+            }, 
+            "issuetype": {
+              "name": "New Feature", 
+              "self": "https://globus.atlassian.net/rest/api/2/issuetype/2", 
+              "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11051&avatarType=issuetype", 
+              "subtask": false, 
+              "avatarId": 11051, 
+              "id": "2", 
+              "description": "A new feature of the product, which has yet to be developed."
+            }, 
+            "summary": "create init script for globus-gatekeeper"
+          }, 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/12031", 
+          "id": "12031", 
+          "key": "GRAM-177"
+        }, 
+        "type": {
+          "outward": "depends on", 
+          "inward": "is depended on by", 
+          "self": "https://globus.atlassian.net/rest/api/2/issueLinkType/10010", 
+          "id": "10010", 
+          "name": "Dependency"
+        }, 
+        "id": "10682"
+      }, 
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/issueLink/10552", 
+        "outwardIssue": {
+          "fields": {
+            "status": {
+              "statusCategory": {
+                "name": "Done", 
+                "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+                "id": 3, 
+                "key": "done", 
+                "colorName": "green"
+              }, 
+              "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+              "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+              "id": "5", 
+              "name": "Resolved"
+            }, 
+            "priority": {
+              "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+              "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+              "name": "Major", 
+              "id": "3"
+            }, 
+            "issuetype": {
+              "name": "New Feature", 
+              "self": "https://globus.atlassian.net/rest/api/2/issuetype/2", 
+              "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11051&avatarType=issuetype", 
+              "subtask": false, 
+              "avatarId": 11051, 
+              "id": "2", 
+              "description": "A new feature of the product, which has yet to be developed."
+            }, 
+            "summary": "provide flexible authorization callout configuration"
+          }, 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/11457", 
+          "id": "11457", 
+          "key": "RIC-87"
+        }, 
+        "type": {
+          "outward": "depends on", 
+          "inward": "is depended on by", 
+          "self": "https://globus.atlassian.net/rest/api/2/issueLinkType/10010", 
+          "id": "10010", 
+          "name": "Dependency"
+        }, 
+        "id": "10552"
+      }, 
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/issueLink/10551", 
+        "outwardIssue": {
+          "fields": {
+            "status": {
+              "statusCategory": {
+                "name": "To Do", 
+                "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+                "id": 2, 
+                "key": "new", 
+                "colorName": "blue-gray"
+              }, 
+              "description": "The issue is open and ready for the assignee to start work on it.", 
+              "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+              "id": "1", 
+              "name": "Open"
+            }, 
+            "priority": {
+              "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+              "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+              "name": "Major", 
+              "id": "3"
+            }, 
+            "issuetype": {
+              "name": "Task", 
+              "self": "https://globus.atlassian.net/rest/api/2/issuetype/3", 
+              "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11058&avatarType=issuetype", 
+              "subtask": false, 
+              "avatarId": 11058, 
+              "id": "3", 
+              "description": "A task that needs to be done."
+            }, 
+            "summary": "Sanity Check GRAM5 LRM setup packages"
+          }, 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/11456", 
+          "id": "11456", 
+          "key": "GT-72"
+        }, 
+        "type": {
+          "outward": "depends on", 
+          "inward": "is depended on by", 
+          "self": "https://globus.atlassian.net/rest/api/2/issueLinkType/10010", 
+          "id": "10010", 
+          "name": "Dependency"
+        }, 
+        "id": "10551"
+      }, 
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/issueLink/10538", 
+        "outwardIssue": {
+          "fields": {
+            "status": {
+              "statusCategory": {
+                "name": "To Do", 
+                "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+                "id": 2, 
+                "key": "new", 
+                "colorName": "blue-gray"
+              }, 
+              "description": "The issue is open and ready for the assignee to start work on it.", 
+              "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+              "id": "1", 
+              "name": "Open"
+            }, 
+            "priority": {
+              "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+              "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+              "name": "Major", 
+              "id": "3"
+            }, 
+            "issuetype": {
+              "name": "Task", 
+              "self": "https://globus.atlassian.net/rest/api/2/issuetype/3", 
+              "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11058&avatarType=issuetype", 
+              "subtask": false, 
+              "avatarId": 11058, 
+              "id": "3", 
+              "description": "A task that needs to be done."
+            }, 
+            "summary": "Add support for using external packages in the installer"
+          }, 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/11443", 
+          "id": "11443", 
+          "key": "GT-128"
+        }, 
+        "type": {
+          "outward": "depends on", 
+          "inward": "is depended on by", 
+          "self": "https://globus.atlassian.net/rest/api/2/issueLinkType/10010", 
+          "id": "10010", 
+          "name": "Dependency"
+        }, 
+        "id": "10538"
+      }, 
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/issueLink/10533", 
+        "outwardIssue": {
+          "fields": {
+            "status": {
+              "statusCategory": {
+                "name": "Done", 
+                "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+                "id": 3, 
+                "key": "done", 
+                "colorName": "green"
+              }, 
+              "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+              "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+              "id": "5", 
+              "name": "Resolved"
+            }, 
+            "priority": {
+              "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+              "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+              "name": "Major", 
+              "id": "3"
+            }, 
+            "issuetype": {
+              "name": "Task", 
+              "self": "https://globus.atlassian.net/rest/api/2/issuetype/3", 
+              "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11058&avatarType=issuetype", 
+              "subtask": false, 
+              "avatarId": 11058, 
+              "id": "3", 
+              "description": "A task that needs to be done."
+            }, 
+            "summary": "Make default behavior of gatekeeper work without GLOBUS_LOCATION"
+          }, 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/11431", 
+          "id": "11431", 
+          "key": "GRAM-151"
+        }, 
+        "type": {
+          "outward": "depends on", 
+          "inward": "is depended on by", 
+          "self": "https://globus.atlassian.net/rest/api/2/issueLinkType/10010", 
+          "id": "10010", 
+          "name": "Dependency"
+        }, 
+        "id": "10533"
+      }, 
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/issueLink/10541", 
+        "outwardIssue": {
+          "fields": {
+            "status": {
+              "statusCategory": {
+                "name": "Done", 
+                "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+                "id": 3, 
+                "key": "done", 
+                "colorName": "green"
+              }, 
+              "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+              "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+              "id": "5", 
+              "name": "Resolved"
+            }, 
+            "priority": {
+              "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+              "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+              "name": "Major", 
+              "id": "3"
+            }, 
+            "issuetype": {
+              "name": "Task", 
+              "self": "https://globus.atlassian.net/rest/api/2/issuetype/3", 
+              "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11058&avatarType=issuetype", 
+              "subtask": false, 
+              "avatarId": 11058, 
+              "id": "3", 
+              "description": "A task that needs to be done."
+            }, 
+            "summary": "Figure out RLS external dependencies"
+          }, 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/11446", 
+          "id": "11446", 
+          "key": "GT-133"
+        }, 
+        "type": {
+          "outward": "depends on", 
+          "inward": "is depended on by", 
+          "self": "https://globus.atlassian.net/rest/api/2/issueLinkType/10010", 
+          "id": "10010", 
+          "name": "Dependency"
+        }, 
+        "id": "10541"
+      }, 
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/issueLink/10517", 
+        "outwardIssue": {
+          "fields": {
+            "status": {
+              "statusCategory": {
+                "name": "Done", 
+                "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+                "id": 3, 
+                "key": "done", 
+                "colorName": "green"
+              }, 
+              "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+              "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+              "id": "5", 
+              "name": "Resolved"
+            }, 
+            "priority": {
+              "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+              "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+              "name": "Major", 
+              "id": "3"
+            }, 
+            "issuetype": {
+              "name": "Task", 
+              "self": "https://globus.atlassian.net/rest/api/2/issuetype/3", 
+              "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11058&avatarType=issuetype", 
+              "subtask": false, 
+              "avatarId": 11058, 
+              "id": "3", 
+              "description": "A task that needs to be done."
+            }, 
+            "summary": "Make a plan on how Globus can be modified to create native binary and source packages "
+          }, 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/11323", 
+          "id": "11323", 
+          "key": "RIC-60"
+        }, 
+        "type": {
+          "outward": "depends on", 
+          "inward": "is depended on by", 
+          "self": "https://globus.atlassian.net/rest/api/2/issueLinkType/10010", 
+          "id": "10010", 
+          "name": "Dependency"
+        }, 
+        "id": "10517"
+      }, 
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/issueLink/10534", 
+        "outwardIssue": {
+          "fields": {
+            "status": {
+              "statusCategory": {
+                "name": "Done", 
+                "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+                "id": 3, 
+                "key": "done", 
+                "colorName": "green"
+              }, 
+              "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+              "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+              "id": "5", 
+              "name": "Resolved"
+            }, 
+            "priority": {
+              "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+              "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+              "name": "Major", 
+              "id": "3"
+            }, 
+            "issuetype": {
+              "name": "Task", 
+              "self": "https://globus.atlassian.net/rest/api/2/issuetype/3", 
+              "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11058&avatarType=issuetype", 
+              "subtask": false, 
+              "avatarId": 11058, 
+              "id": "3", 
+              "description": "A task that needs to be done."
+            }, 
+            "summary": "Externalize libtool dependency"
+          }, 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/11438", 
+          "id": "11438", 
+          "key": "RIC-70"
+        }, 
+        "type": {
+          "outward": "depends on", 
+          "inward": "is depended on by", 
+          "self": "https://globus.atlassian.net/rest/api/2/issueLinkType/10010", 
+          "id": "10010", 
+          "name": "Dependency"
+        }, 
+        "id": "10534"
+      }, 
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/issueLink/10535", 
+        "outwardIssue": {
+          "fields": {
+            "status": {
+              "statusCategory": {
+                "name": "Done", 
+                "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+                "id": 3, 
+                "key": "done", 
+                "colorName": "green"
+              }, 
+              "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+              "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+              "id": "5", 
+              "name": "Resolved"
+            }, 
+            "priority": {
+              "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+              "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+              "name": "Major", 
+              "id": "3"
+            }, 
+            "issuetype": {
+              "name": "Task", 
+              "self": "https://globus.atlassian.net/rest/api/2/issuetype/3", 
+              "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11058&avatarType=issuetype", 
+              "subtask": false, 
+              "avatarId": 11058, 
+              "id": "3", 
+              "description": "A task that needs to be done."
+            }, 
+            "summary": "Externalize xmlsec1 dependency"
+          }, 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/11439", 
+          "id": "11439", 
+          "key": "RIC-71"
+        }, 
+        "type": {
+          "outward": "depends on", 
+          "inward": "is depended on by", 
+          "self": "https://globus.atlassian.net/rest/api/2/issueLinkType/10010", 
+          "id": "10010", 
+          "name": "Dependency"
+        }, 
+        "id": "10535"
+      }, 
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/issueLink/10537", 
+        "outwardIssue": {
+          "fields": {
+            "status": {
+              "statusCategory": {
+                "name": "Done", 
+                "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+                "id": 3, 
+                "key": "done", 
+                "colorName": "green"
+              }, 
+              "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+              "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+              "id": "5", 
+              "name": "Resolved"
+            }, 
+            "priority": {
+              "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+              "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+              "name": "Major", 
+              "id": "3"
+            }, 
+            "issuetype": {
+              "name": "Task", 
+              "self": "https://globus.atlassian.net/rest/api/2/issuetype/3", 
+              "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11058&avatarType=issuetype", 
+              "subtask": false, 
+              "avatarId": 11058, 
+              "id": "3", 
+              "description": "A task that needs to be done."
+            }, 
+            "summary": "Externalize GPT's perl dependencies"
+          }, 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/11442", 
+          "id": "11442", 
+          "key": "RIC-74"
+        }, 
+        "type": {
+          "outward": "depends on", 
+          "inward": "is depended on by", 
+          "self": "https://globus.atlassian.net/rest/api/2/issueLinkType/10010", 
+          "id": "10010", 
+          "name": "Dependency"
+        }, 
+        "id": "10537"
+      }, 
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/issueLink/10539", 
+        "outwardIssue": {
+          "fields": {
+            "status": {
+              "statusCategory": {
+                "name": "Done", 
+                "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+                "id": 3, 
+                "key": "done", 
+                "colorName": "green"
+              }, 
+              "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+              "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+              "id": "5", 
+              "name": "Resolved"
+            }, 
+            "priority": {
+              "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+              "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+              "name": "Major", 
+              "id": "3"
+            }, 
+            "issuetype": {
+              "name": "Task", 
+              "self": "https://globus.atlassian.net/rest/api/2/issuetype/3", 
+              "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11058&avatarType=issuetype", 
+              "subtask": false, 
+              "avatarId": 11058, 
+              "id": "3", 
+              "description": "A task that needs to be done."
+            }, 
+            "summary": "Create metapackages for functional groups"
+          }, 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/11444", 
+          "id": "11444", 
+          "key": "RIC-76"
+        }, 
+        "type": {
+          "outward": "depends on", 
+          "inward": "is depended on by", 
+          "self": "https://globus.atlassian.net/rest/api/2/issueLinkType/10010", 
+          "id": "10010", 
+          "name": "Dependency"
+        }, 
+        "id": "10539"
+      }, 
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/issueLink/10540", 
+        "outwardIssue": {
+          "fields": {
+            "status": {
+              "statusCategory": {
+                "name": "Done", 
+                "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+                "id": 3, 
+                "key": "done", 
+                "colorName": "green"
+              }, 
+              "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+              "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+              "id": "5", 
+              "name": "Resolved"
+            }, 
+            "priority": {
+              "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+              "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+              "name": "Major", 
+              "id": "3"
+            }, 
+            "issuetype": {
+              "name": "Task", 
+              "self": "https://globus.atlassian.net/rest/api/2/issuetype/3", 
+              "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11058&avatarType=issuetype", 
+              "subtask": false, 
+              "avatarId": 11058, 
+              "id": "3", 
+              "description": "A task that needs to be done."
+            }, 
+            "summary": "Remove obsolete external dependencies"
+          }, 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/11445", 
+          "id": "11445", 
+          "key": "RIC-77"
+        }, 
+        "type": {
+          "outward": "depends on", 
+          "inward": "is depended on by", 
+          "self": "https://globus.atlassian.net/rest/api/2/issueLinkType/10010", 
+          "id": "10010", 
+          "name": "Dependency"
+        }, 
+        "id": "10540"
+      }, 
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/issueLink/10543", 
+        "outwardIssue": {
+          "fields": {
+            "status": {
+              "statusCategory": {
+                "name": "Done", 
+                "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+                "id": 3, 
+                "key": "done", 
+                "colorName": "green"
+              }, 
+              "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+              "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+              "id": "5", 
+              "name": "Resolved"
+            }, 
+            "priority": {
+              "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+              "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+              "name": "Major", 
+              "id": "3"
+            }, 
+            "issuetype": {
+              "name": "Task", 
+              "self": "https://globus.atlassian.net/rest/api/2/issuetype/3", 
+              "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11058&avatarType=issuetype", 
+              "subtask": false, 
+              "avatarId": 11058, 
+              "id": "3", 
+              "description": "A task that needs to be done."
+            }, 
+            "summary": "Make globus work without GLOBUS_LOCATION"
+          }, 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/11448", 
+          "id": "11448", 
+          "key": "RIC-80"
+        }, 
+        "type": {
+          "outward": "depends on", 
+          "inward": "is depended on by", 
+          "self": "https://globus.atlassian.net/rest/api/2/issueLinkType/10010", 
+          "id": "10010", 
+          "name": "Dependency"
+        }, 
+        "id": "10543"
+      }, 
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/issueLink/10545", 
+        "outwardIssue": {
+          "fields": {
+            "status": {
+              "statusCategory": {
+                "name": "Done", 
+                "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+                "id": 3, 
+                "key": "done", 
+                "colorName": "green"
+              }, 
+              "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+              "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+              "id": "5", 
+              "name": "Resolved"
+            }, 
+            "priority": {
+              "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+              "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+              "name": "Major", 
+              "id": "3"
+            }, 
+            "issuetype": {
+              "name": "Task", 
+              "self": "https://globus.atlassian.net/rest/api/2/issuetype/3", 
+              "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11058&avatarType=issuetype", 
+              "subtask": false, 
+              "avatarId": 11058, 
+              "id": "3", 
+              "description": "A task that needs to be done."
+            }, 
+            "summary": "Combine threaded and nonthreaded builds"
+          }, 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/11449", 
+          "id": "11449", 
+          "key": "RIC-81"
+        }, 
+        "type": {
+          "outward": "depends on", 
+          "inward": "is depended on by", 
+          "self": "https://globus.atlassian.net/rest/api/2/issueLinkType/10010", 
+          "id": "10010", 
+          "name": "Dependency"
+        }, 
+        "id": "10545"
+      }, 
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/issueLink/10546", 
+        "outwardIssue": {
+          "fields": {
+            "status": {
+              "statusCategory": {
+                "name": "Done", 
+                "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+                "id": 3, 
+                "key": "done", 
+                "colorName": "green"
+              }, 
+              "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+              "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+              "id": "5", 
+              "name": "Resolved"
+            }, 
+            "priority": {
+              "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+              "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+              "name": "Major", 
+              "id": "3"
+            }, 
+            "issuetype": {
+              "name": "Task", 
+              "self": "https://globus.atlassian.net/rest/api/2/issuetype/3", 
+              "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11058&avatarType=issuetype", 
+              "subtask": false, 
+              "avatarId": 11058, 
+              "id": "3", 
+              "description": "A task that needs to be done."
+            }, 
+            "summary": "Drop flavored naming of libraries"
+          }, 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/11450", 
+          "id": "11450", 
+          "key": "RIC-82"
+        }, 
+        "type": {
+          "outward": "depends on", 
+          "inward": "is depended on by", 
+          "self": "https://globus.atlassian.net/rest/api/2/issueLinkType/10010", 
+          "id": "10010", 
+          "name": "Dependency"
+        }, 
+        "id": "10546"
+      }, 
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/issueLink/10547", 
+        "outwardIssue": {
+          "fields": {
+            "status": {
+              "statusCategory": {
+                "name": "Done", 
+                "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+                "id": 3, 
+                "key": "done", 
+                "colorName": "green"
+              }, 
+              "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+              "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+              "id": "5", 
+              "name": "Resolved"
+            }, 
+            "priority": {
+              "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+              "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+              "name": "Major", 
+              "id": "3"
+            }, 
+            "issuetype": {
+              "name": "Task", 
+              "self": "https://globus.atlassian.net/rest/api/2/issuetype/3", 
+              "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11058&avatarType=issuetype", 
+              "subtask": false, 
+              "avatarId": 11058, 
+              "id": "3", 
+              "description": "A task that needs to be done."
+            }, 
+            "summary": "Add GPT metadata to pkg-config tool to GPT or globus_core"
+          }, 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/11452", 
+          "id": "11452", 
+          "key": "RIC-84"
+        }, 
+        "type": {
+          "outward": "depends on", 
+          "inward": "is depended on by", 
+          "self": "https://globus.atlassian.net/rest/api/2/issueLinkType/10010", 
+          "id": "10010", 
+          "name": "Dependency"
+        }, 
+        "id": "10547"
+      }, 
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/issueLink/10550", 
+        "outwardIssue": {
+          "fields": {
+            "status": {
+              "statusCategory": {
+                "name": "Done", 
+                "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+                "id": 3, 
+                "key": "done", 
+                "colorName": "green"
+              }, 
+              "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+              "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+              "id": "5", 
+              "name": "Resolved"
+            }, 
+            "priority": {
+              "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+              "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+              "name": "Major", 
+              "id": "3"
+            }, 
+            "issuetype": {
+              "name": "Task", 
+              "self": "https://globus.atlassian.net/rest/api/2/issuetype/3", 
+              "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11058&avatarType=issuetype", 
+              "subtask": false, 
+              "avatarId": 11058, 
+              "id": "3", 
+              "description": "A task that needs to be done."
+            }, 
+            "summary": "Make Globus Toolkit installation comply with linux FHS"
+          }, 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/11453", 
+          "id": "11453", 
+          "key": "RIC-85"
+        }, 
+        "type": {
+          "outward": "depends on", 
+          "inward": "is depended on by", 
+          "self": "https://globus.atlassian.net/rest/api/2/issueLinkType/10010", 
+          "id": "10010", 
+          "name": "Dependency"
+        }, 
+        "id": "10550"
+      }, 
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/issueLink/10553", 
+        "outwardIssue": {
+          "fields": {
+            "status": {
+              "statusCategory": {
+                "name": "Done", 
+                "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+                "id": 3, 
+                "key": "done", 
+                "colorName": "green"
+              }, 
+              "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+              "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+              "id": "5", 
+              "name": "Resolved"
+            }, 
+            "priority": {
+              "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+              "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+              "name": "Major", 
+              "id": "3"
+            }, 
+            "issuetype": {
+              "name": "Task", 
+              "self": "https://globus.atlassian.net/rest/api/2/issuetype/3", 
+              "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11058&avatarType=issuetype", 
+              "subtask": false, 
+              "avatarId": 11058, 
+              "id": "3", 
+              "description": "A task that needs to be done."
+            }, 
+            "summary": "Simplify GT source builds by creating new installer, installer creation script"
+          }, 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/11466", 
+          "id": "11466", 
+          "key": "RIC-90"
+        }, 
+        "type": {
+          "outward": "depends on", 
+          "inward": "is depended on by", 
+          "self": "https://globus.atlassian.net/rest/api/2/issueLinkType/10010", 
+          "id": "10010", 
+          "name": "Dependency"
+        }, 
+        "id": "10553"
+      }, 
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/issueLink/10555", 
+        "outwardIssue": {
+          "fields": {
+            "status": {
+              "statusCategory": {
+                "name": "Done", 
+                "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+                "id": 3, 
+                "key": "done", 
+                "colorName": "green"
+              }, 
+              "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+              "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+              "id": "5", 
+              "name": "Resolved"
+            }, 
+            "priority": {
+              "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+              "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+              "name": "Major", 
+              "id": "3"
+            }, 
+            "issuetype": {
+              "name": "Task", 
+              "self": "https://globus.atlassian.net/rest/api/2/issuetype/3", 
+              "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11058&avatarType=issuetype", 
+              "subtask": false, 
+              "avatarId": 11058, 
+              "id": "3", 
+              "description": "A task that needs to be done."
+            }, 
+            "summary": "Generate RPM spec files (or control/rules files) from GPT metadata"
+          }, 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/11471", 
+          "id": "11471", 
+          "key": "RIC-92"
+        }, 
+        "type": {
+          "outward": "depends on", 
+          "inward": "is depended on by", 
+          "self": "https://globus.atlassian.net/rest/api/2/issueLinkType/10010", 
+          "id": "10010", 
+          "name": "Dependency"
+        }, 
+        "id": "10555"
+      }, 
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/issueLink/10554", 
+        "outwardIssue": {
+          "fields": {
+            "status": {
+              "statusCategory": {
+                "name": "Done", 
+                "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+                "id": 3, 
+                "key": "done", 
+                "colorName": "green"
+              }, 
+              "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+              "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+              "id": "5", 
+              "name": "Resolved"
+            }, 
+            "priority": {
+              "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+              "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+              "name": "Major", 
+              "id": "3"
+            }, 
+            "issuetype": {
+              "name": "Task", 
+              "self": "https://globus.atlassian.net/rest/api/2/issuetype/3", 
+              "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11058&avatarType=issuetype", 
+              "subtask": false, 
+              "avatarId": 11058, 
+              "id": "3", 
+              "description": "A task that needs to be done."
+            }, 
+            "summary": "Ensure that we can bootstrap with any reasonably modern autotools stack. "
+          }, 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/11472", 
+          "id": "11472", 
+          "key": "RIC-93"
+        }, 
+        "type": {
+          "outward": "depends on", 
+          "inward": "is depended on by", 
+          "self": "https://globus.atlassian.net/rest/api/2/issueLinkType/10010", 
+          "id": "10010", 
+          "name": "Dependency"
+        }, 
+        "id": "10554"
+      }, 
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/issueLink/11359", 
+        "outwardIssue": {
+          "fields": {
+            "status": {
+              "statusCategory": {
+                "name": "Done", 
+                "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+                "id": 3, 
+                "key": "done", 
+                "colorName": "green"
+              }, 
+              "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+              "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+              "id": "5", 
+              "name": "Resolved"
+            }, 
+            "priority": {
+              "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+              "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+              "name": "Major", 
+              "id": "3"
+            }, 
+            "issuetype": {
+              "name": "Task", 
+              "self": "https://globus.atlassian.net/rest/api/2/issuetype/3", 
+              "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11058&avatarType=issuetype", 
+              "subtask": false, 
+              "avatarId": 11058, 
+              "id": "3", 
+              "description": "A task that needs to be done."
+            }, 
+            "summary": "Create RPM package metadata for GRAM"
+          }, 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/15188", 
+          "id": "15188", 
+          "key": "RIC-181"
+        }, 
+        "type": {
+          "outward": "depends on", 
+          "inward": "is depended on by", 
+          "self": "https://globus.atlassian.net/rest/api/2/issueLinkType/10010", 
+          "id": "10010", 
+          "name": "Dependency"
+        }, 
+        "id": "11359"
+      }, 
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/issueLink/10542", 
+        "outwardIssue": {
+          "fields": {
+            "status": {
+              "statusCategory": {
+                "name": "Done", 
+                "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+                "id": 3, 
+                "key": "done", 
+                "colorName": "green"
+              }, 
+              "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+              "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+              "id": "5", 
+              "name": "Resolved"
+            }, 
+            "priority": {
+              "iconUrl": "https://globus.atlassian.net/images/icons/priorities/minor.svg", 
+              "self": "https://globus.atlassian.net/rest/api/2/priority/4", 
+              "name": "Minor", 
+              "id": "4"
+            }, 
+            "issuetype": {
+              "name": "Task", 
+              "self": "https://globus.atlassian.net/rest/api/2/issuetype/3", 
+              "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11058&avatarType=issuetype", 
+              "subtask": false, 
+              "avatarId": 11058, 
+              "id": "3", 
+              "description": "A task that needs to be done."
+            }, 
+            "summary": "Remove MPI-related flavoring from globus_core and gpt"
+          }, 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/11447", 
+          "id": "11447", 
+          "key": "GT-134"
+        }, 
+        "type": {
+          "outward": "depends on", 
+          "inward": "is depended on by", 
+          "self": "https://globus.atlassian.net/rest/api/2/issueLinkType/10010", 
+          "id": "10010", 
+          "name": "Dependency"
+        }, 
+        "id": "10542"
+      }
+    ], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@35ff58", 
+    "summary": "Implement Globus native packaging plan", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-122/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2012-05-02T14:36:49.798-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "Implement the plan created in RIC-60", 
+    "reporter": {
+      "displayName": "Stuart Martin", 
+      "name": "smartin", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=smartin", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "smartin@mcs.anl.gov", 
+      "key": "smartin", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2010-02-25T14:58:19.013-0600", 
+    "versions": [], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10327", 
+        "id": "10327", 
+        "name": "Common Libs"
+      }
+    ], 
+    "issuetype": {
+      "name": "New Feature", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/2", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11051&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11051, 
+      "id": "2", 
+      "description": "A new feature of the product, which has yet to be developed."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/11324", 
+  "id": "11324", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

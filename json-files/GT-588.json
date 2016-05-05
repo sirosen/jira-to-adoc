@@ -1,0 +1,234 @@
+{
+  "key": "GT-588", 
+  "fields": {
+    "comment": {
+      "total": 2, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": " I believe the failure in 7.17 was related to GT-585.  This should work with the latest version.  The config needs to be in /etc/gridftp.conf, or directly set in the file /etc/gridftp-sshftp.", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2015-03-27T00:02:09.882-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/27344/comment/30501", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2015-03-27T00:02:09.882-0500", 
+          "id": "30501"
+        }, 
+        {
+          "body": "Hi Mike,\r\n\r\nWhen I pull either the 'globus-gridftp' package or the 'globus-data-management-server' package from our repo, I'm still getting \"globus_gridftp_server: 7.17 (1417812052-85)\". What version of gridftp do I need for the fix and what package should I pull it from? Thanks.\r\n\r\n-Dan\r\n\r\n\r\n", 
+          "updateAuthor": {
+            "displayName": "Dan Powers", 
+            "name": "dpowers", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=dpowers", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "dpowers@uchicago.edu", 
+            "key": "dpowers", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2015-03-27T09:59:10.878-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/27344/comment/30502", 
+          "author": {
+            "displayName": "Dan Powers", 
+            "name": "dpowers", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=dpowers", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "dpowers@uchicago.edu", 
+            "key": "dpowers", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2015-03-27T09:59:10.878-0500", 
+          "id": "30502"
+        }
+      ], 
+      "maxResults": 2
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "Dan Powers", 
+      "name": "dpowers", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=dpowers", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "dpowers@uchicago.edu", 
+      "key": "dpowers", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|zq5tfu:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-588/watchers", 
+      "watchCount": 2, 
+      "isWatching": false
+    }, 
+    "assignee": null, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@14c574", 
+    "summary": "When conducting transfers with globus-url-copy against a GridFTP server configured for ssh auth, the GridFTP server will attempt to use ports outside of the range defined by $GLOBUS_TCP_PORT_RANGE or port_range.", 
+    "customfield_10288": "2015-03-27T00:02:09.882-0500", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-588/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2015-03-27T09:59:11.045-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "https://globusonline.zendesk.com/agent/tickets/303477\r\n\r\nWhen conducting transfers with globus-url-copy against a GridFTP server configured for ssh auth, the GridFTP server will attempt to use ports outside of the range defined by $GLOBUS_TCP_PORT_RANGE or  port_range. I set config values in both /etc/gridftp.conf and /etc/gridftp.d/, but issue persisted. GUC was installed from the globus-data-management-client package from the GT 6 toolkit and GridFTP was installed from the globus-data-management-server package from the GT 6 toolkit. GridFTP was configured for ssh auth using the globus-gridftp-server-enable-sshftp command. User reported noticing this problem when running GUC with -sync option, but I found the issue occurred even when no sync option was set. \r\n\r\nI was able to reproduce this behavior using two Ubuntu 14.04 aws instances (one with GUC installed acting as client and the other acting as the GridFTP server) using:\r\n\r\nglobus_gridftp_server: 7.17 (1417812052-85)\r\n\r\nand\r\n\r\nglobus-url-copy: 9.13\r\n", 
+    "reporter": {
+      "displayName": "Dan Powers", 
+      "name": "dpowers", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=dpowers", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "dpowers@uchicago.edu", 
+      "key": "dpowers", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2015-03-25T15:31:45.353-0500", 
+    "versions": [], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [], 
+    "issuetype": {
+      "name": "Task", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/3", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11058&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11058, 
+      "id": "3", 
+      "description": "A task that needs to be done."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/27344", 
+  "id": "27344", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

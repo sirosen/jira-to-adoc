@@ -1,0 +1,740 @@
+{
+  "key": "GT-455", 
+  "fields": {
+    "comment": {
+      "total": 2, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "All of the GRAM ones are committed to the GT6 branch and are now being processed by the build system. I'll update when the new packages are available in the GT6 testing repository.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2014-09-18T15:07:33.781-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22276/comment/27997", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2014-09-18T15:07:33.781-0500", 
+          "id": "27997"
+        }, 
+        {
+          "body": "The remaining patches are GridFTP-related", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2014-10-01T08:49:26.503-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22276/comment/28145", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2014-10-01T08:49:26.503-0500", 
+          "id": "28145"
+        }
+      ], 
+      "maxResults": 2
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "matyas", 
+      "name": "matyas", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=matyas", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "matyas", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100nlk:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-455/watchers", 
+      "watchCount": 1, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Mike Link", 
+      "name": "mlink", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mlink@mcs.anl.gov", 
+      "key": "mlink", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "3824", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@8b7216", 
+    "summary": "Incorporate OSG patches", 
+    "customfield_10288": "2014-09-18T15:07:33.781-0500", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-455/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [
+      {
+        "archived": false, 
+        "name": "Keep on the Radar", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11592", 
+        "releaseDate": "2014-12-31", 
+        "released": false, 
+        "id": "11592", 
+        "description": ""
+      }
+    ], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2014-10-01T08:49:26.515-0500", 
+    "customfield_10603": null, 
+    "subtasks": [
+      {
+        "fields": {
+          "status": {
+            "statusCategory": {
+              "name": "Done", 
+              "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+              "id": 3, 
+              "key": "done", 
+              "colorName": "green"
+            }, 
+            "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+            "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+            "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+            "id": "5", 
+            "name": "Resolved"
+          }, 
+          "priority": {
+            "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+            "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+            "name": "Major", 
+            "id": "3"
+          }, 
+          "issuetype": {
+            "name": "Sub-task", 
+            "self": "https://globus.atlassian.net/rest/api/2/issuetype/7", 
+            "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11056&avatarType=issuetype", 
+            "subtask": true, 
+            "avatarId": 11056, 
+            "id": "7", 
+            "description": "The sub-task of the issue"
+          }, 
+          "summary": "OSG patch \"load_requests_before_activating_socket.patch\" for globus-gram-job-manager"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/issue/22277", 
+        "id": "22277", 
+        "key": "GT-456"
+      }, 
+      {
+        "fields": {
+          "status": {
+            "statusCategory": {
+              "name": "Done", 
+              "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+              "id": 3, 
+              "key": "done", 
+              "colorName": "green"
+            }, 
+            "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+            "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+            "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+            "id": "5", 
+            "name": "Resolved"
+          }, 
+          "priority": {
+            "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+            "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+            "name": "Major", 
+            "id": "3"
+          }, 
+          "issuetype": {
+            "name": "Sub-task", 
+            "self": "https://globus.atlassian.net/rest/api/2/issuetype/7", 
+            "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11056&avatarType=issuetype", 
+            "subtask": true, 
+            "avatarId": 11056, 
+            "id": "7", 
+            "description": "The sub-task of the issue"
+          }, 
+          "summary": "OSG patch \"nfslite.patch\" for globus-gram-job-manager-condor"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/issue/22278", 
+        "id": "22278", 
+        "key": "GT-457"
+      }, 
+      {
+        "fields": {
+          "status": {
+            "statusCategory": {
+              "name": "Done", 
+              "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+              "id": 3, 
+              "key": "done", 
+              "colorName": "green"
+            }, 
+            "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+            "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+            "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+            "id": "5", 
+            "name": "Resolved"
+          }, 
+          "priority": {
+            "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+            "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+            "name": "Major", 
+            "id": "3"
+          }, 
+          "issuetype": {
+            "name": "Sub-task", 
+            "self": "https://globus.atlassian.net/rest/api/2/issuetype/7", 
+            "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11056&avatarType=issuetype", 
+            "subtask": true, 
+            "avatarId": 11056, 
+            "id": "7", 
+            "description": "The sub-task of the issue"
+          }, 
+          "summary": "OSG patch \"groupacct.patch\" for globus-gram-job-manager-condor"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/issue/22279", 
+        "id": "22279", 
+        "key": "GT-458"
+      }, 
+      {
+        "fields": {
+          "status": {
+            "statusCategory": {
+              "name": "Done", 
+              "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+              "id": 3, 
+              "key": "done", 
+              "colorName": "green"
+            }, 
+            "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+            "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+            "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+            "id": "5", 
+            "name": "Resolved"
+          }, 
+          "priority": {
+            "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+            "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+            "name": "Major", 
+            "id": "3"
+          }, 
+          "issuetype": {
+            "name": "Sub-task", 
+            "self": "https://globus.atlassian.net/rest/api/2/issuetype/7", 
+            "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11056&avatarType=issuetype", 
+            "subtask": true, 
+            "avatarId": 11056, 
+            "id": "7", 
+            "description": "The sub-task of the issue"
+          }, 
+          "summary": "OSG patch \"669-xcount.patch\" for globus-gram-job-manager-condor"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/issue/22280", 
+        "id": "22280", 
+        "key": "GT-459"
+      }, 
+      {
+        "fields": {
+          "status": {
+            "statusCategory": {
+              "name": "Done", 
+              "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+              "id": 3, 
+              "key": "done", 
+              "colorName": "green"
+            }, 
+            "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+            "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+            "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+            "id": "5", 
+            "name": "Resolved"
+          }, 
+          "priority": {
+            "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+            "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+            "name": "Major", 
+            "id": "3"
+          }, 
+          "issuetype": {
+            "name": "Sub-task", 
+            "self": "https://globus.atlassian.net/rest/api/2/issuetype/7", 
+            "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11056&avatarType=issuetype", 
+            "subtask": true, 
+            "avatarId": 11056, 
+            "id": "7", 
+            "description": "The sub-task of the issue"
+          }, 
+          "summary": "OSG patch \"717-max-walltime.patch\" for globus-gram-job-manager-condor"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/issue/22281", 
+        "id": "22281", 
+        "key": "GT-460"
+      }, 
+      {
+        "fields": {
+          "status": {
+            "statusCategory": {
+              "name": "Done", 
+              "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+              "id": 3, 
+              "key": "done", 
+              "colorName": "green"
+            }, 
+            "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+            "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+            "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+            "id": "5", 
+            "name": "Resolved"
+          }, 
+          "priority": {
+            "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+            "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+            "name": "Major", 
+            "id": "3"
+          }, 
+          "issuetype": {
+            "name": "Sub-task", 
+            "self": "https://globus.atlassian.net/rest/api/2/issuetype/7", 
+            "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11056&avatarType=issuetype", 
+            "subtask": true, 
+            "avatarId": 11056, 
+            "id": "7", 
+            "description": "The sub-task of the issue"
+          }, 
+          "summary": "OSG patch \"increase-concurrency.patch\" for globus-gram-protocol"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/issue/22282", 
+        "id": "22282", 
+        "key": "GT-461"
+      }, 
+      {
+        "fields": {
+          "status": {
+            "statusCategory": {
+              "name": "To Do", 
+              "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+              "id": 2, 
+              "key": "new", 
+              "colorName": "blue-gray"
+            }, 
+            "description": "The issue is open and ready for the assignee to start work on it.", 
+            "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+            "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+            "id": "1", 
+            "name": "Open"
+          }, 
+          "priority": {
+            "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+            "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+            "name": "Major", 
+            "id": "3"
+          }, 
+          "issuetype": {
+            "name": "Sub-task", 
+            "self": "https://globus.atlassian.net/rest/api/2/issuetype/7", 
+            "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11056&avatarType=issuetype", 
+            "subtask": true, 
+            "avatarId": 11056, 
+            "id": "7", 
+            "description": "The sub-task of the issue"
+          }, 
+          "summary": "OSG patch \"level-out-connection-speeds.patch\" for globus-ftp-control"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/issue/22298", 
+        "id": "22298", 
+        "key": "GT-462"
+      }, 
+      {
+        "fields": {
+          "status": {
+            "statusCategory": {
+              "name": "Done", 
+              "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+              "id": 3, 
+              "key": "done", 
+              "colorName": "green"
+            }, 
+            "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+            "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+            "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+            "id": "5", 
+            "name": "Resolved"
+          }, 
+          "priority": {
+            "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+            "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+            "name": "Major", 
+            "id": "3"
+          }, 
+          "issuetype": {
+            "name": "Sub-task", 
+            "self": "https://globus.atlassian.net/rest/api/2/issuetype/7", 
+            "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11056&avatarType=issuetype", 
+            "subtask": true, 
+            "avatarId": 11056, 
+            "id": "7", 
+            "description": "The sub-task of the issue"
+          }, 
+          "summary": "OSG patch \"osg-path.patch\" for globus-gram-job-manager-scripts"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/issue/22299", 
+        "id": "22299", 
+        "key": "GT-463"
+      }, 
+      {
+        "fields": {
+          "status": {
+            "statusCategory": {
+              "name": "To Do", 
+              "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+              "id": 2, 
+              "key": "new", 
+              "colorName": "blue-gray"
+            }, 
+            "description": "This issue was once resolved, but the resolution was deemed incorrect. From here issues are either marked assigned or resolved.", 
+            "self": "https://globus.atlassian.net/rest/api/2/status/4", 
+            "iconUrl": "https://globus.atlassian.net/images/icons/statuses/reopened.png", 
+            "id": "4", 
+            "name": "Reopened"
+          }, 
+          "priority": {
+            "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+            "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+            "name": "Major", 
+            "id": "3"
+          }, 
+          "issuetype": {
+            "name": "Sub-task", 
+            "self": "https://globus.atlassian.net/rest/api/2/issuetype/7", 
+            "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11056&avatarType=issuetype", 
+            "subtask": true, 
+            "avatarId": 11056, 
+            "id": "7", 
+            "description": "The sub-task of the issue"
+          }, 
+          "summary": "OSG patch \"gridftp-conf-logging.patch\" for globus-gridftp-server"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/issue/22300", 
+        "id": "22300", 
+        "key": "GT-464"
+      }, 
+      {
+        "fields": {
+          "status": {
+            "statusCategory": {
+              "name": "Done", 
+              "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+              "id": 3, 
+              "key": "done", 
+              "colorName": "green"
+            }, 
+            "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+            "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+            "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+            "id": "5", 
+            "name": "Resolved"
+          }, 
+          "priority": {
+            "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+            "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+            "name": "Major", 
+            "id": "3"
+          }, 
+          "issuetype": {
+            "name": "Sub-task", 
+            "self": "https://globus.atlassian.net/rest/api/2/issuetype/7", 
+            "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11056&avatarType=issuetype", 
+            "subtask": true, 
+            "avatarId": 11056, 
+            "id": "7", 
+            "description": "The sub-task of the issue"
+          }, 
+          "summary": "OSG patch \"gatekeeper-logrotate-copytruncate.patch\" for globus-gatekeeper"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/issue/22301", 
+        "id": "22301", 
+        "key": "GT-465"
+      }, 
+      {
+        "fields": {
+          "status": {
+            "statusCategory": {
+              "name": "Done", 
+              "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+              "id": 3, 
+              "key": "done", 
+              "colorName": "green"
+            }, 
+            "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+            "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+            "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+            "id": "5", 
+            "name": "Resolved"
+          }, 
+          "priority": {
+            "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+            "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+            "name": "Major", 
+            "id": "3"
+          }, 
+          "issuetype": {
+            "name": "Sub-task", 
+            "self": "https://globus.atlassian.net/rest/api/2/issuetype/7", 
+            "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11056&avatarType=issuetype", 
+            "subtask": true, 
+            "avatarId": 11056, 
+            "id": "7", 
+            "description": "The sub-task of the issue"
+          }, 
+          "summary": "OSG patch \"logrotate-copytruncate-jobmanager.patch\" for globus-gram-job-manager"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/issue/22302", 
+        "id": "22302", 
+        "key": "GT-466"
+      }, 
+      {
+        "fields": {
+          "status": {
+            "statusCategory": {
+              "name": "Done", 
+              "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+              "id": 3, 
+              "key": "done", 
+              "colorName": "green"
+            }, 
+            "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+            "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+            "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+            "id": "5", 
+            "name": "Resolved"
+          }, 
+          "priority": {
+            "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+            "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+            "name": "Major", 
+            "id": "3"
+          }, 
+          "issuetype": {
+            "name": "Sub-task", 
+            "self": "https://globus.atlassian.net/rest/api/2/issuetype/7", 
+            "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11056&avatarType=issuetype", 
+            "subtask": true, 
+            "avatarId": 11056, 
+            "id": "7", 
+            "description": "The sub-task of the issue"
+          }, 
+          "summary": "OSG patch \"gratia.patch\" for globus-gram-job-manager-scripts"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/issue/22303", 
+        "id": "22303", 
+        "key": "GT-467"
+      }, 
+      {
+        "fields": {
+          "status": {
+            "statusCategory": {
+              "name": "Done", 
+              "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+              "id": 3, 
+              "key": "done", 
+              "colorName": "green"
+            }, 
+            "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+            "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+            "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+            "id": "5", 
+            "name": "Resolved"
+          }, 
+          "priority": {
+            "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+            "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+            "name": "Major", 
+            "id": "3"
+          }, 
+          "issuetype": {
+            "name": "Sub-task", 
+            "self": "https://globus.atlassian.net/rest/api/2/issuetype/7", 
+            "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11056&avatarType=issuetype", 
+            "subtask": true, 
+            "avatarId": 11056, 
+            "id": "7", 
+            "description": "The sub-task of the issue"
+          }, 
+          "summary": "OSG patch \"osg-environment.patch\" for globus-gram-job-manager-scripts"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/issue/22304", 
+        "id": "22304", 
+        "key": "GT-468"
+      }
+    ], 
+    "description": "OSG has a large number of patches to various components that we'd like to include in upstream if possible.\n\nThis is an umbrella ticket; specific patches will have their own sub-tickets.", 
+    "reporter": {
+      "displayName": "matyas", 
+      "name": "matyas", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=matyas", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "matyas", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2013-10-09T14:06:15.555-0500", 
+    "versions": [], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [], 
+    "issuetype": {
+      "name": "Task", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/3", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11058&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11058, 
+      "id": "3", 
+      "description": "A task that needs to be done."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/22276", 
+  "id": "22276", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

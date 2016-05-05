@@ -1,0 +1,454 @@
+{
+  "key": "GT-299", 
+  "fields": {
+    "comment": {
+      "total": 3, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "The acl_overlap_backtrace shows that the end of the STOR command (thread 2) is overlapping with the beginning of the MFMT command (thread 3). I believe that since acl_handle is shared, the op stored in acl_handle->user_arg by the MFMT thread is getting picked up in globus_l_gfs_authorize_cb() by the STOR thread. Thus the MFMT command (or possibly any command following STOR) is getting dispatched twice.\n\nI'm still looking for the fix. ", 
+          "updateAuthor": {
+            "displayName": "Jason Alt", 
+            "name": "jasonalt", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=jasonalt", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "jalt@ncsa.illinois.edu", 
+            "key": "jasonalt", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-10-31T10:53:56.663-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19409/comment/20460", 
+          "author": {
+            "displayName": "Jason Alt", 
+            "name": "jasonalt", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=jasonalt", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "jalt@ncsa.illinois.edu", 
+            "key": "jasonalt", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-10-31T10:53:56.663-0500", 
+          "id": "20460"
+        }, 
+        {
+          "body": "It appears that the problem is in source-trees/gridftp/server/src/globus_i_gfs_data.c: globus_l_gfs_data_end_read_kickout(). This function calls globus_gfs_acl_authorize() and then calls globus_l_gfs_data_end_transfer_kickout() to shutdown the control side (which causes the reply to be sent and the next command to be read). Stress testing shows that the server is stable after removing the call to globus_gfs_acl_authorize() in this function. ", 
+          "updateAuthor": {
+            "displayName": "Jason Alt", 
+            "name": "jasonalt", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=jasonalt", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "jalt@ncsa.illinois.edu", 
+            "key": "jasonalt", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-10-31T15:10:24.532-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19409/comment/20463", 
+          "author": {
+            "displayName": "Jason Alt", 
+            "name": "jasonalt", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=jasonalt", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "jalt@ncsa.illinois.edu", 
+            "key": "jasonalt", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-10-31T15:10:24.532-0500", 
+          "id": "20463"
+        }, 
+        {
+          "body": "Thanks for tracking this down.  Fixed for 5.2.3.", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-11-12T14:46:16.659-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19409/comment/20568", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-11-12T14:46:16.659-0600", 
+          "id": "20568"
+        }
+      ], 
+      "maxResults": 3
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "Jason Alt", 
+      "name": "jasonalt", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=jasonalt", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "jalt@ncsa.illinois.edu", 
+      "key": "jasonalt", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [
+      "GridFTP"
+    ], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|101d6g:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-299/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Mike Link", 
+      "name": "mlink", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mlink@mcs.anl.gov", 
+      "key": "mlink", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": "1_*:*_1_*:*_2811998671_*|*_5_*:*_1_*:*_0", 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@11a352f", 
+    "summary": "data and finished command kickouts called twice?", 
+    "customfield_10288": "2012-11-12T14:46:16.659-0600", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-299/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [
+      {
+        "archived": false, 
+        "name": "5.2.3", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/10963", 
+        "releaseDate": "2012-12-03", 
+        "released": true, 
+        "id": "10963"
+      }, 
+      {
+        "archived": false, 
+        "name": "Sprint 2012-11-05", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/10997", 
+        "releaseDate": "2012-11-05", 
+        "released": true, 
+        "id": "10997", 
+        "description": ""
+      }
+    ], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/critical.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/2", 
+      "name": "Critical", 
+      "id": "2"
+    }, 
+    "timespent": null, 
+    "attachment": [
+      {
+        "mimeType": "text/plain", 
+        "author": {
+          "displayName": "Jason Alt", 
+          "name": "jasonalt", 
+          "self": "https://globus.atlassian.net/rest/api/2/user?username=jasonalt", 
+          "avatarUrls": {
+            "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+            "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+            "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+            "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+          }, 
+          "emailAddress": "jalt@ncsa.illinois.edu", 
+          "key": "jasonalt", 
+          "active": true, 
+          "timeZone": "America/Chicago"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/10952", 
+        "created": "2012-10-31T10:53:56.642-0500", 
+        "filename": "acl_overlap_backtrace.txt", 
+        "content": "https://globus.atlassian.net/secure/attachment/10952/acl_overlap_backtrace.txt", 
+        "id": "10952", 
+        "size": 3465
+      }, 
+      {
+        "mimeType": "application/octet-stream", 
+        "author": {
+          "displayName": "Jason Alt", 
+          "name": "jasonalt", 
+          "self": "https://globus.atlassian.net/rest/api/2/user?username=jasonalt", 
+          "avatarUrls": {
+            "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+            "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+            "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+            "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+          }, 
+          "emailAddress": "jalt@ncsa.illinois.edu", 
+          "key": "jasonalt", 
+          "active": true, 
+          "timeZone": "America/Chicago"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/10914", 
+        "created": "2012-10-11T02:39:38.110-0500", 
+        "filename": "backtrace1", 
+        "content": "https://globus.atlassian.net/secure/attachment/10914/backtrace1", 
+        "id": "10914", 
+        "size": 3867
+      }, 
+      {
+        "mimeType": "application/octet-stream", 
+        "author": {
+          "displayName": "Jason Alt", 
+          "name": "jasonalt", 
+          "self": "https://globus.atlassian.net/rest/api/2/user?username=jasonalt", 
+          "avatarUrls": {
+            "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+            "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+            "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+            "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+          }, 
+          "emailAddress": "jalt@ncsa.illinois.edu", 
+          "key": "jasonalt", 
+          "active": true, 
+          "timeZone": "America/Chicago"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/10915", 
+        "created": "2012-10-11T02:39:38.143-0500", 
+        "filename": "backtrace2", 
+        "content": "https://globus.atlassian.net/secure/attachment/10915/backtrace2", 
+        "id": "10915", 
+        "size": 2426
+      }, 
+      {
+        "mimeType": "application/octet-stream", 
+        "author": {
+          "displayName": "Jason Alt", 
+          "name": "jasonalt", 
+          "self": "https://globus.atlassian.net/rest/api/2/user?username=jasonalt", 
+          "avatarUrls": {
+            "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+            "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+            "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+            "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+          }, 
+          "emailAddress": "jalt@ncsa.illinois.edu", 
+          "key": "jasonalt", 
+          "active": true, 
+          "timeZone": "America/Chicago"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/10916", 
+        "created": "2012-10-11T02:39:38.144-0500", 
+        "filename": "backtrace3", 
+        "content": "https://globus.atlassian.net/secure/attachment/10916/backtrace3", 
+        "id": "10916", 
+        "size": 4935
+      }, 
+      {
+        "mimeType": "application/octet-stream", 
+        "author": {
+          "displayName": "Jason Alt", 
+          "name": "jasonalt", 
+          "self": "https://globus.atlassian.net/rest/api/2/user?username=jasonalt", 
+          "avatarUrls": {
+            "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+            "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+            "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+            "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+          }, 
+          "emailAddress": "jalt@ncsa.illinois.edu", 
+          "key": "jasonalt", 
+          "active": true, 
+          "timeZone": "America/Chicago"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/10917", 
+        "created": "2012-10-11T02:39:38.145-0500", 
+        "filename": "valgrind.16850", 
+        "content": "https://globus.atlassian.net/secure/attachment/10917/valgrind.16850", 
+        "id": "10917", 
+        "size": 52548
+      }
+    ], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "Done", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+        "id": 3, 
+        "key": "done", 
+        "colorName": "green"
+      }, 
+      "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+      "id": "5", 
+      "name": "Resolved"
+    }, 
+    "updated": "2012-11-12T14:46:16.660-0600", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "While stress testing the GridFTP server w/ the HPSS DSI, the server became very unstable with moderate load on the system (~20 clients and servers). The server would crash in numerous locations with what appeared to be memory corruption. After debugging with valgrind and dmalloc, a common theme occurred;  somehow the globus_l_gfs_data_operation_t has already been destroyed before the call to globus_l_gfs_finished_command_kickout(). The same is happening with the request structure and globus_l_gfs_request_info_destroy(). The attached valgrind file shows this.\n\nbacktrace1 shows the server aborting on a failed globus_mutex_lock(). The contents of the globus_l_gfs_data_operation_t are included in the output. In this example, I had modified globus_l_gfs_data_operation_destroy() and globus_l_gfs_request_info_destroy() to overwrite the structure before free with '0xef' to be sure this corruption wasn't a write gone haywire. \n\nbacktrace2 and backtrace3 may be related, they may be separate issues. Both files show what appears to be aborts due to the server being in the wrong state. backtrace3 occurs quite frequently and usually with state GLOBUS_L_GSC_STATE_OPEN. \n\nI was not able to reproduce this without the DSI loaded. This problem does not exist with GT 5.1.3 w/ the DSI loaded. \n\nThe order of FTP commands given were:\n\nALLO 52428800\nMODE S\nDCAU A\nPBSZ 1181696\nPROT C\nTYPE I\nPASV\nSTOR 50MB\n\n\nWithout GT 5.2.2, we lose the awesome custom commands and so we lose the ability to stage files.", 
+    "reporter": {
+      "displayName": "Jason Alt", 
+      "name": "jasonalt", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=jasonalt", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "jalt@ncsa.illinois.edu", 
+      "key": "jasonalt", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": "GT versions 5.2.1, 5,2.2. RHEL 5.8 & 6.3. HPSS DSI development work.", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2012-10-11T02:39:37.993-0500", 
+    "versions": [
+      {
+        "archived": false, 
+        "name": "5.2.2", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/10904", 
+        "releaseDate": "2012-07-24", 
+        "released": true, 
+        "id": "10904"
+      }, 
+      {
+        "archived": false, 
+        "name": "5.2.1", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/10922", 
+        "releaseDate": "2012-04-26", 
+        "released": true, 
+        "id": "10922"
+      }
+    ], 
+    "resolutiondate": "2012-11-12T14:46:16.647-0600", 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": {
+      "self": "https://globus.atlassian.net/rest/api/2/resolution/1", 
+      "id": "1", 
+      "name": "Fixed", 
+      "description": "A fix for this issue is checked into the tree and tested."
+    }, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/19409", 
+  "id": "19409", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

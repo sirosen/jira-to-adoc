@@ -1,0 +1,431 @@
+{
+  "key": "GT-534", 
+  "fields": {
+    "comment": {
+      "total": 7, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "More detailed info on versions used:\r\n\r\n[root@fts105 ~]# uname -a\r\nLinux fts105.cern.ch 2.6.32-431.1.2.el6.x86_64 #1 SMP Fri Dec 13 08:31:15 CET 2013 x86_64 x86_64 x86_64 GNU/Linux\r\n\r\n\r\nglobus version 5.2.5 from EPEL 6\r\n\r\n[root@fts105 ~]# globus-version \r\n5.2.5\r\n", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/24031/comment/25081", 
+          "updated": "2014-05-27T09:51:26.245-0500", 
+          "id": "25081", 
+          "created": "2014-05-27T09:51:26.245-0500"
+        }, 
+        {
+          "body": "How can I add attachments?\r\n\r\nRight now attachments can be found here: \r\nhttps://ggus.eu/index.php?mode=ticket_info&ticket_id=105158\r\n\r\nand here:\r\nhttps://rt.ige-project.eu/rt/Ticket/Display.html?id=380", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/24031/comment/25082", 
+          "updated": "2014-05-27T09:56:24.911-0500", 
+          "id": "25082", 
+          "created": "2014-05-27T09:56:24.911-0500"
+        }, 
+        {
+          "body": "I believe that I'm hitting this bug in the esg#esg-anl-gov endpoint, as seen in Globus support ticket 302710\r\n\r\nhttps://globusonline.zendesk.com/agent/#/tickets/302710", 
+          "updateAuthor": {
+            "displayName": "Eric Blau", 
+            "name": "blau", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=blau", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "blau@mcs.anl.gov", 
+            "key": "blau", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2014-08-15T14:26:03.782-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/24031/comment/27452", 
+          "author": {
+            "displayName": "Eric Blau", 
+            "name": "blau", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=blau", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "blau@mcs.anl.gov", 
+            "key": "blau", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2014-08-15T14:26:03.782-0500", 
+          "id": "27452"
+        }, 
+        {
+          "body": "These are the attachments from the GGUS ticket.", 
+          "updateAuthor": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "created": "2014-10-23T03:22:24.279-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/24031/comment/28417", 
+          "author": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "updated": "2014-10-23T03:22:24.279-0500", 
+          "id": "28417"
+        }, 
+        {
+          "body": "I promised to forward relevant parts of the discussion from the GGUS ticket to here.\r\n\r\nMost of the relevant discussion (i.e. excluding entries related to the transfer of the ticket between different support units) is already here. The attachments from the original report were not here before so I have added then. The only missing part of the discussion not yet here were the last part where I said.\r\n\r\n\"The log ends with an assertion failure. The assertion checks for a number of allowed values for client_handle->state. Knowing what value client_handle->state has when the assertion fails would help.\"\r\n\r\nThe reply form the reporter was:\r\n\r\n\"I would safely assume it's \"GLOBUS_FTP_CLIENT_HANDLE_DEST_SETUP_CONNECTION\" since it failed when GridFTP client attempted to connect to the destination GridFTP server.\"\r\n\r\nI can not really judge how safe this assumption is.\r\n", 
+          "updateAuthor": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "created": "2014-10-23T03:30:14.165-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/24031/comment/28418", 
+          "author": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "updated": "2014-10-23T03:30:14.165-0500", 
+          "id": "28418"
+        }, 
+        {
+          "body": "Feedback received on the GGUS ticket:\r\nhttps://ggus.eu/index.php?mode=ticket_info&ticket_id=105158\r\n\r\n\"The ticket should indeed be closed, tested it and it seems to have fixed the issue reported.\"\r\n", 
+          "updateAuthor": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "created": "2015-03-09T08:08:45.449-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/24031/comment/30409", 
+          "author": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "updated": "2015-03-09T08:08:45.449-0500", 
+          "id": "30409"
+        }, 
+        {
+          "body": "Fixed in globus-ftp-client-8.20.", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2015-03-12T16:23:47.367-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/24031/comment/30419", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2015-03-12T16:23:47.367-0500", 
+          "id": "30419"
+        }
+      ], 
+      "maxResults": 7
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": [
+      "com.atlassian.greenhopper.service.sprint.Sprint@b545ea[id=41,rapidViewId=6,state=CLOSED,name=Sprint 2014-12-01,startDate=2014-11-12T09:45:00.000-06:00,endDate=2014-12-01T09:45:00.000-06:00,completeDate=2015-12-22T08:42:20.097-06:00,sequence=41]"
+    ], 
+    "creator": null, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [
+      "GridFTP", 
+      "IGE", 
+      "gridftp"
+    ], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|1024tc:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-534/watchers", 
+      "watchCount": 3, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Mike Link", 
+      "name": "mlink", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mlink@mcs.anl.gov", 
+      "key": "mlink", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": "1_*:*_1_*:*_24997574671_*|*_5_*:*_1_*:*_0", 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@6c06f7", 
+    "summary": "globus gridftp client library random crashes", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-534/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [
+      {
+        "archived": false, 
+        "name": "GT 6.0", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11389", 
+        "releaseDate": "2014-09-11", 
+        "released": false, 
+        "id": "11389", 
+        "description": ""
+      }
+    ], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/critical.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/2", 
+      "name": "Critical", 
+      "id": "2"
+    }, 
+    "timespent": null, 
+    "attachment": [
+      {
+        "mimeType": "application/octet-stream", 
+        "author": {
+          "displayName": "Mattias Ellert", 
+          "name": "ellert", 
+          "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+          "avatarUrls": {
+            "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+            "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+            "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+            "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+          }, 
+          "emailAddress": "mattias.ellert@fysast.uu.se", 
+          "key": "ellert", 
+          "active": true, 
+          "timeZone": "Europe/Stockholm"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/13961", 
+        "created": "2014-10-23T03:22:24.266-0500", 
+        "filename": "2014-05-05-0948__cmsrm-se01.roma1.infn.it__stormfe1.pi.infn.it__13961257__8d560147-1a8d-4985-a9f4-b2a91a0a01b9", 
+        "content": "https://globus.atlassian.net/secure/attachment/13961/2014-05-05-0948__cmsrm-se01.roma1.infn.it__stormfe1.pi.infn.it__13961257__8d560147-1a8d-4985-a9f4-b2a91a0a01b9", 
+        "id": "13961", 
+        "size": 24731
+      }, 
+      {
+        "mimeType": "application/octet-stream", 
+        "author": {
+          "displayName": "Mattias Ellert", 
+          "name": "ellert", 
+          "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+          "avatarUrls": {
+            "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+            "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+            "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+            "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+          }, 
+          "emailAddress": "mattias.ellert@fysast.uu.se", 
+          "key": "ellert", 
+          "active": true, 
+          "timeZone": "Europe/Stockholm"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/13960", 
+        "created": "2014-10-23T03:22:24.209-0500", 
+        "filename": "2014-05-05-0948__cmsrm-se01.roma1.infn.it__stormfe1.pi.infn.it__13961257__8d560147-1a8d-4985-a9f4-b2a91a0a01b9.debug", 
+        "content": "https://globus.atlassian.net/secure/attachment/13960/2014-05-05-0948__cmsrm-se01.roma1.infn.it__stormfe1.pi.infn.it__13961257__8d560147-1a8d-4985-a9f4-b2a91a0a01b9.debug", 
+        "id": "13960", 
+        "size": 7681
+      }
+    ], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "Done", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+        "id": 3, 
+        "key": "done", 
+        "colorName": "green"
+      }, 
+      "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+      "id": "5", 
+      "name": "Resolved"
+    }, 
+    "updated": "2015-04-10T09:24:55.895-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "Hi,\r\n\r\nWe are noticing random gridftp client library crashes in FTS.\r\nAttached FTS log file as also GridFTP debug module output.\r\n\r\nStack-trace:\r\n/lib64/libc.so.6() [0x3aaec329a0]\r\n/lib64/libc.so.6(gsignal+0x35) [0x3aaec32925]\r\n/lib64/libc.so.6(abort+0x175) [0x3aaec34105]\r\n/usr/lib64/libglobus_ftp_client.so.2(globus_i_ftp_client_response_callback+0x5ff) [0x7fd17445b73f]\r\n/usr/lib64/libglobus_ftp_control.so.1(+0xab76) [0x7fd16fde3b76]\r\n/usr/lib64/libglobus_io.so.3(+0x10143) [0x7fd174019143]\r\n/usr/lib64/libglobus_xio.so.0(globus_l_xio_read_write_callback_kickout+0xc8) [0x7fd16fb86298]\r\n/usr/lib64/libglobus_xio.so.0(globus_i_xio_read_write_callback+0x370) [0x7fd16fb86830]\r\n/usr/lib64/libglobus_xio.so.0(globus_l_xio_driver_op_read_kickout+0x14c) [0x7fd16fb8e37c]\r\n/usr/lib64/libglobus_xio.so.0(globus_xio_driver_finished_read+0x40d) [0x7fd16fb9977d]\r\n/usr/lib64/libglobus_xio.so.0(+0x4fdf5) [0x7fd16fbbfdf5]\r\n/usr/lib64/libglobus_xio.so.0(+0x502e6) [0x7fd16fbc02e6]\r\n/usr/lib64/libglobus_xio.so.0(+0x2f12f) [0x7fd16fb9f12f]\r\n/usr/lib64/libglobus_common.so.0() [0x30ae21a1bc]\r\n/usr/lib64/libglobus_common.so.0(globus_l_thread_pool_thread_start+0x1d) [0x30ae2320cd]\r\n/usr/lib64/libglobus_thread_pthread.so.0(+0x202b) [0x7fd16f76c02b]\r\n/lib64/libpthread.so.0() [0x3aaf4079d1]\r\n/lib64/libc.so.6(clone+0x6d) [0x3aaece8b6d]\r\n\r\nFrom the control channel:\r\ngridftp debug :: response from gsiftp://stormgf2.pi.infn.it:2811//gpfs/ddn/srm/cms/store/user/riahi/ZJetsToNuNu_PtZ-100_8TeV-madgraph/140505_082330_crab_20140505_102307/140505_082330/0000/out_124.root:\r\n500-500 Command failed.^M^M\r\n500- : globus_ftp_control_local_pasv failed.^M\r\n500-globus_xio: globus_l_xio_tcp_contact_string failed.^M\r\n500-globus_xio: globus_libc_addr_to_contact_string failed.^M\r\n500-globus_common: globus_libc_gethostaddr failed^M\r\n500 End.^M\r\n\r\ngridftp debug :: fault on connection to gsiftp://stormgf2.pi.infn.it:2811//gpfs/ddn/srm/cms/store/user/riahi/ZJetsToNuNu_PtZ-100_8TeV-madgraph/140505_082330_crab_20140505_102307/140505_082330/0000/out_124.root: globus_ftp_client: the server responded with an error\r\nAssertion client_handle->state == GLOBUS_FTP_CLIENT_HANDLE_SOURCE_LIST || client_handle->state == GLOBUS_FTP_CLIENT_HANDLE_SOURCE_RETR_OR_ERET || client_handle->state == GLOBUS_FTP_CLIENT_HANDLE_DEST_STOR_OR_ESTO || client_handle->state == GLOBUS_FTP_CLIENT_HANDLE_THIRD_PARTY_TRANSFER || client_handle->state == GLOBUS_FTP_CLIENT_HANDLE_THIRD_PARTY_TRANSFER_ONE_COMPLETE || (client_handle->op == GLOBUS_FTP_CLIENT_TRANSFER && client_handle->state == GLOBUS_FTP_CLIENT_HANDLE_SOURCE_SETUP_CONNECTION) || (client_handle->op == GLOBUS_FTP_CLIENT_TRANSFER && client_handle->state == GLOBUS_FTP_CLIENT_HANDLE_SOURCE_CONNECT) failed in file globus_ftp_client_state.c at line 4989\r\n~ \r\nGridFTP Version:\r\nrpm -qa | grep -i globus-\r\nglobus-gsi-cert-utils-8.6-2.el6.x86_64\r\nglobus-io-9.5-1.el6.x86_64\r\nglobus-gsi-credential-6.0-2.el6.x86_64\r\nglobus-xio-popen-driver-2.3-1.el6.x86_64\r\nglobus-gsi-proxy-ssl-4.1-10.el6.x86_64\r\nglobus-gsi-callback-4.6-2.el6.x86_64\r\nglobus-gssapi-gsi-10.10-2.el6.x86_64\r\nglobus-gass-transfer-7.2-9.el6.x86_64\r\nglobus-callout-2.4-2.el6.x86_64\r\nglobus-ftp-client-7.6-1.el6.x86_64\r\nglobus-gass-copy-8.6-7.el6.x86_64\r\nglobus-gsi-openssl-error-2.1-10.el6.x86_64\r\nglobus-gsi-sysconfig-5.3-8.el6.x86_64\r\nglobus-gsi-proxy-core-6.2-9.el6.x86_64\r\nglobus-gssapi-error-4.1-10.el6.x86_64\r\nglobus-xio-3.6-2.el6.x86_64\r\nglobus-gss-assist-9.0-1.el6.x86_64\r\nglobus-ftp-control-4.7-1.el6.x86_64\r\nglobus-common-14.10-2.el6.x86_64\r\nglobus-openssl-module-3.3-2.el6.x86_64\r\nglobus-xio-gsi-driver-2.4-1.el6.x86_64", 
+    "reporter": null, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": "Linux", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2014-05-27T08:37:32.700-0500", 
+    "versions": [
+      {
+        "archived": false, 
+        "name": "5.2.5", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11388", 
+        "releaseDate": "2013-06-17", 
+        "released": true, 
+        "id": "11388", 
+        "description": ""
+      }
+    ], 
+    "resolutiondate": "2015-03-12T16:23:47.322-0500", 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": {
+      "self": "https://globus.atlassian.net/rest/api/2/resolution/1", 
+      "id": "1", 
+      "name": "Fixed", 
+      "description": "A fix for this issue is checked into the tree and tested."
+    }, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/24031", 
+  "id": "24031", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

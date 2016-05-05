@@ -1,0 +1,171 @@
+{
+  "key": "GT-242", 
+  "fields": {
+    "comment": {
+      "total": 0, 
+      "startAt": 0, 
+      "comments": [], 
+      "maxResults": 0
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "support@ige-project.eu", 
+      "name": "support@ige-project.eu", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=support%40ige-project.eu", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "support@ige-project.eu", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [
+      "IGE"
+    ], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100nrc:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-242/watchers", 
+      "watchCount": 1, 
+      "isWatching": false
+    }, 
+    "assignee": null, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "3850", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@7571b", 
+    "summary": "\"-preserve\" option in globus-url-copy does not work as expected", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-242/votes", 
+      "votes": 1
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [
+      {
+        "archived": false, 
+        "name": "Keep on the Radar", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11592", 
+        "releaseDate": "2014-12-31", 
+        "released": false, 
+        "id": "11592", 
+        "description": ""
+      }
+    ], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2014-07-23T13:13:46.965-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "See original description of problem sent by Frank Scheiner:\n\n\"\nDear all,\n\nduring software evaluation in PRACE-1IP we recognized that guc does not preserve file permissions from the local/source side to the remote side.\n\nI made some tests with two Debian 6 driven VMs using the latest GridFTP server packages (v6.11) available and a Ubuntu 11.04 driven workstation with the latest guc package (v8.4) to get some more insight to this issue.\n\nThe v8.4 guc has an option named \"-preserve\" that should - according to [1] - preserve the permissions of files when transferring. It's not documented in the help output, but it's in the source code (according to [1] since 2010).\n\nFor these tests I created a source directory having the following content:\n\n\"\n/home/johndoe/my_special_perm_files$ ls -la\ntotal 24\ndrwxr-xr-x 2 johndoe johndoe 4096 Jun 20 07:58 .\ndrwxr-xr-x 4 johndoe johndoe 4096 Jun 20 07:57 ..\n-rw------- 1 johndoe johndoe 1024 Jun 20 07:59 0600\n-rw---x--x 1 johndoe johndoe 1024 Jun 20 07:59 0611\n-rw-r-x-wx 1 johndoe johndoe    0 Jun 20 07:58 0653\n-rwx------ 1 johndoe johndoe 1024 Jun 20 07:59 0700\n-rwxr--r-- 1 johndoe johndoe 1024 Jun 20 07:59 0744\n\"\n\nAs you can see, the files are named like their permission mode. One file has zero length, to see if this would have an effect. I used the following command to transfer those files from source to destination controlled from my Ubuntu 11.04 driven workstation (reformatted for better reading):\n\n\"\n$ globus-url-copy \\\n  -cd \\\n  -preserve \\\n  gsiftp://gridftp.zeta.orion:2811/~/my_special_perm_files/* \\\n  gsiftp://gridftp.epsilon.terra:2811/~/my_destination_dir/\n\"\n\nThe resulting dir contents look like that:\n\n\"\n/home/johndoe/my_destination_dir$ ls -la\ntotal 24\ndrwxr-xr-x 2 johndoe johndoe 4096 Jun 20 08:14 .\ndrwxr-xr-x 3 johndoe johndoe 4096 Jun  8 10:22 ..\n-rw-r--r-- 1 johndoe johndoe 1024 Jun 20 08:14 0600\n-rw-r--r-- 1 johndoe johndoe 1024 Jun 20 08:14 0611\n-rw-r--r-- 1 johndoe johndoe    0 Jun 20 08:14 0653\n-rw-r--r-- 1 johndoe johndoe 1024 Jun 20 08:14 0700\n-rw-r--r-- 1 johndoe johndoe 1024 Jun 20 08:14 0744\n\"\n\nAll files have 0644 as permission mode - the default for newly created files. Obviously the \"-preserve\" option does not work as expected.\n\nI then again had a look into the source code of guc (available from [2]) and found another option that looks like it could do the job. It's called \"-copy-perms\" and in lines 4045 to 4048 (of \"globus_url_copy.c\") you can see, that it's really intended to do the same job:\n\n\"\n[...]\n    case arg_preserve:\n    case arg_perms:\n        guc_info->perms = GLOBUS_TRUE;\n        break;\n[...]\n\"\n\nHence I tried the above guc command with \"-copy-perms\" instead of \"-preserve\", but this yields the same result, all files 0644. I saw how the \"guc_info\" struct is evaluated for \"delayed passive\" in lines 5859 to 5863 (of \"globus_url_copy.c\"):\n\n\"\n[...]\n    if(guc_info->delayed_pasv)\n    {\n            globus_ftp_client_operationattr_set_delayed_pasv(\n                ftp_attr, GLOBUS_TRUE);\n    }\n[...]\n\"\n\n...but there is nothing similar for the perms variable. Hence I assume this was forgotten or is not implemented yet.\n\nI think this \"preserve permissions\" functionality is something really useful and also needed. Hence the Globus developers  should be contacted to have a look into this issue.\n\nBest regards\nFrank Scheiner\n___________\n[1] <https://globus.atlassian.net/browse/GRIDFTP-70>\n[2] <http://www.globus.org/ftppub/gt5/5.2/5.2.1/packages/src/globus_gass_copy-8.4.tar.gz>\n[3] <https://globus.atlassian.net>\n\n-- \nFrank Scheiner\n\nHigh Performance Computing Center Stuttgart (HLRS)\nDepartment Project User Management & Accounting\n\nEmail: scheiner@hlrs.de\nPhone: ++49(0)711/685-68039 \n\"", 
+    "reporter": {
+      "displayName": "support@ige-project.eu", 
+      "name": "support@ige-project.eu", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=support%40ige-project.eu", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "support@ige-project.eu", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2012-07-03T01:26:28.882-0500", 
+    "versions": [], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/18722", 
+  "id": "18722", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

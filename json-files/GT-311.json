@@ -1,0 +1,525 @@
+{
+  "key": "GT-311", 
+  "fields": {
+    "comment": {
+      "total": 8, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "Can you send some details about the workload for these (rate of job submissions, length of jobs, number of jobs in queue at any given time, rate of polling, lrm, seg configuration)? It's hard to diagnose without any information about how the service is being used.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2012-11-07T10:45:54.873-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19532/comment/20530", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2012-11-07T10:45:54.873-0600", 
+          "id": "20530"
+        }, 
+        {
+          "body": "Can you be specific on the configuration part. I can send you the configuration files. polling and seg should be default from the osg ce installations.\n\nThe particular job manager process is the one running cms production glideins. This one runs much more jobs than others. The queue is limited at 4416 cores, so number of running jobs don't exceed that number. \nNumber of jobs in queue is low these days, but I think it was running at full capacity when we saw the issue.\n\nHere's gratia reporting for a week for this particular DN. Purdue-Rossmann is the site we observed the problem:\n__________________________________________________________________________________________________________________________________________________________________\n|                             CN                              |      Site       |  VO:Reporting   |    Job   |  # Jobs  |    Wall    |    Delta   |  Delta Wall  |\n|                                                             |                 |      Name       | Success? |          |  Time (h)  |    Jobs    |   Time (h)   |\n|_____________________________________________________________|_________________|_________________|__________|__________|____________|____________|______________|\n| /CN=cmspilotjob/vocms157.cern.ch                            | Purdue-Carter   | CMS:cms         |    Yes   |    38996 |    89423.8 |     +24958 |    -127721.3 |\n| /CN=cmspilotjob/vocms157.cern.ch                            | Purdue-Carter   | CMS:cms         |    No    |     1974 |    15908.7 |       -763 |      -4530.9 |\n| /CN=cmspilotjob/vocms157.cern.ch                            | Purdue-RCAC     | CMS:cms         |    Yes   |    73023 |   175772.8 |     +54991 |    -123535.3 |\n| /CN=cmspilotjob/vocms157.cern.ch                            | Purdue-RCAC     | CMS:cms         |    No    |      934 |     1016.8 |      -2022 |     -34767.6 |\n| /CN=cmspilotjob/vocms157.cern.ch                            | Purdue-Rossmann | CMS:cms         |    Yes   |    30246 |   177130.6 |     +15005 |     -49252.4 |\n| /CN=cmspilotjob/vocms157.cern.ch                            | Purdue-Rossmann | CMS:cms         |    No    |     1150 |     9986.7 |        -76 |      -3012.0 |\n| /CN=cmspilotjob/vocms157.cern.ch                            | Purdue-Steele   | CMS:cms         |    Yes   |    36492 |    51104.9 |     +32611 |     -29317.4 |\n| /CN=cmspilotjob/vocms157.cern.ch                            | Purdue-Steele   | CMS:cms         |    No    |       24 |      156.9 |        -18 |       -922.5 |\n\n", 
+          "updateAuthor": {
+            "displayName": "fengping", 
+            "name": "fengping", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=fengping", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "fengping", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-11-07T14:32:01.628-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19532/comment/20539", 
+          "author": {
+            "displayName": "fengping", 
+            "name": "fengping", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=fengping", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "fengping", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-11-07T14:32:01.628-0600", 
+          "id": "20539"
+        }, 
+        {
+          "body": "I don't really understand what your gratia data means in terms of GRAM. What do the Job, #Jobs, and Jobs fields mean? Do any of those number indicate the job characteristics I asked about in my  previous message. Doing some lookups, I think this is a PBS system using SEG, correct?", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2012-11-08T11:07:00.305-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19532/comment/20546", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2012-11-08T11:07:00.305-0600", 
+          "id": "20546"
+        }, 
+        {
+          "body": "Yes. It's a PBS(specifically torque/moab) system using SEG.\nI am not aware of other ways to retrieve the characteristics you asked about. Does globus record those if it's that important to globus?\n", 
+          "updateAuthor": {
+            "displayName": "fengping", 
+            "name": "fengping", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=fengping", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "fengping", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-11-08T12:28:41.091-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19532/comment/20547", 
+          "author": {
+            "displayName": "fengping", 
+            "name": "fengping", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=fengping", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "fengping", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-11-08T12:28:41.091-0600", 
+          "id": "20547"
+        }, 
+        {
+          "body": "I've not been able to reproduce with 10k-job  condor-g driven loads. I'll need more info about how gram's being used in order to try to track this down.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2012-11-21T10:09:26.562-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19532/comment/20665", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2012-11-21T10:09:26.562-0600", 
+          "id": "20665"
+        }, 
+        {
+          "body": "Hi Neha, \n    Joe asked for more information.  I am digging into the log files of batch system to get the required information. \n\nThanks, \nManoj ", 
+          "updateAuthor": {
+            "displayName": "hepmkj", 
+            "name": "hepmkj", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=hepmkj", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "hepmkj", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-03-20T11:26:12.803-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19532/comment/21625", 
+          "author": {
+            "displayName": "hepmkj", 
+            "name": "hepmkj", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=hepmkj", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "hepmkj", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-03-20T11:26:12.803-0500", 
+          "id": "21625"
+        }, 
+        {
+          "body": "Here's the latest update from the admin, is this what you were looking for Joe?  \n\nHi Suchandra,\nPlease find the attached file which tells about  the load (number of jobs) on problematic CE 'rossmann-osg.rcac.purdue.edu' during a year .     This CE is a part of community clusters and max wall time  for a job is 30 days.   Usually, we faced the memory leak problem when number of jobs is more than 6K.   Following are information that is available to us\n\n\"\"\"\"\nRate of job submissions:  Difficult to say.  From the attached file 'rossmannCE.png', on an average 5K jobs are in running state.\nLength of jobs:  Attached file 'report.txt' shows information about all user jobs during this year.  Length of jobs varies from couple of minutes (~7) to several days (13).  For a given user,  walltime represents the average of  walltime from all his/her jobs.\nNumber of jobs in queue at any given time: Don't know.\nRate of polling:  We are using the default value as comes with globus.\nLRM:  PBS (pbs-config --version 4.1.4)\nSeg configuration:\n\"\"\"\n[jha2@rossmann-osg 25th]$ cat /etc/sysconfig/globus-scheduler-event-generator\nGLOBUS_SEG_PIDFMT=\"${localstatedir}/run/globus-scheduler-event-generator-%s.pid\"\nGLOBUS_SEG_LOGFMT=\"${localstatedir}/lib/globus/globus-seg-%s\"\nGLOBUS_SEG_LRM_DIR=\"${sysconfdir}/globus/scheduler-event-generator\"\n# GLOBUS_SEG_NICE_LEVEL=0\n[jha2@rossmann-osg 25th]$\n\n\"\"\"\n\nSite people are in CC.  If you need more information, then let us know.\n\nThanks,\nManoj\n\nby /DC=org/DC=doegrids/OU=People/CN=Manoj Kumar Jha 945408", 
+          "updateAuthor": {
+            "displayName": "sthapa", 
+            "name": "sthapa", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=sthapa", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "sthapa", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-03-28T15:22:09.642-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19532/comment/21673", 
+          "author": {
+            "displayName": "sthapa", 
+            "name": "sthapa", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=sthapa", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "sthapa", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-03-28T15:22:09.642-0500", 
+          "id": "21673"
+        }, 
+        {
+          "body": "Here's a patch that catches some memory leaks. I am still testing this one, but it seems to help quite a bit.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2013-05-16T10:01:16.302-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19532/comment/22050", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2013-05-16T10:01:16.302-0500", 
+          "id": "22050"
+        }
+      ], 
+      "maxResults": 8
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "sthapa", 
+      "name": "sthapa", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=sthapa", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "sthapa", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|101cqw:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-311/watchers", 
+      "watchCount": 1, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Joe Bester", 
+      "name": "bester", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "bester@mcs.anl.gov", 
+      "key": "bester", 
+      "active": true, 
+      "timeZone": "America/New_York"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": "1_*:*_1_*:*_21257232683_*|*_5_*:*_1_*:*_0", 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@1b210bd", 
+    "summary": "globus job manager is leaking memory", 
+    "customfield_10288": "2012-11-07T10:45:54.873-0600", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-311/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [
+      {
+        "archived": false, 
+        "name": "Sprint 2013-07-02", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11382", 
+        "releaseDate": "2013-07-02", 
+        "released": true, 
+        "id": "11382", 
+        "description": ""
+      }, 
+      {
+        "archived": false, 
+        "name": "5.2.5", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11388", 
+        "releaseDate": "2013-06-17", 
+        "released": true, 
+        "id": "11388", 
+        "description": ""
+      }
+    ], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [
+      {
+        "mimeType": "application/octet-stream", 
+        "author": {
+          "displayName": "Joe Bester", 
+          "name": "bester", 
+          "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+          "avatarUrls": {
+            "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+            "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+            "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+            "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+          }, 
+          "emailAddress": "bester@mcs.anl.gov", 
+          "key": "bester", 
+          "active": true, 
+          "timeZone": "America/New_York"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/11258", 
+        "created": "2013-05-16T10:01:16.297-0500", 
+        "filename": "GT-311.diff", 
+        "content": "https://globus.atlassian.net/secure/attachment/11258/GT-311.diff", 
+        "id": "11258", 
+        "size": 4613
+      }
+    ], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "Done", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+        "id": 3, 
+        "key": "done", 
+        "colorName": "green"
+      }, 
+      "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+      "id": "5", 
+      "name": "Resolved"
+    }, 
+    "updated": "2013-06-26T11:19:37.654-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "One of our OSG sites is reporting that the gatekeeper is leaking memory on his system.  His report follows:\n\n\nIt looks the globus jobmanager is leaking memory slowly.\n1) I found that the globus jobmanager on one of our CEs(the biggest one) is using 10.7g virtul mamory and 1.8g resident memory:\n6688 cmsprod7  25   0 10.7g 1.8g 3472 R 50.2 11.8   2831:18 globus-job-mana\nI checked with Brian and he don't think it should use that much memory.\n2) I checked other gatekeeprs and it looks the the cms production account which runs more jobs than others seem to be\nusing around 1g+(virt and res), while the analysis accounts stands at  around 500M(virt and res) level.\n\nAre we really hitting another memory leak.", 
+    "reporter": {
+      "displayName": "sthapa", 
+      "name": "sthapa", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=sthapa", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "sthapa", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2012-10-23T10:32:24.981-0500", 
+    "versions": [], 
+    "resolutiondate": "2013-06-26T11:19:37.600-0500", 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10324", 
+        "id": "10324", 
+        "name": "GRAM"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": {
+      "self": "https://globus.atlassian.net/rest/api/2/resolution/1", 
+      "id": "1", 
+      "name": "Fixed", 
+      "description": "A fix for this issue is checked into the tree and tested."
+    }, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/19532", 
+  "id": "19532", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

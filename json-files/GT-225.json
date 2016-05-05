@@ -1,0 +1,502 @@
+{
+  "key": "GT-225", 
+  "fields": {
+    "comment": {
+      "total": 8, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "The hybrid seg idea has been talked about a while back (GT-89). Maybe time to bump that in priority.\n\nDo you have more details about the PBS problem? Are the jobs ending up in the SEG log in /var/lib/globus/globus-seg-pbs/$DATE logs? Just trying to understand if it's a PBS SEG or job manager problem.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2012-06-07T10:49:39.960-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/18545/comment/19207", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2012-06-07T10:49:39.960-0500", 
+          "id": "19207"
+        }, 
+        {
+          "body": "Hi Joe,\n\nI can confirm the job state transitions are picked up by the SEG, but are not picked up by the job manager.  I don't have any insight into why it is not being picked up by the job-manager.\n\nI believe we have seen this at two of the three large PBS sites (using our globus state file parser).  I have not looked for it at the third.\n\nBrian", 
+          "updateAuthor": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-06-07T12:07:36.862-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/18545/comment/19211", 
+          "author": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-06-07T12:07:36.862-0500", 
+          "id": "19211"
+        }, 
+        {
+          "body": "I started an experiment on Friday and was able to hit the problem in the job manager seg processing for a couple of jobs that occur when they finish at the last second of a (UTC) day. \n\nI'll rerun the experiment today with a patch and see if the problem reoccurs. I am still investigating the GT-89 implementation as well.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2012-06-11T10:05:39.875-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/18545/comment/19235", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2012-06-11T10:05:39.875-0500", 
+          "id": "19235"
+        }, 
+        {
+          "body": "Source package with the fix for the SEG problem. Does not contain a GT-89 implementation, as I'm trying to unwind some of the code a bit to make it safe to add. \n\nhttp://www.globus.org/ftppub/gt5/5.2/testing/packages/rpm/centos/5/SRPMS/globus-gram-job-manager-13.45-1.src.rpm", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2012-06-14T08:10:12.549-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/18545/comment/19260", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2012-06-14T08:10:12.549-0500", 
+          "id": "19260"
+        }, 
+        {
+          "body": "Thanks Joe! Should we wait for to make the other fixes (GT-89) as well, or should we be taking this version?", 
+          "updateAuthor": {
+            "displayName": "alainroy", 
+            "name": "alainroy", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=alainroy", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "alainroy", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-06-14T08:49:05.645-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/18545/comment/19261", 
+          "author": {
+            "displayName": "alainroy", 
+            "name": "alainroy", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=alainroy", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "alainroy", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-06-14T08:49:05.645-0500", 
+          "id": "19261"
+        }, 
+        {
+          "body": "GT-89 is turning to be a little hairy to implement so it might be better to grab this one. This fix is pretty straightforward.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2012-06-14T13:22:35.765-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/18545/comment/19264", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2012-06-14T13:22:35.765-0500", 
+          "id": "19264"
+        }, 
+        {
+          "body": "OK, I'll get out an update for testing soon. Thanks Joe!\n", 
+          "updateAuthor": {
+            "displayName": "alainroy", 
+            "name": "alainroy", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=alainroy", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "alainroy", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-06-14T17:32:44.854-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/18545/comment/19269", 
+          "author": {
+            "displayName": "alainroy", 
+            "name": "alainroy", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=alainroy", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "alainroy", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-06-14T17:32:44.854-0500", 
+          "id": "19269"
+        }, 
+        {
+          "body": "I've built it and asked for a few people to test. If testing goes well, we'll ship next week.", 
+          "updateAuthor": {
+            "displayName": "alainroy", 
+            "name": "alainroy", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=alainroy", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "alainroy", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-06-18T17:24:14.315-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/18545/comment/19285", 
+          "author": {
+            "displayName": "alainroy", 
+            "name": "alainroy", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=alainroy", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "alainroy", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-06-18T17:24:14.315-0500", 
+          "id": "19285"
+        }
+      ], 
+      "maxResults": 8
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "bbockelm", 
+      "name": "bbockelm", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "bbockelm", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|101i00:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-225/watchers", 
+      "watchCount": 1, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Joe Bester", 
+      "name": "bester", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "bester@mcs.anl.gov", 
+      "key": "bester", 
+      "active": true, 
+      "timeZone": "America/New_York"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": "1_*:*_1_*:*_659258163_*|*_5_*:*_1_*:*_0", 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@5bbada", 
+    "summary": "GRAM5 skips some SEG events", 
+    "customfield_10288": "2012-06-07T10:49:39.960-0500", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-225/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [
+      {
+        "archived": false, 
+        "name": "5.2.2", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/10904", 
+        "releaseDate": "2012-07-24", 
+        "released": true, 
+        "id": "10904"
+      }, 
+      {
+        "archived": false, 
+        "name": "Sprint 2012-06-19", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/10921", 
+        "releaseDate": "2012-06-19", 
+        "released": true, 
+        "id": "10921", 
+        "description": ""
+      }
+    ], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "Done", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+        "id": 3, 
+        "key": "done", 
+        "colorName": "green"
+      }, 
+      "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+      "id": "5", 
+      "name": "Resolved"
+    }, 
+    "updated": "2012-06-18T17:24:14.317-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "Our large PBS sites have reported issues with GRAM5 losing track of jobs when SEG is enabled.\n\nIf the SEG misses an event, the job might indefinitely stay in Idle or Running state.  After a few weeks of running, if there's enough Idle jobs, the various pilot factories will stop submitting - possibly causing the site to become non-operational.\n\nThe only workaround I have found is to restart the g-j-m without the SEG, let it do the explicit qstat, and then restart it again with the SEG.  This is a complex procedure for sites to follow.\n\nIs it possible to have a \"hybrid SEG\" mode, where the job states are explicitly queried once every 1-4 hours?", 
+    "reporter": {
+      "displayName": "bbockelm", 
+      "name": "bbockelm", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "bbockelm", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2012-06-06T17:03:07.225-0500", 
+    "versions": [
+      {
+        "archived": false, 
+        "name": "5.2.1", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/10922", 
+        "releaseDate": "2012-04-26", 
+        "released": true, 
+        "id": "10922"
+      }
+    ], 
+    "resolutiondate": "2012-06-14T08:10:45.372-0500", 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [], 
+    "issuetype": {
+      "name": "Task", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/3", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11058&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11058, 
+      "id": "3", 
+      "description": "A task that needs to be done."
+    }, 
+    "resolution": {
+      "self": "https://globus.atlassian.net/rest/api/2/resolution/1", 
+      "id": "1", 
+      "name": "Fixed", 
+      "description": "A fix for this issue is checked into the tree and tested."
+    }, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/18545", 
+  "id": "18545", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

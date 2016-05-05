@@ -1,0 +1,151 @@
+{
+  "key": "GT-591", 
+  "fields": {
+    "comment": {
+      "total": 0, 
+      "startAt": 0, 
+      "comments": [], 
+      "maxResults": 0
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": null, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|zq5tp6:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-591/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Dan Powers", 
+      "name": "dpowers", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=dpowers", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "dpowers@uchicago.edu", 
+      "key": "dpowers", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@d2f0b7", 
+    "summary": "Regular expressions with sharing_rp", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-591/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/minor.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/4", 
+      "name": "Minor", 
+      "id": "4"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2015-12-22T08:49:55.480-0600", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "From ticket: #302913\r\n\r\nWe are having some difficulties setting up sharing_rp as needed for our site. We wish to restrict sharing to a specific share directory contained within the user's project directory. The share directory path has the form\r\n\r\n/projects/*/*/share\r\n\r\nSharing works when I do not use regular expressions:\r\n\r\nsharing_rp \"N/,R/mnt/b/projects/sciteam/xxx/share\"\r\n\r\nBut every attempt to use regular expressions acceptable to fnmatch() have failed. Are regular expressions supported? Thanks!\r\n\r\nRPM list it case it is useful:\r\n\r\nie01$rpm -qa |grep globus \r\nglobus-gsi-cert-utils-progs-8.6-2gt.x86_64 \r\nglobus-xio-debuginfo-3.9-1gt.x86_64 \r\nglobus-gssapi-error-debuginfo-4.1-12gt.x86_64 \r\nglobus-gfork-debuginfo-3.2-7gt.x86_64 \r\nglobus-ftp-client-debuginfo-7.6-1gt.x86_64 \r\nglobus-gsi-sysconfig-debuginfo-5.3-8.el6.x86_64 \r\nglobus-gsi-sysconfig-5.3-8.el6.x86_64 \r\nglobus-xio-gsi-driver-2.4-1gt.x86_64 \r\nglobus-gfork-3.2-7gt.x86_64 \r\nglobus-xio-popen-driver-2.3-7gt.x86_64 \r\nglobus-rsl-debuginfo-9.1-12gt.x86_64 \r\nglobus-gsi-proxy-ssl-debuginfo-4.1-12gt.x86_64 \r\nglobus-gridmap-callout-error-debuginfo-1.2-10gt.x86_64 \r\nglobus-gram-job-manager-debuginfo-13.54-1gt.x86_64 \r\nglobus-gass-server-ez-debuginfo-4.3-6gt.x86_64 \r\nglobus-authz-debuginfo-2.2-9gt.x86_64 \r\nglobus-gram-protocol-debuginfo-11.3-11.el6.x86_64 \r\nglobus-gss-assist-9.0-2gt.x86_64 \r\nglobus-authz-callout-error-2.2-9gt.x86_64 \r\nglobus-xio-pipe-driver-2.2-7gt.x86_64 \r\nglobus-gsi-callback-debuginfo-4.6-2.el6.x86_64 \r\nglobus-gass-copy-debuginfo-8.6-7.el6.x86_64 \r\nglobus-gass-copy-progs-8.6-7.el6.x86_64 \r\nglobus-proxy-utils-5.2-1gt.x86_64 \r\nglobus-xio-pipe-driver-debuginfo-2.2-7gt.x86_64 \r\nglobus-io-debuginfo-9.6-1gt.x86_64 \r\nglobus-gridmap-eppn-callout-debuginfo-0.6-1gt.x86_64 \r\nglobus-gram-job-manager-fork-debuginfo-1.5-9gt.x86_64 \r\nglobus-gram-client-tools-debuginfo-10.5-1gt.x86_64 \r\nglobus-gass-cache-debuginfo-8.1-10gt.x86_64 \r\nglobus-callout-debuginfo-2.5-1gt.x86_64 \r\nglobus-gsi-openssl-error-2.1-13gt.x86_64 \r\nglobus-gsi-cert-utils-8.6-2gt.x86_64 \r\nglobus-gsi-proxy-core-6.3-1gt.x86_64 \r\nglobus-xio-3.9-1gt.x86_64 \r\nglobus-ftp-control-4.8-1gt.x86_64 \r\nglobus-authz-2.2-9gt.x86_64 \r\nglobus-common-progs-14.12-1ggt.x86_64 \r\nglobus-gridftp-server-control-2.10-1gt.x86_64 \r\nglobus-gass-copy-8.6-7.el6.x86_64 \r\nglobus-gridftp-5.2.2-1gt.x86_64 \r\nglobus-gsi-credential-debuginfo-6.0-2.el6.x86_64 \r\nglobus-gass-transfer-debuginfo-7.2-9.el6.x86_64 \r\nglobus-gsi-proxy-ssl-4.1-12gt.x86_64 \r\nglobus-gsi-callback-4.6-2.el6.x86_64 \r\nglobus-gssapi-gsi-10.12-3gt.x86_64 \r\nglobus-gss-assist-progs-9.0-2gt.x86_64 \r\nglobus-xio-popen-driver-debuginfo-2.3-7gt.x86_64 \r\nglobus-usage-debuginfo-3.1-10gt.x86_64 \r\nglobus-openssl-module-debuginfo-3.3-4gt.x86_64 \r\nglobus-gss-assist-debuginfo-9.0-2gt.x86_64 \r\nglobus-gsi-openssl-error-debuginfo-2.1-13gt.x86_64 \r\nglobus-gridmap-verify-myproxy-callout-debuginfo-1.5-1gt.x86_64 \r\nglobus-gridftp-server-control-debuginfo-2.10-1gt.x86_64 \r\nglobus-gram-job-manager-lsf-debuginfo-1.3-1gt.x86_64 \r\nglobus-gram-job-manager-callout-error-debuginfo-2.1-12gt.x86_64 \r\nglobus-gatekeeper-debuginfo-9.16-1gt.x86_64 \r\nglobus-gass-cache-program-debuginfo-5.2-3gt.x86_64 \r\nglobus-common-debuginfo-14.12-1ggt.x86_64 \r\nglobus-gssapi-error-4.1-12gt.x86_64 \r\nglobus-gass-transfer-7.2-9.el6.x86_64 \r\nglobus-gridftp-server-6.43-1gt.x86_64 \r\nglobus-xioperf-debuginfo-3.1-7gt.x86_64 \r\nglobus-proxy-utils-debuginfo-5.2-1gt.x86_64 \r\nglobus-gsi-proxy-core-debuginfo-6.3-1gt.x86_64 \r\nglobus-gridftp-server-debuginfo-6.43-1gt.x86_64 \r\nglobus-gram-job-manager-condor-debuginfo-1.4-4gt.x86_64 \r\nglobus-authz-callout-error-debuginfo-2.2-9gt.x86_64 \r\nglobus-gram-job-manager-pbs-debuginfo-1.6-7.el6.x86_64 \r\nglobus-common-14.12-1ggt.x86_64 \r\nglobus-gsi-credential-6.0-2.el6.x86_64 \r\nglobus-callout-2.5-1gt.x86_64 \r\nglobus-gridftp-server-progs-6.43-1gt.x86_64 \r\nglobus-xio-gsi-driver-debuginfo-2.4-1gt.x86_64 \r\nglobus-gssapi-gsi-debuginfo-10.12-3gt.x86_64 \r\nglobus-gsi-cert-utils-debuginfo-8.6-2gt.x86_64 \r\nglobus-gram-job-manager-sge-debuginfo-1.7-2gt.x86_64 \r\nglobus-gram-client-debuginfo-12.4-8gt.x86_64 \r\nglobus-ftp-control-debuginfo-4.8-1gt.x86_64 \r\nglobus-scheduler-event-generator-debuginfo-4.7-8.el6.x86_64 \r\nglobus-openssl-module-3.3-4gt.x86_64 \r\nglobus-io-9.6-1gt.x86_64 \r\nglobus-usage-3.1-10gt.x86_64 \r\nglobus-ftp-client-7.6-1gt.x86_64\r\n\r\n\r\nReply 1:\r\nGridFTP supports shell globbing with asterisk, but not regular expressions, with fnmatch. Any testing you do with fnmatch() should give you viable paths to give to GridFTP. \r\nThat means that patterns of the form \".../*/*/...\" should all be supported.\r\n\r\nHowever, there are some bugs (with fixes on the way) relating to symlink handling in RestrictPaths. Are there links in the paths you're working with, perhaps after the globbing pattern?\r\n\r\nReply 2:\r\nThere are symlinks. /mnt/b/projects -> /projects. So we need to share out /projects/sciteam/<psn>/share, the real path is /mnt/b/projects/sciteam/<psn>/share.\r\n\r\nThis works:\r\n\r\n\"sharing_rp N/,R/projects/sciteam/xxx/share/\".\r\n\r\nThese d not work:\r\n\r\nsharing_rp N/,R/mnt/b/projects/sciteam/xxx/share/ \r\nsharing_rp N/,R/mnt/b/projects/sciteam/*/share/ \r\nsharing_rp N/,R/projects/sciteam/*/share/\r\n\r\nAny reason fnmatch doesn't use FNM_PATHNAME?\r\n\r\nReply 3:\r\nThere is an upcoming update that fixes a problem when paths contain symlinks. However, it should work if you add both the symlinked and true path to the RP list.\r\n\r\nsharing_rp R/mnt/b/projects/sciteam/*/share/,R/projects/sciteam/*/share/\r\n\r\nThe update also changes to using FNM_PATHNAME, though I don't believe that is the problem here.\r\n\r\nReply 4:\r\nThat has helped with setting up shared on HPSS and Blue Waters. Thanks.\r\n\r\nBlue Waters:\r\n\r\nsharing_rp N/,R/projects/sciteam/*/share/,R/mnt/b/projects/sciteam/*/share\r\n\r\nHPSS (no symlink magic):\r\n\r\nsharing_rp N/,R/projects/sciteam/*/share\r\n\r\nUser arnoldg can create shares (arnoldg#onlinetest and arnoldg#nearlinetest) but I (user jasonalt) can not access them (Permission Denied). Looking at the debug info available through the \"Transfer Files\" web interface:\r\n\r\n\"Command Failed: Error (list) Server: arnoldg#onlinetest (ie25.ncsa.illinois.edu:2811) Command: MLST / Message: Fatal FTP Response --- 500 Command failed : Path not allowed.\"\r\n\r\narnoldg has allowed me explicitly, anonymous access and sent me an email invite, still with the same result \"Permission Denied\".\r\n\r\nReply 5:\r\n\r\nExplicitly adding his share path to sharing_rp makes it work:\r\n\r\nsharing_rp N/,R/projects/sciteam/*/share,R/projects/sciteam/jn7/share\r\n\r\nSo it appears to be a problem with the wildcard\r\n\r\nReply 6:\r\nI seem to have this working now on nearline and bluewaters but it is not pretty. On both systems, I wanted to share /projects/*/*/share. nearline does not have symlinks in the path. Bluewaters does (/mnt/b/project => /projects).\r\n\r\nIn looking at globus_i_gfs_data_check_path(), it seems there is a problem with comparing the true_path/check_path/start_path to the alias (active_rp_list / rp_list) because start_path is a concatenation of chroot_path and in_path, so in other words, it ends with a trailing '/'. Combine that with the fact that the alias has wildcards and you can follow the failure path through globus_i_gfs_data_check_path().\r\n\r\nI debugged this on nearline which does have the HPSS DSI but hopefully the attachment will still be of use. I setup the debugger to print the stack trace, session_handle, chroot_path, active_rp_list and rp_list. The final call to globus_i_gfs_data_check_path() fails.\r\n\r\nOnce I added a trailing '/' to each entry in sharing_rp, I was able to access the share but I was not able to descend into sub directories. For that to work, I had to append '*' to each entry in sharing_rp. Then I had to append '/' to make the matching work.\r\n\r\nSo, I would have expected nearline to work with 'sharing_rp N/,R/projects/*/*/share'. Instead I have to use this:\r\n\r\nsharing_rp N/,R/projects/*/*/share/,R/projects/*/*/share,R/projects/*/*/share/*,R/projects/*/*/share/*/\r\n\r\nOn bluewaters, with the symlink in the path, I have to use this:\r\n\r\nsharing_rp N/,R/projects/*/*/share,R/projects/*/*/share/,R/projects/*/*/share/*,R/projects/*/*/share/*/,R/mnt/b/projects/*/*/share,R/mnt/b/projects/*/*/share/,R/mnt/b/projects/*/*/share/*,R/mnt/b/projects/*/*/share/*/", 
+    "reporter": null, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2015-04-08T16:43:06.999-0500", 
+    "versions": [], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/27460", 
+  "id": "27460", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

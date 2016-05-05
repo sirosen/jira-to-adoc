@@ -1,0 +1,151 @@
+{
+  "key": "GT-613", 
+  "fields": {
+    "comment": {
+      "total": 0, 
+      "startAt": 0, 
+      "comments": [], 
+      "maxResults": 0
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": null, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|zq5uqa:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-613/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Dan Powers", 
+      "name": "dpowers", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=dpowers", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "dpowers@uchicago.edu", 
+      "key": "dpowers", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@56d1d1", 
+    "summary": "-p parallel option fails while pulling data using globus-url-copy from behind nat firewall", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-613/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/critical.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/2", 
+      "name": "Critical", 
+      "id": "2"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2015-12-22T09:16:29.561-0600", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "Host A (our host behind a NAT Firewall)\r\nHost B (server to push pull files from NOT behind NAT firewall)\r\nHost C (server to push/Pull files to/from BEHIND NAT firewall)\r\n\r\nFrom Host A running globus-url-copy, we can successfully push and pull\r\nfiles to and from Host B without the -p parallel thread option. When the\r\n-p (Number) option is included we can still 'push' files to HOST B but can\r\nnot 'pull' files from HOSTB.\r\n\r\nFrom Host B to Host A. Running globus-url-copy from HOST B we can push and pull files to and from HOST A. This works with and without the -p option.\r\n\r\nFrom HOST A to HOST C we can both push and pull files without -p option\r\nagain. Also, with the -p option we can push, but not pull.\r\n\r\nFrom HOST C to HOST A (running globus-url-copy from HOST C) we can push and pull files without the -p. But, again like scenario 3, we can not pull files.\r\n\r\nExample of what I mean by 'push' command:\r\nglobus-url-copy -vb -p 5 file:///home/schwabm/Z_sysInit.log sshftp://nsidc@HOSTC/home/nsidc/testfile2\r\n\r\n(Pushing file from localhost to remote host).\r\n\r\nExample of what is meant by 'pull' command:\r\nglobus-url-copy -vb -p 5  sshftp://nsidc@HOSTC/home/nsidc/testfile2 file:///home/schwabm/TEST_AA\r\n\r\n(Pulling file on remote host to local host)\r\n\r\nSniffing suggests that when the -p (N) is set with globus-url-copy that the -data-interface setting in sshftp may be ignored.\r\nThe sniffer shows the host that is acting as the server attempting to connect to the PRIVATE(non addressable 192.168....) address for the data connections when the -p option is specified. \r\n\r\nFor our service purposes we would really like the ability to PULL data files from a data repository using -P commands from our HOST (A) which is behind our NAT firewall.\r\n", 
+    "reporter": null, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": "\r\nRHEL 6.2 Behind NATing firewall. We are connecting to another grid-ftp host that is also behind a NATing firewall and a host that is not behind a NAT firewall", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2015-07-16T16:12:38.852-0500", 
+    "versions": [], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/28637", 
+  "id": "28637", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

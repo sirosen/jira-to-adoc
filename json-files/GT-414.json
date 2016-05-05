@@ -1,0 +1,499 @@
+{
+  "key": "GT-414", 
+  "fields": {
+    "comment": {
+      "total": 9, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "Can you update the server?  There have been a few bug fixes since that release.  If you installed it from the globus.org repo a yum update should get the latest, otherwise you can install the globus.org repo configuration here: http://www.globus.org/toolkit/downloads/5.2.4/", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-06-13T11:32:20.153-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/21210/comment/22258", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-06-13T11:32:20.153-0500", 
+          "id": "22258"
+        }, 
+        {
+          "body": "Thanks for the quick response. It will take some significant effort to test the upgrade first, get approval, then implement it across our nodes. This was working as expected up until a few days ago, then stopped working.\n\nIs there anything else I can do to increase the verbosity to try to determine why this is happening?", 
+          "updateAuthor": {
+            "displayName": "mulroony", 
+            "name": "mulroony", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mulroony", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "mulroony", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-06-13T12:02:31.603-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/21210/comment/22260", 
+          "author": {
+            "displayName": "mulroony", 
+            "name": "mulroony", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mulroony", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "mulroony", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-06-13T12:02:31.603-0500", 
+          "id": "22260"
+        }, 
+        {
+          "body": "Nothing has changed on your end from when it was working?  Unfortunately most of the debug tracing ability is unavailable in the non-dbg builds.  Do you see a return code from the server processes? It should be either in the gridftp log or xinetd/syslog, depending on how it is running.", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-06-13T12:41:04.218-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/21210/comment/22261", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-06-13T12:41:04.218-0500", 
+          "id": "22261"
+        }, 
+        {
+          "body": "Not to our knowledge did anything change, we did have to restart xinetd on our nodes, but nothing should have changed by the restart as these are stateless nodes. We attempted a restart of a few nodes, which would have pulled the same image they have been running for some time, and no difference. \n\nIt looks like it is exiting with code 127.\n\nTurns out we might be able to test a newer version after all. I will follow up with the results of that test.\n\nThanks again.", 
+          "updateAuthor": {
+            "displayName": "mulroony", 
+            "name": "mulroony", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mulroony", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "mulroony", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-06-13T13:27:06.849-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/21210/comment/22263", 
+          "author": {
+            "displayName": "mulroony", 
+            "name": "mulroony", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mulroony", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "mulroony", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-06-13T13:27:06.849-0500", 
+          "id": "22263"
+        }, 
+        {
+          "body": "It worked when tested with the below versions. With the time it would take to implement a system wide upgrade we still hope to find a different solution if possible.\n\nglobus_gridftp_server: 6.32 (1370414947-83)\nglobus_gfork: 3.2 (1142319502-1)\nglobus_xio_queue: 3.3 (1331018989-83)\nglobus_gridftp_server_file: 6.32 (1370414947-83)\nglobus_xio_udp: 3.3 (1331018989-83)\nglobus_usage_stats_module: 3.1 (1319549265-1)\nglobus_gsi_authz_callout_error_module: 2.2 (1329144117-83)\nglobus_gsi_authz: 2.2 (1329144142-83)\nglobus_xio_pipe: 2.2 (1137650252-1)\nglobus_xio_telnet: 3.3 (1331018989-83)\nglobus_xio_gssapi_ftp: 2.8 (1359003884-83)\nglobus_gridftp_server_control: 2.8 (1359003884-83)\nglobus_gsi_callback_module: 4.4 (1343249939-83)\nglobus_credential: 5.3 (1329144244-83)\nglobus_gsi_proxy: 6.2 (1329144361-83)\nglobus_gsi_openssl_error: 2.1 (1319549263-1)\nglobus_openssl: 3.2 (1329144334-83)\nglobus_gsi_gssapi: 10.7 (1336415934-83)\nglobus_sysconfig: 5.3 (1337105279-83)\nglobus_callout_module: 2.2 (1329143466-83)\nglobus_gss_assist: 8.7 (1359003886-83)\nglobus_xio_gsi: 2.3 (1147293372-1)\nglobus_xio_tcp: 3.3 (1331018989-83)\nglobus_xio_system_select: 3.3 (1331018989-83)\nglobus_xio_file: 3.3 (1331018989-83)\nglobus_io: 9.4 (1359994550-83)\nglobus_ftp_control: 4.5 (1359004328-83)\nglobus_gridftp_server: 6.32 (1370414947-83)\nglobus_xio: 3.3 (1331018989-83)\nglobus_extension_module: 14.9 (1349797671-83)\nglobus_callback_nonthreaded: 14.9 (1349797671-83)\nglobus_callback: 14.9 (1349797671-83)\nglobus_object: 14.9 (1349797671-83)\nglobus_error: 14.9 (1349797671-83)\nglobus_common: 14.9 (1349797671-83)\nglobus_thread_common: 14.9 (1349797671-83)\nglobus_thread_none: 14.9 (1349797671-83)\nglobus_thread: <no version>\n", 
+          "updateAuthor": {
+            "displayName": "mulroony", 
+            "name": "mulroony", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mulroony", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "mulroony", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-06-13T14:29:44.121-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/21210/comment/22270", 
+          "author": {
+            "displayName": "mulroony", 
+            "name": "mulroony", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mulroony", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "mulroony", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-06-13T14:29:44.121-0500", 
+          "id": "22270"
+        }, 
+        {
+          "body": "Interesting.  There wouldn't be any way to prevent it from happening locally without an update, but I'll check if GO has started to do something differently that is triggering a bug in the old version.", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-06-13T16:52:16.633-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/21210/comment/22274", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-06-13T16:52:16.633-0500", 
+          "id": "22274"
+        }, 
+        {
+          "body": "Mike, Tested this with uberftp to one of our clients. Any time I issue the 'CKSM' command it panics with exit code 127. \n\nWhat little I could get from gdb is below:\n\n(gdb) bt\n#0  0x00007ffff472543c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0\n#1  0x000000000040581b in main (argc=<value optimized out>, argv=<value optimized out>) at globus_gridftp_server.c:1863\n(gdb) frame 1\n#1  0x000000000040581b in main (argc=<value optimized out>, argv=<value optimized out>) at globus_gridftp_server.c:1863\n1863\t            globus_cond_wait(&globus_l_gfs_cond, &globus_l_gfs_mutex);\n(gdb) frame 0\n#0  0x00007ffff472543c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0\n(gdb) quit\n", 
+          "updateAuthor": {
+            "displayName": "mulroony", 
+            "name": "mulroony", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mulroony", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "mulroony", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-06-13T17:09:20.309-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/21210/comment/22275", 
+          "author": {
+            "displayName": "mulroony", 
+            "name": "mulroony", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mulroony", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "mulroony", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-06-13T17:09:20.309-0500", 
+          "id": "22275"
+        }, 
+        {
+          "body": "Running under gdb should be helpful.  Did you run it manually or did you attach to a running xinetd process?  Add the gridftp -debug argument and try again, and if you get another crash show: \"thread apply all bt\".", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-06-14T13:25:38.821-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/21210/comment/22302", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-06-14T13:25:38.821-0500", 
+          "id": "22302"
+        }, 
+        {
+          "body": "Hi Mike,\n\nWe resolved the issue at our end by reverting to the previous version of our hpss dsi. Things are working as expected at this point. I will leave the investigations into what is going on in the new dsi for Jason when he returns from vacation.\n\nThanks for your prompt assistance!\n\nJim", 
+          "updateAuthor": {
+            "displayName": "glasgow", 
+            "name": "glasgow", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=glasgow", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "glasgow", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-06-14T13:49:17.891-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/21210/comment/22306", 
+          "author": {
+            "displayName": "glasgow", 
+            "name": "glasgow", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=glasgow", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "glasgow", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-06-14T13:49:17.891-0500", 
+          "id": "22306"
+        }
+      ], 
+      "maxResults": 9
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "mulroony", 
+      "name": "mulroony", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=mulroony", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "mulroony", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100nag:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-414/watchers", 
+      "watchCount": 1, 
+      "isWatching": false
+    }, 
+    "assignee": null, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "3774", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@1bcfc12", 
+    "summary": "globus-gridftp-server closing connection before returning cksm value", 
+    "customfield_10288": "2013-06-13T11:32:20.153-0500", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-414/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2013-06-14T13:49:17.894-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "When users submit a transfer via GO with the verification option selected the connection closes before the cksm value is returned.\n\nGO Error:\nError (transfer)\nServer: mulroony#hpss37 (hpss-md37.ncsa.illinois.edu:2811)\nCommand: CKSM MD5 0 -1 ~/stage_asyrowski_runs2_copy2.sh\nMessage: The connection to the server was broken\n---\nan end-of-file was reached\nglobus_xio: An end of file occurred\n\nCMD Log from system:\nCMD (b:140737018816368 l:13 n:13 r:0)\nALLO 757677\n\nREPLY (b:140737152928832 l:30)\n200 ALLO command successful.\n\nCMD (b:140737018820096 l:39 n:39 r:0)\nSTOR ~/stage_asyrowski_runs2_copy2.sh\n\nCMD (b:140737018831664 l:48 n:48 r:0)\nCKSM MD5 0 -1 ~/stage_asyrowski_runs2_copy2.sh\n\nREPLY (b:140737153062528 l:25)\n150 Beginning transfer.\n\nREPLY (b:140737153132768 l:126)\n112-Perf Marker\n Timestamp:  1371136671.0\n Stripe Index: 0\n Stripe Bytes Transferred: 0\n Total Stripe Count: 1\n112 End.\n\nREPLY (b:140736549178352 l:126)\n112-Perf Marker\n Timestamp:  1371136671.0\n Stripe Index: 0\n Stripe Bytes Transferred: 0\n Total Stripe Count: 1\n112 End.\n\nREPLY (b:140737153132912 l:24)\n226 Transfer Complete.\n\n", 
+    "reporter": {
+      "displayName": "mulroony", 
+      "name": "mulroony", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=mulroony", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "mulroony", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": "rhel6.3\n$globus-gridftp-server -V\nglobus_gridftp_server: 6.19 (1359994843-83)\nglobus_gfork: 3.2 (1142319502-1)\nglobus_xio_queue: 3.3 (1331018989-83)\nglobus_gridftp_server_file: 6.19 (1359994843-83)\nglobus_xio_udp: 3.3 (1331018989-83)\nglobus_usage_stats_module: 3.1 (1319549265-1)\nglobus_gsi_authz_callout_error_module: 2.2 (1329144117-83)\nglobus_gsi_authz: 2.2 (1329144142-83)\nglobus_xio_pipe: 2.2 (1137650252-1)\nglobus_xio_telnet: 3.3 (1331018989-83)\nglobus_xio_gssapi_ftp: 2.8 (1359003884-83)\nglobus_gridftp_server_control: 2.8 (1359003884-83)\nglobus_gsi_callback_module: 4.4 (1343249939-83)\nglobus_credential: 5.3 (1329144244-83)\nglobus_gsi_proxy: 6.2 (1329144361-83)\nglobus_gsi_openssl_error: 2.1 (1319549263-1)\nglobus_openssl: 3.2 (1329144334-83)\nglobus_gsi_gssapi: 10.7 (1336415934-83)\nglobus_sysconfig: 5.3 (1337105279-83)\nglobus_callout_module: 2.2 (1329143466-83)\nglobus_gss_assist: 8.7 (1359003886-83)\nglobus_xio_gsi: 2.3 (1147293372-1)\nglobus_xio_tcp: 3.3 (1331018989-83)\nglobus_xio_system_select: 3.3 (1331018989-83)\nglobus_xio_file: 3.3 (1331018989-83)\nglobus_io: 9.4 (1359994550-83)\nglobus_ftp_control: 4.5 (1359004328-83)\nglobus_gridftp_server: 6.19 (1359994843-83)\nglobus_xio: 3.3 (1331018989-83)\nglobus_extension_module: 14.9 (1349797671-83)\nglobus_callback_nonthreaded: 14.9 (1349797671-83)\nglobus_callback: 14.9 (1349797671-83)\nglobus_object: 14.9 (1349797671-83)\nglobus_error: 14.9 (1349797671-83)\nglobus_common: 14.9 (1349797671-83)\nglobus_thread_common: 14.9 (1349797671-83)\nglobus_thread_none: 14.9 (1349797671-83)\nglobus_thread: <no version>\n", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2013-06-13T10:27:42.152-0500", 
+    "versions": [], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/21210", 
+  "id": "21210", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

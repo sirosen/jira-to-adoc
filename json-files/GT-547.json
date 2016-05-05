@@ -1,0 +1,254 @@
+{
+  "key": "GT-547", 
+  "fields": {
+    "comment": {
+      "total": 2, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "I believe the issue is due to out of order globus_gridftp_server_register_write() calls.  In stream mode these are required to be in order, as there is no offset information transmitted with the data as in mode E/parallel streams.  This also means the problem should be avoidable by using single-stream mode E (i.e. globus-url-copy -p 1).\r\n\r\nLocking around the entire hdfsPread/gridftp_write pair might help, but a better solution might be to wrap the globus_gridftp_server_register_write() call with a function that checks if the offset is in order, and if not, saves the buffer to a queue.  After an in-order write, the func would check the queue to see if it contains a buffer that is next in line. In this case, that queue should never contain more than a block or two so memory isn't an issue.\r\n\r\nI'm not sure what I can do on the server side about this.  I consider it a design flaw in the DSI interface, since out of order writes may be useful and they are essentially disallowed.  Even though they are valid in mode E, the DSI can't learn what the current mode is (and that info is out of scope even if I added it).", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2014-08-20T23:53:39.134-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/25002/comment/27507", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2014-08-20T23:53:39.134-0500", 
+          "id": "27507"
+        }, 
+        {
+          "body": "(From Carl Edquist, 4 September 2014:)\r\n\r\nI was looking over your comment on GT-547, and I noticed something:\r\n\r\nI believe the issue is due to out of order globus_gridftp_server_register_write() calls. In stream mode these are required to be in order, as there is no offset information transmitted with the data as in mode E/parallel streams. This also means the problem should be avoidable by using single-stream mode E (i.e. globus-url-copy -p 1).\r\n\r\nNot sure if this was clear in our report, but we observed the problem with globus-url-copy only when no -p/parallelism argument was specified, and it was avoided by using -p N, with N > 1.\r\n\r\nI see now that it is also avoided with -p 1, as you mentioned, but -p 0 seems to be equivalent to no -p argument, and results in the out-of-sequence blocks.\r\n\r\nAlso, from what I can tell -fast and -pipeline each turn on -p 1 implicitly, and in my tests they also avoid the problem.\r\n\r\nApparently there is an important difference here between -p 0 (no parallelism) and -p 1 ... Is the difference just to turn on mode E, as you mentioned?\r\n\r\nIf so, is there any way to force using mode E from the server side?\r\n\r\nIf there is not a good server-side solution, I'm wondering if we should make the globus-url-copy default -p 1 instead of 0\r\n\r\n-    guc_info->num_streams = 0;\r\n+    guc_info->num_streams = 1;\r\n\r\nin globus_url_copy.c in globus_gass_copy ... Or is there any reason this is a bad idea?", 
+          "updateAuthor": {
+            "displayName": "Tim Cartwright", 
+            "name": "cat", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=cat", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "cat@cs.wisc.edu", 
+            "key": "cat", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2014-09-08T10:14:48.416-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/25002/comment/27881", 
+          "author": {
+            "displayName": "Tim Cartwright", 
+            "name": "cat", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=cat", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "cat@cs.wisc.edu", 
+            "key": "cat", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2014-09-08T10:15:13.182-0500", 
+          "id": "27881"
+        }
+      ], 
+      "maxResults": 2
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "Tim Cartwright", 
+      "name": "cat", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=cat", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "cat@cs.wisc.edu", 
+      "key": "cat", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|zq5o5m:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-547/watchers", 
+      "watchCount": 2, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Mike Link", 
+      "name": "mlink", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mlink@mcs.anl.gov", 
+      "key": "mlink", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@1a973b2", 
+    "summary": "GridFTP-HDFS transfers corrupt order of data blocks (pthreads on, single-stream)", 
+    "customfield_10288": "2014-08-20T23:53:39.134-0500", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-547/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2014-09-08T10:15:13.191-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "With GridFTP-HDFS, enabling pthreads (by setting GLOBUS_THREAD_MODEL=\"pthread\") seems to cause data corruptions for *single stream* transfers that span multiple HDFS blocks. In particular, we believe that the order of blocks can be scrambled on the destination file. This issue has affected a few OSG sites, such as GLOW here in Wisconsin, that have all of the relevant components.\r\n\r\nCarl Edquist (edquist@cs.wisc.edu) is the OSG Software team member who has done most of the debugging on our end, and who will handle questions, etc. He does not have an account here, so I can relay comments as needed. If you want to provide a machine, Carl would be happy to try to set up a failing scenario to play with.\r\n\r\n*Details*\r\n\r\nTransfers that use parallelism (we tried from 2-10 streams), and single stream transfers that only span a single HDFS block seem to be fine.\r\n\r\nTransfers using a single stream but spanning multiple (3 or more) HDFS blocks result in the correct size, but usually the wrong checksum at the destination. This was reported to us by a remote user transferring via srm-copy, and all our testing had the same problems using local globus-url-copy tools.\r\n\r\nLooking at the actual differences in the corrupted files, it appears that blocks sporadically get mis-ordered in the destination file. For example, with an HDFS blocksize of 1M, we can take a corrupted output file and split it into 1M blocks, and we can see that the checksum for each block corresponds to a 1M block from the original input file, only occasionally pairs of adjacent blocks will be swapped in the output file.\r\n\r\nWe had enabled pthreads by adding the line\r\n\r\n{noformat}\r\n$GLOBUS_THREAD_MODEL pthread\r\n{noformat}\r\n\r\nto /etc/gridftp.d/gridftp-hdfs.conf. Turning off pthreads (or rather, not enabling it) by removing this line gives no corruption in all cases.\r\n\r\nWe created a patch to attempt to fix this based on a suggestion from Brian Bockelman (attached). However, the problem persisted and the failures still happen consistently.\r\n\r\nWe used the following gridftp-hdfs build (which includes the patch) in our testing, which still has the failures:\r\n\r\nhttps://koji-hub.batlab.org/koji/buildinfo?buildID=5322\r\n\r\nA recipe for reproducing the failures on a system running this gridftp-hdfs + globus-gridftp-server, with example output:\r\n\r\n{noformat}\r\n$ dd if=/dev/urandom of=/tmp/random.in bs=1M count=2K\r\n$ globus-url-copy gsiftp://$HOSTNAME:2811/tmp/random.in file:///tmp/random.out\r\n$ md5sum /tmp/random.{in,out}\r\n6566088eb4686738b9d27d1f8363fba2  /tmp/random.in\r\nb7a7d94625da8a4b9c18444e4136cef2  /tmp/random.out\r\n{noformat}\r\n\r\nFor history, see the original OSG GOC and JIRA tickets:\r\n\r\nhttps://ticket.grid.iu.edu/21157\r\nhttps://ticket.grid.iu.edu/21825\r\nhttps://jira.opensciencegrid.org/browse/SOFTWARE-1495\r\n\r\n---\r\n1495-pthread-mutex.patch:\r\n{noformat}\r\ndiff -ur gridftp-hdfs-0.5.4.orig/src/gridftp_hdfs_send.c gridftp-hdfs-0.5.4/src/gridftp_hdfs_send.c\r\n--- gridftp-hdfs-0.5.4.orig/src/gridftp_hdfs_send.c\t2012-06-15 07:57:50.000000000 -0500\r\n+++ gridftp-hdfs-0.5.4/src/gridftp_hdfs_send.c\t2014-06-19 13:55:22.760210044 -0500\r\n@@ -313,7 +313,9 @@\r\n     remaining_read = read_length;\r\n     cur_offset = offset;\r\n     while (remaining_read != 0) {\r\n+       globus_mutex_lock(hdfs_handle->mutex);\r\n        nbytes = hdfsPread(hdfs_handle->fs, hdfs_handle->fd, cur_offset, cur_buffer_pos, remaining_read);\r\n+       globus_mutex_unlock(hdfs_handle->mutex);\r\n        if (nbytes == 0) {    /* eof */\r\n            // No error\r\n            globus_gfs_log_message(GLOBUS_GFS_LOG_DUMP, \"hdfs_perform_read_cb EOF.\\n\");\r\n{noformat}", 
+    "reporter": {
+      "displayName": "Tim Cartwright", 
+      "name": "cat", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=cat", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "cat@cs.wisc.edu", 
+      "key": "cat", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2014-08-14T14:50:42.606-0500", 
+    "versions": [], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/25002", 
+  "id": "25002", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

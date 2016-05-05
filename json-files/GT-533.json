@@ -1,0 +1,180 @@
+{
+  "key": "INF-459", 
+  "fields": {
+    "comment": {
+      "total": 0, 
+      "startAt": 0, 
+      "comments": [], 
+      "maxResults": 0
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "Stephen Rosen", 
+      "name": "sirosen", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=sirosen", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "sirosen@uchicago.edu", 
+      "key": "sirosen", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100pmw:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/INF-459/watchers", 
+      "watchCount": 1, 
+      "isWatching": true
+    }, 
+    "customfield_10051": null, 
+    "assignee": {
+      "displayName": "Stephen Rosen", 
+      "name": "sirosen", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=sirosen", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "sirosen@uchicago.edu", 
+      "key": "sirosen", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": "1_*:*_1_*:*_328801428_*|*_6_*:*_1_*:*_0", 
+    "customfield_10280": "4154", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@a13645", 
+    "summary": "git release-tag should not allow date specification", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Infrastructure", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10364", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10364&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10364&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10364&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10364&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10000", 
+        "id": "10000", 
+        "name": "Globus.org", 
+        "description": "The set of online, hosted services (i.e. Software-as-a-Service), providing higher-level, end-to-end grid capabilities to end users, as well as grid builders looking for more complete solutions to build upon."
+      }, 
+      "key": "INF", 
+      "id": "10364"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/INF-459/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "customfield_10180": null, 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "Done", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+        "id": 3, 
+        "key": "done", 
+        "colorName": "green"
+      }, 
+      "description": "The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/6", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/closed.png", 
+      "id": "6", 
+      "name": "Closed"
+    }, 
+    "updated": "2014-05-27T11:23:52.614-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "In line with the philosophy that less is more, git release-tag should not allow a user to specify a date. This means that release tags are specified by the date on which they are created.", 
+    "reporter": {
+      "displayName": "Stephen Rosen", 
+      "name": "sirosen", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=sirosen", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "sirosen@uchicago.edu", 
+      "key": "sirosen", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2014-05-23T16:03:51.188-0500", 
+    "versions": [], 
+    "resolutiondate": "2014-05-27T11:23:52.600-0500", 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [], 
+    "issuetype": {
+      "name": "Task", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/3", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11058&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11058, 
+      "id": "3", 
+      "description": "A task that needs to be done."
+    }, 
+    "resolution": {
+      "self": "https://globus.atlassian.net/rest/api/2/resolution/6", 
+      "id": "6", 
+      "name": "Work Complete", 
+      "description": "The work for this JIRA has been completed as specified."
+    }, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/23961", 
+  "id": "23961", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

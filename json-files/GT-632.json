@@ -1,0 +1,150 @@
+{
+  "key": "GT-632", 
+  "fields": {
+    "comment": {
+      "total": 0, 
+      "startAt": 0, 
+      "comments": [], 
+      "maxResults": 0
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": null, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|zq5waq:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-632/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Mike Link", 
+      "name": "mlink", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mlink@mcs.anl.gov", 
+      "key": "mlink", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@f02002", 
+    "summary": "globus-gridftp API change", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-632/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/minor.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/4", 
+      "name": "Minor", 
+      "id": "4"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2015-12-22T08:52:58.575-0600", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "Our storage backend is implemented as a DSI. Internally DSI is a library that registers itself in Globus GridFTP server and provides a set of callbacks. Normally, there's no need to implement all of them, and this is how our old version (without redirection) worked. It basically provided only read/write callbacks and everything else was handled by Globus GridFTP.\r\nWith redirection I had to implement most of the callbacks because communication between Head node and Disk nodes does not happen automatically. Globus provides IPC API for this purpose, but that's it, so all commands and events need to be communicated back and forth manually. E.g. the Head node has to choose the Disk node, establish an IPC channel with it and command it to start transfer when the client requests so.\r\nNow, in GridFTP there are two types of connections: active and passive (including delayed). Reactions to both have to be implemented as callbacks in DSI, but these callbacks do not receive any information about the command that actually initiated the transfer AND they are called BEFORE the callbacks that are supposed to handle the actual transfer (send, receive or list).\r\n\r\nFor active mode (PORT command) this is not a problem, because we do not need to establish data connection immediately and we can delay it up to the moment when client issues the transfer command (RETR/STOR/etc.)\r\n\r\nHowever, for delayed passive mode this is a big problem, because Disk node has to be chosen based on the information about the transfer direction:\r\n- For reads we choose the node that has the file\r\n- For writes we choose the one that is considered optimal by DMLite\r\n- For lists we choose the random ones to distribute load evenly\r\n\r\nBut we cannot do that because pasv() callback in delayed passive mode needs to return connection information immediately, but knows only the file name that was requested by the command, and not the command itself.\r\n\r\nWe would really appreciate the API call that tells pasv() callback in delayed passive mode which command actually triggered it. Preferably in the form of globus_ftp_control_command_code_t.\r\n\r\nFor the time being we use the following hack to get the actual 4-character FTP command that was issued by the client, and which triggered the delayed passive callback:\r\n\r\n((globus_l_gfs_request_info_t *)op->user_arg)->control_op->command\r\n\r\nBut for that to work, we have to compile the header file with all necessary declarations, because it's not part of the Globus GridFTP API.\r\nAs soon as these declarations change (which happened more than once already) we have to re-compile the header file, and re-compile and re-release our DSI with virtually every new version of Globus GridFTP package.\r\n", 
+    "reporter": null, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2015-12-16T11:02:14.135-0600", 
+    "versions": [], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "Improvement", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/4", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/issuetypes/defect.png", 
+      "subtask": false, 
+      "id": "4", 
+      "description": "An improvement or enhancement to an existing feature or task."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/30731", 
+  "id": "30731", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

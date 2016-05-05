@@ -1,0 +1,290 @@
+{
+  "key": "GT-624", 
+  "fields": {
+    "comment": {
+      "total": 3, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "Is this a bug in the GSI-OpenSSH RPM from Globus, XSEDE, or EPEL? Please provide the RPM version number.", 
+          "updateAuthor": {
+            "displayName": "Jim Basney", 
+            "name": "basney", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=basney", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "jbasney@ncsa.uiuc.edu", 
+            "key": "basney", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2015-08-07T08:55:51.990-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/28947/comment/32101", 
+          "author": {
+            "displayName": "Jim Basney", 
+            "name": "basney", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=basney", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "jbasney@ncsa.uiuc.edu", 
+            "key": "basney", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2015-08-07T08:55:51.990-0500", 
+          "id": "32101"
+        }, 
+        {
+          "body": "Update in progress (available in EPEL testing since 2015-08-06).\r\n\r\nhttps://admin.fedoraproject.org/updates/FEDORA-EPEL-2015-7555/gsi-openssh-6.6.1p1-2.el7\r\n\r\nhttp://pkgs.fedoraproject.org/cgit/gsi-openssh.git/commit/?h=epel7&id=95ab1730573ad13df276c9f5d7b73fe7721110f4\r\n", 
+          "updateAuthor": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "created": "2015-08-19T13:09:50.078-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/28947/comment/32284", 
+          "author": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "updated": "2015-08-19T13:09:50.078-0500", 
+          "id": "32284"
+        }, 
+        {
+          "body": "Update has been pushed to EPEL stable:\r\n\r\nhttps://bodhi.fedoraproject.org/updates/FEDORA-EPEL-2015-7555\r\n", 
+          "updateAuthor": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "created": "2015-08-22T22:28:27.536-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/28947/comment/32287", 
+          "author": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "updated": "2015-08-22T22:28:27.536-0500", 
+          "id": "32287"
+        }
+      ], 
+      "maxResults": 3
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": null, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [
+      "XSEDE"
+    ], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|zq5v2i:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-624/watchers", 
+      "watchCount": 2, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Mattias Ellert", 
+      "name": "ellert", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mattias.ellert@fysast.uu.se", 
+      "key": "ellert", 
+      "active": true, 
+      "timeZone": "Europe/Stockholm"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": "1_*:*_1_*:*_1385967828_*|*_5_*:*_1_*:*_0", 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@757046", 
+    "summary": "GSI-OpenSSH systemd config file errors", 
+    "customfield_10288": "2015-08-07T08:55:51.990-0500", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-624/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "Done", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+        "id": 3, 
+        "key": "done", 
+        "colorName": "green"
+      }, 
+      "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+      "id": "5", 
+      "name": "Resolved"
+    }, 
+    "updated": "2015-08-22T22:28:27.539-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "First hint upon attempted service start was:\r\n\r\nAug 06 21:40:23 poptart.psc.edu systemd[1]: [/usr/lib/systemd/system/gsisshd.service:4] Missing '='.\r\n\r\nThe unit section of /usr/lib/systemd/system/gsisshd.service reads:\r\n\r\n[Unit]\r\nDescription=gsissh server daemon\r\nAfter=network.target gsisshd-keaygen.service\r\nWants:gsisshd-keaygen.service\r\n\r\nI presume it is supposed to read:\r\n\r\n[Unit]\r\nDescription=gsissh server daemon\r\nAfter=network.target gsisshd-keygen.service\r\nWants=gsisshd-keygen.service\r\n\r\nNote also: http://osdir.com/ml/scm-fedora-commits/2015-08/msg02517.html", 
+    "reporter": {
+      "displayName": "Derek Simmel", 
+      "name": "dsimmel", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=dsimmel", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "dsimmel@psc.edu", 
+      "key": "dsimmel", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/customFieldOption/10000", 
+        "id": "10000", 
+        "value": "Impediment"
+      }
+    ], 
+    "timeoriginalestimate": null, 
+    "environment": "CentOS 7", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2015-08-06T21:28:59.712-0500", 
+    "versions": [], 
+    "resolutiondate": "2015-08-22T22:28:27.520-0500", 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10330", 
+        "id": "10330", 
+        "name": "GSI-OpenSSH"
+      }
+    ], 
+    "issuetype": {
+      "name": "Deployment", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/12", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11047&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11047, 
+      "id": "12", 
+      "description": ""
+    }, 
+    "resolution": {
+      "self": "https://globus.atlassian.net/rest/api/2/resolution/10000", 
+      "id": "10000", 
+      "name": "Done", 
+      "description": ""
+    }, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/28947", 
+  "id": "28947", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

@@ -1,0 +1,177 @@
+{
+  "key": "GT-361", 
+  "fields": {
+    "comment": {
+      "total": 0, 
+      "startAt": 0, 
+      "comments": [], 
+      "maxResults": 0
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "madelap", 
+      "name": "madelap", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=madelap", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "madelap", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [
+      "GUC", 
+      "GridFTP"
+    ], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100nsg:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-361/watchers", 
+      "watchCount": 1, 
+      "isWatching": false
+    }, 
+    "assignee": null, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "3855", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@12038f", 
+    "summary": "globus-url-copy inconsistent data when using stdout pipe with parallel option", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-361/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/critical.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/2", 
+      "name": "Critical", 
+      "id": "2"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2013-01-28T04:55:42.972-0600", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "I need to transfert a file from distant server to stdout pipe with globus-url-copy :\n$ globus-url-copy gsiftp://<remote server>/<file> - | <command>\n\nBut the data stream is inconsistent when I use parallel option and the size of the file is upper than 512k.\n\nExample, when I create a file of 513k and I copy it with parallel option to md5sum command pipe, the md5sum of the stream is not equals to source file.\n\n$ dd if=/dev/urandom bs=1024 count=513 of=/tmp/513k\n513+0 records in\n513+0 records out\n$ md5sum  /tmp/513k\nc8a35e2f67617077e4149002a498e171  /tmp/513k\n$ globus-url-copy -p 8 gsiftp://yvas7820.inetpsa.com/tmp/513k - | md5sum\n7e60f67a267bf7aaf835c68f37a0757f  -\n\nI have the same result when a write the pipe stream to a file\n\n$ globus-url-copy -p 8  gsiftp://yvas7820.inetpsa.com/tmp/513k - | cat - > /tmp/513k_dst\n$ md5sum  /tmp/513k_dst\n7e60f67a267bf7aaf835c68f37a0757f  /tmp/513k_dst\n\nBut i don't reproduce the issue :\n\n- When I redirect to stdout to a file\n\n$ globus-url-copy -p 8  gsiftp://yvas7820.inetpsa.com/tmp/513k - > /tmp/513k_dst\n$ md5sum  /tmp/513k_dst\nc8a35e2f67617077e4149002a498e171  /tmp/513k_dst\n\n- When I don't use parallel option\n\n$ globus-url-copy  gsiftp://yvas7820.inetpsa.com/tmp/513k - | md5sum\nc8a35e2f67617077e4149002a498e171  -\n\n- When I use a file smaller or equals to 512k\n\n$ dd if=/dev/urandom bs=1024 count=512 of=/tmp/512k\n512+0 records in\n512+0 records out\n$ md5sum /tmp/512k\n6703c9b4087bf76249b420bef46316e6  /tmp/512k\n$ globus-url-copy -p 8 gsiftp://yvas7820.inetpsa.com/tmp/512k - | md5sum\n6703c9b4087bf76249b420bef46316e6  -\n", 
+    "reporter": {
+      "displayName": "madelap", 
+      "name": "madelap", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=madelap", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "madelap", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": "I have the same issue on Linux SLES 10 SP4 and Solaris 10 x86_64.", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2013-01-28T04:55:42.972-0600", 
+    "versions": [
+      {
+        "archived": false, 
+        "name": "5.2.3", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/10963", 
+        "releaseDate": "2012-12-03", 
+        "released": true, 
+        "id": "10963"
+      }
+    ], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/20123", 
+  "id": "20123", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

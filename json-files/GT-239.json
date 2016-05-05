@@ -1,0 +1,282 @@
+{
+  "key": "GT-239", 
+  "fields": {
+    "comment": {
+      "total": 2, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "CPPFLAGS contains  -I${prefix}/include/globus -I${includedir}/${GLOBUS_FLAVOR_NAME} because the presence of CONFIGOPTS_GPTMACRO in the Build_Steps from pkg_data_src.gpt sets that as its initial value (coming, fundamentally, from $GL/share/globus/flavors/flavor_gcc64.gpt), to which gsi-openssh's configure then adds the correctly expanded version obtained from globus-makefile-header.  It appears that gsi-openssh is already getting everything important that might be coming from CONFIGOPTS_GPTMACRO from globus-makefile-header, and, thus, we may be able to simply remove CONFIGOPTS_GPTMACRO from the build steps.", 
+          "updateAuthor": {
+            "displayName": "Eric Blau", 
+            "name": "blau", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=blau", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "blau@mcs.anl.gov", 
+            "key": "blau", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-06-29T14:04:09.357-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/18707/comment/19416", 
+          "author": {
+            "displayName": "Eric Blau", 
+            "name": "blau", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=blau", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "blau@mcs.anl.gov", 
+            "key": "blau", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-06-29T14:04:09.357-0500", 
+          "id": "19416"
+        }, 
+        {
+          "body": "Eric found a workaround in the gpt package data file for this that Jim Basney implemented and committed.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2012-07-10T11:26:42.604-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/18707/comment/19463", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2012-07-10T11:26:42.604-0500", 
+          "id": "19463"
+        }
+      ], 
+      "maxResults": 2
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "Joe Bester", 
+      "name": "bester", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "bester@mcs.anl.gov", 
+      "key": "bester", 
+      "active": true, 
+      "timeZone": "America/New_York"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|101h20:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-239/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Joe Bester", 
+      "name": "bester", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "bester@mcs.anl.gov", 
+      "key": "bester", 
+      "active": true, 
+      "timeZone": "America/New_York"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": "1_*:*_1_*:*_960080288_*|*_5_*:*_1_*:*_0", 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@db2cd9", 
+    "summary": "installer gsissh build failure from 5.2.2rc1 installer on Mac OS X ", 
+    "customfield_10288": "2012-06-29T14:04:09.357-0500", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-239/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [
+      {
+        "archived": false, 
+        "name": "5.2.2", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/10904", 
+        "releaseDate": "2012-07-24", 
+        "released": true, 
+        "id": "10904"
+      }, 
+      {
+        "archived": false, 
+        "name": "Sprint 2012-07-17", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/10958", 
+        "releaseDate": "2012-07-17", 
+        "released": true, 
+        "id": "10958", 
+        "description": ""
+      }
+    ], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "Done", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+        "id": 3, 
+        "key": "done", 
+        "colorName": "green"
+      }, 
+      "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+      "id": "5", 
+      "name": "Resolved"
+    }, 
+    "updated": "2012-07-10T11:26:42.606-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "I am seeing this on Mac OS X from the 5.2.2rc1 installer:\n\n/usr/bin/gcc -g   -m64 -fno-common  -Wall -g -m64 -fno-common -Wall  -Wall -Wpointer-arith -Wsign-compare -Wformat-security -Wno-pointer-sign -fno-strict-aliasing -D_FORTIFY_SOURCE=2 -fno-builtin-memset -fstack-protector-all  -I. -I.. -I. -I./..  -I/include/globus -I/ -no-cpp-precomp -I/Users/jbester/development/globus_5_2_branch/5.2.2rc1/gt5.2.2rc1-all-source-installer/globus-location/include/globus -I/Users/jbester/development/globus_5_2_branch/5.2.2rc1/gt5.2.2rc1-all-source-installer/globus-location/include/globus/gcc64dbg -no-cpp-precomp -I/Users/jbester/development/globus_5_2_branch/5.2.2rc1/gt5.2.2rc1-all-source-installer/globus-location/include/globus -I/Users/jbester/development/globus_5_2_branch/5.2.2rc1/gt5.2.2rc1-all-source-installer/globus-location/include/globus/ -I/Users/jbester/development/globus_5_2_branch/5.2.2rc1/gt5.2.2rc1-all-source-installer/globus-location/include/globus  -DHAVE_CONFIG_H -c port-tun.c\nport-tun.c:111:20: error: /net/if.h: Input/output error\nport-tun.c: In function 'sys_tun_open':\n\nThe include lines in the openbsd-compat directory contain -I${prefix}/include/globus -I${includedir}/${GLOBUS_FLAVOR_NAME}, but those macros are not defined. On Mac OS X, /net is a special filesystem, so #include <net/if.h> with -I/ causes an I/O error. The top-level Makefile has those macros defined, but they aren't propagated to all of the makefiles.", 
+    "reporter": {
+      "displayName": "Joe Bester", 
+      "name": "bester", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "bester@mcs.anl.gov", 
+      "key": "bester", 
+      "active": true, 
+      "timeZone": "America/New_York"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2012-06-29T08:45:22.321-0500", 
+    "versions": [], 
+    "resolutiondate": "2012-07-10T11:26:42.592-0500", 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10334", 
+        "id": "10334", 
+        "name": "Build & Test"
+      }, 
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10330", 
+        "id": "10330", 
+        "name": "GSI-OpenSSH"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": {
+      "self": "https://globus.atlassian.net/rest/api/2/resolution/1", 
+      "id": "1", 
+      "name": "Fixed", 
+      "description": "A fix for this issue is checked into the tree and tested."
+    }, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/18707", 
+  "id": "18707", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

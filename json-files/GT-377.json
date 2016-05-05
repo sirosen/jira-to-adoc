@@ -1,0 +1,264 @@
+{
+  "key": "GT-377", 
+  "fields": {
+    "comment": {
+      "total": 2, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "It appears as though if a problem arises with the transfer after calling globus_gridftp_server_begin_transfer(), then the data handle is free'd twice:\n\nNormal tear down:\n#0  globus_ftp_control_handle_destroy (handle=0x7fffe404b8e8) at globus_ftp_control_client.c:233\n#1  0x00007ffff7b91ec9 in globus_l_gfs_data_handle_free (data_handle=0x7fffe404b870) at globus_i_gfs_data.c:5056\n#2  0x00007ffff7b9553f in globus_i_gfs_data_request_handle_destroy (ipc_handle=<value optimized out>, in_session_arg=0x7fffe401cba0, data_arg=0x1) at globus_i_gfs_data.c:5229\n#3  0x00007ffff7bb6bff in globus_l_gfs_request_data_destroy (user_data_arg=0x1, user_arg=0x7fffec000eb0) at globus_i_gfs_control.c:2736\n#4  0x00007ffff7519716 in globus_l_gsc_user_data_destroy_cb_kickout (user_arg=0x7fffe404ee70) at globus_gridftp_server_control.c:1612\n#5  0x00007ffff4dd71cc in globus_l_callback_thread_poll (user_arg=0x7ffff5005820) at globus_callback_threads.c:2512\n#6  0x00007ffff4def0dd in globus_l_thread_pool_thread_start (user_arg=0x60beb0) at globus_thread_pool.c:222\n#7  0x00007ffff25d803b in thread_starter (temparg=<value optimized out>) at globus_thread_pthreads.c:285\n#8  0x00007ffff4923851 in start_thread () from /lib64/libpthread.so.0\n#9  0x00007ffff46716dd in clone () from /lib64/libc.so.6\n\nSecond tear down via globus_i_gfs_data_request_transfer_event():\n#0  globus_ftp_control_handle_destroy (handle=0x7fffe404b8e8) at globus_ftp_control_client.c:233\n#1  0x00007ffff7b91ec9 in globus_l_gfs_data_handle_free (data_handle=0x7fffe404b870) at globus_i_gfs_data.c:5056\n#2  0x00007ffff7b9211d in globus_l_gfs_data_fc_return (op=0x7fffe404eec0) at globus_i_gfs_data.c:4839\n#3  0x00007ffff7b96b1c in globus_l_gfs_data_complete_fc_cb (callback_arg=0x7fffe404eec0, ftp_handle=<value optimized out>, error=<value optimized out>) at globus_i_gfs_data.c:4876\n#4  0x00007ffff4dd71cc in globus_l_callback_thread_poll (user_arg=0x7ffff5005820) at globus_callback_threads.c:2512\n#5  0x00007ffff4def0dd in globus_l_thread_pool_thread_start (user_arg=0x60c010) at globus_thread_pool.c:222\n#6  0x00007ffff25d803b in thread_starter (temparg=<value optimized out>) at globus_thread_pthreads.c:285\n#7  0x00007ffff4923851 in start_thread () from /lib64/libpthread.so.0\n#8  0x00007ffff46716dd in clone () from /lib64/libc.so.6\n", 
+          "updateAuthor": {
+            "displayName": "Jason Alt", 
+            "name": "jasonalt", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=jasonalt", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "jalt@ncsa.illinois.edu", 
+            "key": "jasonalt", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-04-01T15:26:02.550-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/20561/comment/21688", 
+          "author": {
+            "displayName": "Jason Alt", 
+            "name": "jasonalt", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=jasonalt", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "jalt@ncsa.illinois.edu", 
+            "key": "jasonalt", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-04-01T15:26:02.550-0500", 
+          "id": "21688"
+        }, 
+        {
+          "body": "I spent a significant amount of time debugging this over Christmas break. It turns out that in order to support restart markers with the HPSS DSI (see also GT-517), I need to send the restart marker on error (it's the only chance I have to send it). Unfortunately, this bug causes the server to crash before I can get the restart marker off so this issue is of greater importance to us then originally believed.\r\n\r\nThis was all verified with GT6. The main culprit seems to be this function here:\r\n\r\nglobus_gridftp_server_control-3.6/globus_gridftp_server_control_events.c:globus_l_gsc_event_done_cb()\r\n\r\nstatic\r\nvoid\r\nglobus_l_gsc_event_done_cb(\r\n    void *                              user_arg)\r\n{\r\n    globus_i_gsc_op_t *                 op;\r\n    globus_i_gsc_event_data_t *         event;\r\n    globus_i_gsc_server_handle_t *      server_handle;\r\n\r\n    op = (globus_i_gsc_op_t *) user_arg;\r\n    event = &op->event;\r\n    server_handle = op->server_handle;\r\n\r\n    event->user_cb(\r\n        op,\r\n        GLOBUS_GRIDFTP_SERVER_CONTROL_EVENT_TRANSFER_COMPLETE,\r\n        event->user_arg);\r\n\r\n    if(event->stripe_total != NULL)\r\n    {\r\n        globus_free(event->stripe_total);\r\n    }\r\n\r\n    globus_mutex_lock(&server_handle->mutex);\r\n    {\r\n        if(op->data_destroy_obj)\r\n        {\r\n            globus_i_guc_data_object_destroy(\r\n                op->server_handle, op->data_destroy_obj);\r\n        }\r\n        globus_i_gsc_op_destroy(op);\r\n    }\r\n    globus_mutex_unlock(&server_handle->mutex);\r\n}\r\n\r\nBoth the event->user_cb() and globus_i_guc_data_object_destroy() start off callbacks that eventually result in calls to globus_l_gfs_data_handle_free(). I believe this is not a problem that is unique to transfers ending with error; I believe ABRT will result in the same effect as will anything that would require a call to globus_ftp_control_data_force_close(). It seems the error handling logic in globus_gridftp_server-7.17/globus_i_gfs_data.c is duplicating the 'clean' shutdown logic. \r\n\r\nI don't know the intent of the original author but I took a stab at a fix in order to verify my assumptions. The server does not crash on 'transfer ends in error\" with the following change:\r\n\r\nglobus_gridftp_server-7.17/globus_i_gfs_data.c:globus_l_gfs_data_fc_return()\r\n\r\nstatic\r\nvoid\r\nglobus_l_gfs_data_fc_return(\r\n    globus_l_gfs_data_operation_t *     op)\r\n{\r\n    GlobusGFSName(globus_l_gfs_data_fc_return);\r\n\r\n    GlobusGFSDebugEnter();\r\n\r\n    switch(op->data_handle->state)\r\n    {\r\n        case GLOBUS_L_GFS_DATA_HANDLE_CLOSING:\r\n            op->data_handle->state = GLOBUS_L_GFS_DATA_HANDLE_TE_PRE_CLOSED;\r\n            break;\r\n\r\n        case GLOBUS_L_GFS_DATA_HANDLE_CLOSING_AND_DESTROYED:\r\n            /* ok free it */\r\n#ifdef NOT\r\n            globus_l_gfs_data_handle_free(op->data_handle);\r\n            op->data_handle = NULL;\r\n#endif\r\n            break;\r\n\r\n        case GLOBUS_L_GFS_DATA_HANDLE_TE_PRE_CLOSED:\r\n        case GLOBUS_L_GFS_DATA_HANDLE_VALID:\r\n        case GLOBUS_L_GFS_DATA_HANDLE_INUSE:\r\n        case GLOBUS_L_GFS_DATA_HANDLE_CLOSED:\r\n        default:\r\n            globus_assert(0 && \"possible memory corruption\");\r\n            break;\r\n    }\r\n\r\n    GlobusGFSDebugExit();\r\n}\r\n\r\nThis takes globus_l_gfs_data_handle_free() out of the error logic. It may result in a memory leak or something worse since \"op->data_handle = NULL\" is also skipped but it works.", 
+          "updateAuthor": {
+            "displayName": "Jason Alt", 
+            "name": "jasonalt", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=jasonalt", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "jalt@ncsa.illinois.edu", 
+            "key": "jasonalt", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2015-01-08T15:47:44.951-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/20561/comment/29668", 
+          "author": {
+            "displayName": "Jason Alt", 
+            "name": "jasonalt", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=jasonalt", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "jalt@ncsa.illinois.edu", 
+            "key": "jasonalt", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2015-01-08T15:47:44.951-0600", 
+          "id": "29668"
+        }
+      ], 
+      "maxResults": 2
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "Jason Alt", 
+      "name": "jasonalt", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=jasonalt", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "jalt@ncsa.illinois.edu", 
+      "key": "jasonalt", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100npc:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-377/watchers", 
+      "watchCount": 1, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Mike Link", 
+      "name": "mlink", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mlink@mcs.anl.gov", 
+      "key": "mlink", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "3841", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@1588e3d", 
+    "summary": "abort() in globus_ftp_control_handle_destroy() -> globus_list_remove()", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-377/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/minor.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/4", 
+      "name": "Minor", 
+      "id": "4"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2015-01-08T15:52:30.116-0600", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "On connection shutdown, we get cores with the following trace:\n\n#4  0x00b3bdf0 in raise () from /lib/libc.so.6\n#5  0x00b3d701 in abort () from /lib/libc.so.6\n#6  0x00b3526b in __assert_fail () from /lib/libc.so.6\n#7  0x558fdfab in globus_list_rest (head=0x0) at globus_list.c:95\n#8  0x558fe8e7 in globus_list_remove (headp=0x555eb700, entry=0x56132370) at globus_list.c:474\n#9  0x555c899d in globus_ftp_control_handle_destroy (handle=0x56133cf0) at globus_ftp_control_client.c:261\n#10 0x55576531 in globus_l_gfs_data_handle_free (data_handle=0x56133ca8) at globus_i_gfs_data.c:4975\n#11 0x55575d3f in globus_l_gfs_data_fc_return (op=0x5613a120) at globus_i_gfs_data.c:4758\n#12 0x55575e86 in globus_l_gfs_data_complete_fc_cb (callback_arg=0x5613a120, ftp_handle=0x56133cf0, error=0x0) at globus_i_gfs_data.c:4795\n#13 0x555da6b4 in globus_l_ftp_control_close_kickout (user_args=0x56133cf0) at globus_ftp_control_data.c:7450\n#14 0x558f0d79 in globus_l_callback_thread_poll (user_arg=0x559196a0) at globus_callback_threads.c:2512\n#15 0x5590b677 in globus_l_thread_pool_thread_start (user_arg=0x5611bf80) at globus_thread_pool.c:284\n#16 0x5572f89b in thread_starter (temparg=0x805223c) at globus_thread_pthreads.c:285\n#17 0x55a92852 in start_thread () from /lib/libpthread.so.0\n#18 0x00be584e in clone () from /lib/libc.so.6", 
+    "reporter": {
+      "displayName": "Jason Alt", 
+      "name": "jasonalt", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=jasonalt", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "jalt@ncsa.illinois.edu", 
+      "key": "jasonalt", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": "rhel 5.8, 32 bit, centos 6.5, 64bit", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2013-03-19T12:33:46.883-0500", 
+    "versions": [
+      {
+        "archived": false, 
+        "name": "5.2.4", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11066", 
+        "releaseDate": "2013-02-13", 
+        "released": true, 
+        "id": "11066", 
+        "description": ""
+      }
+    ], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/20561", 
+  "id": "20561", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

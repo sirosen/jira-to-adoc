@@ -1,0 +1,472 @@
+{
+  "key": "GT-536", 
+  "fields": {
+    "comment": {
+      "total": 9, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "Can you share the core files?", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2014-06-05T09:39:33.299-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/24146/comment/25911", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2014-06-05T09:39:33.299-0500", 
+          "id": "25911"
+        }, 
+        {
+          "body": "I spent most of today trying to get ideas from those. The core core-globus-job-mana-11-723-5001-11833-1401323320 seems to be a memory allocation failing extremely early in the run of the process (before the program really does anything). Is there some low memory situation occurring or some tight limits for the GRAM process?\r\n\r\nI couldn't get gdb to parse core-globus-job-mana-6-723-5001-26169-1401200405 at all (just a bunch of ?? lines) so I can't see anything there.\r\n\r\nThe other one seems to show some memory corruption, with the stack showing problems in the script response parsing. Poking around a bit, it looked like globus-url-copy was returning multiple-line errors, which may be confusing the parser, but I'm not sure, as the heap is pretty messed up by the time the core was generated and not much of the data values seemed legitimate.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2014-06-06T14:22:11.120-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/24146/comment/25925", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2014-06-06T14:22:11.120-0500", 
+          "id": "25925"
+        }, 
+        {
+          "body": "Below is what appeared on the terminal at the time of the issue.\r\nSo, your memory comment makes sense.\r\nI did not have the chance to check what caused the memory exhaustion, though.\r\nBockjoo\r\n\r\n> [root@osg ~]# \r\n> Message from syslogd@osg at May 28 20:34:19 ...\r\n>  t of memory [14579]\r\n> \r\n> Message from syslogd@osg at May 28 20:34:19 ...\r\n>  t of memory [14394]\r\n> \r\n> Message from syslogd@osg at May 28 20:34:19 ...\r\n>  t of memory [14452]\r\n> \r\n> Message from syslogd@osg at May 28 20:34:19 ...\r\n>  t of memory [14594]\r\n> \r\n> Message from syslogd@osg at May 28 20:34:19 ...\r\n>  t of memory [14635]\r\n> \r\n> Message from syslogd@osg at May 28 20:34:19 ...\r\n>  t of memory [14563]\r\n> \r\n> Message from syslogd@osg at May 28 20:34:19 ...\r\n>  t of memory [14653]\r\n> \r\n", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/24146/comment/25928", 
+          "updated": "2014-06-06T21:35:53.766-0500", 
+          "id": "25928", 
+          "created": "2014-06-06T21:35:53.766-0500"
+        }, 
+        {
+          "body": "Can you run rpm -V globus-gram-job-manager-scripts so I can see if there are any local modifications to the GRAM script? If there are any files that indicate changes from that, could you send me them so I can see if they might be contributing to this problem?", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2014-06-09T09:25:40.385-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/24146/comment/25936", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2014-06-09T09:25:40.385-0500", 
+          "id": "25936"
+        }, 
+        {
+          "body": "OSG applies three patches to the globus-gram-job-manager-scripts package. They are all in JIRA (GT-463, GT-467, GT-468), waiting to be incorporated into a future GT release, but for reference, I will attach the latest patches. You can also browse our Koji build system, which might provide a little extra information about the patches and build; the globus-gram-job-manager-scripts source package is here:\r\n\r\nhttps://koji-hub.batlab.org/koji/packageinfo?packageID=37\r\n\r\nI will attach our modified spec file as well, so that you can see how the patches are applied, etc.\r\n\r\nLet me know if there is anything else that I can provide or help with!", 
+          "updateAuthor": {
+            "displayName": "Tim Cartwright", 
+            "name": "cat", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=cat", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "cat@cs.wisc.edu", 
+            "key": "cat", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2014-06-09T10:13:06.216-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/24146/comment/25937", 
+          "author": {
+            "displayName": "Tim Cartwright", 
+            "name": "cat", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=cat", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "cat@cs.wisc.edu", 
+            "key": "cat", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2014-06-09T10:13:06.216-0500", 
+          "id": "25937"
+        }, 
+        {
+          "body": " rpm -V globus-gram-job-manager-scripts\r\nS.5....T.    /usr/share/perl5/vendor_perl/Globus/GRAM/JobManager.pm\r\n\r\nYes, I have a lot of modification in \r\n/usr/share/perl5/vendor_perl/Globus/GRAM/JobManager.pm\r\nto debug the stageout issue:\r\nhttp://oo.ihepa.ufl.edu:8080/t2/operations/glidein/stageout.failure.txt\r\n\r\nThe modified one is uploaded here:\r\nhttp://oo.ihepa.ufl.edu:8080/t2/operations/glidein/JobManager.pm\r\n\r\nThanks,\r\nBockjoo", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/24146/comment/25939", 
+          "updated": "2014-06-09T10:29:20.899-0500", 
+          "id": "25939", 
+          "created": "2014-06-09T10:29:20.899-0500"
+        }, 
+        {
+          "body": "One of the motivations of the modification was the empty stdout/stderr.\r\nIn the pm, if any of output file sometimes fails to be staged out, the JobManager.pm\r\nissues the error condition without sending the stdout/stderr.\r\nOne such a case is the job hitting the walltime and stdout/stderr sometimes\r\n(not always) becomes empty.\r\n", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/24146/comment/25940", 
+          "updated": "2014-06-09T10:37:01.433-0500", 
+          "id": "25940", 
+          "created": "2014-06-09T10:37:01.433-0500"
+        }, 
+        {
+          "body": "I notice that the output from globus-url-copy -v is being returned to the script processor without any escaping. That might be causing the problem, as it can contain newlines and throw off the parser. If you pass that through the log() method in the JobManager object it might help things be more stable.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2014-06-13T13:50:48.520-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/24146/comment/26185", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2014-06-13T13:50:48.520-0500", 
+          "id": "26185"
+        }, 
+        {
+          "body": "M\u00e1ty\u00e1s Selmeci at Wisconsin wrote the patch for me.\r\nThe working patch is\r\n--- JobManager.pm\t2014/06/16 21:25:13\t1.1\r\n+++ JobManager.pm\t2014/06/16 21:34:24\t1.2\r\n@@ -132,6 +132,15 @@\r\n     return undef;\r\n }\r\n \r\n+sub quotestr\r\n+{\r\n+    my $str = $_[0];\r\n+    $str =~ s/\\\\/\\\\\\\\/g;\r\n+    $str =~ s/\\n/\\\\n/g;\r\n+    $str =~ s/\\\"/\\\\\\\"/g;\r\n+    return \"\\\"$str\\\"\";\r\n+}\r\n+\r\n =item $manager->log($string)\r\n \r\n Log a message to the job manager log file. The message is preceded by\r\n@@ -1013,7 +1022,7 @@\r\n \r\n             $self->respond( {\r\n                 'GT3_FAILURE_TYPE' => 'filestageout',\r\n-                'GT3_FAILURE_MESSAGE' => $stderr,\r\n+                'GT3_FAILURE_MESSAGE' => quotestr($stderr),\r\n                 'GT3_FAILURE_SOURCE' => $local,\r\n                 'GT3_FAILURE_DESTINATION' => $remote\r\n             });\r\nand is applied to\r\nhttp://oo.ihepa.ufl.edu:8080/t2/operations/glidein/JobManager.pm.0.8.5\r\nBockjoo Kim at U of Florida", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/24146/comment/26300", 
+          "updated": "2014-06-17T13:24:57.722-0500", 
+          "id": "26300", 
+          "created": "2014-06-17T13:24:57.722-0500"
+        }
+      ], 
+      "maxResults": 9
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": null, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|1025cw:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-536/watchers", 
+      "watchCount": 2, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Joe Bester", 
+      "name": "bester", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "bester@mcs.anl.gov", 
+      "key": "bester", 
+      "active": true, 
+      "timeZone": "America/New_York"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@bfc532", 
+    "summary": "globus-job-manager segfaults from time to time", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-536/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [
+      {
+        "mimeType": "application/octet-stream", 
+        "author": {
+          "displayName": "Tim Cartwright", 
+          "name": "cat", 
+          "self": "https://globus.atlassian.net/rest/api/2/user?username=cat", 
+          "avatarUrls": {
+            "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+            "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+            "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+            "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+          }, 
+          "emailAddress": "cat@cs.wisc.edu", 
+          "key": "cat", 
+          "active": true, 
+          "timeZone": "America/Chicago"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/12353", 
+        "created": "2014-06-09T10:13:33.186-0500", 
+        "filename": "globus-gram-job-manager-scripts.spec", 
+        "content": "https://globus.atlassian.net/secure/attachment/12353/globus-gram-job-manager-scripts.spec", 
+        "id": "12353", 
+        "size": 7347
+      }, 
+      {
+        "mimeType": "text/plain", 
+        "author": {
+          "displayName": "Tim Cartwright", 
+          "name": "cat", 
+          "self": "https://globus.atlassian.net/rest/api/2/user?username=cat", 
+          "avatarUrls": {
+            "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+            "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+            "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+            "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+          }, 
+          "emailAddress": "cat@cs.wisc.edu", 
+          "key": "cat", 
+          "active": true, 
+          "timeZone": "America/Chicago"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/12354", 
+        "created": "2014-06-09T10:13:33.196-0500", 
+        "filename": "gratia.patch", 
+        "content": "https://globus.atlassian.net/secure/attachment/12354/gratia.patch", 
+        "id": "12354", 
+        "size": 1010
+      }, 
+      {
+        "mimeType": "text/plain", 
+        "author": {
+          "displayName": "Tim Cartwright", 
+          "name": "cat", 
+          "self": "https://globus.atlassian.net/rest/api/2/user?username=cat", 
+          "avatarUrls": {
+            "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+            "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+            "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+            "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+          }, 
+          "emailAddress": "cat@cs.wisc.edu", 
+          "key": "cat", 
+          "active": true, 
+          "timeZone": "America/Chicago"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/12355", 
+        "created": "2014-06-09T10:13:33.204-0500", 
+        "filename": "osg-environment.patch", 
+        "content": "https://globus.atlassian.net/secure/attachment/12355/osg-environment.patch", 
+        "id": "12355", 
+        "size": 4673
+      }, 
+      {
+        "mimeType": "text/plain", 
+        "author": {
+          "displayName": "Tim Cartwright", 
+          "name": "cat", 
+          "self": "https://globus.atlassian.net/rest/api/2/user?username=cat", 
+          "avatarUrls": {
+            "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+            "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+            "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+            "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+          }, 
+          "emailAddress": "cat@cs.wisc.edu", 
+          "key": "cat", 
+          "active": true, 
+          "timeZone": "America/Chicago"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/12356", 
+        "created": "2014-06-09T10:13:33.211-0500", 
+        "filename": "osg-path.patch", 
+        "content": "https://globus.atlassian.net/secure/attachment/12356/osg-path.patch", 
+        "id": "12356", 
+        "size": 602
+      }
+    ], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2014-06-17T13:24:57.722-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "Hi,\r\nI still have the globus-job-manager that segfaults from time to time.\r\nI have\r\nglobus-gram-job-manager-13.53-1.3.osg32.el6.x86_64\r\ninstalled via OSG version 3.2.4 on an EL6 machine\r\nwith 12 core AMD 2435, 32 GB of memor.\r\n\r\nThe segfaults are not as frequent as the ones reported in\r\nhttp://jira.globus.org/browse/GT-520, but still they occur every week or so.\r\n\r\nRecently 3 different type of core dumps were created with the globus-job-manager.\r\nI included the 3 backtraces below.\r\nI tried to create an issue with the globus jira, but I think it went to a wrong project:\r\nhttp://jira.globus.org/browse/FACEIT-8#\r\nCan you check them and see what you can do?\r\n\r\nThanks,\r\nBockjoo\r\n\r\ngdb /usr/sbin/globus-job-manager core-globus-job-mana-11-723-5001-11833-1401323320\r\n\r\n(gdb) bt\r\n#0 0x0000003588a1dee8 in globus_l_common_path_error_instance (errmsg=0x3588a3950f \"Can't resolve path\") at globus_common_paths.c:75\r\n#1 0x0000003588a1e0a0 in globus_eval_path (pathstring=<value optimized out>, bufp=0x7fffb39e6038) at globus_common_paths.c:240\r\n#2 0x0000003588a3099c in globus_i_thread_pre_activate () at globus_thread.c:166\r\n#3 0x0000003588a28d8d in globus_l_module_initialize (module_descriptor=0x63e480, deactivate_cb=0, user_arg=0x0) at globus_module.c:871\r\n#4 globus_module_activate_proxy_new (module_descriptor=0x63e480, deactivate_cb=0, user_arg=0x0) at globus_module.c:196\r\n#5 0x00000000004091e1 in main (argc=7, argv=0x7fffb39e6668) at main.c:156\r\n\r\ngdb /usr/sbin/globus-job-manager core-globus-job-mana-11-723-5001-30226-1401021087\r\n\r\n(gdb) bt\r\n#0 0x0000003582289fa4 in _wordcopy_fwd_dest_aligned () from /lib64/libc.so.6\r\n#1 0x0000003582283b5e in memmove () from /lib64/libc.so.6\r\n#2 0x0000000000417ef7 in globus_l_gram_job_manager_script_read (handle=<value optimized out>, result=0, buffer=<value optimized out>,\r\n    len=<value optimized out>, nbytes=<value optimized out>, data_desc=<value optimized out>, user_arg=0x3219cf0)\r\n    at /usr/include/bits/string3.h:58\r\n#3 0x000000358da162f8 in globus_l_xio_read_write_callback_kickout (user_arg=0x185b840) at globus_xio_handle.c:1224\r\n#4 0x000000358da16890 in globus_i_xio_read_write_callback (op=0x185b840, result=0, nbytes=5778, user_arg=<value optimized out>)\r\n    at globus_xio_handle.c:1192\r\n#5 0x000000358da1e46c in globus_l_xio_driver_op_read_kickout (user_arg=0x185b840) at globus_xio_driver.c:637\r\n#6 0x000000358da2986d in globus_xio_driver_finished_read (in_op=0x185b840, result=0, nbytes=<value optimized out>)\r\n    at globus_xio_pass.c:1238\r\n#7 0x00002b45e8499935 in ?? () from /usr/lib64/libglobus_xio_popen_driver.so.0\r\n#8 0x000000358da2f21f in globus_l_xio_system_kickout (user_arg=0x48d0390) at globus_xio_system_select.c:920\r\n#9 0x0000003588a18044 in globus_callback_space_poll_nothreads (timestop=0x3588a3b510, space=<value optimized out>)\r\n    at globus_callback_nothreads.c:1437\r\n#10 0x0000003588a38ab0 in globus_l_thread_none_cond_wait (cv=0x7fff1eb7e110, mut=0x7fff1eb7e0e8) at globus_thread_none.c:371\r\n#11 0x000000000040988b in main (argc=<value optimized out>, argv=<value optimized out>) at main.c:646\r\n\r\n\r\n\r\ngdb /usr/sbin/globus-job-manager core-globus-job-mana-6-723-5001-26169-1401200405\r\n(gdb) bt\r\n#0 0x0000003582232925 in raise () from /lib64/libc.so.6\r\n#1 0x0000003582234105 in abort () from /lib64/libc.so.6\r\n#2 0x0000003582270837 in __libc_message () from /lib64/libc.so.6\r\n#3 0x0000003582276166 in malloc_printerr () from /lib64/libc.so.6\r\n#4 0x0000003582278c93 in _int_free () from /lib64/libc.so.6\r\n#5 0x0000000000417eb4 in globus_l_gram_job_manager_script_read (handle=<value optimized out>, result=0, buffer=<value optimized out>,\r\n    len=<value optimized out>, nbytes=<value optimized out>, data_desc=<value optimized out>, user_arg=0xf2c8600)\r\n    at globus_gram_job_manager_script.c:678\r\n#6 0x000000358da162f8 in globus_l_xio_read_write_callback_kickout (user_arg=0xf764180) at globus_xio_handle.c:1224\r\n#7 0x000000358da16890 in globus_i_xio_read_write_callback (op=0xf764180, result=0, nbytes=53350, user_arg=<value optimized out>)\r\n    at globus_xio_handle.c:1192\r\n#8 0x000000358da1e46c in globus_l_xio_driver_op_read_kickout (user_arg=0xf764180) at globus_xio_driver.c:637\r\n#9 0x000000358da2986d in globus_xio_driver_finished_read (in_op=0xf764180, result=0, nbytes=<value optimized out>)\r\n    at globus_xio_pass.c:1238\r\n#10 0x00002b3bd9a10935 in ?? () from /usr/lib64/libglobus_xio_popen_driver.so.0\r\n#11 0x000000358da2f21f in globus_l_xio_system_kickout (user_arg=0xf19ed10) at globus_xio_system_select.c:920\r\n#12 0x0000003588a18044 in globus_callback_space_poll_nothreads (timestop=0x3588a3b510, space=<value optimized out>)\r\n    at globus_callback_nothreads.c:1437\r\n#13 0x0000003588a38ab0 in globus_l_thread_none_cond_wait (cv=0x7fff6ef418d0, mut=0x7fff6ef418a8) at globus_thread_none.c:371\r\n#14 0x000000000040988b in main (argc=<value optimized out>, argv=<value optimized out>) at main.c:646\r\n\r\n", 
+    "reporter": null, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": "See description", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2014-06-04T13:28:38.901-0500", 
+    "versions": [
+      {
+        "archived": false, 
+        "name": "5.2.5", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11388", 
+        "releaseDate": "2013-06-17", 
+        "released": true, 
+        "id": "11388", 
+        "description": ""
+      }
+    ], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10324", 
+        "id": "10324", 
+        "name": "GRAM"
+      }
+    ], 
+    "issuetype": {
+      "name": "Task", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/3", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11058&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11058, 
+      "id": "3", 
+      "description": "A task that needs to be done."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/24146", 
+  "id": "24146", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

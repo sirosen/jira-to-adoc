@@ -1,0 +1,629 @@
+{
+  "key": "GT-601", 
+  "fields": {
+    "comment": {
+      "total": 11, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "Additional comment from Gerd on the GGUS ticket:\r\n\r\nI spent some time looking through the Globus Toolkit code. The difference between STRICT_RFC2818 and HYBRID is that in strict mode once a cert contains any subjectAltName entries, the CN is ignored, while in HYBRID in will accept if the name matches either the CN or subjectAltName. This is indeed according to RFC 2818.\r\n\r\nBut - and there is of course a but - as far as I can see in the code, the name it compares to the cert is still obtained by doing a reverse lookup! Alternative it will use an explicit DN you set through an environment variable as demonstrated with my proxy above. Thus to make it work with STRICT_RFC2818, the reverse needs to appear in the subjectAltName, which is why it failed for srm.ndgf.org (that's fixed now by us updating the reverse).\r\n\r\nThis also means that security has not actually improved. Even in STRICT_RFC2818, it isn't the hostname in the URI that is compared to the host certificate, but the name obtained from the reverse lookup. Thus there is no guarantee that when you use a srm://srm.ndfg.org/ URI that the server you are talking to actually is srm.ndgf.org or one that possesses a host certificate for that FQDN. Disclaimer: This is from reading the code - I haven't tried to reproduce this and I might have missed something.\r\n", 
+          "updateAuthor": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "created": "2015-06-04T06:32:43.277-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/28136/comment/31286", 
+          "author": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "updated": "2015-06-04T06:32:43.277-0500", 
+          "id": "31286"
+        }, 
+        {
+          "body": "Another question from the same GGUS ticket: https://ggus.eu/index.php?mode=ticket_info&ticket_id=114076\r\n\r\nIs this expected to fail like this?\r\n\r\n$ myproxy-init -d -n -s px403.cern.ch\r\nYour identity: /DC=org/DC=terena/DC=tcs/C=SE/O=Uppsala University/CN=Mattias Ellert mel03009@user.uu.se\r\nEnter GRID pass phrase for this identity:\r\nCreating proxy .............................. Done\r\nProxy Verify OK\r\nYour proxy is valid until: Thu Jun 11 14:34:51 2015\r\nServer authorization failed.  Server identity\r\n(/DC=ch/DC=cern/OU=computers/CN=px403.cern.ch)\r\ndoes not match expected identities\r\nmyproxy@px403.cern.ch or host@px403.cern.ch.\r\nIf the server identity is acceptable, set\r\nMYPROXY_SERVER_DN=\"/DC=ch/DC=cern/OU=computers/CN=px403.cern.ch\"\r\nand try again.\r\n\r\nThis works though:\r\n$ GLOBUS_GSSAPI_NAME_COMPATIBILITY=HYBRID myproxy-init -d -n -s px403.cern.ch\r\n", 
+          "updateAuthor": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "created": "2015-06-04T07:43:17.567-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/28136/comment/31287", 
+          "author": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "updated": "2015-06-04T07:43:17.567-0500", 
+          "id": "31287"
+        }, 
+        {
+          "body": "I'm unable to see the ggus tickets.\r\n\r\n> I spent some time looking through the Globus Toolkit code. The difference between STRICT_RFC2818 and HYBRID is that in strict \r\n> mode once a cert contains any subjectAltName entries, the CN is ignored, while in HYBRID in will accept if the name matches either \r\n> the CN or subjectAltName. This is indeed according to RFC 2818. \r\n\r\nI think that the ip_name field (which is the reverse dns lookup) is always ignored in RFC2818 mode. Are you certain that the hostname being passed to gss_import_name is the one from the url that is attempted to be contacted\r\n\r\nLooking at the myproxy error, it has a DNS:myproxy.cern.ch extension, so the CN comparison is not done. The error message is apparently not aware of that, so that seems a like a diagnostic message bug.\r\n\r\n", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2015-06-04T07:53:28.723-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/28136/comment/31288", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2015-06-04T07:53:28.723-0500", 
+          "id": "31288"
+        }, 
+        {
+          "body": "Yes I realised that too, but using myproxy.cern.ch doesn't work either.\r\n\r\n$ myproxy-init -d -n -s myproxy.cern.ch\r\nYour identity: /DC=org/DC=terena/DC=tcs/C=SE/O=Uppsala University/CN=Mattias Ellert mel03009@user.uu.se\r\nEnter GRID pass phrase for this identity:\r\nCreating proxy .................................................................................................................................................................................................................... Done\r\nProxy Verify OK\r\nYour proxy is valid until: Thu Jun 11 15:09:18 2015\r\nServer authorization failed.  Server identity\r\n(/DC=ch/DC=cern/OU=computers/CN=px403.cern.ch)\r\ndoes not match expected identities\r\nmyproxy@px403.cern.ch or host@px403.cern.ch.\r\nIf the server identity is acceptable, set\r\nMYPROXY_SERVER_DN=\"/DC=ch/DC=cern/OU=computers/CN=px403.cern.ch\"\r\nand try again.\r\n\r\nAlso with myproxy.cern.ch using GLOBUS_GSSAPI_NAME_COMPATIBILITY=HYBRID helps.\r\n", 
+          "updateAuthor": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "created": "2015-06-04T08:13:33.128-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/28136/comment/31289", 
+          "author": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "updated": "2015-06-04T08:13:33.128-0500", 
+          "id": "31289"
+        }, 
+        {
+          "body": "OK. Looking at the myproxy code, it appears to bypass the name comparisons in gss_init_sec_context and supplies its own implementation that does other interesting things. Are you seeing problems with services other than myproxy?", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2015-06-04T08:44:22.907-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/28136/comment/31290", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2015-06-04T08:44:22.907-0500", 
+          "id": "31290"
+        }, 
+        {
+          "body": "The GGUS ticket conflates 2 different issues.\r\n\r\nOne is the myproxy issue.\r\n\r\nThe other was a hiccup due to relying on the magic handling of hyphens in the HYBRID name resolution. But there is a question why this broke, since unless matching happened against the reverse lookup there would not have been any need to use the special handling rules for the hyphen. The reverse lookup was changed in DNS and things started to work.\r\n", 
+          "updateAuthor": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "created": "2015-06-04T10:25:07.340-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/28136/comment/31291", 
+          "author": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "updated": "2015-06-04T10:25:07.340-0500", 
+          "id": "31291"
+        }, 
+        {
+          "body": "> The other was a hiccup due to relying on the magic handling of hyphens in the HYBRID name resolution. But there is a question why \r\n> this broke, since unless matching happened against the reverse lookup there would not have been any need to use the special handling \r\n> rules for the hyphen. The reverse lookup was changed in DNS and things started to work. \r\n\r\nFor this issue, was this a GT-provided client or something else? How was it providing the name to gssapi?\r\n\r\nIn any case, I'm going to put a new version that reverts to HYBRID mode until we sort out the myproxy issue.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2015-06-04T10:59:23.440-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/28136/comment/31293", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2015-06-04T10:59:23.440-0500", 
+          "id": "31293"
+        }, 
+        {
+          "body": "As far as I understood the client was FTS (the file transfer service).", 
+          "updateAuthor": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "created": "2015-06-04T11:23:54.542-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/28136/comment/31295", 
+          "author": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "updated": "2015-06-04T11:23:54.542-0500", 
+          "id": "31295"
+        }, 
+        {
+          "body": "Is the source for that publicly available?", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2015-06-04T11:33:03.698-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/28136/comment/31296", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2015-06-04T11:33:03.698-0500", 
+          "id": "31296"
+        }, 
+        {
+          "body": "The fts package is available in EPEL, so you can get sources from there. The upstream sources are in cern svn\r\nhttp://svn.cern.ch/guest/fts3/tags/fts3_3.2.32\r\n\r\nIt is not so easy to find the way around, since libraries from many packages are involved.\r\n\r\nfts \u2192 gfal2 \u2192 srm-ifce \u2192 CGSI-gSOAP \u2192 globus-gssapi-gsi\r\n\r\nThe cause of the problem seems to be that srm-ifce calls CGSI-gSOAP with an option that causes CGSI-gSOAP to do a reverse lookup before calling globus-gssapi-gsi. So globus-gssapi-gsi is not to blame here - I think.\r\n\r\nWhy this option exists in CGSI-gSOAP and why it is used by srm-ifce I do not know.\r\n\r\nFrom the discussion that was triggered by this event, my impression is that most people involved really want to get rid of the matching to the reverse DNS lookup. So I think that changing the default back to STRICT_RFC2818 again will mostly be well received. But with a bit more of a heads-up next time.\r\n ", 
+          "updateAuthor": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "created": "2015-06-07T01:43:46.234-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/28136/comment/31309", 
+          "author": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "updated": "2015-06-07T01:43:46.234-0500", 
+          "id": "31309"
+        }, 
+        {
+          "body": "We'll probably be including the change to strict by default as part of the 6.1 release later this year.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2015-06-18T14:49:57.266-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/28136/comment/31388", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2015-06-18T14:49:57.266-0500", 
+          "id": "31388"
+        }
+      ], 
+      "maxResults": 11
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": null, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [
+      "IGE"
+    ], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|zq5ubm:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-601/watchers", 
+      "watchCount": 2, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Joe Bester", 
+      "name": "bester", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "bester@mcs.anl.gov", 
+      "key": "bester", 
+      "active": true, 
+      "timeZone": "America/New_York"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": "1_*:*_1_*:*_1247274625_*|*_5_*:*_1_*:*_0", 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/issueLink/17521", 
+        "inwardIssue": {
+          "fields": {
+            "status": {
+              "statusCategory": {
+                "name": "Done", 
+                "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+                "id": 3, 
+                "key": "done", 
+                "colorName": "green"
+              }, 
+              "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+              "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+              "id": "5", 
+              "name": "Resolved"
+            }, 
+            "priority": {
+              "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+              "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+              "name": "Major", 
+              "id": "3"
+            }, 
+            "issuetype": {
+              "name": "Bug", 
+              "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+              "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+              "subtask": false, 
+              "avatarId": 11043, 
+              "id": "1", 
+              "description": "A problem which impairs or prevents the functions of the product."
+            }, 
+            "summary": "CNAME regression in 6.0.1433193802"
+          }, 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/28140", 
+          "id": "28140", 
+          "key": "GT-602"
+        }, 
+        "type": {
+          "outward": "depends on", 
+          "inward": "is depended on by", 
+          "self": "https://globus.atlassian.net/rest/api/2/issueLinkType/10010", 
+          "id": "10010", 
+          "name": "Dependency"
+        }, 
+        "id": "17521"
+      }
+    ], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@515f40", 
+    "summary": "Question about strict RFC 2818 mode", 
+    "customfield_10288": "2015-06-04T07:53:28.723-0500", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-601/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "Done", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+        "id": 3, 
+        "key": "done", 
+        "colorName": "green"
+      }, 
+      "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+      "id": "5", 
+      "name": "Resolved"
+    }, 
+    "updated": "2015-06-18T14:49:57.280-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "In the GGUS ticket discussing the name compatibility mode change in globus-gssapi-gsi, a question was raised regarding the implementation of the RFC 2818 mode in the library. I forward this question here:\r\n\r\n-- begin GGUS quote --\r\nMattias, I read through RFC 2818 now and there is something we the observed STRICT_RFC2818 behaviour of the library that doesn't add up. According to the RFC:\r\n\r\n- \"If a subjectAltName extension of type dNSName is present, that MUST be used as the identity. Otherwise, the (most specific) Common Name field in the Subject field of the certificate MUST be used. Although the use of the Common Name is existing practice, it is deprecated and Certification Authorities are encouraged to use the dNSName instead.\"\r\n\r\nIn other words, the name in the DN doesn't matter if one or subjectAltNames are present.\r\n\r\n- \"In general, HTTP/TLS requests are generated by dereferencing a URI. As a consequence, the hostname for the server is known to the client. If the hostname is available, the client MUST check it against the server's identity as presented in the server's Certificate message, in order to prevent man-in-the-middle attacks.\"\r\n\r\nI.e. the host name in the URI must be checked against the certificate. There is no mentioning of any reverse lookup (which as I described initially would not be safe anyway as it is bound to the IP and the initial DNS lookup is spoofable - thus the IP address cannot be trusted).\r\n\r\n- \"In some cases, the URI is specified as an IP address rather than a hostname. In this case, the iPAddress subjectAltName must be present in the certificate and must exactly match the IP in the URI.\"\r\n\r\nThus even if the URI used an IP address, the client shouldn't do a reverse lookup in the verification.\r\n\r\n- \"If more than one identity of a given type is present in the certificate (e.g., more than one dNSName name, a match in any one of the set is considered acceptable.)\"\r\n\r\nI.e. we can have multiple subjectAltNames and only one needs to match.\r\n\r\nThus given the above, I do not see why the updated library rejected connecting to srm.ndgf.org, even when the reverse pointed to piggy-x.ndgf.org. The name 'srm.ndgf.org' was present in the subjectAltNames and that is all which was needed.\r\n\r\n[ ... ] My comment is to Mattias and to the Globus library - somehow the STRICT_RFC2818 setting doesn't appear to follow RFC2818.\r\n-- end GGUS quote --\r\n\r\nCan you provide a comment on this?\r\n", 
+    "reporter": {
+      "displayName": "Mattias Ellert", 
+      "name": "ellert", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mattias.ellert@fysast.uu.se", 
+      "key": "ellert", 
+      "active": true, 
+      "timeZone": "Europe/Stockholm"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": "EGI/WLCG", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2015-06-04T04:22:02.657-0500", 
+    "versions": [], 
+    "resolutiondate": "2015-06-18T14:49:57.253-0500", 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10326", 
+        "id": "10326", 
+        "name": "GSI"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": {
+      "self": "https://globus.atlassian.net/rest/api/2/resolution/8", 
+      "id": "8", 
+      "name": "No Need to Fix", 
+      "description": "The work in this JIRA has been considered unnecessary for the reasons detailed in the resolution."
+    }, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/28136", 
+  "id": "28136", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

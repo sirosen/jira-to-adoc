@@ -1,0 +1,353 @@
+{
+  "key": "GT-519", 
+  "fields": {
+    "comment": {
+      "total": 4, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "Here is the original email describing the problem\n\n\nOn Feb 13, 2014, at 5:47 PM, Matthew Becker <beckermr@stanford.edu> wrote:\n\nHi everyone,\n\nI am trying to move 10 TB of data off of scratch on stampede to a machine here at SLAC.\n\nThanks for the help!\n\nCheers,\nMatt\n\nOn Thu, Feb 13, 2014 at 3:46 PM, Peter Onyisi <ponyisi@utexas.edu> wrote:\nHi Wei:\n\nI cc Chris Hempel at TACC, who will know better who to contact.  I do note that there seems to be some trouble with the home disks on Stampede right now - is the user trying to transfer from xsede#stampede or some other resource?\n\nCheers,\nPeter\n\nOn Thu, Feb 13, 2014 at 4:41 PM, Yang, Wei <yangw@slac.stanford.edu> wrote:\nThanks Horst!\n\nHi Peter,\n\nPlease redirect me to the right person at TACC. I am helping a user at SLAC. He is using Globus Online to transfer data from TACC to SLAC. He said that he had no problem transferring data from NERSC to SLAC via GO but not from TACC. The error looks like\n\nError (transfer)\nServer: slac#kipac (osggridftp01.slac.stanford.edu:2811)\nCommand: STOR\n\n~/nfs_links/cosmo21/beckermr/mass_function/lasdamas/consuelo/Consuelo_4001_snapshot_046.tar\nMessage: The operation timed out\n---\nTimeout waiting for response\n\nDo you have any suggestions?\n\nregards,\nWei Yang  |  yangw@slac.stanford.edu  |  1-650-926-3338\n\n\nOn Feb 13, 2014, at 2:35 PM, Horst Severini <hs@nhn.ou.edu> wrote:\n\n> Hi Wei,\n>\n> I would start with Peter Onyisi; hi Peter. :)\n>\n> Cheers,\n>\n>       Horst\n>\n> On 02/13/2014 04:13 PM, Yang, Wei wrote:\n>> Hi Horst,\n>>\n>> Do you know anyone at TACC that are familiar with their GridFTP and GlobusOnline stuffs?\n>>\n>> regards,\n>> Wei Yang  |yangw@slac.stanford.edu   |  1-650-926-3338\n\n\n\n\n-- \nPeter Onyisi   |\nCERN: 4-R-028  | Department of Physics\nUT: RLM 10.211 | University of Texas at Austin\n\n\n\n", 
+          "updateAuthor": {
+            "displayName": "David Carver", 
+            "name": "dcarver", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=dcarver", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "dcarver@tacc.utexas.edu", 
+            "key": "dcarver", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2014-02-17T13:33:39.311-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/23107/comment/24049", 
+          "author": {
+            "displayName": "David Carver", 
+            "name": "dcarver", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=dcarver", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "dcarver@tacc.utexas.edu", 
+            "key": "dcarver", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2014-02-17T13:33:39.311-0600", 
+          "id": "24049"
+        }, 
+        {
+          "body": "Hi David,\n\nThat is the expected behavior when one server doesn't have the CA cert of the credential used for the data connection.  This is a common when using different credentials.  You can use the globus-url-copy -data-cred option to use the server feature designed to work around this (which is what Globus Transfer does).  Either -data-cred auto or -data-cred <proxy file path> should work.\n\nI understand Jack Kordas is helping debug the initial stalling issue.", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2014-02-18T15:49:14.960-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/23107/comment/24063", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2014-02-18T15:49:14.960-0600", 
+          "id": "24063"
+        }, 
+        {
+          "body": "Mike the orginal problem was reported to Globusonline by Matthew Becker and referred to TACC.  I used globus-url-copy to get additional debug information and worked with Wei <yangw@slac.stanford.edu> to gather gridftp logs before opening this ticket.  \n\nI am not sure how the \"data-cred\" is specified for GlobusOnline or what to tell Matthew Becker.\n\nIs it possible to reopen and assign this ticket to Globus Online to enable this feature?\n\nLater,\nDavid Carver", 
+          "updateAuthor": {
+            "displayName": "David Carver", 
+            "name": "dcarver", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=dcarver", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "dcarver@tacc.utexas.edu", 
+            "key": "dcarver", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2014-02-18T16:16:39.909-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/23107/comment/24064", 
+          "author": {
+            "displayName": "David Carver", 
+            "name": "dcarver", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=dcarver", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "dcarver@tacc.utexas.edu", 
+            "key": "dcarver", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2014-02-18T16:16:39.909-0600", 
+          "id": "24064"
+        }, 
+        {
+          "body": "FYI, update from  GlobusOnline Request #301979 \n\nHow to specify gridftp \"-data-cred\" feature for Globus-online\n\nDavid Carver\nFeb 18 16:41\n\nI opened a ticket on gridftp (GT-519) and Mike Link said to add \"data-cred\" feature in globus-url-copy. But the user (Matthew Becker) is using GlobusOnline to move his files from TACC to SLAC at Stanford. Not sure how Matthew Becker can enable this feature in GlobusOnline.\n\nThanks, \nDavid Carver\n\n \nComments\nUser photo Globus Team - Jack \nglobus support\nGlobusOnline automatically uses this option to avoid the unsupported certificate error.\n\nWe discovered yesterday for some reason if the user chooses to encrypt the data transfer between stampede and space, the transfers start to work. There must be some different use of the network stack in this case.\n\nGiven this ticket is specifically about enabling the DCSC protocol and GlobusOnline does that. I'm going to close this ticket.\n\nMatthew Becker still has a ticket open for the original issue.\n\nJack\n\nFebruary 19, 2014 09:18", 
+          "updateAuthor": {
+            "displayName": "David Carver", 
+            "name": "dcarver", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=dcarver", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "dcarver@tacc.utexas.edu", 
+            "key": "dcarver", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2014-02-19T10:42:29.276-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/23107/comment/24068", 
+          "author": {
+            "displayName": "David Carver", 
+            "name": "dcarver", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=dcarver", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "dcarver@tacc.utexas.edu", 
+            "key": "dcarver", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2014-02-19T10:42:29.276-0600", 
+          "id": "24068"
+        }
+      ], 
+      "maxResults": 4
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "David Carver", 
+      "name": "dcarver", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=dcarver", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "dcarver@tacc.utexas.edu", 
+      "key": "dcarver", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100wvs:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-519/watchers", 
+      "watchCount": 1, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Mike Link", 
+      "name": "mlink", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mlink@mcs.anl.gov", 
+      "key": "mlink", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": "1_*:*_1_*:*_106120091_*|*_5_*:*_1_*:*_0", 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@46977f", 
+    "summary": "Globus-url-copy transfer failing between TACC and SLAC with message Can't get the local trusted CA certificate: Untrusted self-signed certificate in chain with hash aece7839", 
+    "customfield_10288": "2014-02-18T15:49:14.960-0600", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-519/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [
+      {
+        "archived": false, 
+        "name": "Sprint 2014-03-03", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11645", 
+        "releaseDate": "2014-03-02", 
+        "released": true, 
+        "id": "11645", 
+        "description": ""
+      }
+    ], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "Done", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+        "id": 3, 
+        "key": "done", 
+        "colorName": "green"
+      }, 
+      "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+      "id": "5", 
+      "name": "Resolved"
+    }, 
+    "updated": "2014-02-20T14:04:53.420-0600", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "Globus-url-copy transfer failing between TACC and SLAC with the following error message:\n500-globus_gsi_callback_module: Can't get the local trusted CA certificate: Untrusted self-signed certificate in chain with hash aece7839\n500 End.\n\nHere is a debug trace on the transfer:\nlogin2$ globus-url-copy -dst-cred /tmp/x509_ubeckermr.slac -dbg -tcp-bs 13M gsiftp://data3.stampede.tacc.utexas.edu:2811/scratch/01756/beckermr/lasdamas/Consuelo_4001_snapshot_046.tar gsiftp://osggridftp01.slac.stanford.edu:2811/nfs/slac/g/ki/ki21/cosmo/beckermr/mass_function/lasdamas/Consuelo_4001_snapshot_046.tar\ndebug: starting to size gsiftp://data3.stampede.tacc.utexas.edu:2811/scratch/01756/beckermr/lasdamas/Consuelo_4001_snapshot_046.tar\ndebug: connecting to gsiftp://data3.stampede.tacc.utexas.edu:2811/scratch/01756/beckermr/lasdamas/Consuelo_4001_snapshot_046.tar\ndebug: response from gsiftp://data3.stampede.tacc.utexas.edu:2811/scratch/01756/beckermr/lasdamas/Consuelo_4001_snapshot_046.tar:\n220 data3.stampede.tacc.utexas.edu GridFTP Server 6.38 (gcc64dbg, 1382984154-83) [Globus Toolkit 5.2.5] ready.\n\ndebug: authenticating with gsiftp://data3.stampede.tacc.utexas.edu:2811/scratch/01756/beckermr/lasdamas/Consuelo_4001_snapshot_046.tar\ndebug: response from gsiftp://data3.stampede.tacc.utexas.edu:2811/scratch/01756/beckermr/lasdamas/Consuelo_4001_snapshot_046.tar:\n230 User beckermr logged in.\n\ndebug: sending command to gsiftp://data3.stampede.tacc.utexas.edu:2811/scratch/01756/beckermr/lasdamas/Consuelo_4001_snapshot_046.tar:\nSITE HELP\n\ndebug: response from gsiftp://data3.stampede.tacc.utexas.edu:2811/scratch/01756/beckermr/lasdamas/Consuelo_4001_snapshot_046.tar:\n214-The following commands are recognized:\n    ALLO    APPE    REST    CWD     CDUP    DCAU    EPSV    FEAT\n    ERET    MDTM    STAT    ESTO    HELP    LIST    MODE    NLST\n    MLSC    MLSD    PASV    RNFR    MLSR    MLST    NOOP    OPTS\n    STOR    PASS    PBSZ    PORT    PROT    SITE    EPRT    RETR\n    SPOR    MFMT    SCKS    TREV    PWD     QUIT    SBUF    SIZE\n    SPAS    STRU    SYST    RNTO    TYPE    USER    LANG    MKD \n    RMD     DELE    CKSM    DCSC\n214 End\n\ndebug: sending command to gsiftp://data3.stampede.tacc.utexas.edu:2811/scratch/01756/beckermr/lasdamas/Consuelo_4001_snapshot_046.tar:\nFEAT\n\ndebug: response from gsiftp://data3.stampede.tacc.utexas.edu:2811/scratch/01756/beckermr/lasdamas/Consuelo_4001_snapshot_046.tar:\n211-Extensions supported\n DCSC P,D\n MFMT\n AUTHZ_ASSERT\n MLSR\n MLSC\n UTF8\n LANG EN\n DCAU\n PARALLEL\n SIZE\n MLST Type*;Size*;Modify*;Perm*;Charset;UNIX.mode*;UNIX.owner*;UNIX.uid*;UNIX.group*;UNIX.gid*;Unique*;UNIX.slink*;X.count;\n ERET\n ESTO\n SPAS\n SPOR\n REST STREAM\n MDTM\n PASV AllowDelayed;\n211 End.\n\ndebug: sending command to gsiftp://data3.stampede.tacc.utexas.edu:2811/scratch/01756/beckermr/lasdamas/Consuelo_4001_snapshot_046.tar:\nSITE CLIENTINFO scheme=gsiftp;appname=\"globus-url-copy\";appver=\"5.14 (gcc64, 1305182462-80) [Globus Toolkit 5.0.4]\";\ndebug: response from gsiftp://data3.stampede.tacc.utexas.edu:2811/scratch/01756/beckermr/lasdamas/Consuelo_4001_snapshot_046.tar:\n250 OK.\n\ndebug: sending command to gsiftp://data3.stampede.tacc.utexas.edu:2811/scratch/01756/beckermr/lasdamas/Consuelo_4001_snapshot_046.tar:\nTYPE I\ndebug: response from gsiftp://data3.stampede.tacc.utexas.edu:2811/scratch/01756/beckermr/lasdamas/Consuelo_4001_snapshot_046.tar:\n200 Type set to I.\n\ndebug: sending command to gsiftp://data3.stampede.tacc.utexas.edu:2811/scratch/01756/beckermr/lasdamas/Consuelo_4001_snapshot_046.tar:\nSIZE /scratch/01756/beckermr/lasdamas/Consuelo_4001_snapshot_046.tar\n\ndebug: response from gsiftp://data3.stampede.tacc.utexas.edu:2811/scratch/01756/beckermr/lasdamas/Consuelo_4001_snapshot_046.tar:\n213 76832051200\n\ndebug: operation complete\ndebug: starting to transfer gsiftp://data3.stampede.tacc.utexas.edu:2811/scratch/01756/beckermr/lasdamas/Consuelo_4001_snapshot_046.tar to gsiftp://osggridftp01.slac.stanford.edu:2811/nfs/slac/g/ki/ki21/cosmo/beckermr/mass_function/lasdamas/Consuelo_4001_snapshot_046.tar\ndebug: connecting to gsiftp://osggridftp01.slac.stanford.edu:2811/nfs/slac/g/ki/ki21/cosmo/beckermr/mass_function/lasdamas/Consuelo_4001_snapshot_046.tar\ndebug: response from gsiftp://osggridftp01.slac.stanford.edu:2811/nfs/slac/g/ki/ki21/cosmo/beckermr/mass_function/lasdamas/Consuelo_4001_snapshot_046.tar:\n220 osggridftp01.slac.stanford.edu GridFTP Server 6.38 (gcc64, 1382984154-83) [Globus Toolkit 5.2.5] ready.\n\ndebug: authenticating with gsiftp://osggridftp01.slac.stanford.edu:2811/nfs/slac/g/ki/ki21/cosmo/beckermr/mass_function/lasdamas/Consuelo_4001_snapshot_046.tar\ndebug: response from gsiftp://osggridftp01.slac.stanford.edu:2811/nfs/slac/g/ki/ki21/cosmo/beckermr/mass_function/lasdamas/Consuelo_4001_snapshot_046.tar:\n230 User beckermr logged in.\n\ndebug: sending command to gsiftp://osggridftp01.slac.stanford.edu:2811/nfs/slac/g/ki/ki21/cosmo/beckermr/mass_function/lasdamas/Consuelo_4001_snapshot_046.tar:\nSITE HELP\n\ndebug: response from gsiftp://osggridftp01.slac.stanford.edu:2811/nfs/slac/g/ki/ki21/cosmo/beckermr/mass_function/lasdamas/Consuelo_4001_snapshot_046.tar:\n214-The following commands are recognized:\n    ALLO    APPE    REST    CWD     CDUP    DCAU    EPSV    FEAT\n    ERET    MDTM    STAT    ESTO    HELP    LIST    MODE    NLST\n    MLSC    MLSD    PASV    RNFR    MLSR    MLST    NOOP    OPTS\n    STOR    PASS    PBSZ    PORT    PROT    SITE    EPRT    RETR\n    SPOR    MFMT    SCKS    TREV    PWD     QUIT    SBUF    SIZE\n    SPAS    STRU    SYST    RNTO    TYPE    USER    LANG    MKD \n    RMD     DELE    CKSM    DCSC\n214 End\n\ndebug: sending command to gsiftp://osggridftp01.slac.stanford.edu:2811/nfs/slac/g/ki/ki21/cosmo/beckermr/mass_function/lasdamas/Consuelo_4001_snapshot_046.tar:\nFEAT\n\ndebug: response from gsiftp://osggridftp01.slac.stanford.edu:2811/nfs/slac/g/ki/ki21/cosmo/beckermr/mass_function/lasdamas/Consuelo_4001_snapshot_046.tar:\n211-Extensions supported\n DCSC P,D\n MFMT\n AUTHZ_ASSERT\n MLSR\n MLSC\n UTF8\n LANG EN\n DCAU\n PARALLEL\n SIZE\n MLST Type*;Size*;Modify*;Perm*;Charset;UNIX.mode*;UNIX.owner*;UNIX.uid*;UNIX.group*;UNIX.gid*;Unique*;UNIX.slink*;X.count;\n ERET\n ESTO\n SPAS\n SPOR\n REST STREAM\n MDTM\n PASV AllowDelayed;\n211 End.\n\ndebug: sending command to gsiftp://osggridftp01.slac.stanford.edu:2811/nfs/slac/g/ki/ki21/cosmo/beckermr/mass_function/lasdamas/Consuelo_4001_snapshot_046.tar:\nSITE CLIENTINFO scheme=gsiftp;appname=\"globus-url-copy\";appver=\"5.14 (gcc64, 1305182462-80) [Globus Toolkit 5.0.4]\";\ndebug: response from gsiftp://osggridftp01.slac.stanford.edu:2811/nfs/slac/g/ki/ki21/cosmo/beckermr/mass_function/lasdamas/Consuelo_4001_snapshot_046.tar:\n250 OK.\n\ndebug: sending command to gsiftp://osggridftp01.slac.stanford.edu:2811/nfs/slac/g/ki/ki21/cosmo/beckermr/mass_function/lasdamas/Consuelo_4001_snapshot_046.tar:\nTYPE I\ndebug: response from gsiftp://osggridftp01.slac.stanford.edu:2811/nfs/slac/g/ki/ki21/cosmo/beckermr/mass_function/lasdamas/Consuelo_4001_snapshot_046.tar:\n200 Type set to I.\n\ndebug: sending command to gsiftp://osggridftp01.slac.stanford.edu:2811/nfs/slac/g/ki/ki21/cosmo/beckermr/mass_function/lasdamas/Consuelo_4001_snapshot_046.tar:\nSITE STORBUFSIZE 13631488\n\ndebug: response from gsiftp://osggridftp01.slac.stanford.edu:2811/nfs/slac/g/ki/ki21/cosmo/beckermr/mass_function/lasdamas/Consuelo_4001_snapshot_046.tar:\n200 Site Command Successful.\n\ndebug: sending command to gsiftp://osggridftp01.slac.stanford.edu:2811/nfs/slac/g/ki/ki21/cosmo/beckermr/mass_function/lasdamas/Consuelo_4001_snapshot_046.tar:\nDCAU S /C=US/O=National Center for Supercomputing Applications/CN=Matthew Becker\n\ndebug: response from gsiftp://osggridftp01.slac.stanford.edu:2811/nfs/slac/g/ki/ki21/cosmo/beckermr/mass_function/lasdamas/Consuelo_4001_snapshot_046.tar:\n200 DCAU S.\n\ndebug: sending command to gsiftp://osggridftp01.slac.stanford.edu:2811/nfs/slac/g/ki/ki21/cosmo/beckermr/mass_function/lasdamas/Consuelo_4001_snapshot_046.tar:\nPBSZ 1048576\n\ndebug: response from gsiftp://osggridftp01.slac.stanford.edu:2811/nfs/slac/g/ki/ki21/cosmo/beckermr/mass_function/lasdamas/Consuelo_4001_snapshot_046.tar:\n200 PBSZ=1048576\n\ndebug: sending command to gsiftp://osggridftp01.slac.stanford.edu:2811/nfs/slac/g/ki/ki21/cosmo/beckermr/mass_function/lasdamas/Consuelo_4001_snapshot_046.tar:\nPASV\n\ndebug: response from gsiftp://osggridftp01.slac.stanford.edu:2811/nfs/slac/g/ki/ki21/cosmo/beckermr/mass_function/lasdamas/Consuelo_4001_snapshot_046.tar:\n227 Entering Passive Mode (134,79,120,8,196,207)\n\ndebug: sending command to gsiftp://osggridftp01.slac.stanford.edu:2811/nfs/slac/g/ki/ki21/cosmo/beckermr/mass_function/lasdamas/Consuelo_4001_snapshot_046.tar:\nALLO 76832051200\n\ndebug: response from gsiftp://osggridftp01.slac.stanford.edu:2811/nfs/slac/g/ki/ki21/cosmo/beckermr/mass_function/lasdamas/Consuelo_4001_snapshot_046.tar:\n200 ALLO command successful.\n\ndebug: sending command to gsiftp://osggridftp01.slac.stanford.edu:2811/nfs/slac/g/ki/ki21/cosmo/beckermr/mass_function/lasdamas/Consuelo_4001_snapshot_046.tar:\nSTOR /nfs/slac/g/ki/ki21/cosmo/beckermr/mass_function/lasdamas/Consuelo_4001_snapshot_046.tar\n\ndebug: sending command to gsiftp://data3.stampede.tacc.utexas.edu:2811/scratch/01756/beckermr/lasdamas/Consuelo_4001_snapshot_046.tar:\nSITE RETRBUFSIZE 13631488\n\ndebug: response from gsiftp://data3.stampede.tacc.utexas.edu:2811/scratch/01756/beckermr/lasdamas/Consuelo_4001_snapshot_046.tar:\n200 Site Command Successful.\n\ndebug: sending command to gsiftp://data3.stampede.tacc.utexas.edu:2811/scratch/01756/beckermr/lasdamas/Consuelo_4001_snapshot_046.tar:\nDCAU S /O=Grid/OU=GlobusTest/OU=simpleCA-osgmyproxy.slac.stanford.edu/OU=SLAC/CN=uid:beckermr\n\ndebug: response from gsiftp://data3.stampede.tacc.utexas.edu:2811/scratch/01756/beckermr/lasdamas/Consuelo_4001_snapshot_046.tar:\n200 DCAU S.\n\ndebug: sending command to gsiftp://data3.stampede.tacc.utexas.edu:2811/scratch/01756/beckermr/lasdamas/Consuelo_4001_snapshot_046.tar:\nPBSZ 1048576\n\ndebug: response from gsiftp://data3.stampede.tacc.utexas.edu:2811/scratch/01756/beckermr/lasdamas/Consuelo_4001_snapshot_046.tar:\n200 PBSZ=1048576\n\ndebug: sending command to gsiftp://data3.stampede.tacc.utexas.edu:2811/scratch/01756/beckermr/lasdamas/Consuelo_4001_snapshot_046.tar:\nPORT 134,79,120,8,196,207\n\ndebug: response from gsiftp://data3.stampede.tacc.utexas.edu:2811/scratch/01756/beckermr/lasdamas/Consuelo_4001_snapshot_046.tar:\n200 PORT Command successful.\n\ndebug: sending command to gsiftp://data3.stampede.tacc.utexas.edu:2811/scratch/01756/beckermr/lasdamas/Consuelo_4001_snapshot_046.tar:\nRETR /scratch/01756/beckermr/lasdamas/Consuelo_4001_snapshot_046.tar\n\ndebug: response from gsiftp://data3.stampede.tacc.utexas.edu:2811/scratch/01756/beckermr/lasdamas/Consuelo_4001_snapshot_046.tar:\n500-Command failed. : callback failed.\n500-OpenSSL Error: s3_clnt.c:1068: in library: SSL routines, function SSL3_GET_SERVER_CERTIFICATE: certificate verify failed\n500-globus_gsi_callback_module: Could not verify credential\n500-globus_gsi_callback_module: Can't get the local trusted CA certificate: Untrusted self-signed certificate in chain with hash aece7839\n500 End.\n\ndebug: fault on connection to gsiftp://data3.stampede.tacc.utexas.edu:2811/scratch/01756/beckermr/lasdamas/Consuelo_4001_snapshot_046.tar: globus_ftp_client: the server responded with an error\ndebug: operation complete\n\nerror: globus_ftp_client: the server responded with an error\n500 500-Command failed. : callback failed.\n500-OpenSSL Error: s3_clnt.c:1068: in library: SSL routines, function SSL3_GET_SERVER_CERTIFICATE: certificate verify failed\n500-globus_gsi_callback_module: Could not verify credential\n500-globus_gsi_callback_module: Can't get the local trusted CA certificate: Untrusted self-signed certificate in chain with hash aece7839\n500 End.\n\nHowever, I am at a lost where the \"Untrusted self-signed certificate in chain with hash aece7839\" is referenced.\n\nSimple grep on CAs for aece7839\ndata3# grep -i aece7839 /etc/grid-security/certificates/* /etc/grid-security/h*pem\ndata3#\n\nGrep on openssl hashs of all defined CAs at TACC\ndata3# for C in `ls -1 /etc/grid-security/certificates/*.0 /etc/grid-security/certificates/*.pem` ; do echo $C; openssl x509 -in $C -subject_hash -issuer_hash -noout -subject_hash_old -issuer_hash_old; done | grep aece7839\ndata3# \n\nThe gridftp server logs at both TACC and SLAC report sucess or return code 226.\n\nHere is the gridftp log at SLAC end.\n\nDATE=20140214223132.875137 HOST=osggridftp01.slac.stanford.edu PROG=globus-gridftp-server NL.EVNT=FTP_INFO START=20140214222702.516169 USER=beckermr FILE=/u/ki/beckermr/nfs_links/cosmo21/beckermr/mass_function/lasdamas/lasdamas/Consuelo_4001_snapshot_046.tar BUFFER=65536 BLOCK=262144 NBYTES=4363 VOLUME=/ STREAMS=1 STRIPES=1 DEST=[129.114.62.19] TYPE=ESTO CODE=226\nDATE=20140214223638.361932 HOST=osggridftp01.slac.stanford.edu PROG=globus-gridftp-server NL.EVNT=FTP_INFO START=20140214223207.854667 USER=beckermr FILE=/u/ki/beckermr/nfs_links/cosmo21/beckermr/mass_function/lasdamas/lasdamas/Consuelo_4001_snapshot_046.tar BUFFER=65536 BLOCK=262144 NBYTES=4363 VOLUME=/ STREAMS=1 STRIPES=1 DEST=[129.114.62.20] TYPE=ESTO CODE=226\nDATE=20140214224147.945451 HOST=osggridftp01.slac.stanford.edu PROG=globus-gridftp-server NL.EVNT=FTP_INFO START=20140214223716.785862 USER=beckermr FILE=/u/ki/beckermr/nfs_links/cosmo21/beckermr/mass_function/lasdamas/lasdamas/Consuelo_4001_snapshot_046.tar BUFFER=65536 BLOCK=262144 NBYTES=4363 VOLUME=/ STREAMS=1 STRIPES=1 DEST=[129.114.62.19] TYPE=ESTO CODE=226\nDATE=20140214224654.549034 HOST=osggridftp01.slac.stanford.edu PROG=globus-gridftp-server NL.EVNT=FTP_INFO START=20140214224224.555878 USER=beckermr FILE=/u/ki/beckermr/nfs_links/cosmo21/beckermr/mass_function/lasdamas/lasdamas/Consuelo_4001_snapshot_046.tar BUFFER=65536 BLOCK=262144 NBYTES=4363 VOLUME=/ STREAMS=1 STRIPES=1 DEST=[129.114.62.19] TYPE=ESTO CODE=226\nDATE=20140214225158.424155 HOST=osggridftp01.slac.stanford.edu PROG=globus-gridftp-server NL.EVNT=FTP_INFO START=20140214224728.346313 USER=beckermr FILE=/u/ki/beckermr/nfs_links/cosmo21/beckermr/mass_function/lasdamas/lasdamas/Consuelo_4001_snapshot_046.tar BUFFER=65536 BLOCK=262144 NBYTES=4363 VOLUME=/ STREAMS=1 STRIPES=1 DEST=[129.114.62.19] TYPE=ESTO CODE=226\nDATE=20140214225704.255575 HOST=osggridftp01.slac.stanford.edu PROG=globus-gridftp-server NL.EVNT=FTP_INFO START=20140214225233.847119 USER=beckermr FILE=/u/ki/beckermr/nfs_links/cosmo21/beckermr/mass_function/lasdamas/lasdamas/Consuelo_4001_snapshot_046.tar BUFFER=65536 BLOCK=262144 NBYTES=24803 VOLUME=/ STREAMS=1 STRIPES=1 DEST=[129.114.62.20] TYPE=ESTO CODE=226\n\nAnd here is the log at TACC end\n\nNBYTES=262144 VOLUME=/ STREAMS=1 STRIPES=1 DEST=[134.79.120.8] TYPE=RETR CODE=226\ndata3.stampede.transfer.log:DATE=20140214215040.116685 HOST=data3.stampede.tacc.utexas.edu PROG=globus-gridftp-server NL.EVNT=FTP_INFO START=20140214214610.608660 USER=beckermr FILE=/home1/01756/beckermr/scratch/lasdamas/Consuelo_4001_snapshot_046.tar BUFFER=87380 BLOCK=262144 NBYTES=262144 VOLUME=/ STREAMS=1 STRIPES=1 DEST=[134.79.120.8] TYPE=RETR CODE=226\ndata3.stampede.transfer.log:DATE=20140214220052.253903 HOST=data3.stampede.tacc.utexas.edu PROG=globus-gridftp-server NL.EVNT=FTP_INFO START=20140214215621.868786 USER=beckermr FILE=/home1/01756/beckermr/scratch/lasdamas/Consuelo_4001_snapshot_046.tar BUFFER=87380 BLOCK=262144 NBYTES=262144 VOLUME=/ STREAMS=1 STRIPES=1 DEST=[134.79.120.8] TYPE=RETR CODE=226\ndata3.stampede.transfer.log:DATE=20140214230209.212324 HOST=data3.stampede.tacc.utexas.edu PROG=globus-gridftp-server NL.EVNT=FTP_INFO START=20140214225738.739932 USER=beckermr FILE=/home1/01756/beckermr/scratch/lasdamas/Consuelo_4001_snapshot_046.tar BUFFER=87380 BLOCK=262144 NBYTES=262144 VOLUME=/ STREAMS=1 STRIPES=1 DEST=[134.79.120.8] TYPE=RETR CODE=226\ndata3.stampede.transfer.log:DATE=20140214233747.773684 HOST=data3.stampede.tacc.utexas.edu PROG=globus-gridftp-server NL.EVNT=FTP_INFO START=20140214233317.162566 USER=beckermr FILE=/home1/01756/beckermr/scratch/lasdamas/Consuelo_4001_snapshot_046.tar BUFFER=87380 BLOCK=262144 NBYTES=262144 VOLUME=/ STREAMS=1 STRIPES=1 DEST=[134.79.120.8] TYPE=RETR CODE=226\n\n\nAlso, Globusonline loops trying to send the file, since globus-url-copy transfer an error message\n", 
+    "reporter": {
+      "displayName": "David Carver", 
+      "name": "dcarver", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=dcarver", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "dcarver@tacc.utexas.edu", 
+      "key": "dcarver", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": "Globusonline and CLI globus-ulr-copy transfers between TACC and SLAC both running gridftp 5.2.5.\nTACC is using the XSEDE CA at NCSA.", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2014-02-17T10:20:48.053-0600", 
+    "versions": [
+      {
+        "archived": false, 
+        "name": "5.2.5", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11388", 
+        "releaseDate": "2013-06-17", 
+        "released": true, 
+        "id": "11388", 
+        "description": ""
+      }
+    ], 
+    "resolutiondate": "2014-02-18T15:49:28.104-0600", 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": {
+      "self": "https://globus.atlassian.net/rest/api/2/resolution/8", 
+      "id": "8", 
+      "name": "No Need to Fix", 
+      "description": "The work in this JIRA has been considered unnecessary for the reasons detailed in the resolution."
+    }, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/23107", 
+  "id": "23107", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

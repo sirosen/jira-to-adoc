@@ -1,0 +1,165 @@
+{
+  "key": "GT-6", 
+  "fields": {
+    "comment": {
+      "total": 0, 
+      "startAt": 0, 
+      "comments": [], 
+      "maxResults": 0
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "frank.scheiner", 
+      "name": "frank.scheiner", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=frank.scheiner", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "frank.scheiner", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100ccw:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-6/watchers", 
+      "watchCount": 1, 
+      "isWatching": false
+    }, 
+    "assignee": null, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "2003", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@e3d050", 
+    "summary": "GridFTP installation on OpenBSD 4.9", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-6/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/minor.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/4", 
+      "name": "Minor", 
+      "id": "4"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2012-05-10T15:08:25.825-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "Dear all,\n\nduring installation of GridFTP (from GT 5.0.4) on an OpenBSD 4.9 x86_64 virtual machine, I stumbled upon a problem that blocks successful compilation.\n\nI extracted the Globus Toolkit 5.0.4 sources, configured them with:\n\n$ ./configure --prefix=$GLOBUS_LOCATION --with-flavor=gcc32\n\n...and tried to compile and install GridFTP with:\n\n$ time make gridftp\n\nThe make run starts with building the \"gpt\" target. But this fails after some time with the following message:\n\n\"\ncd gpt && OBJECT_MODE=32 ./build_gpt\n[...]\nbuild_gpt ====> building /home/globus/tmp/gt5.0.4-all-source-installer/gpt/packaging_tools\n/home/globus/usr/local/globus/sbin/gpt-build -srcdir=source-trees-thr/core/source gcc64dbgthr\nsh: NOT: not found\n/home/globus/usr/local/globus/etc/gpt/globus_core-src.tar.gz could not be untarred:512\nDied at /home/globus/usr/local/globus/lib/perl/Grid/PkgMngmt/ExpandSource.pm line 42.\nmake: *** [globus_core-thr-compile] Error 2\n\"\n\nChecking \"[...]/ExpandSource.pm\" it calls an external function \"get_tool_location()\" from a non-existing Perl module named \"LocalEnv.pm\". There only exists a file \"LocalEnv.pm.in\" both in the sources dir ($GLOBUS_SOURCE/gpt/packaging_tools/perl/GPT\") and in the installation dir ($GLOBUS_LOCATION/lib/perl/Grid/GPT\").\n\nI don't know if Perl tries to use this module, or just refuses it, because it cannot find the *.pm file for it. The *.pm.in file still contains placeholders like \"@<TOOL>@\" for gtar, gunzip and others, that weren't replaced by the actual paths to the programs. I assume that this *.pm.in file isn't there by intention. BTW, there are other *.pm.in files located in the same \"[...]/packaging_tools/perl/GPT\" dir, but the corresponding *.pm files exist.\n\nTo workaround this issue, I just replaced the calls to \"get_tool_location()\"  for \"$gunzip = [...] \" and \"$gtar = [...]\" in lines 83/84 of \"[...]/ExpandSource.pm\" with the actual paths to the tools. Then making the gpt target could continue successfully. The remainder of the compilation also works through. The gridftp target is built successfully.\n\nI don't have much insight to the GPT tools, but I assume there is an error in the process that prepares the Perl modules. Could you have a look?\n\nBest regards,\nFrank Scheiner\n\n-- \nFrank Scheiner\n\nHigh Performance Computing Center Stuttgart (HLRS)\nDepartment Project User Management & Accounting ", 
+    "reporter": {
+      "displayName": "frank.scheiner", 
+      "name": "frank.scheiner", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=frank.scheiner", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "frank.scheiner", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": "OpenBSD 4.9 (x86_64)\nVirtual Machine (VirtualBox 3.1.6_OSE r59338)\nmake => GNU Make 3.81 (symlinked as /usr/bin/make)\nperl => Perl 5 v5.12.2", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2011-08-01T00:43:49.887-0500", 
+    "versions": [], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/15202", 
+  "id": "15202", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

@@ -6,6 +6,7 @@ import unicodedata
 
 from jira_auth import get_auth_header, get_jira_server, connect as jira_connect
 
+json_dir = 'json-files/'
 project_id = 'GT'
 start_index = 2
 # can't trust the first failure we get from the API, since we've seen missing
@@ -103,6 +104,8 @@ if __name__ == '__main__':
         if issue is None:
             pass
         else:
+            with open(json_dir + issue_name + '.json', 'w') as f:
+                f.write(json.dumps(issue, indent=2))
             print(format_issue(issue, template_str))
 
         if i > max_issue_num:

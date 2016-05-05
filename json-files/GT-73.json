@@ -1,0 +1,324 @@
+{
+  "key": "GT-73", 
+  "fields": {
+    "comment": {
+      "total": 1, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "I've committed code to trunk that includes an init script for the SEG which determines based on installed files whether to start the SEG or not for each LRM. \n\nI've remove the globus-job-manager-event-generator script and added an option to the SEG to write to log files in a directory like that script used to do, but without the extra forking and parsing code.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2011-08-23T06:58:19.003-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/12082/comment/15819", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2011-08-23T06:58:19.003-0500", 
+          "id": "15819"
+        }
+      ], 
+      "maxResults": 1
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "Joe Bester", 
+      "name": "bester", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "bester@mcs.anl.gov", 
+      "key": "bester", 
+      "active": true, 
+      "timeZone": "America/New_York"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|101y7c:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-73/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Joe Bester", 
+      "name": "bester", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "bester@mcs.anl.gov", 
+      "key": "bester", 
+      "active": true, 
+      "timeZone": "America/New_York"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": "1_*:*_1_*:*_32463169302_*|*_5_*:*_1_*:*_0", 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/issueLink/11410", 
+        "outwardIssue": {
+          "fields": {
+            "status": {
+              "statusCategory": {
+                "name": "Done", 
+                "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+                "id": 3, 
+                "key": "done", 
+                "colorName": "green"
+              }, 
+              "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+              "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+              "id": "5", 
+              "name": "Resolved"
+            }, 
+            "priority": {
+              "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+              "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+              "name": "Major", 
+              "id": "3"
+            }, 
+            "issuetype": {
+              "name": "Improvement", 
+              "self": "https://globus.atlassian.net/rest/api/2/issuetype/4", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/issuetypes/defect.png", 
+              "subtask": false, 
+              "id": "4", 
+              "description": "An improvement or enhancement to an existing feature or task."
+            }, 
+            "summary": "Make the Scheduler Event Generator easy to deploy"
+          }, 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/11932", 
+          "id": "11932", 
+          "key": "GRAM-174"
+        }, 
+        "type": {
+          "outward": "depends on", 
+          "inward": "is depended on by", 
+          "self": "https://globus.atlassian.net/rest/api/2/issueLinkType/10010", 
+          "id": "10010", 
+          "name": "Dependency"
+        }, 
+        "id": "11410"
+      }
+    ], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@20126", 
+    "summary": "Improve globus_scheduler_event_generator packaging", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 43200, 
+      "percent": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-73/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [
+      {
+        "archived": false, 
+        "name": "issue cleanup may 2012", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/10924", 
+        "releaseDate": "2012-05-08", 
+        "released": true, 
+        "id": "10924", 
+        "description": "Instead of polluting a sprint, put old/won't fix issues in this bucket."
+      }
+    ], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": 43200, 
+    "progress": {
+      "progress": 0, 
+      "total": 43200, 
+      "percent": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "Done", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+        "id": 3, 
+        "key": "done", 
+        "colorName": "green"
+      }, 
+      "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+      "id": "5", 
+      "name": "Resolved"
+    }, 
+    "updated": "2012-05-02T15:43:56.706-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "When the SEG was first designed, it was intended to be run by a GT4 container to process LRM events. One instance ran per container per LRM to process log events. \n\nIn GRAM2 and GRAM5, we didn't want to run a SEG per user per LRM, so we wrote a script \"globus-job-manager-event-generator\" that executes the (potentially privileged) globus-scheduler-event-generator program and writes its output to log files in a compact, LRM-independent format. One globus-job-manager-event-generator program is run per LRM. The job manager uses the  seg_job_manager_module to parse the logs generated by this program.\n\nAs a result of this architectural shift, the globus-scheduler-event-generator program is no used independently of the globus-job-manager-event-generator script. The functionality of these can be combined into a program that behaves like the latter. \n\nAnother thing to add is an init script for the SEG program to allow it to be started at boot time for all installed LRMs. By default, it can search $libdir for libglobus_seg_*.la and start a SEG process for each, with a configuration file to explicitly set which SEGs to start and what user to run those as.", 
+    "parent": {
+      "fields": {
+        "status": {
+          "statusCategory": {
+            "name": "To Do", 
+            "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+            "id": 2, 
+            "key": "new", 
+            "colorName": "blue-gray"
+          }, 
+          "description": "The issue is open and ready for the assignee to start work on it.", 
+          "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+          "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+          "id": "1", 
+          "name": "Open"
+        }, 
+        "priority": {
+          "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+          "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+          "name": "Major", 
+          "id": "3"
+        }, 
+        "issuetype": {
+          "name": "Task", 
+          "self": "https://globus.atlassian.net/rest/api/2/issuetype/3", 
+          "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11058&avatarType=issuetype", 
+          "subtask": false, 
+          "avatarId": 11058, 
+          "id": "3", 
+          "description": "A task that needs to be done."
+        }, 
+        "summary": "Sanity Check GRAM5 LRM setup packages"
+      }, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/11456", 
+      "id": "11456", 
+      "key": "GT-72"
+    }, 
+    "reporter": {
+      "displayName": "Joe Bester", 
+      "name": "bester", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "bester@mcs.anl.gov", 
+      "key": "bester", 
+      "active": true, 
+      "timeZone": "America/New_York"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": 43200, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": 43200, 
+    "created": "2010-08-12T13:25:29.765-0500", 
+    "versions": [], 
+    "resolutiondate": "2011-08-23T06:58:18.905-0500", 
+    "workratio": 0, 
+    "aggregatetimespent": null, 
+    "timetracking": {
+      "originalEstimateSeconds": 43200, 
+      "remainingEstimate": "2d", 
+      "remainingEstimateSeconds": 43200, 
+      "originalEstimate": "2d"
+    }, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10324", 
+        "id": "10324", 
+        "name": "GRAM"
+      }
+    ], 
+    "issuetype": {
+      "name": "Sub-task", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/7", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11056&avatarType=issuetype", 
+      "subtask": true, 
+      "avatarId": 11056, 
+      "id": "7", 
+      "description": "The sub-task of the issue"
+    }, 
+    "resolution": {
+      "self": "https://globus.atlassian.net/rest/api/2/resolution/6", 
+      "id": "6", 
+      "name": "Work Complete", 
+      "description": "The work for this JIRA has been completed as specified."
+    }, 
+    "timeestimate": 43200
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/12082", 
+  "id": "12082", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

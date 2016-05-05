@@ -1,0 +1,165 @@
+{
+  "key": "GT-7", 
+  "fields": {
+    "comment": {
+      "total": 0, 
+      "startAt": 0, 
+      "comments": [], 
+      "maxResults": 0
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "frank.scheiner", 
+      "name": "frank.scheiner", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=frank.scheiner", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "frank.scheiner", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100c94:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-7/watchers", 
+      "watchCount": 1, 
+      "isWatching": false
+    }, 
+    "assignee": null, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "1986", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@19077c7", 
+    "summary": "Issues with netlogger style logs", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-7/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2012-05-02T08:55:01.762-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "Dear all,\n\nI've developed a usage numbers collection toolkit using the netlogger style logs provided by the Globus GridFTP service.\nInformation about GridFTP operations is stored in an SQL DB. This database can be queried later to draw some useful information\nfrom the logged data. For example:\n\n* aggregated traffic for the last month (or another period)\n* average performance of transfers\n* top senders\n* etc.\n\nDuring testing I recognized some issues with the logfiles that hinder the collection or make it even impossible:\n\nTests with striped transfers showed that a striped transfer is only logged on one \"stripe\" (usually the last stripe) and the frontend's netlog. The problem is, that this \"stripe\" only logs the amount of data transferred by itself and not the whole data that was transferred by all stripes. If one wants to know the full size, one has to gather this information from the netlog on the frontend. But the netlog on the frontend doesn't log the user name (if it's not running as root - please correct me if I'm wrong). Additionally the START and DATE values (on frontend and backend) differ slightly, so one also cannot correlate the line from the frontend's netlog with the corresponding line of the last \"stripe\" to get the user name.\nIn PRACE we like to monitor availability and performance of our GridFTP servers regularly, but it would be nice if we could filter this \"monitoring\" traffic. With the user name it would be easy, but as I described this is not really possible, as one can either have the user name (backend netlog) or the full amount of data that was transferred (frontend netlog).\n\nIt would be very nice, if either all the backends would log the amount of data they transferred, or if the frontend would log the username and the remote system's IP address (which is also missing in the frontend's netlog, as I recently found out, it's always \"0.0.0.0\").\n\nIs the current behaviour intented? If you need more details, please let me know.\n\nBest regards,\nFrank Scheiner\n\n-- \nFrank Scheiner\n\nHigh Performance Computing Center Stuttgart (HLRS)\nDepartment Project User Management & Accounting ", 
+    "reporter": {
+      "displayName": "frank.scheiner", 
+      "name": "frank.scheiner", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=frank.scheiner", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "frank.scheiner", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": "OS: SLES10\nArch: IA64/i386 (so far)\nsplit process configuration (1 frontend (PI) and 4 (IA64) / 2 (i386) backends (DTP))\nGlobus Toolkit 5.0.4", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2011-08-08T05:35:27.654-0500", 
+    "versions": [], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/15295", 
+  "id": "15295", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

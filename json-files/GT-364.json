@@ -1,0 +1,195 @@
+{
+  "key": "GT-364", 
+  "fields": {
+    "comment": {
+      "total": 0, 
+      "startAt": 0, 
+      "comments": [], 
+      "maxResults": 0
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "madelap", 
+      "name": "madelap", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=madelap", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "madelap", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [
+      "GridFTP"
+    ], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100o0g:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-364/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": null, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "3891", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@14e0101", 
+    "summary": "SSHFTP (GridFTP-over-SSH) segmentation fault", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-364/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/critical.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/2", 
+      "name": "Critical", 
+      "id": "2"
+    }, 
+    "timespent": null, 
+    "attachment": [
+      {
+        "mimeType": "text/plain", 
+        "created": "2013-02-19T09:46:56.681-0600", 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/10982", 
+        "filename": "globus_gridftp_server.c.patch", 
+        "content": "https://globus.atlassian.net/secure/attachment/10982/globus_gridftp_server.c.patch", 
+        "id": "10982", 
+        "size": 1799
+      }
+    ], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2013-02-19T09:46:56.573-0600", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "I didn't success to use GridFTP over SSH with GridFTP of GT 5.2.3 or GT 5.2.4. It works succefully with GridFTP of GT 5.0.5.\n\nI saw that the remote_contact variable in globus_l_gfs_new_server_cb method could be not set. I modified globus_gridftp_server.c to resolve the problem for my case and now it's works. But I do not know the impact of my modification. See the patch file in attachement.\n\nOutput of globus-url-copy\n$  globus-url-copy -dbg /etc/group sshftp://127.0.0.1/tmp/group\ndebug: starting to put sshftp://127.0.0.1/tmp/group\ndebug: connecting to sshftp://127.0.0.1/tmp/group\ndebug: response from sshftp://127.0.0.1/tmp/group:\n500 Server is not configured for SSHFTP connections.\n\ndebug: fault on connection to sshftp://127.0.0.1/tmp/group: globus_ftp_client: the server responded with an error\ndebug: data callback, error globus_ftp_client: the server responded with an error, buffer 0x2b10f22bd010, length 0, offset=0, eof=true\ndebug: operation complete\n\nerror: globus_ftp_client: the server responded with an error\n500 Server is not configured for SSHFTP connections.\n\nI added debug and log option in the file ~/.globus/sshftp :\nexec $GLOBUS_LOCATION/sbin/globus-gridftp-server -log-level all -logfile /scratch/lsftmp/gridftp.log -debug -ssh\n\nAnd I could seean issue  in the log with the remote hostname (with 5.0.5, i have \"New connection from: 0.0.0.0\")\n\nglobus_gfork: GFork error: Env not set\n\n[32268] Tue Feb 19 14:35:40 2013 :: No configuration file found.\n[32268] Tue Feb 19 14:35:40 2013 :: Server started in inetd mode.\n[32268] Tue Feb 19 14:35:40 2013 :: Couldn't get remote IP address.  Possibly using a non-tcp protocol.\n[32268] Tue Feb 19 14:35:40 2013 :: New connection from: \u00b0\u00d5     +\n[32268] Tue Feb 19 14:35:40 2013 :: Couldn't get local contact.  Possibly using a non-tcp protocol.\n[32268] Tue Feb 19 14:35:40 2013 :: Couldn't get local contact.  Possibly using a non-tcp protocol.\n[32268] Tue Feb 19 14:35:40 2013 :: Couldn't enable TCP_NODELAY.  Possibly using a non-tcp protocol.\n[1214] Tue Feb 19 14:37:25 2013 :: GFork functionality not enabled.:\n\nWhen i tried to launch directly the wrapper gridftp-ssh, i obtain a segmentation fault with a core dump\n\n$  ${GLOBUS_LOCATION}/share/globus/gridftp-ssh sshftp://127.0.0.1/tmp/group 127.0.0.1 22\n500 Server is not configured for SSHFTP connections.\n\nksh: line 1: 12017: Memory fault\n\nThe backtrace of the core file dump from gdb :\n\n#0  0x00002b36bc7fe027 in free () from /lib64/libc.so.6\n#1  0x0000000000404330 in globus_l_gfs_new_server_cb (handle=0x53cc80, result=18, user_arg=0x0) at globus_gridftp_server.c:740\n#2  0x00002b36bb986ba8 in globus_l_xio_open_close_callback_kickout (user_arg=0x53cd60) at globus_xio_handle.c:998\n#3  0x00002b36bb986a62 in globus_l_xio_open_close_callback (op=0x53cd60, result=0, user_arg=0x0) at globus_xio_handle.c:965\n#4  0x00002b36bb993601 in globus_l_xio_driver_open_op_kickout (user_arg=0x53cd60) at globus_xio_driver.c:906\n#5  0x00002b36bbf15c1e in globus_callback_space_poll_nothreads (timestop=0x2b36bbf40e10, space=-2) at globus_callback_nothreads.c:1437\n#6  0x00002b36bbf139e6 in globus_callback_space_poll (timestop=0x2b36bbf40e10, space=-2) at globus_callback.c:252\n#7  0x00002b36bbf3de2c in globus_l_thread_none_cond_wait (cv=0x507e80, mut=0x507ec0) at globus_thread_none.c:371\n#8  0x00002b36bbf33a9c in globus_cond_wait (cond=0x507e80, mutex=0x507ec0) at globus_thread.c:585\n#9  0x000000000040604e in main (argc=7, argv=0x7fffc950ea88) at globus_gridftp_server.c:1863\n", 
+    "reporter": {
+      "displayName": "madelap", 
+      "name": "madelap", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=madelap", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "madelap", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": "Checked both on Linux SLES 10 SP4 and Solaris 10 x86_64.\n", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2013-02-19T09:46:56.573-0600", 
+    "versions": [
+      {
+        "archived": false, 
+        "name": "5.2.3", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/10963", 
+        "releaseDate": "2012-12-03", 
+        "released": true, 
+        "id": "10963"
+      }, 
+      {
+        "archived": false, 
+        "name": "5.2.4", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11066", 
+        "releaseDate": "2013-02-13", 
+        "released": true, 
+        "id": "11066", 
+        "description": ""
+      }
+    ], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/20302", 
+  "id": "20302", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

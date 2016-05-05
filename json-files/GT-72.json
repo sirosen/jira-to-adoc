@@ -1,0 +1,476 @@
+{
+  "key": "GT-72", 
+  "fields": {
+    "comment": {
+      "total": 1, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "For the condor LRM, the following is done in the LRM setup package:\n1 Modify condor.in to condor.pm to set paths to condor_submit, condor_rm, and condor's mpi script, set environment variable CONDOR_CONFIG, and set an optional config parameter for vanilla jobs.\n2 Create share/globus_gram_job_manager/condor.rvf\n3 Probe for current machines condor os and arch\n4 Create etc/grid-services/jobmanager-condor using the globus-job-manager-service.pl script\n\nThis could be replaced by a non-setup package that includes the following:\n- condor.pm (not .in), with default paths to condor executables and CONDOR_CONFIG.  The default paths can be chosen at configure time, so that we can use the paths of native condor packages as the default. \n- condor.rvf as a file instead of generating it by writing to the deploy directory at postinstall time\n- jobmanager-condor as a file that is distributed (with stubstitutions for $prefix done at configure time).", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2010-07-13T19:46:53.567-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/11456/comment/11725", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2010-07-13T19:46:53.567-0500", 
+          "id": "11725"
+        }
+      ], 
+      "maxResults": 1
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "Joe Bester", 
+      "name": "bester", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "bester@mcs.anl.gov", 
+      "key": "bester", 
+      "active": true, 
+      "timeZone": "America/New_York"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100bw0:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-72/watchers", 
+      "watchCount": 1, 
+      "isWatching": false
+    }, 
+    "assignee": null, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "1927", 
+    "issuelinks": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/issueLink/10551", 
+        "inwardIssue": {
+          "fields": {
+            "status": {
+              "statusCategory": {
+                "name": "To Do", 
+                "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+                "id": 2, 
+                "key": "new", 
+                "colorName": "blue-gray"
+              }, 
+              "description": "The issue is open and ready for the assignee to start work on it.", 
+              "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+              "id": "1", 
+              "name": "Open"
+            }, 
+            "priority": {
+              "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+              "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+              "name": "Major", 
+              "id": "3"
+            }, 
+            "issuetype": {
+              "name": "New Feature", 
+              "self": "https://globus.atlassian.net/rest/api/2/issuetype/2", 
+              "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11051&avatarType=issuetype", 
+              "subtask": false, 
+              "avatarId": 11051, 
+              "id": "2", 
+              "description": "A new feature of the product, which has yet to be developed."
+            }, 
+            "summary": "Implement Globus native packaging plan"
+          }, 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/11324", 
+          "id": "11324", 
+          "key": "GT-122"
+        }, 
+        "type": {
+          "outward": "depends on", 
+          "inward": "is depended on by", 
+          "self": "https://globus.atlassian.net/rest/api/2/issueLinkType/10010", 
+          "id": "10010", 
+          "name": "Dependency"
+        }, 
+        "id": "10551"
+      }
+    ], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@1fb7b2d", 
+    "summary": "Sanity Check GRAM5 LRM setup packages", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 129600, 
+      "percent": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-72/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": 129600, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2012-05-02T15:32:37.918-0500", 
+    "customfield_10603": null, 
+    "subtasks": [
+      {
+        "fields": {
+          "status": {
+            "statusCategory": {
+              "name": "Done", 
+              "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+              "id": 3, 
+              "key": "done", 
+              "colorName": "green"
+            }, 
+            "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+            "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+            "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+            "id": "5", 
+            "name": "Resolved"
+          }, 
+          "priority": {
+            "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+            "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+            "name": "Major", 
+            "id": "3"
+          }, 
+          "issuetype": {
+            "name": "Sub-task", 
+            "self": "https://globus.atlassian.net/rest/api/2/issuetype/7", 
+            "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11056&avatarType=issuetype", 
+            "subtask": true, 
+            "avatarId": 11056, 
+            "id": "7", 
+            "description": "The sub-task of the issue"
+          }, 
+          "summary": "Improve globus_scheduler_event_generator packaging"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/issue/12082", 
+        "id": "12082", 
+        "key": "GT-73"
+      }, 
+      {
+        "fields": {
+          "status": {
+            "statusCategory": {
+              "name": "Done", 
+              "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+              "id": 3, 
+              "key": "done", 
+              "colorName": "green"
+            }, 
+            "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+            "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+            "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+            "id": "5", 
+            "name": "Resolved"
+          }, 
+          "priority": {
+            "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+            "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+            "name": "Major", 
+            "id": "3"
+          }, 
+          "issuetype": {
+            "name": "Sub-task", 
+            "self": "https://globus.atlassian.net/rest/api/2/issuetype/7", 
+            "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11056&avatarType=issuetype", 
+            "subtask": true, 
+            "avatarId": 11056, 
+            "id": "7", 
+            "description": "The sub-task of the issue"
+          }, 
+          "summary": "Improve fork packaging"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/issue/12083", 
+        "id": "12083", 
+        "key": "GT-74"
+      }, 
+      {
+        "fields": {
+          "status": {
+            "statusCategory": {
+              "name": "Done", 
+              "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+              "id": 3, 
+              "key": "done", 
+              "colorName": "green"
+            }, 
+            "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+            "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+            "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+            "id": "5", 
+            "name": "Resolved"
+          }, 
+          "priority": {
+            "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+            "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+            "name": "Major", 
+            "id": "3"
+          }, 
+          "issuetype": {
+            "name": "Sub-task", 
+            "self": "https://globus.atlassian.net/rest/api/2/issuetype/7", 
+            "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11056&avatarType=issuetype", 
+            "subtask": true, 
+            "avatarId": 11056, 
+            "id": "7", 
+            "description": "The sub-task of the issue"
+          }, 
+          "summary": "Improve condor packaging"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/issue/12084", 
+        "id": "12084", 
+        "key": "GT-75"
+      }, 
+      {
+        "fields": {
+          "status": {
+            "statusCategory": {
+              "name": "Done", 
+              "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+              "id": 3, 
+              "key": "done", 
+              "colorName": "green"
+            }, 
+            "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+            "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+            "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+            "id": "5", 
+            "name": "Resolved"
+          }, 
+          "priority": {
+            "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+            "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+            "name": "Major", 
+            "id": "3"
+          }, 
+          "issuetype": {
+            "name": "Sub-task", 
+            "self": "https://globus.atlassian.net/rest/api/2/issuetype/7", 
+            "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11056&avatarType=issuetype", 
+            "subtask": true, 
+            "avatarId": 11056, 
+            "id": "7", 
+            "description": "The sub-task of the issue"
+          }, 
+          "summary": "Improve pbs packaging"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/issue/12085", 
+        "id": "12085", 
+        "key": "GT-76"
+      }, 
+      {
+        "fields": {
+          "status": {
+            "statusCategory": {
+              "name": "Done", 
+              "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+              "id": 3, 
+              "key": "done", 
+              "colorName": "green"
+            }, 
+            "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+            "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+            "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+            "id": "5", 
+            "name": "Resolved"
+          }, 
+          "priority": {
+            "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+            "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+            "name": "Major", 
+            "id": "3"
+          }, 
+          "issuetype": {
+            "name": "Sub-task", 
+            "self": "https://globus.atlassian.net/rest/api/2/issuetype/7", 
+            "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11056&avatarType=issuetype", 
+            "subtask": true, 
+            "avatarId": 11056, 
+            "id": "7", 
+            "description": "The sub-task of the issue"
+          }, 
+          "summary": "Improve lsf packaging"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/issue/12086", 
+        "id": "12086", 
+        "key": "GT-77"
+      }, 
+      {
+        "fields": {
+          "status": {
+            "statusCategory": {
+              "name": "Done", 
+              "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+              "id": 3, 
+              "key": "done", 
+              "colorName": "green"
+            }, 
+            "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+            "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+            "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+            "id": "5", 
+            "name": "Resolved"
+          }, 
+          "priority": {
+            "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+            "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+            "name": "Major", 
+            "id": "3"
+          }, 
+          "issuetype": {
+            "name": "Sub-task", 
+            "self": "https://globus.atlassian.net/rest/api/2/issuetype/7", 
+            "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11056&avatarType=issuetype", 
+            "subtask": true, 
+            "avatarId": 11056, 
+            "id": "7", 
+            "description": "The sub-task of the issue"
+          }, 
+          "summary": "Improve SGE packaging"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/issue/15652", 
+        "id": "15652", 
+        "key": "GT-78"
+      }
+    ], 
+    "description": "The LRM setup packages treat the perl code installed in $GLOBUS_LOCATION/lib/perl as data that needs to be generated at runtime. It would simplify external packaging if the configuration could be separated from the LRM perl code, and make it have reasonable defaults if the configuration values are not present.", 
+    "reporter": {
+      "displayName": "Joe Bester", 
+      "name": "bester", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "bester@mcs.anl.gov", 
+      "key": "bester", 
+      "active": true, 
+      "timeZone": "America/New_York"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": 129600, 
+    "created": "2010-04-06T13:22:20.417-0500", 
+    "versions": [], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10324", 
+        "id": "10324", 
+        "name": "GRAM"
+      }
+    ], 
+    "issuetype": {
+      "name": "Task", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/3", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11058&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11058, 
+      "id": "3", 
+      "description": "A task that needs to be done."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/11456", 
+  "id": "11456", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

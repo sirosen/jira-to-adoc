@@ -1,0 +1,293 @@
+{
+  "key": "GT-375", 
+  "fields": {
+    "comment": {
+      "total": 2, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "Some additional informatiion \n\nmcoyne@oldtimer:/usr/include/openssl> openssl version\nOpenSSL 1.0.1e 11 Feb 2013\n\nAs far as i can tell i think i am getting the following  NID_aes_256_gcm for the switch statement added in gss_get_mic.c , what , if any hash EVP_md5 EVP_sha1 is there EVP_gsm?\n\nfrom openssl's obj_mac.h \n\n#define SN_aes_256_gcm          \"id-aes256-GCM\"\n#define LN_aes_256_gcm          \"aes-256-gcm\"\n#define NID_aes_256_gcm         901\n#define OBJ_aes_256_gcm         OBJ_aes,46L\n\n\n\ngdb /usr/bin/gsissh -vvv ...\n\nBreakpoint 2, gss_get_mic (minor_status=minor_status@entry=0x6a7c84, \n    context_handle=0x6a80f0, qop_req=qop_req@entry=0, \n    message_buffer=message_buffer@entry=0x7fffffffb5f0, \n    message_token=message_token@entry=0x7fffffffb5e0) at get_mic.c:153\n153\t    hash = context->gss_ssl->write_hash->digest;\n(gdb) print context->gss_ssl->write_hash->digest\n$1 = (const EVP_MD *) 0x0\n(gdb) s\n\nBreakpoint 4, gss_get_mic (minor_status=minor_status@entry=0x6a7c84, \n    context_handle=0x6a80f0, qop_req=qop_req@entry=0, \n    message_buffer=message_buffer@entry=0x7fffffffb5f0, \n    message_token=message_token@entry=0x7fffffffb5e0) at get_mic.c:161\n161\t    if(hash == NULL)\n(gdb) s\n164\t         switch(EVP_CIPHER_CTX_nid(cctx))\n(gdb) print EVP_CIPHER_CTX_nid(cctx)\n$2 = 901\n(gdb) s\n178\t         GLOBUS_GSI_GSSAPI_MALLOC_ERROR(minor_status);\n(gdb) list\n173\t    #endif\n174\t    #endif\n175\t    if(hash == NULL)\n176\t         {\n177\t         /* Shouldn't happen: some error occurred */\n178\t         GLOBUS_GSI_GSSAPI_MALLOC_ERROR(minor_status);\n179\t         major_status = GSS_S_FAILURE;\n180\t         goto unlock_mutex;\n181\t         }\n182\t    md_size = EVP_MD_size(hash);\n(gdb) print minor_status\n$3 = (OM_uint32 *) 0x6a7c84\n(gdb) help s\nStep program until it reaches a different source line.\nArgument N means do this N times (or till program stops for another reason).\n(gdb) list 160\n155\t    /* Some versions of OpenSSL use special ciphers which\n156\t    * combine HMAC with the encryption operation:\n157\t    * for these ssl->write_hash is NULL.\n158\t    * If the cipher context is one of these set the\n", 
+          "updateAuthor": {
+            "displayName": "mcoyne", 
+            "name": "mcoyne", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mcoyne", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "mcoyne", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-03-13T17:55:29.180-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/20545/comment/21584", 
+          "author": {
+            "displayName": "mcoyne", 
+            "name": "mcoyne", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mcoyne", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "mcoyne", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-03-13T17:55:29.180-0500", 
+          "id": "21584"
+        }, 
+        {
+          "body": "By adding this\n+              case NID_aes_128_gcm:\n+              case NID_aes_192_gcm:\n+              case NID_aes_256_gcm: hash = EVP_md_null();\n+                                              break;\nto the patch proposed in GT-363 and correcting some divide by zero errors , i got gsissh to work arround the  the gsm crypto type.", 
+          "updateAuthor": {
+            "displayName": "mcoyne", 
+            "name": "mcoyne", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mcoyne", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "mcoyne", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-03-23T14:00:09.537-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/20545/comment/21648", 
+          "author": {
+            "displayName": "mcoyne", 
+            "name": "mcoyne", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mcoyne", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "mcoyne", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-03-23T14:00:09.537-0500", 
+          "id": "21648"
+        }
+      ], 
+      "maxResults": 2
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "mcoyne", 
+      "name": "mcoyne", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=mcoyne", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "mcoyne", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [
+      "Build"
+    ], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100nps:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-375/watchers", 
+      "watchCount": 1, 
+      "isWatching": false
+    }, 
+    "assignee": null, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "3843", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@2410cd", 
+    "summary": "Gsi-openssh fails in get_mic wth null pointer referance OpenSuSe 12.2 ", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-375/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [
+      {
+        "mimeType": "application/octet-stream", 
+        "created": "2013-03-13T15:19:58.164-0500", 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/11022", 
+        "filename": "globus_gssapi_gsi.patch.1.0.0", 
+        "content": "https://globus.atlassian.net/secure/attachment/11022/globus_gssapi_gsi.patch.1.0.0", 
+        "id": "11022", 
+        "size": 4370
+      }, 
+      {
+        "mimeType": "application/octet-stream", 
+        "created": "2013-03-13T15:19:58.165-0500", 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/11023", 
+        "filename": "globus_gssapi_gsi.patch.1.0.1", 
+        "content": "https://globus.atlassian.net/secure/attachment/11023/globus_gssapi_gsi.patch.1.0.1", 
+        "id": "11023", 
+        "size": 783
+      }, 
+      {
+        "mimeType": "application/octet-stream", 
+        "created": "2013-03-23T14:00:09.534-0500", 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/11025", 
+        "filename": "globus_gssapi_gsi.patch.1.0.3", 
+        "content": "https://globus.atlassian.net/secure/attachment/11025/globus_gssapi_gsi.patch.1.0.3", 
+        "id": "11025", 
+        "size": 24157
+      }, 
+      {
+        "mimeType": "application/octet-stream", 
+        "created": "2013-03-13T15:19:58.137-0500", 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/11021", 
+        "filename": "globus-gssapi-gsi.spec.afs", 
+        "content": "https://globus.atlassian.net/secure/attachment/11021/globus-gssapi-gsi.spec.afs", 
+        "id": "11021", 
+        "size": 9666
+      }
+    ], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2013-03-23T14:00:09.590-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "I built the current globus build for SuSE 12.2 from source rpms. I ran across a issue i believe related to bug GT-363 as in gis-openssh it failed with a null pointer inside of get_mic(). I followed the recomendation in GT363 and patched the get_mic.c and verifiy_mic.c which in fact fixed the Null pointer referance but now  i get\n\n... from the client .....\ndebug3: authmethod_is_enabled gssapi-with-mic\ndebug1: Next authentication method: gssapi-with-mic\ndebug2: we sent a gssapi-with-mic packet, wait for reply\ndebug1: Delegating credentials\ndebug1: Delegating credentials\ndebug1: Delegating credentials\ndebug1: Delegating credentials\ndebug1: GSS Major Status: General failure\n\nGSS Minor Status Error Chain:\nglobus_gsi_gssapi: Out of memory: Success\nglobus_gsi_gssapi: A system call failed: Success\n\n\ndebug2: we did not send a packet, disable method\ndebug1: No more authentication methods to try.\nPermission denied (publickey,gssapi-keyex,gssapi-with-mic,password,keyboard-interactive).\n.... from the server....\ndebug3: mm_request_receive entering\ndebug3: monitor_read: checking request 39\ndebug1: Got no client credentials\ndebug3: mm_request_send entering: type 40\ndebug3: mm_request_send entering: type 39 [preauth]\ndebug3: mm_request_receive_expect entering: type 40 [preauth]\ndebug3: mm_request_receive entering [preauth]\ndebug3: mm_request_receive entering\ndebug3: monitor_read: checking request 39\ndebug1: Got no client credentials\ndebug3: mm_request_send entering: type 40\ndebug3: mm_request_send entering: type 39 [preauth]\ndebug3: mm_request_receive_expect entering: type 40 [preauth]\ndebug3: mm_request_receive entering [preauth]\ndebug3: mm_request_receive entering\ndebug3: monitor_read: checking request 39\ndebug1: Got no client credentials\ndebug3: mm_request_send entering: type 40\nConnection closed by 192.168.0.2 [preauth]\ndebug1: do_cleanup [preauth]\ndebug1: monitor_read_log: child log fd closed\ndebug3: mm_request_receive entering\ndebug1: do_cleanup\ndebug1: Killing privsep child 6040\n\n\n\non the client loggin into the same machine w/ gsissh -vvvv \n\nI needed to add the -bits 2048 to the grid-proxy-init line to avoid other issues comming from openssl 1.0.1 i believe \n\nAttached are the changes i make to globus_gssapi_gsi-10.7\n\nthe globus_gssapi_gsi.patch.1.0.1 is a patch to fix a problem with a older application gssklogd  , When getting an context lifetime, the returned value is the maximum of either the local cert or the peers cert. It would seem the returned value should be minimum of those two as the context will become invalid when the shortest of the two expires. ? \n\nIf i did patch this correctly else can i do to correct the gssapi  mic issue?  or does the problem lie in gsi-openssh ? \nI should note that other services so seem to work correctly gram seems ok , as well as gsiftp and with some finesse so does gssklog \n", 
+    "reporter": {
+      "displayName": "mcoyne", 
+      "name": "mcoyne", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=mcoyne", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "mcoyne", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": "older Amd Opteron 2xcpus single core each , SuSe 12.2 , current as of 3/13/2013 ", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2013-03-13T15:19:58.044-0500", 
+    "versions": [
+      {
+        "archived": false, 
+        "name": "5.2.3", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/10963", 
+        "releaseDate": "2012-12-03", 
+        "released": true, 
+        "id": "10963"
+      }
+    ], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10326", 
+        "id": "10326", 
+        "name": "GSI"
+      }, 
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10330", 
+        "id": "10330", 
+        "name": "GSI-OpenSSH"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/20545", 
+  "id": "20545", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

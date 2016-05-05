@@ -1,0 +1,226 @@
+{
+  "key": "GT-444", 
+  "fields": {
+    "comment": {
+      "total": 1, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "To contribute to what Helmut reported: I've done some testing locally on the Nikhef testbed and what I see is that the gsi-authz call-out is run only for the front-end, not for the back-end. This can be illustrated by using separate LCMAPS log files for front-end and backend (no logfile is created for the back-end at all).\n\nI've been using the documentation http://www.globus.org/toolkit/docs/5.2/5.2.4/gridftp/admin/#globus-gridftp-server and tried several combinations of -ipc-auth-mode, to no effect.", 
+          "updateAuthor": {
+            "displayName": "dennisvd", 
+            "name": "dennisvd", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=dennisvd", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "dennisvd", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-07-24T09:14:24.010-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/21535/comment/22550", 
+          "author": {
+            "displayName": "dennisvd", 
+            "name": "dennisvd", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=dennisvd", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "dennisvd", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-07-24T09:14:24.010-0500", 
+          "id": "22550"
+        }
+      ], 
+      "maxResults": 1
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "helmut", 
+      "name": "helmut", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=helmut", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "helmut", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [
+      "IGE", 
+      "gridftp"
+    ], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100nn4:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-444/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": null, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "3831", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@ae257c", 
+    "summary": "Support for gsi-authz.conf in data nodes not working", 
+    "customfield_10288": "2013-07-24T09:14:24.010-0500", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-444/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [
+      {
+        "archived": false, 
+        "name": "Keep on the Radar", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11592", 
+        "releaseDate": "2014-12-31", 
+        "released": false, 
+        "id": "11592", 
+        "description": ""
+      }
+    ], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2013-12-06T09:18:06.678-0600", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "here at LRZ we use a split configuration for the production GridFTP instances. We would like to add VOMS support but we found a problem.\n\nGiven a VOMS configuration (see {lcas, lcmaps}.db_lxcluster) working for a single instance of GridFTP, we tried to extend it to a split setup. The scripts used to configure and launch the front end and the back end are, respectively, gridftp_fe and gridftp_be.\n\n \n\nFirst of all, we compiled libraries and plugins from scratch, since our systems are SLES11 based, in particular:\n\n \n\n- lcas-1.3.19\n\n- voms-2.0.8\n\n- lcmaps-1.5.7\n\n- lcmaps-plugins-basic-1.5.1\n\n- lcmaps-plugins-voms-1.5.5\n\n- lcas-lcmaps-gt4-interface-0.2.5\n\n \n\nI assume that all the environment variable are properly set, since everything is working for the single server case, as already said.\n\n \n\nIf the grid-mapfile has an entry for my DN, I can use the split service. If I want to use a pool account, i.e.\n\n- removing my DN from the grid-mapfile \n\n- adding the entry ' \"/esr/*\" .ops ' in order to map members of the ESR VO into accounts ops000* (gridmapdir, groupmapfile and groupmapdir are correctly populated) \n\nthen nothing works.\n\n \n\nWe tried many configurations:\n\n \n\n- front end running as unprivileged user and back end as root: nothing works, even the log file of VOMS is not created (not a problem of permissions, the specific environment variable set in the configuration script of the service points to /tmp)\n\n- both front end and back end running as root, VOMS disable on the front end: of course it does't work if I want to use a pool account, the front end can't do the authentication and the error message is consistent: \"530-Login incorrect. : globus_gss_assist: Gridmap lookup failure: Could not map ...\"\n\n- both front end and back end running as root, VOMS enabled on the front end (VOMS enabled/disabled on the back end doesn't matter): it doesn't work. The error message is \n\n\"530-Login incorrect. : globus_gss_assist: Error invoking callout\n\n530-globus_callout_module: The callout returned an error\" \n\nThe VOMS logfile is created, voms_fe-root-voms_be-root-novoms.log: it doesn't show any error, on the contrary, I'm mapped to the correct pool account.\n\n\nPreliminary investigations seem to suggest that the back-end does not use the GSI authentication callout, by which we've implemented the VOMS integration. Come to think of it, this actually makes sense as it is the front-end that connects to the back-end, and probably not by using GSI authentication. Without GSI authentication, globus-gridftp-server falls back to using plain grid-mapfile lookups.\n\nCan you please support split configurations in the GSI call-out?\n\nTracked as https://rt.ige.psnc.pl/rt/Ticket/Display.html?id=340 in EGCF RT.\n", 
+    "reporter": {
+      "displayName": "helmut", 
+      "name": "helmut", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=helmut", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "helmut", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": "SPLIT configuration for GridFTP with Front-end and Back-end (data node). GSI-callout not working (VOMS support not functioning)", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2013-07-24T04:25:35.351-0500", 
+    "versions": [
+      {
+        "archived": false, 
+        "name": "5.2.4", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11066", 
+        "releaseDate": "2013-02-13", 
+        "released": true, 
+        "id": "11066", 
+        "description": ""
+      }
+    ], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/21535", 
+  "id": "21535", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

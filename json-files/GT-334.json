@@ -1,0 +1,241 @@
+{
+  "key": "GT-334", 
+  "fields": {
+    "comment": {
+      "total": 1, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "Fixed for 5.2.4", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-01-14T08:14:09.062-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19843/comment/20967", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-01-14T08:14:09.062-0600", 
+          "id": "20967"
+        }
+      ], 
+      "maxResults": 1
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "Karl Pickett", 
+      "name": "karl", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=karl", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "kjp@ci.uchicago.edu", 
+      "key": "karl", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|101b1s:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-334/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Mike Link", 
+      "name": "mlink", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mlink@mcs.anl.gov", 
+      "key": "mlink", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": "1_*:*_1_*:*_3431284597_*|*_5_*:*_1_*:*_0", 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@15d24b3", 
+    "summary": "segfault using ftp control lib", 
+    "customfield_10288": "2013-01-14T08:14:09.062-0600", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-334/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [
+      {
+        "archived": false, 
+        "name": "Sprint 2013-01-14", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11037", 
+        "releaseDate": "2013-01-14", 
+        "released": true, 
+        "id": "11037", 
+        "description": ""
+      }, 
+      {
+        "archived": false, 
+        "name": "5.2.4", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11066", 
+        "releaseDate": "2013-02-13", 
+        "released": true, 
+        "id": "11066", 
+        "description": ""
+      }
+    ], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "Done", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+        "id": 3, 
+        "key": "done", 
+        "colorName": "green"
+      }, 
+      "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+      "id": "5", 
+      "name": "Resolved"
+    }, 
+    "updated": "2013-01-14T08:14:09.064-0600", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "GO had a crasher with 5.0.5, here's trace: (https://globus.atlassian.net/browse/KOA-2351 has details)\n\n#0 0x00007feaa7c4c7e7 in gss_unwrap () \n   from /usr/local/gogt/lib/libglobus_gssapi_gsi_gcc64dbg.so.0 \n#1 0x00007feaa888bbf8 in ?? () \n   from /usr/local/gogt/lib/libglobus_ftp_control_gcc64dbg.so.0 \n#2 0x00007feaa888b1e9 in ?? () \n   from /usr/local/gogt/lib/libglobus_ftp_control_gcc64dbg.so.0 \n#3 0x00007feaa6c0eaef in ?? () \n   from /usr/local/gogt/lib/libglobus_io_gcc64dbg.so.0 \n#4 0x00007feaa6173fc7 in globus_l_xio_read_write_callback_kickout () \n   from /usr/local/gogt/lib/libglobus_xio_gcc64dbg.so.0 \n#5 0x00007feaa6173e42 in globus_i_xio_read_write_callback () \n   from /usr/local/gogt/lib/libglobus_xio_gcc64dbg.so.0 \n#6 0x00007feaa617f426 in globus_l_xio_driver_op_read_kickout () \n   from /usr/local/gogt/lib/libglobus_xio_gcc64dbg.so.0 \n#7 0x00007feaa61942a2 in globus_xio_driver_finished_read () \n   from /usr/local/gogt/lib/libglobus_xio_gcc64dbg.so.0 \n#8 0x00007feaa61c2c15 in ?? () \n   from /usr/local/gogt/lib/libglobus_xio_gcc64dbg.so.0 \n#9 0x00007feaa61c2cfe in ?? () \n   from /usr/local/gogt/lib/libglobus_xio_gcc64dbg.so.0 \n#10 0x00007feaa6198843 in ?? () \n   from /usr/local/gogt/lib/libglobus_xio_gcc64dbg.so.0 \n#11 0x00007feaa71c4430 in globus_callback_space_poll () \n   from /usr/local/gogt/lib/libglobus_common_gcc64dbg.so.0 \n#12 0x00000000004079dd in WaitLock::wl_wait_until_done (this=0x7fff97694dd0) \n    at conn/../lib/waitlock.h:37 \n#13 0x0000000000407453 in conn::conn_run () at conn/connect.cpp:483 \n#14 0x0000000000412d88 in main (argc=11, argv=0x7fff97694f18) \n    at fxp/fxp.cpp:494 \n\n", 
+    "reporter": {
+      "displayName": "Karl Pickett", 
+      "name": "karl", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=karl", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "kjp@ci.uchicago.edu", 
+      "key": "karl", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2012-12-05T15:06:04.471-0600", 
+    "versions": [], 
+    "resolutiondate": "2013-01-14T08:14:09.050-0600", 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": {
+      "self": "https://globus.atlassian.net/rest/api/2/resolution/1", 
+      "id": "1", 
+      "name": "Fixed", 
+      "description": "A fix for this issue is checked into the tree and tested."
+    }, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/19843", 
+  "id": "19843", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

@@ -1,0 +1,355 @@
+{
+  "key": "GT-475", 
+  "fields": {
+    "comment": {
+      "total": 4, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "Hi Helmut,\n\nI need to create a formal doc, but basically you'll have to add sharing support to your callout.\n\nHere is a good example of the simplest change you would need to make:\nhttp://viewcvs.globus.org/viewcvs.cgi/gsi/gridmap_callout/source/globus_gridmap_callout.c?r1=1.4&r2=1.4.22.2\n\nThe function globus_gsi_cred_read_cert_buffer() can return you the subect, x509 cert, x509 chain, and the globus_gsi_cred_handle_t of the original user cert;\n\nIn order to support sharing in a gridmap callout, you must not fail if the credentials are expired, and any extensions that you reference in the credential must be ageless (i.e. an auth token to a remote system that itself expires would not be compatible with sharing).\n", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-10-18T12:22:02.971-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22361/comment/23252", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-10-18T12:22:02.971-0500", 
+          "id": "23252"
+        }, 
+        {
+          "body": "Hi Mike,\n\nIn order to be able to implement this, I have a few questions.\nThe input is a pem-encoded proxy cert as far as I can see, which parts are allowed to have expired? Only the proxy cert itself, or also the EEC, or maybe even the (root)CA cert(s)? And should revoked EEC and CA certs be accepted? Should the chain itself be validated? Furthermore, what is the precise reason for wanting to accept expired credentials? Is it because the (proxy) cert is basically used a convenient wrapper around the DN. It makes me feel a bit uncomfortable to rely on expired proxy certificates, in my opinion once a proxy is expired it's useless, but it seems it could here still be used.\n\nBest wishes,\nMischa\n\n", 
+          "updateAuthor": {
+            "displayName": "msalle", 
+            "name": "msalle", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=msalle", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "msalle", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-10-28T05:15:10.252-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22361/comment/23298", 
+          "author": {
+            "displayName": "msalle", 
+            "name": "msalle", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=msalle", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "msalle", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-10-28T05:15:10.252-0500", 
+          "id": "23298"
+        }, 
+        {
+          "body": "Hi Mike,\n\nI think Mischa still needs your answers in order to be able to proceed. Could you please advise him?\n\nThanks!\nHelmut", 
+          "updateAuthor": {
+            "displayName": "helmut", 
+            "name": "helmut", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=helmut", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "helmut", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2014-02-10T07:06:42.679-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22361/comment/24005", 
+          "author": {
+            "displayName": "helmut", 
+            "name": "helmut", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=helmut", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "helmut", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2014-02-10T07:06:42.679-0600", 
+          "id": "24005"
+        }, 
+        {
+          "body": "Hi Mike,\r\n\r\nas I commented in the IGE rt tracker:\r\n\r\nI am implementing a setup where the sharing proxy is completely (i.e. also chain, VOMS AC etc.) checked, but always and entirely at the notBefore time. So everything might be long expired, including even root CA certs, but they may *not* be revoked.\r\nWould this be a correct implementation?\r\n\r\nBest wishes,\r\nMischa", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22361/comment/24949", 
+          "updated": "2014-05-16T05:55:31.060-0500", 
+          "id": "24949", 
+          "created": "2014-05-16T05:55:31.060-0500"
+        }
+      ], 
+      "maxResults": 4
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "helmut", 
+      "name": "helmut", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=helmut", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "helmut", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [
+      "GridFTP", 
+      "IGE"
+    ], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100nkg:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-475/watchers", 
+      "watchCount": 1, 
+      "isWatching": false
+    }, 
+    "assignee": null, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "3819", 
+    "issuelinks": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/issueLink/12759", 
+        "outwardIssue": {
+          "fields": {
+            "status": {
+              "statusCategory": {
+                "name": "To Do", 
+                "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+                "id": 2, 
+                "key": "new", 
+                "colorName": "blue-gray"
+              }, 
+              "description": "The issue is open and ready for the assignee to start work on it.", 
+              "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+              "id": "1", 
+              "name": "Open"
+            }, 
+            "priority": {
+              "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+              "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+              "name": "Major", 
+              "id": "3"
+            }, 
+            "issuetype": {
+              "name": "Documentation", 
+              "self": "https://globus.atlassian.net/rest/api/2/issuetype/17", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/issuetypes/documentation.png", 
+              "subtask": false, 
+              "id": "17", 
+              "description": ""
+            }, 
+            "summary": "Document gridmap callout requirements for sharing support"
+          }, 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22363", 
+          "id": "22363", 
+          "key": "GT-476"
+        }, 
+        "type": {
+          "outward": "depends on", 
+          "inward": "is depended on by", 
+          "self": "https://globus.atlassian.net/rest/api/2/issueLinkType/10010", 
+          "id": "10010", 
+          "name": "Dependency"
+        }, 
+        "id": "12759"
+      }
+    ], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@14c9586", 
+    "summary": "Globus Online Sharing does not work with LCAS/LCMAPS libraries", 
+    "customfield_10288": "2013-10-18T12:22:02.971-0500", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-475/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [
+      {
+        "archived": false, 
+        "name": "Keep on the Radar", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11592", 
+        "releaseDate": "2014-12-31", 
+        "released": false, 
+        "id": "11592", 
+        "description": ""
+      }
+    ], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2014-07-21T16:24:43.045-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "This issue is tracked at https://rt.ige-project.eu/rt/Ticket/Display.html?id=367\n\n\nThe IGE testbed machine at LRZ, gt5-ige.drg.lrz.de, hosts a GridFTP server \"GO Share\" enabled on port 2812 (endpoitn: mlanati#gt5-ige). The sharing feature works, but when GridFTP is configured with LCAS/LCMAPS support for VOMS support, sharing fails with the following message:\n\n \n\n[11160] Sun Aug 25 16:49:13 2013 :: New connection from: cli.globusonline.org:58654\n\n[11160] Sun Aug 25 16:49:14 2013 :: cli.globusonline.org:58654: [CLIENT]: USER :globus-sharing:cert=LS0tLS1CRUdJTiBD...\n\n...\nBVEUtLS0tLQ==;id=222ee528-ed20-11e2-9f2f-22000a972bd6;sharee=matteodemo;\n\n[11160] Sun Aug 25 16:49:14 2013 :: cli.globusonline.org:58654: [CLIENT]: PASS dummy\n\n[11160] Sun Aug 25 16:49:14 2013 :: DN /C=US/O=Globus Consortium/OU=Globus Online/OU=Transfer User/CN=__transfer__ has provided sharing credentials for DN /C=DE/O=GridGermany/OU=Leibniz-Rechenzentrum/CN=Matteo Lanati.\n\n[11160] Sun Aug 25 16:49:14 2013 :: cli.globusonline.org:58654: [CLIENT]: PASS dummy\n\n[11160] Sun Aug 25 16:49:14 2013 :: cli.globusonline.org:58654: [SERVER]: 530-Login incorrect. : globus_gss_assist: Error invoking callout\n\n530-globus_callout_module: The callout returned an error\n\n530-an unknown error occurred\n\n530 End.\n\n[11160] Sun Aug 25 16:49:14 2013 :: Closed connection from cli.globusonline.org:58654\n\n[10494] Sun Aug 25 16:49:14 2013 :: Child process 11160 ended with rc = 0\n \n\nIt looks like that the library performing the credential mapping should be updated.\n\nPlease, get in touch if you need access to the testbed.\n\n\nLater investigation revealed:\nI found out that if I add to the grid-mapfile the DN used by the Globus Share service and I associate it with a user having sharing privileges on the folder, then it works.\nNote that this is not necessary in a regular GridFTP installation (i.e. without LCAS/LCMAPS callout)\n\nI have been looking in the logs (I was on holiday last week), somehow LCMAPS receives the\n \"/C=US/O=Globus Consortium/OU=Globus Online/OU=Transfer User/CN=__transfer__\"\ncredential, and not the \"/C=DE/O=GridGermany/OU=Leibniz-Rechenzentrum/CN=Matteo Lanati\" credential.\nNow I don't know how this is supposed to work, but it doesn't sound like anything we can change. LCMAPS is simply responding to what it receives in the gsi credential. From the gsiftp.log it seems like both credentials are available, but the wrong one is passed in/used.\n\n", 
+    "reporter": {
+      "displayName": "helmut", 
+      "name": "helmut", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=helmut", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "helmut", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": "Linux", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2013-10-18T08:03:53.498-0500", 
+    "versions": [
+      {
+        "archived": false, 
+        "name": "5.2.4", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11066", 
+        "releaseDate": "2013-02-13", 
+        "released": true, 
+        "id": "11066", 
+        "description": ""
+      }
+    ], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/22361", 
+  "id": "22361", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

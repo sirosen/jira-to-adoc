@@ -1,0 +1,969 @@
+{
+  "key": "GT-163", 
+  "fields": {
+    "comment": {
+      "total": 18, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "From gdb, the SEG believes it has already processed all 8265 bytes in the file.  So, there are one of two possibilities:\n\n1) SEG is not properly parsing the attached file.\n2) There is some race condition where not all events are read, but the ref->seg_last_size is still updated.", 
+          "updateAuthor": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-03-28T08:00:42.297-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17931/comment/18546", 
+          "author": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-03-28T08:00:42.297-0500", 
+          "id": "18546"
+        }, 
+        {
+          "body": "Is there a gram log?", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2012-03-28T08:16:31.849-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17931/comment/18547", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2012-03-28T08:16:31.849-0500", 
+          "id": "18547"
+        }, 
+        {
+          "body": "To help the user along, I restarted the job manager.  The file parsed successfully and the job ended with respect to GRAM.  So, I suppose we are looking for a race condition.\n\nOh - and another interesting thing.  Even though the job is \"still running\", notice that there aren't any destinations for stdout/err persisted in the state file.  When the job manager is restarted, Condor-G and GRAM will go into an infinite loop unless Globus 129 is suppressed.", 
+          "updateAuthor": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-03-28T08:17:26.788-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17931/comment/18548", 
+          "author": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-03-28T08:17:26.788-0500", 
+          "id": "18548"
+        }, 
+        {
+          "body": "Here's the GRAM log; not very useful:\n\nI killed off the job-manager at around 13:10:12; PID 2605 is the restarted job-manager where it successfully parsed the state file.\n\nts=2012-03-28T09:47:59.433535Z id=5350 event=gram.send_job.end level=WARN status=-3 errno=2 msg=\"Error creating datagram socket\" reason=\"No such file or directory\"\nts=2012-03-28T10:49:30.658964Z id=20630 event=gram.send_job.end level=WARN status=-3 errno=2 msg=\"Error creating datagram socket\" reason=\"No such file or directory\"\nts=2012-03-28T11:51:03.060209Z id=15125 event=gram.send_job.end level=WARN status=-3 errno=2 msg=\"Error creating datagram socket\" reason=\"No such file or directory\"\nts=2012-03-28T12:52:35.342865Z id=28350 event=gram.send_job.end level=WARN status=-3 errno=2 msg=\"Error creating datagram socket\" reason=\"No such file or directory\"\nts=2012-03-28T13:11:12.414579Z id=2606 event=gram.send_job.end level=WARN status=-3 errno=111 msg=\"Error creating datagram socket\" reason=\"Connection refused\"\nts=2012-03-28T13:11:12.431932Z id=2605 event=gram.set_job_status.end level=WARN gramid=/16217795921895230381/17186126506088338356/ state=2 failure_code=0 status=-156 reason=\"the job contact string does not match any which the\n job manager is handling\" \nts=2012-03-28T13:11:19.773143Z id=2605 event=gram.signal.end level=WARN gramid=/16217795921895230381/17186126506088338356/ signal=\"8\" jmstate=GLOBUS_GRAM_JOB_MANAGER_STATE_TWO_PHASE_END msg=\"Stdout size mismatch\" status=0 stdout_signal_size=0 stdout_actual_size=194 reason=\"Success\" \n", 
+          "updateAuthor": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-03-28T08:18:42.889-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17931/comment/18549", 
+          "author": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-03-28T08:18:42.889-0500", 
+          "id": "18549"
+        }, 
+        {
+          "body": "Here's a second example of the same behavior.  The contents of the condor log file is a bit simpler - likely simple enough to eliminate the chance of a parsing issue.\n\nThis came from a different CE; as before, no useful GRAM log file.", 
+          "updateAuthor": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-03-28T08:24:26.539-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17931/comment/18550", 
+          "author": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-03-28T08:24:26.539-0500", 
+          "id": "18550"
+        }, 
+        {
+          "body": "Actually, it looks like this problem is fairly widespread.  I extended my Globus state parser script to also query Condor.\n\nOn one of my CEs, I count 3300 jobs in either the ACTIVE or PENDING Globus job state with no corresponding job in Condor.\n\n[root@red-gw1 gram_job_state]# ~/globus_state_parser -x FAILED,DONE | grep Unknown | wc -l\n3300\n", 
+          "updateAuthor": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-03-28T09:07:17.607-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17931/comment/18552", 
+          "author": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-03-28T09:07:17.607-0500", 
+          "id": "18552"
+        }, 
+        {
+          "body": "Hi Joe,\n\nTalking with the Condor folks, I think the approach used in this code is unsafe.  Consider this ordering:\n1) poll_time = time() is executed.\n2) Condor writes an event to the log, where the event occurs after poll_time.\n3) g-j-m calls fstat to check size of the file.\n4) When the log is parsed, the event is read but rejected because the timestamp happens after poll_time\n5) At the next SEG run, the file is ignored because it grew before step 3.\n\nThe immediate fix may be to no longer ignore \"too new\" events.  However, that's got other issues - you'll get duplicated events.\n\nThe Condor guys suggested to not use the date for ordering events, regardless.  They suggested to count the number of events that appear in the user log (it's never rotated) and to remember the last completely parsed event.  A bit more coding work, but a much more robust solution.\n\nBrian", 
+          "updateAuthor": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-03-28T10:39:31.376-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17931/comment/18557", 
+          "author": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-03-28T10:39:31.376-0500", 
+          "id": "18557"
+        }, 
+        {
+          "body": "Attached a patch. It keeps track of the parsed offset instead of the file length as the seg_last_size.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2012-03-28T13:36:12.826-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17931/comment/18558", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2012-03-28T13:36:12.826-0500", 
+          "id": "18558"
+        }, 
+        {
+          "body": "Dumb question (have a meeting, don't have time to look at the code) - is this info persisted to disk anywhere?  I ask because I want to make sure it is safe to upgrade for running jobs.", 
+          "updateAuthor": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-03-28T13:49:47.174-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17931/comment/18559", 
+          "author": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-03-28T13:49:47.174-0500", 
+          "id": "18559"
+        }, 
+        {
+          "body": "It's not persisted, but the timestamp of the last handled event is. The size is only used to determine whether to check a file again (an optimization related to GRAM-273).", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2012-03-28T13:56:10.485-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17931/comment/18560", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2012-03-28T13:56:10.485-0500", 
+          "id": "18560"
+        }, 
+        {
+          "body": "Updated a new patch GRAM-329.diff that removes the timestamp stuff for parsing condor logs, and avoids reparsing events that have already been read by a job manager process.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2012-03-29T10:52:40.523-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17931/comment/18570", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2012-03-29T10:52:40.523-0500", 
+          "id": "18570"
+        }, 
+        {
+          "body": "Hi Joe,\n\nThere's a problem with the previous patch - it doesn't capture the \"</c>\\n\" at the end of the event.\n\nThis causes the log file to be re-parsed with each iteration, as there is always 5 bytes at the end of the file left unparsed - in turn, this causes the g-j-m to consume significantly more resources than before this fix.\n\nThis patch reduced, but not eliminated, the problem.  Don't know what the remaining issue is.\n\nBrian", 
+          "updateAuthor": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-04-09T08:01:38.726-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17931/comment/18658", 
+          "author": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-04-09T08:01:38.726-0500", 
+          "id": "18658"
+        }, 
+        {
+          "body": "What's the state of this? Any chance of eliminating the final problems? I'd really like to ship an update next week if possibe. Thanks!\n\nAlain\n", 
+          "updateAuthor": {
+            "displayName": "alainroy", 
+            "name": "alainroy", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=alainroy", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "alainroy", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-04-15T21:16:26.349-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17931/comment/18719", 
+          "author": {
+            "displayName": "alainroy", 
+            "name": "alainroy", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=alainroy", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "alainroy", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-04-15T21:16:26.349-0500", 
+          "id": "18719"
+        }, 
+        {
+          "body": "Brian, were you referring to the first or second patch?", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2012-04-18T07:39:06.888-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17931/comment/18734", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2012-04-18T07:39:06.888-0500", 
+          "id": "18734"
+        }, 
+        {
+          "body": "This was the second patch (GRAM-329.patch, not GRAM-229.patch).", 
+          "updateAuthor": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-04-18T08:31:34.889-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17931/comment/18735", 
+          "author": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-04-18T08:31:34.889-0500", 
+          "id": "18735"
+        }, 
+        {
+          "body": "Found the following: the parser didn't anchor the regex, so adding the match length didn't move past the end of the whole message. Also, the parser didn't know about the <e>time()</e> style values (which might be errors on condor's part?) and so it would fail to parse things that came after them.\n\nThis attached version is the same as 5.2.1rc2 + patches to fix the above issues.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2012-04-18T15:53:28.012-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17931/comment/18742", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2012-04-18T15:53:28.012-0500", 
+          "id": "18742"
+        }, 
+        {
+          "body": "Do you have any feedback on this latest version?", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2012-04-26T13:59:40.867-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17931/comment/18798", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2012-04-26T13:59:40.867-0500", 
+          "id": "18798"
+        }, 
+        {
+          "body": "These has been added to OSG so I've committed it to trunk and 5.2 branch.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2012-05-04T13:24:19.347-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/17931/comment/18885", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2012-05-04T13:24:19.347-0500", 
+          "id": "18885"
+        }
+      ], 
+      "maxResults": 18
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "bbockelm", 
+      "name": "bbockelm", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "bbockelm", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|101lg8:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-163/watchers", 
+      "watchCount": 2, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Joe Bester", 
+      "name": "bester", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "bester@mcs.anl.gov", 
+      "key": "bester", 
+      "active": true, 
+      "timeZone": "America/New_York"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": "1_*:*_1_*:*_440445208_*|*_5_*:*_2_*:*_597849256_*|*_4_*:*_1_*:*_2179364092", 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@1b1d61c", 
+    "summary": "Condor fake-SEG loses track of job", 
+    "customfield_10288": "2012-03-28T08:16:31.849-0500", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-163/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [
+      {
+        "archived": false, 
+        "name": "5.2.2", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/10904", 
+        "releaseDate": "2012-07-24", 
+        "released": true, 
+        "id": "10904"
+      }, 
+      {
+        "archived": false, 
+        "name": "Sprint 2012-05-08", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/10934", 
+        "releaseDate": "2012-05-08", 
+        "released": true, 
+        "id": "10934", 
+        "description": ""
+      }
+    ], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [
+      {
+        "mimeType": "application/x-gzip", 
+        "author": {
+          "displayName": "Joe Bester", 
+          "name": "bester", 
+          "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+          "avatarUrls": {
+            "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+            "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+            "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+            "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+          }, 
+          "emailAddress": "bester@mcs.anl.gov", 
+          "key": "bester", 
+          "active": true, 
+          "timeZone": "America/New_York"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/10860", 
+        "created": "2012-04-18T15:53:27.940-0500", 
+        "filename": "globus_gram_job_manager-13.34.tar.gz", 
+        "content": "https://globus.atlassian.net/secure/attachment/10860/globus_gram_job_manager-13.34.tar.gz", 
+        "id": "10860", 
+        "size": 579976
+      }, 
+      {
+        "mimeType": "application/octet-stream", 
+        "author": {
+          "displayName": "Joe Bester", 
+          "name": "bester", 
+          "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+          "avatarUrls": {
+            "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+            "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+            "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+            "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+          }, 
+          "emailAddress": "bester@mcs.anl.gov", 
+          "key": "bester", 
+          "active": true, 
+          "timeZone": "America/New_York"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/10849", 
+        "created": "2012-03-28T13:36:12.823-0500", 
+        "filename": "GRAM-229.diff", 
+        "content": "https://globus.atlassian.net/secure/attachment/10849/GRAM-229.diff", 
+        "id": "10849", 
+        "size": 4224
+      }, 
+      {
+        "mimeType": "application/octet-stream", 
+        "author": {
+          "displayName": "Joe Bester", 
+          "name": "bester", 
+          "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+          "avatarUrls": {
+            "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+            "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+            "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+            "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+          }, 
+          "emailAddress": "bester@mcs.anl.gov", 
+          "key": "bester", 
+          "active": true, 
+          "timeZone": "America/New_York"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/10851", 
+        "created": "2012-03-29T10:52:40.502-0500", 
+        "filename": "GRAM-329.diff", 
+        "content": "https://globus.atlassian.net/secure/attachment/10851/GRAM-329.diff", 
+        "id": "10851", 
+        "size": 6308
+      }, 
+      {
+        "mimeType": "text/plain", 
+        "created": "2012-03-28T07:36:50.207-0500", 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/10846", 
+        "filename": "stuck_condor_job.txt", 
+        "content": "https://globus.atlassian.net/secure/attachment/10846/stuck_condor_job.txt", 
+        "id": "10846", 
+        "size": 10174
+      }, 
+      {
+        "mimeType": "text/plain", 
+        "created": "2012-03-28T08:24:26.536-0500", 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/10847", 
+        "filename": "stuck_condor_job2.txt", 
+        "content": "https://globus.atlassian.net/secure/attachment/10847/stuck_condor_job2.txt", 
+        "id": "10847", 
+        "size": 4743
+      }
+    ], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "Done", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+        "id": 3, 
+        "key": "done", 
+        "colorName": "green"
+      }, 
+      "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+      "id": "5", 
+      "name": "Resolved"
+    }, 
+    "updated": "2012-05-09T18:43:04.593-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "Due to a user complaint, I found a case where a user's job remained in \"active\" state indefinitely - even hours after the job actually finished.\n\nUsing strace, I still see the condor XML file being polled and read. I suspect there is some unforeseen race condition - or parsing issue - in the \"fake\" SEG for Condor.\n\nopen(\"/var/lib/globus/gram_job_state/condor.16217795921895230381.17186126506088338356\", O_RDONLY) = 14\nfstat(14, {st_mode=S_IFREG|0644, st_size=8265, ...}) = 0\ngetuid()                                = 30177\nclose(14)                               = 0\n\nI've attached the Condor log and the job state file.", 
+    "reporter": {
+      "displayName": "bbockelm", 
+      "name": "bbockelm", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "bbockelm", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2012-03-28T07:36:50.168-0500", 
+    "versions": [
+      {
+        "archived": false, 
+        "name": "5.2.1", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/10922", 
+        "releaseDate": "2012-04-26", 
+        "released": true, 
+        "id": "10922"
+      }
+    ], 
+    "resolutiondate": "2012-05-04T13:24:28.709-0500", 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10324", 
+        "id": "10324", 
+        "name": "GRAM"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": {
+      "self": "https://globus.atlassian.net/rest/api/2/resolution/1", 
+      "id": "1", 
+      "name": "Fixed", 
+      "description": "A fix for this issue is checked into the tree and tested."
+    }, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/17931", 
+  "id": "17931", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

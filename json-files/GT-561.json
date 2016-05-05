@@ -1,0 +1,177 @@
+{
+  "key": "GT-561", 
+  "fields": {
+    "comment": {
+      "total": 1, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "This is expected when the connection to the remote server could not be made.", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2014-10-14T13:52:06.335-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/25673/comment/28285", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2014-10-14T13:52:06.335-0500", 
+          "id": "28285"
+        }
+      ], 
+      "maxResults": 1
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": null, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [
+      "GridFTP"
+    ], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|zq5p9u:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-561/watchers", 
+      "watchCount": 1, 
+      "isWatching": false
+    }, 
+    "assignee": null, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@1042d", 
+    "summary": "Gridftp 5.2.5 ( with patch globus_ftp_control 4.8.3) and 6.0 still logging [0.0.0.0] when \"Requesting Abort,  otherwise not seeing DEST=[0.0.0.0].", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-561/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/minor.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/4", 
+      "name": "Minor", 
+      "id": "4"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2014-10-14T13:52:06.335-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "Gridftp 5.2.5 ( with patch globus_ftp_control 4.8.3) and 6.0 still logging [0.0.0.0] when \"Requesting Abort, \r\notherwise not seeing DEST=[0.0.0.0].\r\n\r\nLog from patched gridftp 5.2.5 \r\n[3009] Mon Sep 29 17:23:58 2014 :: Requesting abort... \r\n[3009] Mon Sep 29 17:23:58 2014 :: Transfer stats: DATE=20140929222358.304696 HOST=data2.stampede.tacc.utexas.edu PROG=globus-gridftp-server NL.EVNT=FTP_INFO START=2014 929222358.261524 USER=tg803251 FILE=/home1/01062/tg803251/ToTyler/state200:7/min4-sim.dcd BUFFER=0 BLOCK=262144 NBYTES=0 VOLUME=/ STREAMS=1 STRIPES=1 DEST=[0.0.0.0] TYP =STOR CODE=226 \r\n[3656] Mon Sep 29 22:27:54 2014 :: Requesting abort... \r\n[3667] Mon Sep 29 22:39:44 2014 :: Requesting abort... \r\n[3883] Tue Sep 30 00:44:45 2014 :: Requesting abort... \r\n[8336] Tue Sep 30 19:55:19 2014 :: Requesting abort... \r\n[8336] Tue Sep 30 19:55:19 2014 :: Transfer stats: DATE=20141001005519.894538 HOST=data2.stampede.tacc.utexas.edu PROG=globus-gridftp-server NL.EVNT=FTP_INFO START=2014 001005519.879223 USER=tg811191 FILE=/scratch/01823/tg811191/rtdensity/k8/R100Sc1/512exp/postavg2/Kux/Kux000.plt BUFFER=0 BLOCK=262144 NBYTES=0 VOLUME=/ STREAMS=1 STRIPES=1 DEST=[0.0.0.0] TYPE=RETR CODE=226 \r\n[8337] Tue Sep 30 19:55:19 2014 :: Requesting abort... \r\n[8337] Tue Sep 30 19:55:19 2014 :: Transfer stats: DATE=20141001005519.925649 HOST=data2.stampede.tacc.utexas.edu PROG=globus-gridftp-server NL.EVNT=FTP_INFO START=20141001005519.860277 USER=tg811191 FILE=/scratch/01823/tg811191/rtdensity/k8/R100Sc1/512exp/postavg2/Krhowz/Srhowz029.plt BUFFER=0 BLOCK=262144 NBYTES=0 VOLUME=/ STREAMS=1 STRIPES=1 DEST=[0.0.0.0] TYPE=RETR CODE=226\r\n\r\nLog from gridftp 6.0 \r\n[39960] Tue Oct 7 06:17:49 2014 :: Requesting abort... \r\n[39960] Tue Oct 7 06:17:49 2014 :: Transfer stats: DATE=20141007111749.685957 HOST=data1.stampede.tacc.utexas.edu PROG=globus-gridftp-server NL.EVNT=FTP_INFO START=201 1007111749.305876 USER=duanl FILE=/home1/02682/duanl/Postprocessing/.git/objects/0d/2acd3a5aedc85d7a5067ce911c94eedf8ce1b9 BUFFER=0 BLOCK=262144 NBYTES=0 VOLUME=/ STREA S=1 STRIPES=1 DEST=[0.0.0.0] TYPE=RETR CODE=226 \r\n[40027] Tue Oct 7 06:17:49 2014 :: Requesting abort... \r\n[40027] Tue Oct 7 06:17:49 2014 :: Transfer stats: DATE=20141007111749.686162 HOST=data1.stampede.tacc.utexas.edu PROG=globus-gridftp-server NL.EVNT=FTP_INFO START=201 1007111748.226227 USER=duanl FILE=/home1/02682/duanl/Postprocessing/.git/objects/08/11ccdd47c8a1514733b769b06e1b3649eb54a1 BUFFER=0 BLOCK=262144 NBYTES=0 VOLUME=/ STREA S=1 STRIPES=1 DEST=[0.0.0.0] TYPE=RETR CODE=226 \r\n[40077] Tue Oct 7 06:27:08 2014 :: Requesting abort... \r\n[40077] Tue Oct 7 06:27:08 2014 :: Transfer stats: DATE=20141007112708.191737 HOST=data1.stampede.tacc.utexas.edu PROG=globus-gridftp-server NL.EVNT=FTP_INFO START=201 1007112707.694558 USER=duanl FILE=/home1/02682/duanl/Postprocessing/.ptp-sync/objects/18/bb96e364d0217e0b65c30b2cedd9c9866b33fa BUFFER=0 BLOCK=262144 NBYTES=0 VOLUME=/ TREAMS=1 STRIPES=1 DEST=[0.0.0.0] TYPE=RETR CODE=226 \r\n[40078] Tue Oct 7 06:27:08 2014 :: Requesting abort... \r\n[40078] Tue Oct 7 06:27:08 2014 :: Transfer stats: DATE=20141007112708.191922 HOST=data1.stampede.tacc.utexas.edu PROG=globus-gridftp-server NL.EVNT=FTP_INFO START=201 1007112707.694232 USER=duanl FILE=/home1/02682/duanl/Postprocessing/.ptp-sync/objects/1b/1849b803717153c9d14c6712e117665cc50c99 BUFFER=0 BLOCK=262144 NBYTES=0 VOLUME=/ TREAMS=1 STRIPES=1 DEST=[0.0.0.0] TYPE=RETR CODE=226 \r\n[40115] Tue Oct 7 06:33:10 2014 :: Requesting abort... \r\n[40116] Tue Oct 7 06:33:10 2014 :: Requesting abort... \r\n[40116] Tue Oct 7 06:33:10 2014 :: Transfer stats: DATE=20141007113310.649237 HOST=data1.stampede.tacc.utexas.edu PROG=globus-gridftp-server NL.EVNT=FTP_INFO START=201 1007113310.357252 USER=duanl FILE=/home1/02682/duanl/Postprocessing/.ptp-sync/objects/70/89813b8e1f9133b98802ba3b5d1dadcbd002b7 BUFFER=0 BLOCK=262144 NBYTES=0 VOLUME=/ TREAMS=1 STRIPES=1 DEST=[0.0.0.0] TYPE=RETR CODE=226 \r\n[40131] Tue Oct 7 06:41:00 2014 :: Requesting abort... \r\n[40131] Tue Oct 7 06:41:00 2014 :: Transfer stats: DATE=20141007114100.917673 HOST=data1.stampede.tacc.utexas.edu PROG=globus-gridftp-server NL.EVNT=FTP_INFO START=201 1007114057.863798 USER=duanl FILE=/home1/02682/duanl/Code_Init/Calsgr.f90 BUFFER=0 BLOCK=262144 NBYTES=0 VOLUME=/ STREAMS=1 STRIPES=1 DEST=[0.0.0.0] TYPE=RETR CODE=226\r\n", 
+    "reporter": null, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": "Redhat / CentOS 6.5", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2014-10-07T13:50:22.789-0500", 
+    "versions": [], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/25673", 
+  "id": "25673", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

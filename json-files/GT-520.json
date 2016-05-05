@@ -1,0 +1,649 @@
+{
+  "key": "GT-520", 
+  "fields": {
+    "comment": {
+      "total": 12, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "I think I'd ignore the extra parameters to the function---the optimizer is probably inlining the function because it's only called in one place.\n\nThe two bugs look to point to the same issue: request->job_stats.client_address is NULL. I guess that's the thing to investigate for this. You might be able to see if there are any jobs that look like that in the state file directory.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2014-02-26T15:02:46.823-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/23184/comment/24113", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2014-02-26T15:02:46.823-0600", 
+          "id": "24113"
+        }, 
+        {
+          "body": "Unfortunately, Bockjoo doesn't have those state files anymore, but he has some core files saved that might help:\nhttp://oo.ihepa.ufl.edu:8080/t2/operations/cores/\n", 
+          "updateAuthor": {
+            "displayName": "matyas", 
+            "name": "matyas", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=matyas", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "matyas", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2014-02-27T18:03:35.459-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/23184/comment/24126", 
+          "author": {
+            "displayName": "matyas", 
+            "name": "matyas", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=matyas", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "matyas", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2014-02-27T18:03:35.459-0600", 
+          "id": "24126"
+        }, 
+        {
+          "body": "I just signed up for the jira globus so that I can directly reply.\nWe have also upgraded our glibc to the same version as Nebraska has because the have the same OSG 3.2.4.\nThat did not help and we still had the segfault every couple seconds.\nI think 'ip' point became different after the glibc upgrade.\nBut I hope provided core files can help pin down the issue.\nPlease let me know if you need more info from me.\nThanks for looking into it!", 
+          "updateAuthor": {
+            "displayName": "bockjoo", 
+            "name": "bockjoo", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bockjoo", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bockjoo", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2014-02-28T11:25:28.013-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/23184/comment/24127", 
+          "author": {
+            "displayName": "bockjoo", 
+            "name": "bockjoo", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bockjoo", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bockjoo", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2014-02-28T11:25:28.013-0600", 
+          "id": "24127"
+        }, 
+        {
+          "body": "I think I've found a way that this situation can arise. Briefly, the job state file is created before the peer's connection information is stored in the request structure. So, if the job manager terminates (two phase timeout or crash or reboot) between the time the job has been created and the state machine has begun processing, it'll have an invalid value of the client_address. Then when the job manager is restarted and tries to process that job, it is unable to create a script because it assumes the client_address value is non-NULL.\n\nI'll have to fix two issues. 1: ensure that the state file includes the client address when it is first written. 2: handle the case where the client address is unknown without crashing.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2014-03-11T13:02:08.623-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/23184/comment/24300", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2014-03-11T13:02:08.623-0500", 
+          "id": "24300"
+        }, 
+        {
+          "body": "I have some RHEL 6 RPMS with a patch for this issue:\nSource:\nhttp://builds.globus.org/repo/rpm/redhat/6Server/SRPMS/globus-gram-job-manager-13.54-1gt.src.rpm\nBinary:\nhttp://builds.globus.org/repo/rpm/redhat/6Server/x86_64/globus-gram-job-manager-13.54-1gt.i686.rpm\nhttp://builds.globus.org/repo/rpm/redhat/6Server/x86_64/globus-gram-job-manager-13.54-1gt.x86_64.rpm\n\nI'm currently testing those, but preliminary results seem to show the issue resolved.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2014-03-12T10:58:20.398-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/23184/comment/24310", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2014-03-12T10:58:20.398-0500", 
+          "id": "24310"
+        }, 
+        {
+          "body": "Hi Joe,\nCan you give us a patch file of the changes that we can apply to our existing package? We get our packages from EPEL now, and merging the packages would be slower for us. We now have another site reporting the same problem, so we need to get a fix out fast.\nThanks,\n-Mat\n", 
+          "updateAuthor": {
+            "displayName": "matyas", 
+            "name": "matyas", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=matyas", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "matyas", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2014-03-13T10:44:59.929-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/23184/comment/24320", 
+          "author": {
+            "displayName": "matyas", 
+            "name": "matyas", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=matyas", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "matyas", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2014-03-13T10:44:59.929-0500", 
+          "id": "24320"
+        }, 
+        {
+          "body": "https://github.com/globus/globus-toolkit/commit/d8bf2d72d4e14c7765964a4c155a89ce031fbacf.patch", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2014-03-13T10:51:18.729-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/23184/comment/24321", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2014-03-13T10:51:18.729-0500", 
+          "id": "24321"
+        }, 
+        {
+          "body": "Can you give me instructions on how to reproduce the original issue? Here's the procedure I tried:\n\n1. globus-job-submit a long sleep job\n2. Kill the job-manager\n3. Edit the state file to remove the client_address (I tried both truncating the file to just before the client_address and also just blanking out that field)\n4. Restart the job manager (by doing another globus-job-submit).\n\nI expected the job manager to start crashing at that point, but it just complained about not being able to read the state file.", 
+          "updateAuthor": {
+            "displayName": "matyas", 
+            "name": "matyas", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=matyas", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "matyas", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2014-03-13T16:21:50.213-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/23184/comment/24325", 
+          "author": {
+            "displayName": "matyas", 
+            "name": "matyas", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=matyas", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "matyas", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2014-03-13T16:21:50.213-0500", 
+          "id": "24325"
+        }, 
+        {
+          "body": "If you convert that line to \" \\n\" SPACE NEWLINE  it'll be caught by the parser. \n\nWhat I did was attach a job manager to the debugger and kill it after globus_gram_job_manager_request_load() returns but before the request->job_stats.client_address = peer_str line in startup_socket.c\n", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2014-03-13T17:50:50.382-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/23184/comment/24328", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2014-03-13T17:50:50.382-0500", 
+          "id": "24328"
+        }, 
+        {
+          "body": "When I tried \" \\n\", the job manager stopped complaining, but didn't crash.\n\nHow did you use gdb on the job manager? I tried attaching it to the gatekeeper and then following the child process once it forked, but the globus-job-manager did not seem to touch either startup_socket.c or globus_gram_job_manager_request_load().", 
+          "updateAuthor": {
+            "displayName": "matyas", 
+            "name": "matyas", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=matyas", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "matyas", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2014-03-14T11:18:47.199-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/23184/comment/24334", 
+          "author": {
+            "displayName": "matyas", 
+            "name": "matyas", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=matyas", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "matyas", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2014-03-14T11:18:47.199-0500", 
+          "id": "24334"
+        }, 
+        {
+          "body": "Either attach to an existing job manager process, or run the job manager with the command-line options in the grid-service entry before a job manager is running.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2014-03-14T11:42:13.278-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/23184/comment/24335", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2014-03-14T11:42:13.278-0500", 
+          "id": "24335"
+        }, 
+        {
+          "body": "That did it. I've been able to replicate both the original crash and verify that the patched version fixes it.\n\nThanks Joe!", 
+          "updateAuthor": {
+            "displayName": "matyas", 
+            "name": "matyas", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=matyas", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "matyas", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2014-03-14T14:27:12.709-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/23184/comment/24337", 
+          "author": {
+            "displayName": "matyas", 
+            "name": "matyas", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=matyas", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "matyas", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2014-03-14T14:27:12.709-0500", 
+          "id": "24337"
+        }
+      ], 
+      "maxResults": 12
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "matyas", 
+      "name": "matyas", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=matyas", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "matyas", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100wmg:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-520/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Joe Bester", 
+      "name": "bester", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "bester@mcs.anl.gov", 
+      "key": "bester", 
+      "active": true, 
+      "timeZone": "America/New_York"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": "1_*:*_1_*:*_1626835724_*|*_5_*:*_1_*:*_0", 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@1a9019f", 
+    "summary": "GRAM Jobmanager crash", 
+    "customfield_10288": "2014-02-26T15:02:46.823-0600", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-520/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [
+      {
+        "archived": false, 
+        "name": "Sprint 2014-03-03", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11645", 
+        "releaseDate": "2014-03-02", 
+        "released": true, 
+        "id": "11645", 
+        "description": ""
+      }
+    ], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "Done", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+        "id": 3, 
+        "key": "done", 
+        "colorName": "green"
+      }, 
+      "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+      "id": "5", 
+      "name": "Resolved"
+    }, 
+    "updated": "2014-03-17T11:36:48.689-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "Hi,\n\nUFlorida was having issues with globus-job-manager segfaulting regularly.  This\nhappened after an upgrade to OSG 3.2.4 (which included the GT 5.2.5 packages)\nand was solved by downgrading \"globus-gram-job-manager\",\n\"globus-scheduler-event-generator\" and \"globus-gatekeeper\" packages to their\npre-5.2.5 versions (globus-gram-job-manager-13.45, globus-gatekeeper-9.6,\nglobus-scheduler-event-generator-4.4).\n\nThey've provided stack traces, which I'll link. The interesting thing about\nboth stack traces is that globus_l_gram_script_queue was somehow called with\narguments for globus_l_gram_job_manager_script_run even though the function\nsignatures are not at all the same.\n\nIn the first stack trace:\n...\n   #3  0x00000000004172b9 in globus_l_gram_script_queue (request=0xaa42c0, script_cmd=<value optimized out>, callback=<value optimized out>, callback_arg=<value optimized out>)    at globus_gram_job_manager_script.c:2366\n   #4  globus_l_gram_job_manager_script_run (request=0xaa42c0, script_cmd=<value optimized out>, callback=<value optimized out>, callback_arg=<value optimized out>)    at globus_gram_job_manager_script.c:317\n...\nBut globus_l_gram_script_queue takes 2 arguments, not 4!\n\nAt first I thought this might be a mismatch between the globus-gram-job-manager package\nand the globus-gram-job-manager-debuginfo package, but their package list shows\nthis not to be the case.\n\n\nUnfortunately, we have not been able to replicate this in a controlled\nenvironment. UFlorida is fairly unique in that they pass a huge number of jobs\nthrough a single CE that most other sites would split up across multiple CEs.\nSo it's possible that this only exhibits itself under heavy load.\n\nThe stack traces are available at:\nhttp://oo.ihepa.ufl.edu:8080/t2/operations/GDB.OSG.3.24.core.txt\nhttp://oo.ihepa.ufl.edu:8080/t2/operations/GDB.OSG.3.24.core.2.txt\n\nThe site's osg-system-profiler output (which lists, among other things, their\nfull set of packages (pre-downgrade)) is here:\nhttp://oo.ihepa.ufl.edu:8080/t2/operations/osg-profile.txt\n\nI hope you can help. If you need further information, the main contact for\nUFlorida on this issue is Bockjoo Kim (bockjoo at phys.ufl.edu).\n\nThanks,\n-Mat\n\n", 
+    "reporter": {
+      "displayName": "matyas", 
+      "name": "matyas", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=matyas", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "matyas", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2014-02-26T14:42:52.991-0600", 
+    "versions": [
+      {
+        "archived": false, 
+        "name": "5.2.5", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11388", 
+        "releaseDate": "2013-06-17", 
+        "released": true, 
+        "id": "11388", 
+        "description": ""
+      }
+    ], 
+    "resolutiondate": "2014-03-17T11:36:48.664-0500", 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10324", 
+        "id": "10324", 
+        "name": "GRAM"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": {
+      "self": "https://globus.atlassian.net/rest/api/2/resolution/1", 
+      "id": "1", 
+      "name": "Fixed", 
+      "description": "A fix for this issue is checked into the tree and tested."
+    }, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/23184", 
+  "id": "23184", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

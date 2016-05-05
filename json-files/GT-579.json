@@ -1,0 +1,328 @@
+{
+  "key": "GT-579", 
+  "fields": {
+    "comment": {
+      "total": 4, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "Subject: HPN-SSH fatal: buffer_append_space: alloc 67141632 not supported\r\nFrom: Jim Basney <jbasney@illinois.edu>\r\nTo: <hpn-ssh@psc.edu>\r\nCC: Scott Watson <scott.watson@umanitoba.ca>\r\n\r\nHello HPN-SSH developers,\r\n\r\nScott Watson (cc'ed) has reported an issue with the HPN14 patch that we\r\ninclude in GSI-OpenSSH:\r\n\r\n  https://globus.atlassian.net/browse/GT-579\r\n\r\nThe error he sees is:\r\n\r\n  \"fatal: buffer_append_space: alloc 67141632 not supported\"\r\n\r\nManually setting HPNBufferSize=[number less than 64MB] works around the\r\nissue.\r\n\r\nAt the bottom of http://www.psc.edu/index.php/hpn-ssh I read, \"If you are\r\nexperiencing disconnects due to a failure in buffer_append_space please\r\nlet us know.\" So I'm writing to connect you with Scott so you can gather\r\nthe information you need to resolve the problem, then I'll be happy to\r\nroll the fix into GSI-OpenSSH.\r\n\r\nThanks,\r\nJim", 
+          "updateAuthor": {
+            "displayName": "Jim Basney", 
+            "name": "basney", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=basney", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "jbasney@ncsa.uiuc.edu", 
+            "key": "basney", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2015-01-22T16:16:11.158-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/26832/comment/30009", 
+          "author": {
+            "displayName": "Jim Basney", 
+            "name": "basney", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=basney", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "jbasney@ncsa.uiuc.edu", 
+            "key": "basney", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2015-01-22T16:16:11.158-0600", 
+          "id": "30009"
+        }, 
+        {
+          "body": "Note that buffer_append_space() changed in OpenSSH 6.7 and later, so there's a good chance that updating GSI-OpenSSH to the current OpenSSH release will resolve this issue.", 
+          "updateAuthor": {
+            "displayName": "Jim Basney", 
+            "name": "basney", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=basney", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "jbasney@ncsa.uiuc.edu", 
+            "key": "basney", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2015-07-21T22:15:18.050-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/26832/comment/31888", 
+          "author": {
+            "displayName": "Jim Basney", 
+            "name": "basney", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=basney", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "jbasney@ncsa.uiuc.edu", 
+            "key": "basney", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2015-07-21T22:15:18.050-0500", 
+          "id": "31888"
+        }, 
+        {
+          "body": "We've got a user of gsi-openssh-server-5.7-3.el6+gt6.x86_64 who is reporting the same issue described here in ticket:\r\n\r\nhttps://globusonline.zendesk.com/agent/tickets/304090\r\n\r\nThey report that:\r\n\r\n\"We also tried setting HPNBufferSize to 16384, in both the sshd_config file and using the option \"oHPNBufferSize=16384\", but it did not make any difference.\"\r\n\r\nand also that:\r\n\r\n\"The only thing that worked was disabling HPN completely, using \"HPNDisabled yes\" in the sshd_config file.\"\r\n", 
+          "updateAuthor": {
+            "displayName": "Dan Powers", 
+            "name": "dpowers", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=dpowers", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "dpowers@uchicago.edu", 
+            "key": "dpowers", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2015-07-22T09:28:36.357-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/26832/comment/31980", 
+          "author": {
+            "displayName": "Dan Powers", 
+            "name": "dpowers", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=dpowers", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "dpowers@uchicago.edu", 
+            "key": "dpowers", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2015-07-22T09:28:36.357-0500", 
+          "id": "31980"
+        }, 
+        {
+          "body": "\r\nWe recently received the following comment as a ticket at our Globus Support Help Desk. Please feel free to contact him directly if warranted. Also adding the patch which he just sent.\r\nThanks,\r\n  Gigi\r\n\r\nhttps://globusonline.zendesk.com/attachments/token/GtnMa4IJGi4D4QrKUmK1TtBaa/?name=hpn-14v1-256MBbuffer.txt\r\n\r\nfrom: Adam Dorsey  - adam.dorsey@noaa.gov\r\n\r\nHi, \r\nI am trying to provide information regarding https://globus.atlassian.net/browse/GT-579 but I have no idea how to request an account for that portal, so I'm emailing you instead. Sorry in advance.\r\n\r\nRegarding that issue (buffer_append_space error causing disconnects from clients) we've found a workaround. Recompiling the gsi-openssh package and changing the maximum HPN buffer size from 64MB to 256MB seems to resolve the issue. I have a patch, which I will gladly send to whoever is responsible for that package.\r\n\r\nCan you please either get me an account on your bug tracker, or point me towards whoever maintains the gsi-openssh package?\r\n\r\nThanks, \r\nAdam Dorsey (NOAA)", 
+          "updateAuthor": {
+            "displayName": "Gigi Rohder", 
+            "name": "rohder", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=rohder", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "rohder@mcs.anl.gov", 
+            "key": "rohder", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2015-10-28T11:28:22.917-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/26832/comment/33187", 
+          "author": {
+            "displayName": "Gigi Rohder", 
+            "name": "rohder", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=rohder", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "rohder@mcs.anl.gov", 
+            "key": "rohder", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2015-10-28T13:13:09.799-0500", 
+          "id": "33187"
+        }
+      ], 
+      "maxResults": 4
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "Stuart Martin", 
+      "name": "smartin", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=smartin", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "smartin@mcs.anl.gov", 
+      "key": "smartin", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|zq5s96:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-579/watchers", 
+      "watchCount": 4, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Jim Basney", 
+      "name": "basney", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=basney", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "jbasney@ncsa.uiuc.edu", 
+      "key": "basney", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@151c115", 
+    "summary": "GSI-OpenSSH V5.7 bug on Luster file sytems", 
+    "customfield_10288": "2015-01-22T16:16:11.158-0600", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-579/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2015-10-28T13:13:09.802-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "This was started a globus.org support ticket (#303096) that is being moved to the Toolkit Jira system.\r\n\r\nHi Gigi,\r\n\r\nYes, it's since upgrading to 5.7....5.5 did not produce this error.\r\n\r\nWe're running the \"gsi-openssh-server-5.7-1gt\" package provided via \r\nGlobus' RPM repository on CentOS 6.5 x86_64.\r\n\r\nThe issue seems to only occur when scp'ing or gsiscp'ing large files to \r\na path that resides on a Lustre filesystem.\r\n\r\nI took a look at the openssh code in question, it seems there's a \r\nhardcoded max buffer of 64MB, which seems to be overrun in this case.\r\n\r\nScott\r\n\r\n--------------------\r\n\r\nHello,\r\n\r\nSince upgrading to the latest gsi-openssh-server packages, large file transfers have been failing with:\r\n\r\n\"fatal: buffer_append_space: alloc 67141632 not supported\"\r\n\r\nManually setting HPNBufferSize=[number less than 64MB] works around the issue. This started in 5.6.\r\n\r\nHPN references the problem at the bottom of this page: http://www.psc.edu/index.php/hpn-ssh#patches\r\n\r\nThanks,\r\n\r\nScott Watson \r\nSystems Administrator - University of Manitoba", 
+    "reporter": {
+      "displayName": "Stuart Martin", 
+      "name": "smartin", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=smartin", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "smartin@mcs.anl.gov", 
+      "key": "smartin", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2015-01-20T10:38:48.443-0600", 
+    "versions": [], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10330", 
+        "id": "10330", 
+        "name": "GSI-OpenSSH"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/26832", 
+  "id": "26832", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

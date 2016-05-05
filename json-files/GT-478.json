@@ -1,0 +1,312 @@
+{
+  "key": "GT-478", 
+  "fields": {
+    "comment": {
+      "total": 3, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "Another comment - The SLURM module description is inconsistent with the existing ones:\n\n    <Description>Condor Job Manager Support</Description>\n    <Description>Fork Job Manager Support</Description>\n    <Description>LSF Job Manager Support</Description>\n    <Description>PBS Job Manager Support</Description>\n    <Description>Grid Engine Job Manager Support</Description>\n\nBut:\n\n    <Description>SLURM GRAM LRM</Description>\n\nI strongly suggest changing this to be consistent with the others:\n\n    <Description>SLURM Job Manager Support</Description>\n", 
+          "updateAuthor": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "created": "2013-10-26T06:38:54.765-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22415/comment/23295", 
+          "author": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "updated": "2013-10-26T06:38:54.765-0500", 
+          "id": "23295"
+        }, 
+        {
+          "body": "The 5.2.5 RC is not tagged in the CVS like the release candidates of earlier releases, so it looks more like a random snapshot than a proper release candidate. I hope the final release will not be done without a CVS tag.\n\nThe RC source directory http://www.globus.org/ftppub/gt5/5.2/5.2.5rc1/packages/src/ contains a lot of files that are not part of the release. A release (or an RC) should only contain one version of each package. This RC contains multiple versions of many packages and its contents is therefore ambiguous. It looks like the RC source directory started from a complete copy of the previous release's update directory http://www.globus.org/ftppub/gt5/5.2/5.2.4/updates/src/ without removing old versions of packages. The RC source directory should contain only the package versions in the release candidate. Compare to the contents of the source directories of previous RCs.\n", 
+          "updateAuthor": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "created": "2013-10-26T23:34:27.111-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22415/comment/23296", 
+          "author": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "updated": "2013-10-26T23:34:27.111-0500", 
+          "id": "23296"
+        }, 
+        {
+          "body": "Hers is a patch for one of the remaining issues.", 
+          "updateAuthor": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "created": "2013-12-11T12:00:03.794-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22415/comment/23629", 
+          "author": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "updated": "2013-12-11T12:00:03.794-0600", 
+          "id": "23629"
+        }
+      ], 
+      "maxResults": 3
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "Mattias Ellert", 
+      "name": "ellert", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mattias.ellert@fysast.uu.se", 
+      "key": "ellert", 
+      "active": true, 
+      "timeZone": "Europe/Stockholm"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100nk0:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-478/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": null, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "3817", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@db5d53", 
+    "summary": "Comments on GT 5.2.5 Release Candidate", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-478/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [
+      {
+        "mimeType": "text/x-patch", 
+        "author": {
+          "displayName": "Mattias Ellert", 
+          "name": "ellert", 
+          "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+          "avatarUrls": {
+            "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+            "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+            "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+            "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+          }, 
+          "emailAddress": "mattias.ellert@fysast.uu.se", 
+          "key": "ellert", 
+          "active": true, 
+          "timeZone": "Europe/Stockholm"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/11557", 
+        "created": "2013-12-11T12:00:03.789-0600", 
+        "filename": "globus-gridmap-verify-myproxy-callout-desc.patch", 
+        "content": "https://globus.atlassian.net/secure/attachment/11557/globus-gridmap-verify-myproxy-callout-desc.patch", 
+        "id": "11557", 
+        "size": 595
+      }
+    ], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2013-12-11T12:00:03.798-0600", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "Here are some comments on the GT 5.2.5 Release candidate.\n\n=====================\nglobus-gsi-credential\n=====================\n\nThis version (5.7) adds symbols to the library w.r.t previous version (5.3)\n - globus_gsi_cred_read_cert_buffer\n - globus_gsi_cred_verify_cert_chain_when\n\nThe Major version and Age should therefore increase, and Minor version\nshould be reset. (The Age part is important! - otherwise the soname changes.)\n\n-    <Aging_Version Major=\"5\" Minor=\"7\" Age=\"4\"/>\n+    <Aging_Version Major=\"6\" Minor=\"0\" Age=\"5\"/>\n\nPackages using any of the new symbols must declare dependencies\n(compile and linking) on globus-gsi-credential version 6 in their GPT\nmetadata. For most of them this is a new dependency that must be added\narther than an existing dependency that should change version.\n - globus-gridftp-server\n - globus-gridmap-callout\n - globus-gridmap-eppn-callout\n - globus-gridmap-verify-myproxy-callout\n - globus-gss-assist\n\n\n=================\nglobus-gss-assist\n=================\n\nAdd new dependency on globus-gsi-credential in GPT metadata - see\nabove for details.\n\nThis version (8.9) adds symbols to the library w.r.t previous version (8.7)\n - globus_gss_assist_map_and_authorize_sharing\n\nThe Major version and Age should therefore increase, and Minor version\nshould be reset. (The Age part is important! - otherwise the soname changes.)\n\n-    <Aging_Version Major=\"8\" Minor=\"9\" Age=\"5\"/>\n+    <Aging_Version Major=\"9\" Minor=\"0\" Age=\"6\"/>\n\nThe new function is missing in the header file. This results in warnings\nabout implicit declarations when compiling packages that depend on it.\n\nAdd the new function to the header file!\n\nPackages using the new symbol must declare dependencies (compile and\nlinking) on globus-gsi-credential version 9 in their GPT metadata.\nThis seems to be only one: globus-gridftp-server\n\n             <Dependency Name=\"globus_gss_assist\">\n                 <Version>\n-                    <Simple_Version Major=\"3\"/>\n+                    <Simple_Version Major=\"9\"/>\n                 </Version>\n             </Dependency>\n\n(The change above should be appled three times (compile, lib_link, pgm_link)\n\n\n=====================\nglobus-gridftp-server\n=====================\n\nAdd compile and link depee\u0144dency on globus-gsi-credential version 6 in GPT\nmetadata (see above).\n\nUpdate compile and link dependency on globus-gss-assist to version 9 in GPT\nmetadata (see above)\n\n\n=====================================\nglobus-gridmap-callout\n=====================================\n\nAdd compile and link depee\u0144dency on globus-gsi-credential version 6 in GPT\nmetadata (see above).\n\n\n=====================================\nglobus-gridmap-eppn-callout\n=====================================\n\nAdd compile and link depee\u0144dency on globus-gsi-credential version 6 in GPT\nmetadata (see above).\n\nThe gpt metadate contains a <pkg_libs> tag that is not quite empty\n(This confuses the globus-spec-creator script).\n\n-            <pkg_libs >\n-            </pkg_libs>\n+            <pkg_libs ></pkg_libs>\n\n\n=====================================\nglobus-gridmap-verify-myproxy-callout\n=====================================\n\nAdd compile and link depee\u0144dency on globus-gsi-credential version 6 in GPT\nmetadata (see above).\n\nThe gpt metadate contains a <pkg_libs> tag that is not quite empty\n(This confuses the globus-spec-creator script).\n\n-            <pkg_libs >\n-            </pkg_libs>\n+            <pkg_libs ></pkg_libs>\n", 
+    "reporter": {
+      "displayName": "Mattias Ellert", 
+      "name": "ellert", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mattias.ellert@fysast.uu.se", 
+      "key": "ellert", 
+      "active": true, 
+      "timeZone": "Europe/Stockholm"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2013-10-26T04:40:52.611-0500", 
+    "versions": [
+      {
+        "archived": false, 
+        "name": "5.2.5", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11388", 
+        "releaseDate": "2013-06-17", 
+        "released": true, 
+        "id": "11388", 
+        "description": ""
+      }
+    ], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10334", 
+        "id": "10334", 
+        "name": "Build & Test"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/22415", 
+  "id": "22415", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

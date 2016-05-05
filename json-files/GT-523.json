@@ -1,0 +1,174 @@
+{
+  "key": "GT-523", 
+  "fields": {
+    "comment": {
+      "total": 0, 
+      "startAt": 0, 
+      "comments": [], 
+      "maxResults": 0
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "David Carver", 
+      "name": "dcarver", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=dcarver", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "dcarver@tacc.utexas.edu", 
+      "key": "dcarver", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100nds:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-523/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": null, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "3789", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@17708e1", 
+    "summary": "Update GSI OpenSSH configuration instructions to include   \"=\"--with-default-path=/usr/local/bin:/bin:/usr/bin\"", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-523/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/minor.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/4", 
+      "name": "Minor", 
+      "id": "4"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2014-03-21T14:57:51.580-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "Update build instructions at http://toolkit.globus.org/toolkit/docs/5.2/5.2.5/gsiopenssh/admin/#gsiopenssh-admin-installing-configure-options to reflect \ndefault-path with \"/usr/local/bin:/bin:/usr/bin\" in globus tollkit rpms.  Otherwise a user building the GSI OpenSSH will get a default-path of \"/usr/bin:/bin:/usr/sbin:/sbin\n\nExample\n--with-gsiopensshargs=\"--with-default-path=/usr/local/bin:/bin:/usr/bin\"\n\nThe default-path in Globus toolkit gsi-openssh rpm\n\nstaff$ wget -q http://toolkit.globus.org/ftppub/gt5/5.2/5.2.5/packages/rpm/centos/6/x86_64/gsi-openssh-5.6-1.el6.x86_64.rpm\nstaff$ rpm2cpio gsi-openssh-server-5.6-1.el6.x86_64.rpm |  cpio -idmv\nstaff$ strings ./usr/sbin/gsisshd | grep /usr/bin\n/usr/bin/xauth\n/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin\n/usr/bin/passwd\n/usr/local/bin:/bin:/usr/bin\n\n\nCentos /usr/sbin/sshd also has /usr/local/bin in default path\n\nmaster$ rpm -qf /usr/sbin/sshd\nopenssh-server-6.2p2-1.x86_64\nmaster$  strings /usr/sbin/sshd | grep /usr/bin\n/usr/bin/xauth\n/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin\n/usr/bin/passwd\n/usr/local/bin:/bin:/usr/bin\nmaster$ \n\nBut, building GSI OpenSSH from scratch using current instructions (without default-path option) does not include /usr/local/bin\n\nstaff$ wget -q http://toolkit.globus.org/ftppub/gt5/5.2/5.2.5/installers/src/gt5.2.5-all-source-installer.tar.gz\nstaff$ tar xf gt5.2.5-all-source-installer.tar.gz\nstaff$ cd gt5.2.5-all-source-installer\nstaff$ ./configure --prefix=/opt/apps/xsede/gsi-openssh-6.2p1  --with-gsiopensshargs=\"--with-pam --with-md5-passwords --with-tcp-wrappers\"\nstaff$ make gsi-openssh\nstaff$ make gsi-openssh install\nstaff$ strings /opt/apps/xsede/gsi-openssh-6.2p1/sbin/sshd | grep /usr/bin\n\n/usr/bin/xauth\n/usr/bin:/bin:/usr/sbin:/sbin:/opt/apps/xsede/gsi-openssh-6.2p1/bin\n/usr/bin/passwd\n/usr/bin:/bin:/usr/sbin:/sbin:/opt/apps/xsede/gsi-openssh-6.2p1/bin\n\nstaff$ head -5 /opt/apps/xsede/gsi-openssh-6.2p1/etc/ssh/sshd_config\n#       $OpenBSD: sshd_config,v 1.89 2013/02/06 00:20:42 dtucker Exp $\n\n# This is the sshd server system-wide configuration file.  See\n# sshd_config(5) for more information.\n\n# This sshd was compiled with PATH=/usr/bin:/bin:/usr/sbin:/sbin\n", 
+    "reporter": {
+      "displayName": "David Carver", 
+      "name": "dcarver", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=dcarver", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "dcarver@tacc.utexas.edu", 
+      "key": "dcarver", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": "Redhat and CentOS Linux", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2014-03-21T14:57:51.580-0500", 
+    "versions": [
+      {
+        "archived": false, 
+        "name": "5.2.5", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11388", 
+        "releaseDate": "2013-06-17", 
+        "released": true, 
+        "id": "11388", 
+        "description": ""
+      }
+    ], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10330", 
+        "id": "10330", 
+        "name": "GSI-OpenSSH"
+      }
+    ], 
+    "issuetype": {
+      "name": "Improvement", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/4", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/issuetypes/defect.png", 
+      "subtask": false, 
+      "id": "4", 
+      "description": "An improvement or enhancement to an existing feature or task."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/23451", 
+  "id": "23451", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

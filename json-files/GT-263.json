@@ -1,0 +1,387 @@
+{
+  "key": "GT-263", 
+  "fields": {
+    "comment": {
+      "total": 5, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "Here is a cert that uses GENERALIZEDTIME for notbefore/notafter. Lukasz original discovered this when trying to use the cert with GO, and we discovered that the bug was not just in M2Crypto, but also in GT.", 
+          "updateAuthor": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-08-08T17:31:43.363-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/18949/comment/19696", 
+          "author": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-08-08T17:31:43.363-0500", 
+          "id": "19696"
+        }, 
+        {
+          "body": "This alternate implementation seems to be working for both ASN1_TIME subtypes. It assumes X.509 restricted format though (e.g. ends with Z for GMT with no timezone offset). If make_time is called on ASN1_TIME objects that did not come from an X.509, that may be an issue. It would not be too hard to extend however.\n\nIt looks like the original make_time implementation was a sloppy adaptation of X509_cmp_time from openssl (crypto/x509/x509_vfy.c). It copies data into a buffer which is not necessary for the adapted version, and it doesn't handle errors properly (it just sets newtime to 0 and continues). ASN1_XTIME_print functions provide a better starting point, although they don't parse TZ offset (they assume X.509 format).", 
+          "updateAuthor": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-08-09T15:58:12.176-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/18949/comment/19707", 
+          "author": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-08-09T15:58:12.176-0500", 
+          "id": "19707"
+        }, 
+        {
+          "body": "One reason we've been getting away with this:\n\nhttp://tools.ietf.org/html/rfc2459#section-4.1.2.5\n\"CAs conforming to this profile MUST always encode certificate\n   validity dates through the year 2049 as UTCTime; certificate validity\n   dates in 2050 or later MUST be encoded as GeneralizedTime.\"", 
+          "updateAuthor": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-08-09T16:01:38.914-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/18949/comment/19708", 
+          "author": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-08-09T16:01:38.914-0500", 
+          "id": "19708"
+        }, 
+        {
+          "body": "Decreasing the priority. CAs that follow the RFC shouldn't be producing GENERALIZEDTIME for a while.", 
+          "updateAuthor": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-08-09T16:06:43.492-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/18949/comment/19709", 
+          "author": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-08-09T16:06:43.492-0500", 
+          "id": "19709"
+        }, 
+        {
+          "body": "The latest RFC adds this sentence:\n\nhttp://tools.ietf.org/html/rfc5280#section-4.1.2.5\nConforming applications MUST be able to process validity dates that\nare encoded in either UTCTime or GeneralizedTime.\n\nSo GT isn't technically conforming because of this bug. In practice it may still be a non-issue for many years though.", 
+          "updateAuthor": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-08-09T16:12:46.755-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/18949/comment/19710", 
+          "author": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-08-09T16:12:46.755-0500", 
+          "id": "19710"
+        }
+      ], 
+      "maxResults": 5
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "Bryce Allen", 
+      "name": "Bryce", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "ballen@ci.uchicago.edu", 
+      "key": "bryce", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100nyg:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-263/watchers", 
+      "watchCount": 1, 
+      "isWatching": false
+    }, 
+    "assignee": null, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "3882", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@12f2929", 
+    "summary": "gsi cert_utils does not handle ASN1 GENERALIZEDTIME", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-263/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [
+      {
+        "mimeType": "application/x-x509-ca-cert", 
+        "created": "2012-08-08T17:31:43.360-0500", 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/10897", 
+        "filename": "asn1generalizedtime.pem", 
+        "content": "https://globus.atlassian.net/secure/attachment/10897/asn1generalizedtime.pem", 
+        "id": "10897", 
+        "size": 1204
+      }, 
+      {
+        "mimeType": "text/x-c", 
+        "created": "2012-08-09T15:58:12.161-0500", 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/10898", 
+        "filename": "globus_gsi_cred_patch.c", 
+        "content": "https://globus.atlassian.net/secure/attachment/10898/globus_gsi_cred_patch.c", 
+        "id": "10898", 
+        "size": 14183
+      }
+    ], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2012-08-09T16:12:46.757-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "In globus_gsi_cred_handle.c, fucntion globus_i_gsi_cred_goodtill:\n\n        result = globus_gsi_cert_utils_make_time(\n            X509_get_notAfter(current_cert), \n            &tmp_goodtill);\n\nThis assumes that the value of X509_get_notAfter is ASN1_UTCTIME, which is not always the case. It has value ASN1_TIME, which may be UTCTIME or GENERALIZEDTIME. To make matters worse, if the cert does use generalized time, no error is returned, it just mis-interprets the date.\n\nThe proper place to fix this is probably globus_gsi_cert_utils_make_time, in cert_utils. It's probably used in other locations as well.\n\nPrior to openssl 0.9.6, it appears that openssl did use UTCTIME. From CHANGELOG in the openssl source:\n\nChanges between 0.9.5a and 0.9.6  [24 Sep 2000]\n...\n  *) Various fixes to use ASN1_TIME instead of ASN1_UTCTIME.\n     Also change the functions X509_cmp_current_time() and\n     X509_gmtime_adj() work with an ASN1_TIME structure,\n     this will enable certificates using GeneralizedTime in validity\n     dates to be checked.\n     [Steve Henson]\n\nIf we require compatibility with 0.9.5a and earlier, we may need some special handling.", 
+    "reporter": {
+      "displayName": "Bryce Allen", 
+      "name": "Bryce", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "ballen@ci.uchicago.edu", 
+      "key": "bryce", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2012-08-08T17:28:48.722-0500", 
+    "versions": [
+      {
+        "archived": false, 
+        "name": "5.2.2", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/10904", 
+        "releaseDate": "2012-07-24", 
+        "released": true, 
+        "id": "10904"
+      }, 
+      {
+        "archived": false, 
+        "name": "5.0.5", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/10923", 
+        "releaseDate": "2012-03-08", 
+        "released": true, 
+        "id": "10923"
+      }
+    ], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10327", 
+        "id": "10327", 
+        "name": "Common Libs"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/18949", 
+  "id": "18949", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

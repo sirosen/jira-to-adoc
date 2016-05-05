@@ -1,0 +1,262 @@
+{
+  "key": "GT-539", 
+  "fields": {
+    "comment": {
+      "total": 2, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "Related ticket which I'm going to reassign to Joe as well.\r\n\r\nhttps://globusonline.zendesk.com/agent/#/tickets/302426", 
+          "updateAuthor": {
+            "displayName": "Jack Kordas", 
+            "name": "kordas", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=kordas", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "kordas@ci.uchicago.edu", 
+            "key": "kordas", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2014-06-10T12:55:36.967-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/24173/comment/26117", 
+          "author": {
+            "displayName": "Jack Kordas", 
+            "name": "kordas", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=kordas", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "kordas@ci.uchicago.edu", 
+            "key": "kordas", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2014-06-10T12:55:36.967-0500", 
+          "id": "26117"
+        }, 
+        {
+          "body": "I've committed changes to include default runlevels for the myproxy-server service to git. I'm in process of building new binaries, but am also rebuilding to add ubuntu 14.04 so it may be a few days to get it updated.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2014-06-12T11:19:23.594-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/24173/comment/26152", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2014-06-12T11:19:23.594-0500", 
+          "id": "26152"
+        }
+      ], 
+      "maxResults": 2
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": [
+      "com.atlassian.greenhopper.service.sprint.Sprint@17536bf[id=8,rapidViewId=4,state=CLOSED,name=Sprint 2014-06-23,startDate=2014-06-02T17:58:27.271-05:00,endDate=2014-06-23T17:58:00.000-05:00,completeDate=2014-06-23T18:24:39.795-05:00,sequence=8]"
+    ], 
+    "creator": {
+      "displayName": "Jack Kordas", 
+      "name": "kordas", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=kordas", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "kordas@ci.uchicago.edu", 
+      "key": "kordas", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|1025iw:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-539/watchers", 
+      "watchCount": 2, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Joe Bester", 
+      "name": "bester", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "bester@mcs.anl.gov", 
+      "key": "bester", 
+      "active": true, 
+      "timeZone": "America/New_York"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": "1_*:*_1_*:*_1986590078_*|*_5_*:*_1_*:*_0", 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@89ad2d", 
+    "summary": "MyProxy Server Startup Not Configured Properly on Debian 7", 
+    "customfield_10288": "2014-06-12T11:19:23.594-0500", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-539/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "Done", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+        "id": 3, 
+        "key": "done", 
+        "colorName": "green"
+      }, 
+      "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+      "id": "5", 
+      "name": "Resolved"
+    }, 
+    "updated": "2014-07-03T12:43:41.640-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "Installed the following deb: http://www.globus.org/ftppub/gt5/5.2/stable/installers/repo/globus-repository-5.2-stable-wheezy_0.0.3_all.deb\r\n\r\nInstalled GCS with default options changing only endpoint name.\r\n\r\nAfter install, I was able to authenticate via MyProxy and list a directory via the  Globus cli.\r\n\r\nI then rebooted the machine.  The GridFTP sever restarts properly but the MyProxy server does not.  I don't see any entries for MyProxy in /etc/rc*.d.\r\n\r\nIf I try to manually start it I get an error as shown below:\r\n\r\nservice myproxy-server start\r\n[ ok ] Started myproxy-server.\r\n/etc/init.d/myproxy-server: 62: /etc/init.d/myproxy-server: cannot create /var/run/myproxy/myproxy.pid: Directory nonexistent\r\nroot@ip-10-151-50-144:/home/admin# /etc/init.d/myproxy-server status\r\n[FAIL] myproxy-server is not running ... failed!\r\nroot@ip-10-151-50-144:/home/admin# /etc/init.d/myproxy-server start\r\n[warn] myproxy-server already running ... (warning).\r\nroot@ip-10-151-50-144:/home/admin# /etc/init.d/myproxy-server status\r\n[FAIL] myproxy-server is not running ... failed!\r\n", 
+    "reporter": {
+      "displayName": "Jack Kordas", 
+      "name": "kordas", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=kordas", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "kordas@ci.uchicago.edu", 
+      "key": "kordas", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": "ami ami-78b45610", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2014-06-10T12:53:51.563-0500", 
+    "versions": [], 
+    "resolutiondate": "2014-07-03T12:43:41.624-0500", 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10441", 
+        "description": "Globus Connect Server", 
+        "id": "10441", 
+        "name": "GCS"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": {
+      "self": "https://globus.atlassian.net/rest/api/2/resolution/1", 
+      "id": "1", 
+      "name": "Fixed", 
+      "description": "A fix for this issue is checked into the tree and tested."
+    }, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/24173", 
+  "id": "24173", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

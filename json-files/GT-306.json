@@ -1,0 +1,917 @@
+{
+  "key": "GT-306", 
+  "fields": {
+    "comment": {
+      "total": 18, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "I was able to get hole punching to work with udp sockets and then start a UDT connection by binding to the existing udp sockets. Both clients are behind a Linux NAT firewall which allows all outgoing forward traffic, but only allows ESTABLISHED/RELATED in.", 
+          "updateAuthor": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-11-07T17:15:13.316-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19465/comment/20540", 
+          "author": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-11-07T17:15:13.316-0600", 
+          "id": "20540"
+        }, 
+        {
+          "body": "Linux Firewall notes:\n\n- Default timeout on UDP \"connections\" is 30 seconds\n- A connection becomes \"ASSURED\" and gets a timeout of 180 seconds only after three packets are sent - outgoing, incoming, and the third can be either incoming or outgoing.\n\nIt's important to maintain the connections by sending packets periodically, so the port mapping on any NAT firewall is not changed.", 
+          "updateAuthor": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-11-08T17:13:46.941-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19465/comment/20553", 
+          "author": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-11-08T17:13:46.941-0600", 
+          "id": "20553"
+        }, 
+        {
+          "body": "Implementing STUN and ICE from scratch would be a fairly large project. There are three open source implementations worth looking at:\n\nPJNATH: http://www.pjsip.org/pjnath/docs/html/\n- No external requirements, but there is no obvious way to build only pjnath and pjlib (exclude the SIP and audio/video libraries)\n- GPLv2 or later\n- Developed primarily by small company (4 people?) in UK\n- API looks like it's designed as a complete solution, may be hard to use selectively and then pass the socket off to UDT\n\nLIBNICE: http://nice.freedesktop.org/wiki/\n- LGPL v2.1 and MPL\n- Requires glib >= 2.10. Dependencies on gupnp-igd and gstreamer are optional and easy to disable.\n- API seems very clean, but no obvious way to extract a socket fd (or even a GSocket) for external use.\n\nSTUNTMAN: http://www.stunprotocol.org/\n- STUN only, no ICE support\n- Apache v2 license\n- Requires Boost and openssl\n- Server and Client implementation, but has a cleanly separated core library\n- Most flexible, getting the socket fd should not be a problem, but will require significant work to implement NICE on top of. May be able to collaborate with other devs to add ICE support to the main library.", 
+          "updateAuthor": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-11-08T18:23:27.253-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19465/comment/20554", 
+          "author": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-11-08T18:23:27.253-0600", 
+          "id": "20554"
+        }, 
+        {
+          "body": "PJSIP includes a sample 'icedemo' application that does ICE step by step in an interactive CLI, with an optional STUN or TURN server. Wish I had found it sooner, it is perfect for testing that ICE really works on a given network topology:\n  http://www.pjsip.org/pjnath/docs/html/ice_demo_sample.htm\n\nThe released (2.0.1) version has a critical bug, fixed by this patch:\n http://trac.pjsip.org/repos/changeset/4217/pjproject/trunk/pjsip-apps/src/samples/icedemo.c\n\nSo far I've tested in my lxc environment (two hosts behind linux fw cone nat), and between two ANL hosts (one secure wireless, second wired).", 
+          "updateAuthor": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-11-09T17:45:53.598-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19465/comment/20560", 
+          "author": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-11-09T17:45:53.598-0600", 
+          "id": "20560"
+        }, 
+        {
+          "body": "The following also work with icedemo:\n- ANL wired w/ public IP (appears to have stateful firewall for non-ANL traffic), home computer behind linux nat\n- two machines behind same linux nat\n- public IP without firewall or NAT, symmetric NAT\n- double NAT, single NAT (separate)\n- double NAT, single NAT (outer NAT shared, so it's similar to no NAT/single NAT but the STUN server is outside)\n- double NAT, double NAT (all 4 NATs are standard linux MASQUERADE)\n\nThe following does not work:\n- standard linux NAT, symmetric NAT\n\nSymmetric NAT was implemented with the following iptables rules:\n-t nat -A POSTROUTING -o eth0 -p udp -j SNAT --to-source 10.0.3.111-10.0.3.113:50000-51000 --random\n-t nat -A POSTROUTING -o eth0 ! -p udp -j SNAT --to-source 10.0.3.111-10.0.3.113 --random\n\nI tested that different destinations for the same local port get mapped to different public addresses and ports. Not sure how typical the full behavior is of real symmetric NAT though.", 
+          "updateAuthor": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-11-12T16:58:01.074-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19465/comment/20569", 
+          "author": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-11-12T16:58:01.074-0600", 
+          "id": "20569"
+        }, 
+        {
+          "body": "libnice is packaged for RHEL, debian, and ubuntu (since lucid). However getting glib and all it's dependencies setup on windows and Mac OSX is a royal pain from source. We might be able to leverage existing binary builds and/or dev builds.\n\npjnath is not packaged anywhere, but is generally very easy to build and has no external dependencies. I get a link error cross compiling with mingw-w64, but it's during the sample app build after all the libs (including pjnath) and icedemo get built, so it could be ignored.", 
+          "updateAuthor": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-11-13T14:39:04.489-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19465/comment/20577", 
+          "author": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-11-13T14:39:04.489-0600", 
+          "id": "20577"
+        }, 
+        {
+          "body": "More icedemo tests (working):\n\n- ANL wired, ANL guest wifi (note that both have no NAT, just firewall)\n- ANL guest wifi, home linux NAT", 
+          "updateAuthor": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-11-16T16:22:14.940-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19465/comment/20623", 
+          "author": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-11-16T16:22:14.940-0600", 
+          "id": "20623"
+        }, 
+        {
+          "body": "I have ICE working (using pjnath) with my udpc test client. I can do ice negotation, using upas/uprt commands in udpc, then start a UDT connection immediately after destorying the ice session, binding to the negotiated addr:port.\n\nThere is some strange behavior in exotic network configs. My test machines behind linux double NAT take two minutes to initialize the ice session. icedemo has the same behavior, so it's either an intrinsic limitation of ICE, an issue with pjnath, or an issue with my test environment. It's a relatively minor issue, since everything still works - it just delays the connection. The response from the STUN server returns almost immediately, so there is no obvious reason for the delay.", 
+          "updateAuthor": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-01-08T11:58:58.449-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19465/comment/20916", 
+          "author": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-01-08T12:02:58.057-0600", 
+          "id": "20916"
+        }, 
+        {
+          "body": "Mystery solved: the delay has nothing to do with STUN or double NAT - it's caused by the hostname not resolving. I had hosts entries for the single NAT containers in my test environment, but not for the double NAT containers.", 
+          "updateAuthor": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-01-09T09:32:05.012-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19465/comment/20921", 
+          "author": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-01-09T09:32:05.012-0600", 
+          "id": "20921"
+        }, 
+        {
+          "body": "Scripts I used to setup a NAT test environment in Linux:\nhttps://github.com/globusonline/lxc-nat", 
+          "updateAuthor": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-01-09T14:02:53.490-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19465/comment/20930", 
+          "author": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-01-09T14:02:53.490-0600", 
+          "id": "20930"
+        }, 
+        {
+          "body": "Need to see if pjnath can be dynamically linked, and make sure that Mike keeps the ice lib with code copied from icedemo.c separate.", 
+          "updateAuthor": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-01-18T13:00:12.392-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19465/comment/21038", 
+          "author": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-01-18T13:00:34.862-0600", 
+          "id": "21038"
+        }, 
+        {
+          "body": "Building .so should be possible, but it may require some work; I can't find any examples of people doing it for Linux:\n\nhttp://www.pjsip.org/pjlib/docs/html/group__pj__dll__target.htm\nhttp://lists.pjsip.org/pipermail/pjsip_lists.pjsip.org/2007-September/000111.html", 
+          "updateAuthor": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-01-18T13:47:19.851-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19465/comment/21039", 
+          "author": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-01-18T13:47:19.851-0600", 
+          "id": "21039"
+        }, 
+        {
+          "body": "We can't use PJNATH because of licensing (confirmed by Perry Ismangil <perry@teluu.com>). Their proprietary license is not an option because it's not compatible with OSS.\n\nLibnice is LGPL 2.1, as is glib which it depends on. I think we can link to that dynamically without problems.", 
+          "updateAuthor": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-01-22T11:06:02.107-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19465/comment/21051", 
+          "author": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-01-22T11:06:02.107-0600", 
+          "id": "21051"
+        }, 
+        {
+          "body": "One concern with libnice is that there are many versions in the wild, and RHEL/CentOS 5 has no package. The oldest is 0.0.9 in CentOS 6.\n\nUBUNTU\nlucid has 0.0.10, oneiric has 0.1.0, precise has 0.1.1, and quantal has 0.1.2\n\nDEBIAN\nsqueeze has 0.0.12, wheezy (upcoming) has 0.1.2\n\nRHEL/CENTOS\n6 has 0.0.9, 5 has nothing and no EPEL package\nFedora 16 has 0.1.0, 17 has 0.1.2, 18 has 0.1.3", 
+          "updateAuthor": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-01-22T11:24:04.713-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19465/comment/21052", 
+          "author": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-01-22T11:24:04.713-0600", 
+          "id": "21052"
+        }, 
+        {
+          "body": "libnice lacks a public API for getting the selected candidates - it assumes you will be using their internal send/receive functions.\nhttp://nice.freedesktop.org/libnice/libnice-NiceCandidate.html\n\nThere is a private API that we could use to hack around this, but that may not be consistent between 0.0.X and 0.1.X or even among minor point releases. They may be open to adding such an API, but we still can't take advantage of existing native packages.\n\nWaiting on response from the mailing list, but I'm going to use the hack for now so I'm not blocked yet.", 
+          "updateAuthor": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-01-22T16:04:44.035-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19465/comment/21065", 
+          "author": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-01-22T16:04:44.035-0600", 
+          "id": "21065"
+        }, 
+        {
+          "body": "libnice 0.0.X and 0.1.X are not compatible. Our options are to not support older distros with 0.0.X, build packages for 0.1.X for those distros, or try to throw in some ifdefs to support both versions. One example is that nice_agent_gather_candidates returns void on 0.0.X and gboolean on 0.1.X. That isn't too hard to work around, but on 0.0.X the error handling is weak.\n\nNote that 0.1.X won't compile on CentOS 5 - it requires glib 2.13, and 2.12 is installed. We'd have to also build glib 2.X, X>=13 package (or statically link) to make it work.", 
+          "updateAuthor": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-02-06T11:17:10.822-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19465/comment/21171", 
+          "author": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-02-08T17:16:02.426-0600", 
+          "id": "21171"
+        }, 
+        {
+          "body": "I've only found two difference between 0.0.X vs 0.1.X that affect my code:\n\n- use DRAFT19 compatiblity instead of RFC, which maps to RFC on the newer versions anyway\n- nice_agent_gather_candidates returns void on 0.0.X\n\nThe second issue is more problematic, beause right after gathering candidates it waits on a condition variable for candidate-gathering-done. If the function failed the signal will never get triggered, and the old version does not signal that back to the caller.\n\nAnother concern is whether they will interoperate with each other. It might be simpler to package the latest that to get it to compile and then test on all the combinations.", 
+          "updateAuthor": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-02-06T15:48:57.454-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19465/comment/21174", 
+          "author": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-02-06T15:48:57.454-0600", 
+          "id": "21174"
+        }, 
+        {
+          "body": "Issue with libnice 0.0.9 in CentOS 6: nice_candidate_copy is not exported. Fairly easy to workaround, just a surprising discrepency.", 
+          "updateAuthor": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-02-08T17:16:51.870-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19465/comment/21185", 
+          "author": {
+            "displayName": "Bryce Allen", 
+            "name": "Bryce", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ballen@ci.uchicago.edu", 
+            "key": "bryce", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-02-08T17:16:51.870-0600", 
+          "id": "21185"
+        }
+      ], 
+      "maxResults": 18
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "Bryce Allen", 
+      "name": "Bryce", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "ballen@ci.uchicago.edu", 
+      "key": "bryce", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|101cuw:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-306/watchers", 
+      "watchCount": 1, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Bryce Allen", 
+      "name": "Bryce", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "ballen@ci.uchicago.edu", 
+      "key": "bryce", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": "1_*:*_1_*:*_13398557819_*|*_5_*:*_1_*:*_0", 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/issueLink/12333", 
+        "inwardIssue": {
+          "fields": {
+            "status": {
+              "statusCategory": {
+                "name": "To Do", 
+                "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+                "id": 2, 
+                "key": "new", 
+                "colorName": "blue-gray"
+              }, 
+              "description": "The issue is open and ready for the assignee to start work on it.", 
+              "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+              "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+              "id": "1", 
+              "name": "Open"
+            }, 
+            "priority": {
+              "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+              "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+              "name": "Major", 
+              "id": "3"
+            }, 
+            "issuetype": {
+              "name": "New Feature", 
+              "self": "https://globus.atlassian.net/rest/api/2/issuetype/2", 
+              "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11051&avatarType=issuetype", 
+              "subtask": false, 
+              "avatarId": 11051, 
+              "id": "2", 
+              "description": "A new feature of the product, which has yet to be developed."
+            }, 
+            "summary": "fxp: add upas/uprt support for GC peer to peer"
+          }, 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/20011", 
+          "id": "20011", 
+          "key": "KOA-2418"
+        }, 
+        "type": {
+          "outward": "depends on", 
+          "inward": "is depended on by", 
+          "self": "https://globus.atlassian.net/rest/api/2/issueLinkType/10010", 
+          "id": "10010", 
+          "name": "Dependency"
+        }, 
+        "id": "12333"
+      }
+    ], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@ab7cb7", 
+    "summary": "add mode U for UDT based mode E with ICE based NAT traversal", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 324000, 
+      "percent": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-306/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [
+      {
+        "archived": false, 
+        "name": "Sprint 2013-02-11", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11098", 
+        "releaseDate": "2013-02-11", 
+        "released": true, 
+        "id": "11098", 
+        "description": ""
+      }
+    ], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": 324000, 
+    "progress": {
+      "progress": 0, 
+      "total": 324000, 
+      "percent": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "Done", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+        "id": 3, 
+        "key": "done", 
+        "colorName": "green"
+      }, 
+      "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+      "id": "5", 
+      "name": "Resolved"
+    }, 
+    "updated": "2013-03-22T13:40:01.680-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "We'd like to demo this at SC 2012.\n\nFrom Steve:\n\nI think what we want to do is enhance the GridFTP control channel protocol, so that a GridFTP client can mediate the passing of UDP ip/port information between the two GridFTP servers. Assume we define a new \"MODE U\" that is the UDP with NAT traversal + UDT + mode E.  When in that mode, I think would basically replace the PASV and PORT commands with new ones that can pass a list of alternate ip/port pairs. I'm thinking as a short-term hack we can maybe use SPSV and SPOR for these, but instead of treating the list of ip/ports as striped servers, treat them as alternate UDP ip/ports.  So after passing MODE U to each side, the client would call SPSV to one server, which would then use STUN to discover its external ip/port, and would return both its external ip/port and its local (private) ip/port. The client would pass this list to the other server using SPOR. I don't recall if this exchange has to happen in both directions -- the second server also does STUN discovery, and pass that through the client to the first server.  If so, then perhaps you use SPSV and SPOR a second time in the opposite direction to pass this.  Or maybe its easer to just add new commands to do this (UPSV, UPOR).  In any case, then the servers use the ICE negotiation protocol to figure out with ip/ports to use to talk to each other.  For example, if they happen to be on the same private network, then they will talk directly using their private network addresses.  Otherwise they will use their external addresses.  I don't recall in what situations there might even be more than 2 ip/port pairs for each server -- perhaps if the server is multi-homed?\n\nOnce the two servers have found each other via UDP, then we should drop into UDT, and then drive MODE E over that.  I think the MODE E over UDT is already done. So I think the main missing bit is adding the STUN and ICE support to the UDP connection establishment.", 
+    "reporter": {
+      "displayName": "Bryce Allen", 
+      "name": "Bryce", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=Bryce", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "ballen@ci.uchicago.edu", 
+      "key": "bryce", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": 324000, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": 324000, 
+    "created": "2012-10-18T11:50:43.878-0500", 
+    "versions": [], 
+    "resolutiondate": "2013-03-22T13:40:01.652-0500", 
+    "workratio": 0, 
+    "aggregatetimespent": null, 
+    "timetracking": {
+      "originalEstimateSeconds": 324000, 
+      "remainingEstimate": "3w", 
+      "remainingEstimateSeconds": 324000, 
+      "originalEstimate": "3w"
+    }, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "New Feature", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/2", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11051&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11051, 
+      "id": "2", 
+      "description": "A new feature of the product, which has yet to be developed."
+    }, 
+    "resolution": {
+      "self": "https://globus.atlassian.net/rest/api/2/resolution/6", 
+      "id": "6", 
+      "name": "Work Complete", 
+      "description": "The work for this JIRA has been completed as specified."
+    }, 
+    "timeestimate": 324000
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/19465", 
+  "id": "19465", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

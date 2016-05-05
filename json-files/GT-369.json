@@ -1,0 +1,165 @@
+{
+  "key": "GT-369", 
+  "fields": {
+    "comment": {
+      "total": 0, 
+      "startAt": 0, 
+      "comments": [], 
+      "maxResults": 0
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "hepmkj", 
+      "name": "hepmkj", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=hepmkj", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "hepmkj", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100nqo:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-369/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": null, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "3847", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@12e964b", 
+    "summary": " GRAM5 skips some SEG events for PBS batch system", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-369/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2013-03-05T10:09:56.691-0600", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "The Purdue site is using PBS as one of the batch system. We have noticed for a given local pool account all the jobs from PBS batch system are not communicating to globus job manager. These jobs finished successfully on the batch system.  But, the globus job manager had not recieved concerning the ending of jobs in the batch system.   Admin of the CE had received following mail\n\n\"\"\"\n\nPBS Job Id: 1492855.carter-adm.rcac.purdue.edu\nJob Name:   STDIN\nExec host:  carter-a010/9\nAn error has occurred processing your job, see below.\nPost job file processing error; job 1492855.carter-adm.rcac.purdue.edu on host carter-a010/9\n\n\n\"\"\"\nAbove mail don't depicts valuable information.  'globus-seg-pbs'   log contains following messages\n\n\"\"\"\n[jha2@carter-osg globus-seg-pbs]$ grep -r '1492855' .\n./20130228:001;1362056658;1492855.carter-adm.rcac.purdue.edu;2;0\n./20130228:001;1362056985;1492855.carter-adm.rcac.purdue.edu;2;0\n./20130228:001;1362057101;1492855.carter-adm.rcac.purdue.edu;8;0\n[jha2@carter-osg globus-seg-pbs]$\n\n\"\"\"\n\n\n\n\nSite is using following list of  rpms from globus\n***\n[jha2@carter-osg ~]$ rpm -qa | grep globus      \nglobus-gsi-openssl-error-2.1-4.osg.el6.x86_64\nglobus-rsl-9.1-4.osg.el6.x86_64\nglobus-gfork-3.1-4.osg.el6.x86_64\nglobus-gridftp-server-6.5-1.7.osg.el6.x86_64\nglobus-gsi-cert-utils-8.1-4.osg.el6.x86_64\nglobus-io-9.2-3.osg.el6.x86_64\nglobus-xio-devel-3.2-4.1.osg.el6.x86_64\nglobus-authz-2.1-4.osg.el6.x86_64\nglobus-gass-copy-8.2-4.osg.el6.x86_64\nglobus-gsi-cert-utils-progs-8.1-4.osg.el6.x86_64\nglobus-gss-assist-8.1-4.osg.el6.x86_64\nglobus-xio-gsi-driver-devel-2.1-4.osg.el6.x86_64\nglobus-core-8.5-2.osg.el6.x86_64\nglobus-gatekeeper-9.6-1.7.osg.el6.x86_64\nglobus-gridmap-callout-error-1.2-2.osg.el6.x86_64\nglobus-gsi-sysconfig-5.1-4.osg.el6.x86_64\nglobus-gram-protocol-11.2-3.1.osg.el6.x86_64\nglobus-gsi-proxy-ssl-devel-4.1-4.osg.el6.x86_64\nglobus-gsi-callback-devel-4.1-4.osg.el6.x86_64\nglobus-gass-copy-progs-8.2-4.osg.el6.x86_64\nglobus-gsi-proxy-core-devel-6.1-4.osg.el6.x86_64\nglobus-gram-job-manager-callout-error-2.1-4.osg.el6.x86_64\nglobus-common-14.5-2.2.osg.el6.x86_64\nglobus-gsi-proxy-core-6.1-4.osg.el6.x86_64\nglobus-usage-3.1-4.osg.el6.x86_64\nglobus-gram-job-manager-pbs-1.1-4.1.osg.el6.x86_64\nglobus-gsi-sysconfig-devel-5.1-4.osg.el6.x86_64\nglobus-gram-job-manager-fork-setup-poll-1.0-8.osg.el6.noarch\ncog-jglobus-axis-1.2-1.osg.el6.noarch\nglobus-callout-devel-2.1-4.osg.el6.x86_64\nglobus-gridftp-server-control-2.3-1.1.osg.el6.x86_64\nglobus-gsi-credential-5.1-4.osg.el6.x86_64\nglobus-common-devel-14.5-2.2.osg.el6.x86_64\nglobus-ftp-control-4.2-6.osg.el6.x86_64\nglobus-scheduler-event-generator-4.4-1.osg.el6.x86_64\nglobus-gsi-cert-utils-devel-8.1-4.osg.el6.x86_64\nglobus-gass-server-ez-4.1-4.osg.el6.x86_64\nglobus-gass-cache-program-5.0-5.osg.el6.x86_64\nglobus-xio-pipe-driver-2.1-4.osg.el6.x86_64\nglobus-gsi-proxy-ssl-4.1-4.osg.el6.x86_64\nglobus-callout-2.1-4.osg.el6.x86_64\nglobus-gsi-openssl-error-devel-2.1-4.osg.el6.x86_64\nglobus-gram-job-manager-scripts-4.1-3.1.osg.el6.noarch\nglobus-authz-callout-error-2.1-4.osg.el6.x86_64\nglobus-xio-popen-driver-2.2-3.osg.el6.x86_64\nglobus-gram-client-tools-10.0-5.osg.el6.x86_64\nglobus-scheduler-event-generator-progs-4.4-1.osg.el6.x86_64\nglobus-gssapi-error-devel-4.1-4.osg.el6.x86_64\nglobus-gridftp-server-progs-6.5-1.7.osg.el6.x86_64\nglobus-scheduler-event-generator-devel-4.4-1.osg.el6.x86_64\nglobus-gssapi-gsi-10.7-2.osg.el6.x86_64\nglobus-common-progs-14.5-2.2.osg.el6.x86_64\nglobus-proxy-utils-5.0-5.osg.el6.x86_64\nglobus-gram-client-12.3-3.osg.el6.x86_64\nglobus-gram-job-manager-fork-1.0-8.osg.el6.x86_64\nglobus-gss-assist-devel-8.1-4.osg.el6.x86_64\nglobus-xio-3.2-4.1.osg.el6.x86_64\nglobus-io-devel-9.2-3.osg.el6.x86_64\nglobus-openssl-module-3.1-4.osg.el6.x86_64\nglobus-xio-gsi-driver-2.1-4.osg.el6.x86_64\nglobus-gram-job-manager-pbs-setup-seg-1.1-4.1.osg.el6.x86_64\nglobus-ftp-client-7.2-4.osg.el6.x86_64\nglobus-gsi-callback-4.1-4.osg.el6.x86_64\nglobus-gass-transfer-7.1-4.osg.el6.x86_64\nglobus-openssl-module-devel-3.1-4.osg.el6.x86_64\nglobus-gsi-credential-devel-5.1-4.osg.el6.x86_64\nglobus-gass-cache-8.1-4.osg.el6.x86_64\nglobus-gssapi-gsi-devel-10.7-2.osg.el6.x86_64\nglobus-gram-job-manager-13.45-1.1.osg.el6.x86_64\nglobus-gssapi-error-4.1-4.osg.el6.x86_64\ncog-jglobus-1.8.0-1.osg.el6.noarch\nglobus-gram-protocol-devel-11.2-3.1.osg.el6.x86_64\n[jha2@carter-osg ~]$\n\n***\n\nGlobus version is '5.2.0' .\n\n\n\nThanks,\nManoj\n\n", 
+    "reporter": {
+      "displayName": "hepmkj", 
+      "name": "hepmkj", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=hepmkj", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "hepmkj", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": "Linux carter-osg.rcac.purdue.edu 2.6.32-220.4.2.el6.x86_64 #1 SMP Mon Feb 6 16:39:28 EST 2012 x86_64 x86_64 x86_64 GNU/Linux", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2013-03-05T10:09:56.691-0600", 
+    "versions": [], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10324", 
+        "id": "10324", 
+        "name": "GRAM"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/20469", 
+  "id": "20469", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

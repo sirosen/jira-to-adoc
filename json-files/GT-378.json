@@ -1,0 +1,276 @@
+{
+  "key": "GT-378", 
+  "fields": {
+    "comment": {
+      "total": 1, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "This one seems to be related:\n\n#0  0xffffe410 in __kernel_vsyscall ()\n#1  0x00b3bdf0 in raise () from /lib/libc.so.6\n#2  0x00b3d701 in abort () from /lib/libc.so.6\n#3  0x00b743ab in __libc_message () from /lib/libc.so.6\n#4  0x00b7c6c5 in _int_free () from /lib/libc.so.6\n#5  0x00b7cb09 in free () from /lib/libc.so.6\n#6  0x5556f33b in globus_l_gfs_free_session_handle (session_handle=0x806d1b0) at globus_i_gfs_data.c:1026\n#7  0x555814ed in globus_i_gfs_data_session_stop (ipc_handle=0x0, session_arg=0x806d1b0) at globus_i_gfs_data.c:8914\n#8  0x555a0f03 in globus_l_gfs_channel_close_cb (handle=0x56429028, result=0, user_arg=0x805d6f8) at globus_i_gfs_control.c:517\n#9  0x556c6bff in globus_l_xio_open_close_callback_kickout (user_arg=0x8077b50) at globus_xio_handle.c:998\n#10 0x556c6ac1 in globus_l_xio_open_close_callback (op=0x8077b50, result=0, user_arg=0x0) at globus_xio_handle.c:965\n#11 0x556d2697 in globus_l_xio_driver_op_close_kickout (user_arg=0x8077b50) at globus_xio_driver.c:813\n#12 0x558f2d79 in globus_l_callback_thread_poll (user_arg=0x5591b6a0) at globus_callback_threads.c:2512\n#13 0x5590d444 in globus_l_thread_pool_thread_start (user_arg=0x80539f8) at globus_thread_pool.c:222\n#14 0x5573189b in thread_starter (temparg=0x80521f8) at globus_thread_pthreads.c:285\n#15 0x55a94852 in start_thread () from /lib/libpthread.so.0\n#16 0x00be584e in clone () from /lib/libc.so.6\n", 
+          "updateAuthor": {
+            "displayName": "Jason Alt", 
+            "name": "jasonalt", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=jasonalt", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "jalt@ncsa.illinois.edu", 
+            "key": "jasonalt", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-03-24T16:39:00.893-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/20590/comment/21649", 
+          "author": {
+            "displayName": "Jason Alt", 
+            "name": "jasonalt", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=jasonalt", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "jalt@ncsa.illinois.edu", 
+            "key": "jasonalt", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-03-24T16:39:00.893-0500", 
+          "id": "21649"
+        }
+      ], 
+      "maxResults": 1
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "Jason Alt", 
+      "name": "jasonalt", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=jasonalt", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "jalt@ncsa.illinois.edu", 
+      "key": "jasonalt", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100now:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-378/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Mike Link", 
+      "name": "mlink", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mlink@mcs.anl.gov", 
+      "key": "mlink", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "3839", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@d8360e", 
+    "summary": "abort() in globus_i_gfs_data_session_stop()", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-378/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [
+      {
+        "mimeType": "text/plain", 
+        "author": {
+          "displayName": "Jason Alt", 
+          "name": "jasonalt", 
+          "self": "https://globus.atlassian.net/rest/api/2/user?username=jasonalt", 
+          "avatarUrls": {
+            "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+            "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+            "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+            "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+          }, 
+          "emailAddress": "jalt@ncsa.illinois.edu", 
+          "key": "jasonalt", 
+          "active": true, 
+          "timeZone": "America/Chicago"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/11026", 
+        "created": "2013-03-24T16:31:58.398-0500", 
+        "filename": "backtrace.txt", 
+        "content": "https://globus.atlassian.net/secure/attachment/11026/backtrace.txt", 
+        "id": "11026", 
+        "size": 8265
+      }, 
+      {
+        "mimeType": "text/plain", 
+        "author": {
+          "displayName": "Jason Alt", 
+          "name": "jasonalt", 
+          "self": "https://globus.atlassian.net/rest/api/2/user?username=jasonalt", 
+          "avatarUrls": {
+            "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+            "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+            "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+            "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+          }, 
+          "emailAddress": "jalt@ncsa.illinois.edu", 
+          "key": "jasonalt", 
+          "active": true, 
+          "timeZone": "America/Chicago"
+        }, 
+        "self": "https://globus.atlassian.net/rest/api/2/attachment/11027", 
+        "created": "2013-03-24T16:39:00.890-0500", 
+        "filename": "backtrace2.txt", 
+        "content": "https://globus.atlassian.net/secure/attachment/11027/backtrace2.txt", 
+        "id": "11027", 
+        "size": 8240
+      }
+    ], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2014-03-17T10:55:01.600-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "full backtrace plus dump of session handle attached.\n\nThread 1 (Thread 0x560abb90 (LWP 10050)):\n#0  0xffffe410 in __kernel_vsyscall ()\n#1  0x00b3bdf0 in raise () from /lib/libc.so.6\n#2  0x00b3d701 in abort () from /lib/libc.so.6\n#3  0x55906e27 in globus_silent_fatal () at globus_print.c:62\n#4  0x55906e9d in globus_fatal (msg=0x559186cf \"%s %s\\n%s %s\") at globus_print.c:93\n#5  0x5590b251 in globus_i_thread_report_bad_rc (rc=22, message=0x557327c4 \"GLOBUSTHREAD: pthread_mutex_lock() failed\\n\") at globus_thread_common.c:145\n#6  0x55731ece in globus_l_pthread_mutex_lock (mut=0x806d184) at globus_thread_pthreads.c:594\n#7  0x5590be06 in globus_mutex_lock (mutex=0x806d184) at globus_thread.c:357\n#8  0x55581455 in globus_i_gfs_data_session_stop (ipc_handle=0x0, session_arg=0x806d0e0) at globus_i_gfs_data.c:8892\n#9  0x555a0f03 in globus_l_gfs_channel_close_cb (handle=0x564290b0, result=0, user_arg=0x805d628) at globus_i_gfs_control.c:517\n#10 0x556c6bff in globus_l_xio_open_close_callback_kickout (user_arg=0x8077a80) at globus_xio_handle.c:998\n#11 0x556c6ac1 in globus_l_xio_open_close_callback (op=0x8077a80, result=0, user_arg=0x0) at globus_xio_handle.c:965\n#12 0x556d2697 in globus_l_xio_driver_op_close_kickout (user_arg=0x8077a80) at globus_xio_driver.c:813\n#13 0x558f2d79 in globus_l_callback_thread_poll (user_arg=0x5591b6a0) at globus_callback_threads.c:2512\n#14 0x5590d444 in globus_l_thread_pool_thread_start (user_arg=0x8053aa0) at globus_thread_pool.c:222\n#15 0x5573189b in thread_starter (temparg=0x8052204) at globus_thread_pthreads.c:285\n#16 0x55a94852 in start_thread () from /lib/libpthread.so.0\n#17 0x00be584e in clone () from /lib/libc.so.6", 
+    "reporter": {
+      "displayName": "Jason Alt", 
+      "name": "jasonalt", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=jasonalt", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "jalt@ncsa.illinois.edu", 
+      "key": "jasonalt", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": "rhel 5.8, 32 bit build", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2013-03-24T16:31:58.303-0500", 
+    "versions": [
+      {
+        "archived": false, 
+        "name": "5.2.4", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11066", 
+        "releaseDate": "2013-02-13", 
+        "released": true, 
+        "id": "11066", 
+        "description": ""
+      }
+    ], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/20590", 
+  "id": "20590", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

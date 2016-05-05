@@ -1,0 +1,333 @@
+{
+  "key": "GT-583", 
+  "fields": {
+    "comment": {
+      "total": 4, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "Also reported in redhat bugzilla:\r\nhttps://bugzilla.redhat.com/show_bug.cgi?id=1193992\r\n", 
+          "updateAuthor": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "created": "2015-02-18T12:56:17.559-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/27036/comment/30198", 
+          "author": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "updated": "2015-02-18T12:56:17.559-0600", 
+          "id": "30198"
+        }, 
+        {
+          "body": "Updates in EPEL testing:\r\n\r\nEPEL5: https://admin.fedoraproject.org/updates/FEDORA-EPEL-2015-0827\r\nEPEL6: https://admin.fedoraproject.org/updates/FEDORA-EPEL-2015-0817\r\nEPEL7: https://admin.fedoraproject.org/updates/FEDORA-EPEL-2015-0820\r\n", 
+          "updateAuthor": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "created": "2015-02-19T15:48:49.962-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/27036/comment/30206", 
+          "author": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "updated": "2015-02-19T15:48:49.962-0600", 
+          "id": "30206"
+        }, 
+        {
+          "body": "Positive feedback (karma: +1) reported on the EPEL 6 update.", 
+          "updateAuthor": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "created": "2015-02-24T04:49:38.738-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/27036/comment/30280", 
+          "author": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "updated": "2015-02-24T04:49:38.738-0600", 
+          "id": "30280"
+        }, 
+        {
+          "body": "EPEL updates are now in EPEL stable.", 
+          "updateAuthor": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "created": "2015-03-08T18:01:59.319-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/27036/comment/30407", 
+          "author": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "updated": "2015-03-08T18:01:59.319-0500", 
+          "id": "30407"
+        }
+      ], 
+      "maxResults": 4
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "Tim Cartwright", 
+      "name": "cat", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=cat", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "cat@cs.wisc.edu", 
+      "key": "cat", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|zq5suq:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-583/watchers", 
+      "watchCount": 2, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Mattias Ellert", 
+      "name": "ellert", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mattias.ellert@fysast.uu.se", 
+      "key": "ellert", 
+      "active": true, 
+      "timeZone": "Europe/Stockholm"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": "1_*:*_1_*:*_1665085583_*|*_5_*:*_1_*:*_0", 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@1ec6bc4", 
+    "summary": "SEG hangs looking for moved log directory (EPEL packaging)", 
+    "customfield_10288": "2015-02-18T12:56:17.559-0600", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-583/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "Done", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+        "id": 3, 
+        "key": "done", 
+        "colorName": "green"
+      }, 
+      "description": "The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/6", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/closed.png", 
+      "id": "6", 
+      "name": "Closed"
+    }, 
+    "updated": "2015-03-08T18:03:14.867-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "We've run into a problem with the latest GT6 packages where a globus-job-run against a PBS jobmanager using the SEG will hang indefinitely. Attaching gdb to the globus-scheduler-event-generator process showed that globus_l_job_manager_find_logfile() repeatedly fails with the error SEG_JOB_MANAGER_ERROR_LOG_NOT_PRESENT, yet when I looked at the file system, the SEG logfile for the day was definitely there and the SEG had successfully been writing to it.\r\n\r\nThis appears to be caused to be caused by the move of the SEG log directories from /var/lib/globus/* to /var/log/globus/* -- creating the symlink /var/lib/globus/globus-seg-pbs -> /var/log/globus/globus-seg-pbs fixed the problem. I haven't been able to find the part of the code that needs to be changed, so as a workaround, we've just modified the init script to create those symlinks.\r\n\r\nInstructions to reproduce on EL6 using the EPEL repos (assuming grid certificates are already present):\r\n\r\n# as root:\r\nyum install  globus-gatekeeper  globus-gram-client-tools \\\r\n globus-gram-job-manager-pbs-setup-seg  globus-proxy-utils \\\r\n globus-scheduler-event-generator-progs  munge \\\r\n torque-{client,mom,scheduler,server}\r\n\r\n# set up a 1-node pbs cluster\r\nmom_config=/var/lib/torque/mom_priv/config\r\nnodes_file=/var/lib/torque/server_priv/nodes\r\nservername_file=/var/lib/torque/server_name\r\n\r\n/usr/sbin/create-munge-key -f\r\nservice munge start\r\n\r\necho '$pbsserver' $(hostname) > $mom_config\r\nservice pbs_mom start\r\n\r\nservice pbs_sched start\r\n\r\necho $(hostname) np=1 > $nodes_file\r\nhostname > $servername_file\r\nservice pbs_server start\r\n\r\npbs_config='\r\ncreate queue batch queue_type=execution\r\nset queue batch started=true\r\nset queue batch enabled=true\r\nset queue batch resources_default.nodes=1\r\nset queue batch resources_default.walltime=3600\r\nset server default_queue=batch\r\nset server keep_completed = 600\r\nset server job_nanny = True\r\nset server scheduling=true\r\nset server acl_hosts += *\r\nset server acl_host_enable = True\r\n'\r\n\r\nqmgr $(hostname) <<< \"$pbs_config\"\r\n\r\n# wait for the output of `qnodes -s $(hostname)` to contain 'state = free'\r\n\r\nglobus-scheduler-event-generator-admin -e pbs\r\nglobus-gatekeeper-admin -e jobmanager-pbs-seg\r\n\r\nservice globus-gatekeeper start\r\nservice globus-scheduler-event-generator start\r\n\r\n# as a user:\r\ngrid-proxy-init\r\nglobus-job-run `hostname`/jobmanager-pbs-seg /usr/bin/id\r\n# ^ this should hang\r\n# until you do `ln -s  /var/log/globus/globus-seg-pbs  /var/lib/globus`\r\n\r\n(Discovered and documented by Mat Selmeci, UW\u2013Madison/OSG Software)", 
+    "reporter": {
+      "displayName": "Tim Cartwright", 
+      "name": "cat", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=cat", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "cat@cs.wisc.edu", 
+      "key": "cat", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2015-02-17T10:30:33.792-0600", 
+    "versions": [], 
+    "resolutiondate": "2015-03-08T18:01:59.300-0500", 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10324", 
+        "id": "10324", 
+        "name": "GRAM"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": {
+      "self": "https://globus.atlassian.net/rest/api/2/resolution/1", 
+      "id": "1", 
+      "name": "Fixed", 
+      "description": "A fix for this issue is checked into the tree and tested."
+    }, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/27036", 
+  "id": "27036", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

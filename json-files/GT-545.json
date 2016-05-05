@@ -1,0 +1,137 @@
+{
+  "key": "GT-545", 
+  "fields": {
+    "comment": {
+      "total": 0, 
+      "startAt": 0, 
+      "comments": [], 
+      "maxResults": 0
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": null, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|zq5nvu:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-545/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": null, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@12b3c9c", 
+    "summary": "gridftp server can hang during exit() from globus_l_gfs_bad_signal_handler", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-545/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/minor.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/4", 
+      "name": "Minor", 
+      "id": "4"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2014-08-07T04:35:51.962-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "Hello,\r\n\r\n(using linux, slc6, 64 bit)\r\n\r\nWe had a problem with our gridftp server plugin with gt 5.2.5 (probably unrelated to the globus toolkit) which causes a SIGSEGV. However the gridftp process hung - apparently due to a weakness in globus_l_gfs_bad_signal_handler: Traces which may be helpful:\r\n\r\nThread 3 (Thread 0x7fa750536700 (LWP 32734)):\r\n#0  0x0000003f2b8f82be in __lll_lock_wait_private () from /lib64/libc.so.6\r\n#1  0x0000003f2b87d0b0 in _L_lock_5195 () from /lib64/libc.so.6\r\n#2  0x0000003f2b878a0b in _int_free () from /lib64/libc.so.6\r\n#3  0x0000003f2b835e55 in exit () from /lib64/libc.so.6\r\n#4  0x00000033072422e1 in ?? () from /usr/lib64/libglobus_gridftp_server.so.6\r\n#5  0x0000003f30c1a1bc in ?? () from /usr/lib64/libglobus_common.so.0\r\n#6  0x0000003f30c320cd in globus_l_thread_pool_thread_start () from /usr/lib64/libglobus_common.so.0\r\n#7  0x00007fa75053902b in ?? () from /usr/lib64/libglobus_thread_pthread.so.0\r\n#8  0x0000003f2bc079d1 in start_thread () from /lib64/libpthread.so.0\r\n#9  0x0000003f2b8e8b5d in clone () from /lib64/libc.so.6\r\n\r\nThread 2 (Thread 0x7fa737fff700 (LWP 32735)):\r\n#0  0x0000003f2b8f82be in __lll_lock_wait_private () from /lib64/libc.so.6\r\n#1  0x0000003f2b87d0b0 in _L_lock_5195 () from /lib64/libc.so.6\r\n#2  0x0000003f2b878a0b in _int_free () from /lib64/libc.so.6\r\n#3  0x0000003f2b835e55 in exit () from /lib64/libc.so.6\r\n#4  0x0000000000403009 in ?? ()\r\n#5  <signal handler called>\r\n#6  0x0000003f2b876272 in malloc_consolidate () from /lib64/libc.so.6\r\n#7  0x0000003f2b878c38 in _int_free () from /lib64/libc.so.6\r\n#8  0x00007fa73d66bf21 in free_root () from /usr/lib64/mysql/libmysqlclient.so.16\r\n#9  0x00007fa73d68f36c in free_old_query () from /usr/lib64/mysql/libmysqlclient.so.16\r\n#10 0x00007fa73d68fbbd in mysql_close () from /usr/lib64/mysql/libmysqlclient.so.16\r\n#11 0x00007fa73d9f50aa in _M_set_node (this=0x7fa74c7aafd0, __vtt_parm=0x7fa73dc19288, __in_chrg=<value optimized out>) at /usr/include/c++/4.4.7/bits/stl_deque.h:224\r\n#12 _M_pop_front_aux (this=0x7fa74c7aafd0, __vtt_parm=0x7fa73dc19288, __in_chrg=<value optimized out>) at /usr/include/c++/4.4.7/bits/deque.tcc:446\r\n#13 pop_front (this=0x7fa74c7aafd0, __vtt_parm=0x7fa73dc19288, __in_chrg=<value optimized out>) at /usr/include/c++/4.4.7/bits/stl_deque.h:1241\r\n#14 ~PoolContainer (this=0x7fa74c7aafd0, __vtt_parm=0x7fa73dc19288, __in_chrg=<value optimized out>) at /usr/src/debug/dmlite-0.7.0/include/dmlite/cpp/utils/poolcontainer.h:54\r\n---Type <return> to continue, or q <return> to quit---\r\n#15 dmlite::NsMySqlFactory::~NsMySqlFactory (this=0x7fa74c7aafd0, __vtt_parm=0x7fa73dc19288, __in_chrg=<value optimized out>) at /usr/src/debug/dmlite-0.7.0/src/plugins/mysql/MySqlFactories.cpp:129\r\n#16 0x000000000234d000 in ?? ()\r\n#17 0x000000000235ca73 in ?? ()\r\n#18 0x000000000234cff9 in ?? () \r\n\r\nA problem happens in thread 2 which triggers the signal handler. The handler calls exit() in globus_l_gfs_bad_signal_handler, but exit() is considered an \"unsafe\" function for a signal handler. (_exit() may be an alternative possibility). The thread hangs, as exit() triggers some dynamic memory actions while the malloc system had been left in an intermediate state as this is where the signal occurred .\r\n\r\n(Thread 3 is the globus_l_gfs_control_watchdog_exit(), but it also hangs in exit()).", 
+    "reporter": null, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2014-08-07T04:35:51.962-0500", 
+    "versions": [], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "Task", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/3", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11058&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11058, 
+      "id": "3", 
+      "description": "A task that needs to be done."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/24955", 
+  "id": "24955", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

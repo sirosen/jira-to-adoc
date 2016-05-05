@@ -1,0 +1,212 @@
+{
+  "key": "GT-289", 
+  "fields": {
+    "comment": {
+      "total": 1, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "This is with the latest OSG packages. Here is the output of\nglobus-gass-server -versions:\nglobus-gass-server: 4.1 (1319549256-1)\nglobus_xio_gsi: 2.1 (1147293372-1)\nglobus_xio_tcp: 3.2 (1323094639-1)\nglobus_xio_system_select: 3.2 (1323094639-1)\nglobus_xio_file: 3.2 (1323094639-1)\nglobus_xio: 3.2 (1323094639-1)\nglobus_io: 9.2 (1322772745-1)\nglobus_i_gass_transfer_http: 7.1 (1319549257-1)\nglobus_gass_transfer: 7.1 (1319549257-1)\nglobus_gass_server_ez: 4.1 (1319549256-1)\nglobus_callout_module: 2.1 (1319549254-1)\nglobus_gss_assist: 8.1 (1319549262-1)\nglobus_gsi_callback_module: 4.4 (1343249939-83)\nglobus_sysconfig: 5.1 (1319549264-1)\nglobus_credential: 5.1 (1319549261-1)\nglobus_gsi_proxy: 6.1 (1319549263-1)\nglobus_gsi_openssl_error: 2.1 (1319549263-1)\nglobus_openssl: 3.1 (1319549263-1)\nglobus_extension_module: 14.5 (1323116869-1)\nglobus_callback_nonthreaded: 14.5 (1323116869-1)\nglobus_callback: 14.5 (1323116869-1)\nglobus_object: 14.5 (1323116869-1)\nglobus_error: 14.5 (1323116869-1)\nglobus_common: 14.5 (1323116869-1)\nglobus_gsi_gssapi: 10.7 (1336415934-83)\nglobus_thread_common: 14.5 (1323116869-1)\nglobus_thread_none: 14.5 (1323116869-1)\nglobus_thread: <no version>\n", 
+          "updateAuthor": {
+            "displayName": "jfrey", 
+            "name": "jfrey", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=jfrey", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "jfrey", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2012-10-09T14:05:42.534-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/19389/comment/20260", 
+          "author": {
+            "displayName": "jfrey", 
+            "name": "jfrey", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=jfrey", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "jfrey", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2012-10-09T14:05:42.534-0500", 
+          "id": "20260"
+        }
+      ], 
+      "maxResults": 1
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "jfrey", 
+      "name": "jfrey", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=jfrey", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "jfrey", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100nvc:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-289/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": null, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "3868", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@9b0f52", 
+    "summary": "globus-url-copy can hang on error with gass server", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-289/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/minor.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/4", 
+      "name": "Minor", 
+      "id": "4"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2012-10-09T14:05:42.535-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "When transferring a file from globus-url-copy to the gass-server\nlibrary, if the destination filename cannot be opened, globus-url-copy\ncan end up blocking for a long period of time (15+ minutes). The gass\nserver has closed the connection, while globus-url-copy has the\nconnection open in CLOSE_WAIT state.\nFor this bug to trigger, I needed a moderately-sized file (400k) and a\nwide distance between machines (UW and BNL). Otherwise, the transfer\nfails immediately with this error:\n   error: [globus_l_gass_copy_gass_write_callback]: gass_transfer_request_status: 3", 
+    "reporter": {
+      "displayName": "jfrey", 
+      "name": "jfrey", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=jfrey", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "jfrey", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2012-10-08T19:07:42.858-0500", 
+    "versions": [
+      {
+        "archived": false, 
+        "name": "5.2.1", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/10922", 
+        "releaseDate": "2012-04-26", 
+        "released": true, 
+        "id": "10922"
+      }
+    ], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10327", 
+        "id": "10327", 
+        "name": "Common Libs"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/19389", 
+  "id": "19389", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

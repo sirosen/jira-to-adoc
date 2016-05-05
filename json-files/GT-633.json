@@ -1,0 +1,226 @@
+{
+  "key": "GT-633", 
+  "fields": {
+    "comment": {
+      "total": 1, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "Those stacks seem to show garbage pointer values being passed to the globus_hashtable_remove() function:\r\n\r\n#0 0x0000003a84624466 in globus_hashtable_remove (table=0xc60c, key=0xc1a4) at globus_hashtable.c:466 \r\n#0 0x0000003a84624466 in globus_hashtable_remove (table=0xc3ad, key=0xc1a4) at globus_hashtable.c:466 \r\n#0 0x0000003a8462446d in globus_hashtable_remove (table=0xc366, key=0xc1a4) at globus_hashtable.c:466 \r\n#0 0x0000003a8462446d in globus_hashtable_remove (table=0xc354, key=0xc677) at globus_hashtable.c:466 \r\n#0 0x0000003a84624466 in globus_hashtable_remove (table=0xc4c1, key=0xc1a4) at globus_hashtable.c:466 \r\n\r\nIt's not clear to me from the stack traces where those are coming from.\r\n\r\nI'm not sure if you are doing this yet, but if you are using globus within a multi-threaded application, be sure to enable threads in the runtime by calling globus_thread_set_model(\"pthread\") before activating any Globus module..", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2015-12-22T09:23:52.062-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/30831/comment/33883", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2015-12-22T09:23:52.062-0600", 
+          "id": "33883"
+        }
+      ], 
+      "maxResults": 1
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": null, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|zq5wca:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-633/watchers", 
+      "watchCount": 1, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Joe Bester", 
+      "name": "bester", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "bester@mcs.anl.gov", 
+      "key": "bester", 
+      "active": true, 
+      "timeZone": "America/New_York"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@15d9aef", 
+    "summary": "Follow up", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-633/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/minor.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/4", 
+      "name": "Minor", 
+      "id": "4"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2015-12-22T09:23:52.062-0600", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "Hi, thanks for having picked this up and sorry for the late reply. As a side note, it is apparently not possible to have a login in order to contribute un-anonymously, and the only available way to contribute here was to create this sub-task.\r\n\r\nClearly, I don't have a final proof that there is a deadlock, but the evidence I have is that our daemon was stuck and unable to answer to any connection, and when core dumping it, many threads were into either globus_hashtable_remove() or globus_hashtable_size(), the former function suggesting that a lock be possibly required to ensure thread safety.\r\n\r\nThe entire stack trace follows - where multiple threads are involved in both those functions:\r\n\r\n--------------------------------------------------------------------------------------\r\n(gdb) thr apply all bt\r\n\r\nThread 12 (Thread 0x7f89f8eae700 (LWP 9382)):\r\n#0  0x0000003a846242ae in fprintf (table=<value optimized out>) at /usr/include/bits/stdio2.h:98\r\n#1  globus_hashtable_size (table=<value optimized out>) at globus_hashtable.c:598\r\n#2  0x00007f89cc0eb4a0 in ?? ()\r\n#3  0x000000000000c77b in ?? ()\r\n#4  0x000000000000c77b in ?? ()\r\n#5  0x0000003a8501f080 in ?? () from /usr/lib64/libglobus_gssapi_gsi.so.4\r\n#6  0x0000003a8461efe1 in globus_error_put (error=0x7f89c8029e50) at globus_error.c:437\r\n#7  0x0000003a84e161ea in globus_i_gsi_gssapi_openssl_error_result () from /usr/lib64/libglobus_gssapi_gsi.so.4\r\n#8  0x0000003a84e0f4ed in gss_release_name () from /usr/lib64/libglobus_gssapi_gsi.so.4\r\n#9  0x0000003a826066aa in ?? () from /usr/lib64/libcgsi_plugin_voms_cpp.so.1\r\n#10 0x0000003a82606f97 in ?? () from /usr/lib64/libcgsi_plugin_voms_cpp.so.1\r\n#11 0x0000003a82213e04 in soap_recv_raw () from /usr/lib64/libgsoap++.so.0\r\n#12 0x0000003a82214286 in soap_recv () from /usr/lib64/libgsoap++.so.0\r\n#13 0x0000003a8221440d in soap_getchar () from /usr/lib64/libgsoap++.so.0\r\n#14 0x0000003a82215a88 in soap_begin_recv () from /usr/lib64/libgsoap++.so.0\r\n#15 0x0000003a8c80ac22 in soap_serve (soap=0x7f89ec0390b0) at gsoap/soapServer.cpp:40\r\n#16 0x000000000042f223 in srm::server::SrmThread::run (this=0x23ece80, param=0x7f89ec0390b0)\r\n    at srm/server/SrmThread.cpp:52\r\n#17 0x0000003a887cd4c4 in castor::server::DynamicThreadPool::_consumer(void*) () from /usr/lib64/libcastorclient.so.2.1\r\n#18 0x0000003a7d607a51 in start_thread () from /lib64/libpthread.so.0\r\n#19 0x0000003a7d2e893d in clone () from /lib64/libc.so.6\r\n\r\nThread 11 (Thread 0x7f89f8daa700 (LWP 9386)):\r\n#0  0x0000003a84624466 in globus_hashtable_remove (table=0xc60c, key=0xc1a4) at globus_hashtable.c:466\r\n#1  0x00007f89f8da8d50 in ?? ()\r\n#2  0x0000003a84849ae0 in ?? () from /usr/lib64/libglobus_common.so.0\r\n#3  0x0000000000000000 in ?? ()\r\n\r\nThread 10 (Thread 0x7f89f8d69700 (LWP 9387)):\r\n#0  0x0000003a7d60b63c in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0\r\n#1  0x0000003a887d5188 in castor::server::Queue::push(void*, bool) () from /usr/lib64/libcastorclient.so.2.1\r\n#2  0x0000003a887cdec3 in castor::server::DynamicThreadPool::addTask(void*, bool) ()\r\n   from /usr/lib64/libcastorclient.so.2.1\r\n#3  0x0000003a887ce857 in castor::server::ListenerThreadPool::threadAssign(void*) ()\r\n   from /usr/lib64/libcastorclient.so.2.1\r\n#4  0x00000000004381aa in srm::server::SoapListenerThreadPool::listenLoop (this=0x23ecea0)\r\n    at srm/server/SoapListenerThreadPool.cpp:133\r\n#5  0x0000003a887cecaf in castor::server::ListenerProducerThread::run(void*) () from /usr/lib64/libcastorclient.so.2.1\r\n#6  0x0000003a887ccd5b in castor::server::DynamicThreadPool::_producer(void*) () from /usr/lib64/libcastorclient.so.2.1\r\n#7  0x0000003a7d607a51 in start_thread () from /lib64/libpthread.so.0\r\n#8  0x0000003a7d2e893d in clone () from /lib64/libc.so.6\r\n\r\nThread 9 (Thread 0x7f89f8deb700 (LWP 9385)):\r\n#0  0x0000003a846242b5 in globus_hashtable_size (table=<value optimized out>) at globus_hashtable.c:598\r\n#1  0x00007f89dc0b98b0 in ?? ()\r\n#2  0x000000000000c6f9 in ?? ()\r\n#3  0x000000000000c6f9 in ?? ()\r\n#4  0x0000003a8501f080 in ?? () from /usr/lib64/libglobus_gssapi_gsi.so.4\r\n#5  0x0000003a8461efe1 in globus_error_put (error=0x7f89c8018a20) at globus_error.c:437\r\n#6  0x0000003a84e161ea in globus_i_gsi_gssapi_openssl_error_result () from /usr/lib64/libglobus_gssapi_gsi.so.4\r\n#7  0x0000003a84e0f4ed in gss_release_name () from /usr/lib64/libglobus_gssapi_gsi.so.4\r\n#8  0x0000003a826066aa in ?? () from /usr/lib64/libcgsi_plugin_voms_cpp.so.1\r\n#9  0x0000003a82606f97 in ?? () from /usr/lib64/libcgsi_plugin_voms_cpp.so.1\r\n#10 0x0000003a82213e04 in soap_recv_raw () from /usr/lib64/libgsoap++.so.0\r\n#11 0x0000003a82214286 in soap_recv () from /usr/lib64/libgsoap++.so.0\r\n#12 0x0000003a8221440d in soap_getchar () from /usr/lib64/libgsoap++.so.0\r\n#13 0x0000003a82215a88 in soap_begin_recv () from /usr/lib64/libgsoap++.so.0\r\n#14 0x0000003a8c80ac22 in soap_serve (soap=0x7f89ec01cd60) at gsoap/soapServer.cpp:40\r\n#15 0x000000000042f223 in srm::server::SrmThread::run (this=0x23ece80, param=0x7f89ec01cd60)\r\n    at srm/server/SrmThread.cpp:52\r\n#16 0x0000003a887cd4c4 in castor::server::DynamicThreadPool::_consumer(void*) () from /usr/lib64/libcastorclient.so.2.1\r\n#17 0x0000003a7d607a51 in start_thread () from /lib64/libpthread.so.0\r\n#18 0x0000003a7d2e893d in clone () from /lib64/libc.so.6\r\n\r\nThread 8 (Thread 0x7f89f9972700 (LWP 9374)):\r\n#0  0x0000003a7d60f535 in sigwait () from /lib64/libpthread.so.0\r\n#1  0x0000003a887c51fa in castor::server::BaseDaemon::_signalHandler(void*) () from /usr/lib64/libcastorclient.so.2.1\r\n#2  0x0000003a7e6203b1 in _Cthread_start_pthread () from /usr/lib64/libcastorcommon.so.2.1\r\n#3  0x0000003a7d607a51 in start_thread () from /lib64/libpthread.so.0\r\n#4  0x0000003a7d2e893d in clone () from /lib64/libc.so.6\r\n\r\nThread 7 (Thread 0x7f89e4cdc700 (LWP 10164)):\r\n#0  0x0000003a84624466 in globus_hashtable_remove (table=0xc3ad, key=0xc1a4) at globus_hashtable.c:466\r\n#1  0x00007f89e4cdad50 in ?? ()\r\n#2  0x0000003a84849ae0 in ?? () from /usr/lib64/libglobus_common.so.0\r\n#3  0x0000000000000000 in ?? ()\r\n\r\nThread 6 (Thread 0x7f89f8e2c700 (LWP 9384)):\r\n#0  0x0000003a8462446d in globus_hashtable_remove (table=0xc366, key=0xc1a4) at globus_hashtable.c:466\r\n#1  0x00007f89f8e2ad50 in ?? ()\r\n#2  0x0000003a84849ae0 in ?? () from /usr/lib64/libglobus_common.so.0\r\n#3  0x0000000000000000 in ?? ()\r\n\r\nThread 5 (Thread 0x7f89f8f71700 (LWP 9379)):\r\n#0  0x0000003a846242ae in fprintf (table=<value optimized out>) at /usr/include/bits/stdio2.h:98\r\n#1  globus_hashtable_size (table=<value optimized out>) at globus_hashtable.c:598\r\n#2  0x00007f89f00b79b0 in ?? ()\r\n#3  0x000000000000c6b8 in ?? ()\r\n#4  0x000000000000c6b8 in ?? ()\r\n#5  0x0000003a8600bb48 in ?? () from /usr/lib64/libglobus_gsi_sysconfig.so.1\r\n#6  0x0000003a8461efe1 in globus_error_put (error=0x7f89cc176760) at globus_error.c:437\r\n#7  0x0000003a85e09150 in globus_i_gsi_sysconfig_error_result () from /usr/lib64/libglobus_gsi_sysconfig.so.1\r\n#8  0x0000003a85e038d6 in globus_gsi_sysconfig_dir_exists_unix () from /usr/lib64/libglobus_gsi_sysconfig.so.1\r\n#9  0x0000003a85e083a6 in globus_i_gsi_sysconfig_create_cert_dir_string () from /usr/lib64/libglobus_gsi_sysconfig.so.1\r\n#10 0x0000003a85e0866e in globus_gsi_sysconfig_get_cert_dir_unix () from /usr/lib64/libglobus_gsi_sysconfig.so.1\r\n#11 0x0000003a84e14e99 in globus_i_gsi_gss_create_and_fill_context () from /usr/lib64/libglobus_gssapi_gsi.so.4\r\n#12 0x0000003a84e07e5d in gss_accept_sec_context () from /usr/lib64/libglobus_gssapi_gsi.so.4\r\n#13 0x0000003a826069f6 in ?? () from /usr/lib64/libcgsi_plugin_voms_cpp.so.1\r\n#14 0x0000003a82606f97 in ?? () from /usr/lib64/libcgsi_plugin_voms_cpp.so.1\r\n#15 0x0000003a82213e04 in soap_recv_raw () from /usr/lib64/libgsoap++.so.0\r\n#16 0x0000003a82214286 in soap_recv () from /usr/lib64/libgsoap++.so.0\r\n#17 0x0000003a8221440d in soap_getchar () from /usr/lib64/libgsoap++.so.0\r\n#18 0x0000003a82215a88 in soap_begin_recv () from /usr/lib64/libgsoap++.so.0\r\n#19 0x0000003a8c80ac22 in soap_serve (soap=0x7f89ec000980) at gsoap/soapServer.cpp:40\r\n#20 0x000000000042f223 in srm::server::SrmThread::run (this=0x23ece80, param=0x7f89ec000980)\r\n    at srm/server/SrmThread.cpp:52\r\n#21 0x0000003a887cd4c4 in castor::server::DynamicThreadPool::_consumer(void*) () from /usr/lib64/libcastorclient.so.2.1\r\n#22 0x0000003a7d607a51 in start_thread () from /lib64/libpthread.so.0\r\n#23 0x0000003a7d2e893d in clone () from /lib64/libc.so.6\r\n\r\nThread 4 (Thread 0x7f89f8e6d700 (LWP 9383)):\r\n#0  0x0000003a8462446d in globus_hashtable_remove (table=0xc354, key=0xc677) at globus_hashtable.c:466\r\n#1  0x00007f89e007e010 in ?? ()\r\n#2  0x0000003a84849ae0 in ?? () from /usr/lib64/libglobus_common.so.0\r\n#3  0x0000000000000000 in ?? ()\r\n\r\nThread 3 (Thread 0x7f89f8f30700 (LWP 9380)):\r\n#0  0x0000003a84624466 in globus_hashtable_remove (table=0xc4c1, key=0xc1a4) at globus_hashtable.c:466\r\n#1  0x00007f89f8f2ed50 in ?? ()\r\n#2  0x0000003a84849ae0 in ?? () from /usr/lib64/libglobus_common.so.0\r\n#3  0x0000000000000000 in ?? ()\r\n\r\nThread 2 (Thread 0x7f89f8eef700 (LWP 9381)):\r\n#0  0x0000003a846242ae in fprintf (table=<value optimized out>) at /usr/include/bits/stdio2.h:98\r\n#1  globus_hashtable_size (table=<value optimized out>) at globus_hashtable.c:598\r\n#2  0x00007f89c81b02f0 in ?? ()\r\n#3  0x000000000000c73a in ?? ()\r\n#4  0x000000000000c73a in ?? ()\r\n#5  0x0000003a8501f080 in ?? () from /usr/lib64/libglobus_gssapi_gsi.so.4\r\n#6  0x0000003a8461efe1 in globus_error_put (error=0x7f89cc00c980) at globus_error.c:437\r\n#7  0x0000003a84e161ea in globus_i_gsi_gssapi_openssl_error_result () from /usr/lib64/libglobus_gssapi_gsi.so.4\r\n#8  0x0000003a84e0f4ed in gss_release_name () from /usr/lib64/libglobus_gssapi_gsi.so.4\r\n#9  0x0000003a826066aa in ?? () from /usr/lib64/libcgsi_plugin_voms_cpp.so.1\r\n#10 0x0000003a82606f97 in ?? () from /usr/lib64/libcgsi_plugin_voms_cpp.so.1\r\n#11 0x0000003a82213e04 in soap_recv_raw () from /usr/lib64/libgsoap++.so.0\r\n#12 0x0000003a82214286 in soap_recv () from /usr/lib64/libgsoap++.so.0\r\n#13 0x0000003a8221440d in soap_getchar () from /usr/lib64/libgsoap++.so.0\r\n#14 0x0000003a82215a88 in soap_begin_recv () from /usr/lib64/libgsoap++.so.0\r\n#15 0x0000003a8c80ac22 in soap_serve (soap=0x7f89ec08e0d0) at gsoap/soapServer.cpp:40\r\n#16 0x000000000042f223 in srm::server::SrmThread::run (this=0x23ece80, param=0x7f89ec08e0d0)\r\n    at srm/server/SrmThread.cpp:52\r\n#17 0x0000003a887cd4c4 in castor::server::DynamicThreadPool::_consumer(void*) () from /usr/lib64/libcastorclient.so.2.1\r\n#18 0x0000003a7d607a51 in start_thread () from /lib64/libpthread.so.0\r\n#19 0x0000003a7d2e893d in clone () from /lib64/libc.so.6\r\n\t\r\nThread 1 (Thread 0x7f89f9b81820 (LWP 9373)):\r\n#0  0x0000003a7d60f65b in raise () from /lib64/libpthread.so.0\r\n#1  0x0000003a8a7546c6 in skgesigOSCrash () from /usr/lib64/oracle/11.2.0.4.0/client/lib64/libclntsh.so.11.1\r\n#2  0x0000003a8aa05f79 in kpeDbgSignalHandler () from /usr/lib64/oracle/11.2.0.4.0/client/lib64/libclntsh.so.11.1\r\n#3  0x0000003a8a7548d6 in skgesig_sigactionHandler () from /usr/lib64/oracle/11.2.0.4.0/client/lib64/libclntsh.so.11.1\r\n#4  <signal handler called>\r\n#5  0x0000003a7d60ba0e in pthread_cond_timedwait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0\r\n#6  0x0000003a7e621029 in Cthread_Wait_Condition_ext () from /usr/lib64/libcastorcommon.so.2.1\r\n#7  0x0000003a887d3832 in castor::server::Mutex::wait() () from /usr/lib64/libcastorclient.so.2.1\r\n#8  0x0000003a887c482d in castor::server::BaseDaemon::handleSignals() () from /usr/lib64/libcastorclient.so.2.1\r\n#9  0x0000003a887c3ffb in castor::server::BaseDaemon::start() () from /usr/lib64/libcastorclient.so.2.1\r\n#10 0x000000000042d86f in main (argc=1, argv=0x7fff971578b8) at srm/server/SrmServer.cpp:84\r\n(gdb) \r\n---------------------------------------------------------------------------------------------\r\n\r\nNow, if you say that those functions don't take locks, how do you explain that many threads were stuck into functions that ought to complete very quickly? Any clue as what could have happened?\r\n\r\nThanks, cheers,\r\n\r\nGiuseppe\r\n\r\n--\r\nGiuseppe Lo Presti\r\ngiuseppe.lopresti@cern.ch\r\n", 
+    "parent": {
+      "fields": {
+        "status": {
+          "statusCategory": {
+            "name": "Done", 
+            "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+            "id": 3, 
+            "key": "done", 
+            "colorName": "green"
+          }, 
+          "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+          "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+          "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+          "id": "5", 
+          "name": "Resolved"
+        }, 
+        "priority": {
+          "iconUrl": "https://globus.atlassian.net/images/icons/priorities/minor.svg", 
+          "self": "https://globus.atlassian.net/rest/api/2/priority/4", 
+          "name": "Minor", 
+          "id": "4"
+        }, 
+        "issuetype": {
+          "name": "Bug", 
+          "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+          "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+          "subtask": false, 
+          "avatarId": 11043, 
+          "id": "1", 
+          "description": "A problem which impairs or prevents the functions of the product."
+        }, 
+        "summary": "Deadlock between globus_hashtable_size() and globus_hashtable_remove() in libglobus_common"
+      }, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/30239", 
+      "id": "30239", 
+      "key": "GT-630"
+    }, 
+    "reporter": null, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2015-12-22T04:58:42.377-0600", 
+    "versions": [], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10327", 
+        "id": "10327", 
+        "name": "Common Libs"
+      }
+    ], 
+    "issuetype": {
+      "name": "Sub-task", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/7", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11056&avatarType=issuetype", 
+      "subtask": true, 
+      "avatarId": 11056, 
+      "id": "7", 
+      "description": "The sub-task of the issue"
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/30831", 
+  "id": "30831", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

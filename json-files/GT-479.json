@@ -1,0 +1,380 @@
+{
+  "key": "GT-479", 
+  "fields": {
+    "comment": {
+      "total": 5, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "It looks like Wei may have resolved this issue:\n\n\nI found that the SEG module is using the secondary LSF log, not the primary log. I believe this is the root cause of most of the problems I saw, if not all. I fixed it. Let me run for a month (previously we were able to run for  two weeks with the secondary log) and see if we still run into problem. If not, i will close this ticket, or we can follow up if there are still problem.\n\nI think the globus-job-manager may still have some memory problem but I hope that by using the primary log, the problem will never be triggered.\n\nregards,\nWei Yang  |  yangw@slac.stanford.edu  |  1-650-926-3338", 
+          "updateAuthor": {
+            "displayName": "sthapa", 
+            "name": "sthapa", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=sthapa", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "sthapa", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-10-30T10:48:44.041-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22419/comment/23332", 
+          "author": {
+            "displayName": "sthapa", 
+            "name": "sthapa", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=sthapa", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "sthapa", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-10-30T10:48:44.041-0500", 
+          "id": "23332"
+        }, 
+        {
+          "body": "Thanks for the update.  Marking this resolved for now.  Reopen or create a new issue if something specific is identified.", 
+          "updateAuthor": {
+            "displayName": "Stuart Martin", 
+            "name": "smartin", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=smartin", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "smartin@mcs.anl.gov", 
+            "key": "smartin", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-10-30T12:01:58.283-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22419/comment/23334", 
+          "author": {
+            "displayName": "Stuart Martin", 
+            "name": "smartin", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=smartin", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "smartin@mcs.anl.gov", 
+            "key": "smartin", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-10-30T12:01:58.283-0500", 
+          "id": "23334"
+        }, 
+        {
+          "body": "Can this be reopened?  Wei indicates that it's still a problem:\n\nHi Chris,\n\nWe still see large number of gram state files left behind at /var/lib/globus/gram_job_state/osgatlas01/18ac9349/lsf (not today since we have a site wide downtime today), and it seems one of the (long running) globus-job-manager spent a lot of time on those files. These still results in huge # of globus-job-manager processes hanging around (I guess they were all waiting for the long running globus-job-manager to respond to a unix socket). When the # of these process reach ~20k, the system will run out of memory.\n\nTo mitigate these issues, I run a script to delete state files older than 3 days, and temporarily stop globus-gatekeeper service if the # of globus-job-manager goes beyond 1000. Doing so allows me to keep the number state files below 14k and thus we are able to archive stable operation. But I think the problem is clearly still there.\n\nregards,\nWei Yang  |  yangw@slac.stanford.edu  |  650-926-3338(O)\n", 
+          "updateAuthor": {
+            "displayName": "sthapa", 
+            "name": "sthapa", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=sthapa", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "sthapa", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-12-03T16:34:22.118-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22419/comment/23575", 
+          "author": {
+            "displayName": "sthapa", 
+            "name": "sthapa", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=sthapa", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "sthapa", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-12-03T16:34:22.118-0600", 
+          "id": "23575"
+        }, 
+        {
+          "body": "This is difficult for me to debug as I don't have any LSF capable machines that I can access. I guess some things to figure out:\n\n- Why isn't the job manager responding to the startup socket connects?\n- Why are there so many jobs in the job state directory? Are they finished? Why aren't they being cleaned/expired.\n- Why is the client sending so many job requests when the service is not responding?\n\nThe first one we might be able to get some info from the logs at higher levels of verbosity. I think OSG has some sort of state file parser that might help figure out whether the jobs are completed for the second item.", 
+          "updateAuthor": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "created": "2013-12-10T10:57:41.791-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22419/comment/23617", 
+          "author": {
+            "displayName": "Joe Bester", 
+            "name": "bester", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "bester@mcs.anl.gov", 
+            "key": "bester", 
+            "active": true, 
+            "timeZone": "America/New_York"
+          }, 
+          "updated": "2013-12-10T10:57:41.791-0600", 
+          "id": "23617"
+        }, 
+        {
+          "body": "resolving this.  Reopen with additional info if it comes up again.", 
+          "updateAuthor": {
+            "displayName": "Stuart Martin", 
+            "name": "smartin", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=smartin", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "smartin@mcs.anl.gov", 
+            "key": "smartin", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2014-01-16T14:44:24.679-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/22419/comment/23815", 
+          "author": {
+            "displayName": "Stuart Martin", 
+            "name": "smartin", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=smartin", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "smartin@mcs.anl.gov", 
+            "key": "smartin", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2014-01-16T14:44:24.679-0600", 
+          "id": "23815"
+        }
+      ], 
+      "maxResults": 5
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "sthapa", 
+      "name": "sthapa", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=sthapa", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "sthapa", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100zw8:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-479/watchers", 
+      "watchCount": 1, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Joe Bester", 
+      "name": "bester", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=bester", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "bester@mcs.anl.gov", 
+      "key": "bester", 
+      "active": true, 
+      "timeZone": "America/New_York"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": "1_*:*_1_*:*_173930405_*|*_5_*:*_2_*:*_3464757683_*|*_4_*:*_1_*:*_3287788694", 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@1565788", 
+    "summary": "memory leak in LSF job manager", 
+    "customfield_10288": "2013-10-30T12:01:58.283-0500", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-479/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [
+      {
+        "archived": false, 
+        "name": "Sprint 2014-01-06", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11602", 
+        "releaseDate": "2014-01-06", 
+        "released": true, 
+        "id": "11602", 
+        "description": ""
+      }
+    ], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "Done", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+        "id": 3, 
+        "key": "done", 
+        "colorName": "green"
+      }, 
+      "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+      "id": "5", 
+      "name": "Resolved"
+    }, 
+    "updated": "2014-01-16T14:44:24.712-0600", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "Wei Yang at SLAC is running into problems with a memory leak or something similar in the LSF jobmanger.  I've included his report below and am getting more details.  There's a OSG GOC ticket for this open at https://ticket.grid.iu.edu/goc/17605\n\n\nAt SLAC we constantly have problem with LSF jobmanager with the new GT5 installation. It runs a few days (now a few hours) and it starts to pile up globus-job-manager processes. One of them seems to be still running OK but it memory usage grows quickly. All other globus-job-manager (last time I checked, there are 11k of them) are basically hanging at\n\nconnect(X,X,\"/var/lib/globus/gram_job_state/osgatlas01/osgserv02/lsf.18ac9349.sock\")\n\nThis happens with both SEG enabled and disabled. In most case, the memory leak is fast and I don't get much change to find it before the machine become unresponsive. But there are two cases (one with SEG and one without SEG) that I stopped globus-gatekeeper, and the system slowly go back to normal (that particular globus-job-manager is stil there but all others disappeared).\n\nAfter i stopped globus-gatekeeper, there are still jobs be submitted to our LSF (probably by those reminding globus-job-manager processes?)\n\nThe CE is a RHEL6 x85_64 with 16GB in KVM. with OSG 3.1.25 rpms. Any idea?", 
+    "reporter": {
+      "displayName": "sthapa", 
+      "name": "sthapa", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=sthapa", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "sthapa", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2013-10-28T11:43:07.933-0500", 
+    "versions": [], 
+    "resolutiondate": "2014-01-16T14:44:24.633-0600", 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10324", 
+        "id": "10324", 
+        "name": "GRAM"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": {
+      "self": "https://globus.atlassian.net/rest/api/2/resolution/8", 
+      "id": "8", 
+      "name": "No Need to Fix", 
+      "description": "The work in this JIRA has been considered unnecessary for the reasons detailed in the resolution."
+    }, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/22419", 
+  "id": "22419", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

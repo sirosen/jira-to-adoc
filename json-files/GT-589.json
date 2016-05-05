@@ -1,0 +1,216 @@
+{
+  "key": "PM-251", 
+  "fields": {
+    "comment": {
+      "total": 1, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "https://support.globus.org/entries/24005071", 
+          "updateAuthor": {
+            "displayName": "Rachana Ananthakrishnan", 
+            "name": "ranantha", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ranantha", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ranantha@mcs.anl.gov", 
+            "key": "ranantha", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2015-07-01T14:29:06.563-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/27441/comment/31586", 
+          "author": {
+            "displayName": "Rachana Ananthakrishnan", 
+            "name": "ranantha", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ranantha", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "ranantha@mcs.anl.gov", 
+            "key": "ranantha", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2015-07-01T14:29:06.563-0500", 
+          "id": "31586"
+        }
+      ], 
+      "maxResults": 1
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "Dan Powers", 
+      "name": "dpowers", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=dpowers", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "dpowers@uchicago.edu", 
+      "key": "dpowers", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|zq5tky:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/PM-251/watchers", 
+      "watchCount": 2, 
+      "isWatching": false
+    }, 
+    "customfield_10051": null, 
+    "assignee": {
+      "displayName": "Rachana Ananthakrishnan", 
+      "name": "ranantha", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=ranantha", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "ranantha@mcs.anl.gov", 
+      "key": "ranantha", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@826d80", 
+    "summary": "Managed endpoint admin wants additional control over who users are permitted to grant share access to", 
+    "customfield_10288": "2015-07-01T14:29:06.563-0500", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "self": "https://globus.atlassian.net/rest/api/2/project/10560", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10560&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10560&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10560&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10560&avatarId=10011"
+      }, 
+      "id": "10560", 
+      "key": "PM", 
+      "name": "Product Management"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/PM-251/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [
+      {
+        "archived": false, 
+        "name": "2015-10-08", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/15331", 
+        "releaseDate": "2015-10-08", 
+        "released": true, 
+        "id": "15331", 
+        "description": ""
+      }
+    ], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "Done", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+        "id": 3, 
+        "key": "done", 
+        "colorName": "green"
+      }, 
+      "description": "", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/10118", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/closed.png", 
+      "id": "10118", 
+      "name": "Done"
+    }, 
+    "updated": "2015-10-08T11:12:47.976-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "https://globusonline.zendesk.com/agent/tickets/303542\r\n\r\nUser would like to be able to restrict users who are creating shares on a managed endpoint from being able to grant access to that share to \"all users\", but would still like to allow users to be able to grant access to other users or groups individually.", 
+    "reporter": {
+      "displayName": "Dan Powers", 
+      "name": "dpowers", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=dpowers", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "dpowers@uchicago.edu", 
+      "key": "dpowers", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2015-03-31T10:35:07.836-0500", 
+    "versions": [], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [], 
+    "issuetype": {
+      "name": "User Story", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/5", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11040&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11040, 
+      "id": "5", 
+      "description": "gh.issue.story.desc"
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/27441", 
+  "id": "27441", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

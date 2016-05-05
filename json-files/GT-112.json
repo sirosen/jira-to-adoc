@@ -1,0 +1,165 @@
+{
+  "key": "GT-112", 
+  "fields": {
+    "comment": {
+      "total": 0, 
+      "startAt": 0, 
+      "comments": [], 
+      "maxResults": 0
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "Lukasz Lacinski", 
+      "name": "lukasz", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=lukasz", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "lukasz@ci.uchicago.edu", 
+      "key": "lukasz", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100c0g:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-112/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": null, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "1947", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@1688d89", 
+    "summary": "Building source-trees-thr/database/c/sqlite/sqlite-3.3.17 causes problems", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-112/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2012-05-10T15:08:34.031-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "The readline header file has been detected but the readline library -lreadline has not been (it happens when GT with 64-bit flavor is built, and the readline is 32-bit). However, the macro -DHAVE_READLINE=1 is set on. It looks like that the configure script decided that the readline library is also availbale. It causes problems because symbols supposed to be defined in the readline library cannot be found.\n\n[gt-installer]$ ./configure --prefix=/home/condor/execute/dir_4041/userdir/install --with-flavor=gcc64dbg --with-buildopts='-verbose' LDFLAGS=-L/usr/local/lib\n\n<snap>\n\nCPP='/prereq/gcc-3.4.3/bin/gcc -E'; export CPP; CPPFLAGS=' -I/home/condor/execute/dir_4041/userdir/install/include -I/home/condor/execute/dir_4041/userdir/install/include/gcc64dbgpthr'; export CPPFLAGS; CFLAGS='-g -D_REENTRANT -std=gnu99 -D_XOPEN_SOURCE=600 -D__EXTENSIONS__ -m64 -D_REENTRANT -Wall'; export CFLAGS; LDFLAGS='-L/usr/local/lib -L/home/condor/execute/dir_4041/userdir/install/lib -m64 '; export LDFLAGS; LIBS='-lsocket -lnsl -lpthread -lposix4'; export LIBS; CXX='/prereq/gcc-3.4.3/bin/g++'; export CXX; CXXCPP='/prereq/gcc-3.4.3/bin/g++ -E'; export CXXCPP; CXXFLAGS='-g -D_REENTRANT -m64 '; export CXXFLAGS; AR='/prereq/binutils-2.21/bin/ar'; export AR; ARFLAGS='ruv'; export ARFLAGS; RANLIB='/prereq/binutils-2.21/bin/ranlib'; export RANLIB; NM='/prereq/binutils-2.21/bin/nm -B'; export NM; CC='/prereq/gcc-3.4.3/bin/gcc'; export CC; ./configure --prefix=/home/condor/execute/dir_4041/userdir/install --enable-threadsafe --disable-tcl\n\n<snap>\n\nchecking for readline in -lreadline... no\nchecking readline.h usability... no\nchecking readline.h presence...\nno checking for readline.h... no\nchecking for /usr/include/readline.h... no\nchecking for /usr/include/readline/readline.h... no\nchecking for /usr/local/include/readline.h... no\nchecking for /usr/local/include/readline/readline.h... yes\n\n<snap>\n\ncreating libsqlite3_gcc64dbgpthr.la\n(cd .libs && rm -f libsqlite3_gcc64dbgpthr.la && ln -s ../libsqlite3_gcc64dbgpthr.la libsqlite3_gcc64dbgpthr.la)\n./libtool --mode=link /prereq/gcc-3.4.3/bin/gcc -g -D_REENTRANT -std=gnu99 -D_XOPEN_SOURCE=600 -D__EXTENSIONS__ -m64 -D_REENTRANT -Wall -I. -I./src -DNDEBUG -DTHREADSAFE=1 -DSQLITE_THREAD_OVERRIDE_LOCK=-1 -DSQLITE_OMIT_LOAD_EXTENSION=1 -DHAVE_READLINE=1 -I/usr/local/include/readline -lpthread \\\n   -o sqlite3 ./src/shell.c libsqlite3_gcc64dbgpthr.la \\\n   -lcurses -lrt /prereq/gcc-3.4.3/bin/gcc -g -D_REENTRANT -std=gnu99 -D_XOPEN_SOURCE=600 -D__EXTENSIONS__ -m64 -D_REENTRANT -Wall -I. -I./src -DNDEBUG -DTHREADSAFE=1 -DSQLITE_THREAD_OVERRIDE_LOCK=-1 -DSQLITE_OMIT_LOAD_EXTENSION=1 -DHAVE_READLINE=1 -I/usr/local/include/readline -o .libs/sqlite3 ./src/shell.c ./.libs/libsqlite3_gcc64dbgpthr.so -lpthread -lcurses -lrt -R/home/condor/execute/dir_4041/userdir/install/lib Undefined first referenced symbol in file\nwrite_history /home/condor/execute/dir_4041/ccdjLdc4.o\nstifle_history /home/condor/execute/dir_4041/ccdjLdc4.o\nread_history /home/condor/execute/dir_4041/ccdjLdc4.o\nreadline /home/condor/execute/dir_4041/ccdjLdc4.o\nadd_history /home/condor/execute/dir_4041/ccdjLdc4.o\nld: fatal: Symbol referencing errors. No output written to .libs/sqlite3\ncollect2: ld returned 1 exit status\nmake[1]: *** [sqlite3] Error 1\nmake[1]: Leaving directory `/home/condor/execute/dir_4041/userdir/gt-installer/source-trees-thr/database/c/sqlite/sqlite-3.3.17'\nERROR: Build has failed\nmake: *** [globus_database_sqlite-thr-compile] Error 9\n", 
+    "reporter": {
+      "displayName": "Lukasz Lacinski", 
+      "name": "lukasz", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=lukasz", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "lukasz@ci.uchicago.edu", 
+      "key": "lukasz", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": "Solaris with 32-bit readline library", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2011-04-17T14:55:30.258-0500", 
+    "versions": [], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10334", 
+        "id": "10334", 
+        "name": "Build & Test"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/13682", 
+  "id": "13682", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

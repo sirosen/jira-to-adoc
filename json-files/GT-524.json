@@ -1,0 +1,206 @@
+{
+  "key": "GT-524", 
+  "fields": {
+    "comment": {
+      "total": 1, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "David,\r\n\r\nI've committed a fix for this build problem to the GSI-OpenSSH CVS. You can apply the fix as a patch like this:\r\n\r\n$ cd gsi_openssh-5.7-src\r\n$  wget http://lists.globus.org/pipermail/gsi-openssh-commit/2014-May/000505.html\r\n$ patch < 000505.html \r\npatching file channels.h\r\npatching file channels.c\r\nHunk #1 succeeded at 273 with fuzz 2.\r\n\r\nThe fix will appear in the next GSI-OpenSSH release. I've also reported the issue to the NERSC developers.\r\n\r\nThanks,\r\nJim Basney", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/23455/comment/25016", 
+          "updated": "2014-05-23T09:49:08.039-0500", 
+          "id": "25016", 
+          "created": "2014-05-23T09:49:08.039-0500"
+        }
+      ], 
+      "maxResults": 1
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "David Carver", 
+      "name": "dcarver", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=dcarver", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "dcarver@tacc.utexas.edu", 
+      "key": "dcarver", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100ne0:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-524/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Jim Basney", 
+      "name": "basney", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=basney", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "jbasney@ncsa.uiuc.edu", 
+      "key": "basney", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "3790", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@2893fb", 
+    "summary": "Can't build gsi_openssh_bundle-5.7-src.tar.gz with --with-nerscmod option", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-524/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2014-05-23T10:30:12.606-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "Can't build the gsi-openssh-5.7 update for Globus 5.2.5 with the \"with-nerscmod\" option\n\nstaff$ http://toolkit.globus.org/ftppub/gt5/5.2/5.2.5/updates/src/gsi_openssh-5.7-src.tar.gz\nstaff$ tar xf gsi_openssh-5.7-src.tar.gz\n\nor from\n\nstaff$ wget --no-check-certificate https://sourceforge.net/projects/cilogon/files/gsissh/gsi_openssh_bundle-5.7-src.tar.gz/download\nstaff$ tar zxf gsi_openssh_bundle-5.7-src.tar.gz\nstaff$ tar xf gsi_openssh-5.7-src.tar.gz\n\n\n\nstaff$ cd gsi_openssh-5.7-src\nstaff$ ./configure --prefix=/opt/apps/xsede/gsi-openssh-5.7 --with-default-path=/usr/local/bin:/bin:/usr/bin --with-superuser-path=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin --with-pam --with-md5-passwords --with-tcp-wrappers --with-nerscmod\n\nstaff$ make\n ...\n\ngcc -g -O2 -Wall -Wpointer-arith -Wsign-compare -Wformat-security -Wno-pointer-sign -fno-strict-aliasing -D_FORTIFY_SOURCE=2 -fno-builtin-memset -fstack-protector-all  -I. -I.  -D_PATH_PRIVSEP_CHROOT_DIR=\\\"/var/empty\\\" -DHAVE_CONFIG_H -c channels.c\nchannels.c: In function ?channel_handle_wfd?:\nchannels.c:1926: error: ?Channel? has no member named ?wfd_isatty?\nmake: *** [channels.o] Error 1\n\nIt looks like \"wfd_isatty\" in channels.h  is only defined when compiling on AIX\n\nstaff$ grep -A 1 -B 1 wfd_isatty *.h *.c\nchannels.h-#ifdef _AIX\nchannels.h:     int     wfd_isatty;     /* wfd is a tty */\nchannels.h-#endif\n--\nchannels.c-     /* XXX: Later AIX versions can't push as much data to tty */\nchannels.c:     c->wfd_isatty = is_tty || isatty(c->wfd);\nchannels.c-#endif\n--\nchannels.c-             /* XXX: Later AIX versions can't push as much data to tty */\nchannels.c:             if (compat20 && c->wfd_isatty)\nchannels.c-                     dlen = MIN(dlen, 8*1024);\n--\nchannels.c-                     /* this section for filtering unwanted data */\nchannels.c:                     if ( !c->wfd_isatty  && c->audit_enable == 1 ) {\nchannels.c-                             int print_len = 0;\nstaff$ \n\nI am glad that you all are picking up the ncsa gsi, psc hpn, and now nersc patches!\n\nThanks,\nDavid", 
+    "reporter": {
+      "displayName": "David Carver", 
+      "name": "dcarver", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=dcarver", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "dcarver@tacc.utexas.edu", 
+      "key": "dcarver", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": "Centos 6.5 with gcc 4.4.7\n\nstaff$ cat /etc/issue\nCentOS release 6.5 (Final)\n\nstaff$ uname -a\nLinux staff.maverick.tacc.utexas.edu 2.6.32-358.23.2.el6.x86_64 #1 SMP Wed Oct 16 18:37:12 UTC 2013 x86_64 x86_64 x86_64 GNU/Linux\n\ngcc version 4.4.7 20120313 (Red Hat 4.4.7-4) (GCC) ", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2014-03-24T13:07:07.911-0500", 
+    "versions": [
+      {
+        "archived": false, 
+        "name": "5.2.5", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11388", 
+        "releaseDate": "2013-06-17", 
+        "released": true, 
+        "id": "11388", 
+        "description": ""
+      }, 
+      {
+        "archived": false, 
+        "name": "Sprint 2013-10-28", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11588", 
+        "releaseDate": "2013-10-28", 
+        "released": true, 
+        "id": "11588", 
+        "description": ""
+      }
+    ], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10330", 
+        "id": "10330", 
+        "name": "GSI-OpenSSH"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/23455", 
+  "id": "23455", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

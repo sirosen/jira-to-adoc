@@ -1,0 +1,159 @@
+{
+  "key": "GT-525", 
+  "fields": {
+    "comment": {
+      "total": 0, 
+      "startAt": 0, 
+      "comments": [], 
+      "maxResults": 0
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "platyna", 
+      "name": "platyna", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=platyna", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "platyna", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100ndk:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-525/watchers", 
+      "watchCount": 1, 
+      "isWatching": false
+    }, 
+    "assignee": null, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "3788", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@3f9bc2", 
+    "summary": "globus-gridftp-server crashes at startup with assertion failed", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-525/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2014-03-27T09:32:40.995-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "Hello.\n\nWhen trying to start globus-gridftp-server I am receiving assertion failed:\n\n# /usr/sbin/globus-gridftp-server -p 2811 -S -d error,warn,info -l /var/log/gridftp-session.log -Z /var/log/globus-gridftp.log\nAssertion 0 && \"globus_hashtable_lookup bad parms\" failed in file globus_hashtable.c at line 390\nAborted\n\n]# gdb /usr/sbin/globus-gridftp-server\nGNU gdb (GDB) Red Hat Enterprise Linux (7.2-60.el6)\nCopyright (C) 2010 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.  Type \"show copying\"\nand \"show warranty\" for details.\nThis GDB was configured as \"x86_64-redhat-linux-gnu\".\nFor bug reporting instructions, please see:\n<http://www.gnu.org/software/gdb/bugs/>...\nReading symbols from /usr/sbin/globus-gridftp-server...(no debugging symbols found)...done.\n(gdb) run\nStarting program: /usr/sbin/globus-gridftp-server \n[Thread debugging using libthread_db enabled]\nAssertion 0 && \"globus_hashtable_lookup bad parms\" failed in file globus_hashtable.c at line 390\n\nGDB output:\n\n# gdb /usr/sbin/globus-gridftp-server\nThis GDB was configured as \"x86_64-redhat-linux-gnu\".\nFor bug reporting instructions, please see:\n<http://www.gnu.org/software/gdb/bugs/>...\nReading symbols from /usr/sbin/globus-gridftp-server...(no debugging symbols found)...done.\n(gdb) run\nStarting program: /usr/sbin/globus-gridftp-server \n[Thread debugging using libthread_db enabled]\nAssertion 0 && \"globus_hashtable_lookup bad parms\" failed in file globus_hashtable.c at line 390\n\nProgram received signal SIGABRT, Aborted.\n0x00007ffff6f3a925 in raise () from /lib64/libc.so.6\nMissing separate debuginfos, use: debuginfo-install globus-gridftp-server-progs-6.38-1.el6.x86_64\n(gdb) bt\n#0  0x00007ffff6f3a925 in raise () from /lib64/libc.so.6\n#1  0x00007ffff6f3c105 in abort () from /lib64/libc.so.6\n#2  0x00007ffff74dd2be in globus_hashtable_lookup () from /usr/lib64/libglobus_common.so.0\n#3  0x00007ffff7b85631 in globus_i_gfs_config_int () from /usr/lib64/libglobus_gridftp_server.so.6\n#4  0x00007ffff7b8290e in globus_gfs_log_exit_message () from /usr/lib64/libglobus_gridftp_server.so.6\n#5  0x00007ffff7b86ea6 in ?? () from /usr/lib64/libglobus_gridftp_server.so.6\n#6  0x00007ffff7b873ef in globus_i_gfs_config_init_envs () from /usr/lib64/libglobus_gridftp_server.so.6\n#7  0x0000000000404cd1 in main ()\n\nVersion:\nglobus-gridftp-server-6.38-1.el6.x86_64\n", 
+    "reporter": {
+      "displayName": "platyna", 
+      "name": "platyna", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=platyna", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "platyna", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": "Scientific Linux release 6.3 (Carbon), x86_64, Intel.", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2014-03-27T09:32:40.995-0500", 
+    "versions": [], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/23486", 
+  "id": "23486", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

@@ -1,0 +1,164 @@
+{
+  "key": "GT-308", 
+  "fields": {
+    "comment": {
+      "total": 0, 
+      "startAt": 0, 
+      "comments": [], 
+      "maxResults": 0
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "Stuart Martin", 
+      "name": "smartin", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=smartin", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "smartin@mcs.anl.gov", 
+      "key": "smartin", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|100nug:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-308/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": null, 
+    "lastViewed": "2016-03-08T11:37:57.068-0600", 
+    "customfield_10287": null, 
+    "customfield_10280": "3864", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@3e029c", 
+    "summary": "move some GT web pages to wiki", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-308/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2012-10-19T10:21:19.501-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "Consider moving some GT web pages to a Globus supported community wiki in order to enable the community to help maintain and improve them.\n\nFrom: Pete Eby <relative.prime@gmail.com>\nDate: October 19, 2012 9:28:35 AM CDT\nSubject: Re: [gt-user] who maintains the Globus Toolkit documentation?\n\nI thinking having the install and quickstart guides in a wiki format\nwould be extremely helpful. The globus user community seems well\nsuited to help maintain this documentation. These guides are very\nhelpful, and allowing them to be updated might help to improve them\nfurther.\n\nAlso, perhaps an additional community wiki page could be created for\ntrouble shooting common issues. There seems to be some \"top 10\" things\nusers encounter frequently, and this might help save them a\nconsiderable amount of debug / research time.\n\nPete\n\nOn Fri, Oct 19, 2012 at 10:22 AM, Stuart Martin <smartin@mcs.anl.gov> wrote:\nI like that idea a lot.  We use docbook to generate most of the toolkit's web content.  We'll have to think through if and where taking on a transition like that would make sense.  Maybe there are some GT pages that are best left to be generated via docbook and some that could be changed to become wiki pages.\n\nFor example, I'm thinking (partially based on the input here) that the install and quick start might be good candidates to be wiki pages.\n       http://www.globus.org/toolkit/docs/latest-stable/admin/install/#gtadmin\n       http://www.globus.org/toolkit/docs/latest-stable/admin/quickstart/#quickstart\n\nMaybe this developer guide too?\n       http://www.globus.org/toolkit/docs/5.2/5.2.2/appendices/developer/\n\nThoughts?\n\n-Stu\n\nOn Oct 19, 2012, at Oct 19, 6:09 AM, Pete Eby wrote:\n\nHas the idea of placing the documentation on a wiki where it could be\nupdated by community members been discussed? Perhaps by users with a\nGlobus Online login?", 
+    "reporter": {
+      "displayName": "Stuart Martin", 
+      "name": "smartin", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=smartin", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "smartin@mcs.anl.gov", 
+      "key": "smartin", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2012-10-19T10:21:19.501-0500", 
+    "versions": [], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10333", 
+        "id": "10333", 
+        "name": "Website"
+      }
+    ], 
+    "issuetype": {
+      "name": "Documentation", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/17", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/issuetypes/documentation.png", 
+      "subtask": false, 
+      "id": "17", 
+      "description": ""
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/19472", 
+  "id": "19472", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

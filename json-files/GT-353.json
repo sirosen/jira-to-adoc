@@ -1,0 +1,429 @@
+{
+  "key": "GT-353", 
+  "fields": {
+    "comment": {
+      "total": 6, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "Is it possible that DSI was built against an older version of GridFTP?  There was an ABI break between 4.x and 6.x, and according to \nwhat I see here: http://vdt.cs.wisc.edu/upstream/xrootd-dsi/3.0.4-2/xrootd-dsi/globus_gridftp_server_posix.c, that is a likely explanation for the crash.\n\nDespite the technical incompatibility, we've tried to work around situations where a DSI would be affected by the ABI change, and I may be able to do that here as well, but that won't always be the case.  If possible, the DSI should be rebuilt against a post-6.x version.", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-01-17T12:03:22.732-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/20075/comment/21012", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-01-17T12:03:22.732-0600", 
+          "id": "21012"
+        }, 
+        {
+          "body": "Actually, it appears the soname bump didn't happen until between 6.6 and 6.7, so you would want to rebuild against 6.7 or later.", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-01-17T12:13:55.108-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/20075/comment/21013", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-01-17T12:13:55.108-0600", 
+          "id": "21013"
+        }, 
+        {
+          "body": "Ah, I see.  That would explain it.  I will try to rebuild xrootd-dsi against the newer version and let you know.", 
+          "updateAuthor": {
+            "displayName": "dstrain", 
+            "name": "dstrain", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=dstrain", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "dstrain", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-01-17T12:57:33.408-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/20075/comment/21014", 
+          "author": {
+            "displayName": "dstrain", 
+            "name": "dstrain", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=dstrain", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "dstrain", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-01-17T12:57:33.408-0600", 
+          "id": "21014"
+        }, 
+        {
+          "body": "Hi Doug,\n\nLook at the build info for xrootd-dsi:\n\nhttps://koji-hub.batlab.org/koji/rpminfo?rpmID=13184\n\nIt's probably an issue with xrootd-dsi: it appears the xrootd-dsi library is not explicitly linked against the gridftp library (likely it means it resolves symbols at runtime as it is a loadable module).  Hence, the wrong version of the gridftp library got loaded (with respect to the version it was compiled against), the wrong data structure used, and garbage got fed to malloc.\n\nFault is probably at both sides:\n* The DSI module design probably ought to use explicit version checking and refuse to load improperly versioned plugins.\n* We should get the upstream plugin devs to explicitly link against a particular version so RPM dependency checking picks up this issue.\n\nI suspect gridftp-hdfs also has the same issue as xrootd-dsi.\n\nBrian", 
+          "updateAuthor": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-01-17T13:00:36.740-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/20075/comment/21016", 
+          "author": {
+            "displayName": "bbockelm", 
+            "name": "bbockelm", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=bbockelm", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "bbockelm", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-01-17T13:00:36.740-0600", 
+          "id": "21016"
+        }, 
+        {
+          "body": "I have rebuilt the xrootd-dsi and gridftp-hdfs DSI modules using the new ABI from globus-gridftp-server 6.14.  This fixed the issues.  \nThe modules still don't explicitly link against libglobus_gridftp_server for some reason (or at least rpm is not catching it), but that's a problem for us to fix.\n\nYou can close this ticket.  (I apparently do not have the permissions to do so.)\n", 
+          "updateAuthor": {
+            "displayName": "dstrain", 
+            "name": "dstrain", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=dstrain", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "dstrain", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-01-23T14:50:48.406-0600", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/20075/comment/21070", 
+          "author": {
+            "displayName": "dstrain", 
+            "name": "dstrain", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=dstrain", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+            }, 
+            "emailAddress": "?", 
+            "key": "dstrain", 
+            "active": false, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-01-23T14:50:48.406-0600", 
+          "id": "21070"
+        }, 
+        {
+          "body": "Added some protection against this which was released with 5.2.4.", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2013-03-22T21:33:27.417-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/20075/comment/21647", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2013-03-22T21:33:27.417-0500", 
+          "id": "21647"
+        }
+      ], 
+      "maxResults": 6
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "dstrain", 
+      "name": "dstrain", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=dstrain", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "dstrain", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [
+      "GridFTP", 
+      "OSG"
+    ], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|1019vk:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-353/watchers", 
+      "watchCount": 0, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Mike Link", 
+      "name": "mlink", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mlink@mcs.anl.gov", 
+      "key": "mlink", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": "1_*:*_1_*:*_5562334872_*|*_5_*:*_1_*:*_0", 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@1bcfd87", 
+    "summary": "Globus-GridFTP-Server 6.14 Memory Explosion", 
+    "customfield_10288": "2013-01-17T12:03:22.732-0600", 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-353/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [
+      {
+        "archived": false, 
+        "name": "5.2.4", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11066", 
+        "releaseDate": "2013-02-13", 
+        "released": true, 
+        "id": "11066", 
+        "description": ""
+      }, 
+      {
+        "archived": false, 
+        "name": "Sprint 2013-01-28", 
+        "self": "https://globus.atlassian.net/rest/api/2/version/11097", 
+        "releaseDate": "2013-01-28", 
+        "released": true, 
+        "id": "11097", 
+        "description": ""
+      }
+    ], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "Done", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/3", 
+        "id": 3, 
+        "key": "done", 
+        "colorName": "green"
+      }, 
+      "description": "A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/5", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/resolved.png", 
+      "id": "5", 
+      "name": "Resolved"
+    }, 
+    "updated": "2013-03-22T21:33:27.431-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "If you use a dsi module with globus-gridftp-server-6.14 (specifically xrootd-dsi), the globus-gridftp-server hangs up the request unexpectedly after using up all the memory on the machine and then crashing. \n\nAn example conf file used was:\ndaemon 0\nlog_level ERROR,WARN,INFO,ALL\nlog_module stdio\ndebug 1\nport 5002\nblocksize 1048576\nload_dsi_module posix\n\nThe client gets the following error:\nerror: an end-of-file was reached\nglobus_xio: An end of file occurred\n\nNo errors are reported on the server, but it uses up all the memory on the machine and is killed by the OS.  \nIt seems to be stuck in this procedure:\n\nr0  0x0000003d16672208 in _int_malloc () from /lib64/libc.so.6\n#1  0x0000003d16673bae in malloc () from /lib64/libc.so.6\n#2  0x00000033ae027663 in globus_list_insert ()\n   from /usr/lib64/libglobus_common.so.0\n#3  0x00000033ae0242fc in globus_hashtable_to_list ()\n   from /usr/lib64/libglobus_common.so.0\n#4  0x00000033b303e3e3 in globus_l_gfs_auth_session_cb (reply=0x7fffffffe270,\n    user_arg=0x66d6a0) at globus_i_gfs_control.c:646\n#5  0x00000033b302905c in globus_l_gfs_operation_finished_kickout (\n    op=<value optimized out>, result=0, finished_info=0x7fffffffe270)\n    at globus_i_gfs_data.c:9017\n#6  globus_gridftp_server_operation_finished (op=<value optimized out>,\n    result=0, finished_info=0x7fffffffe270) at globus_i_gfs_data.c:9191\n#7  0x00002aaaab2fcabf in globus_l_gfs_posix_start ()\n   from /usr/lib64/libglobus_gridftp_server_posix.so\n#8  0x00000033b3021d14 in globus_l_gfs_data_brain_ready_delay_cb (\n    user_arg=0x650170) at globus_i_gfs_data.c:1633\n#9  0x00000033b3022124 in globus_l_gfs_data_auth_init_cb (\n    object=<value optimized out>, action=<value optimized out>,\n    user_arg=0x650170, result=0) at globus_i_gfs_data.c:1712\n#10 0x00000033b3019641 in globus_l_gfs_acl_kickout (user_arg=0x66d780)\n    at globus_i_gfs_acl.c:104\n#11 0x00000033ae01850e in globus_callback_space_poll_nothreads ()\n   from /usr/lib64/libglobus_common.so.0\n#12 0x00000033ae03846f in ?? () from /usr/lib64/libglobus_common.so.0\n#13 0x00000000004051d2 in main (argc=4, argv=<value optimized out>)\n    at globus_gridftp_server.c:1857\n\nSeems to be a problem in globus_i_gfs_control.c with code added between 6.5 and 6.14.\n            rc = globus_hashtable_to_list(\n                &reply->op_info->custom_command_table, &list);\n\nI can give more information on the xrootd posix dsi module if necessary.  It's possible it doesn't have all the proper methods defined or something, but this is still an unacceptable mode of error that the whole server eats up all the memory then dies.\n\n\nDoug Strain\nOSG Software\n\n", 
+    "reporter": {
+      "displayName": "dstrain", 
+      "name": "dstrain", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=dstrain", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10163", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10163", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10163", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10163"
+      }, 
+      "emailAddress": "?", 
+      "key": "dstrain", 
+      "active": false, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": "SL5 / SL6 while using a DSI module", 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2013-01-17T11:27:52.580-0600", 
+    "versions": [], 
+    "resolutiondate": "2013-03-22T21:33:27.388-0500", 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "Bug", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/1", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11043&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11043, 
+      "id": "1", 
+      "description": "A problem which impairs or prevents the functions of the product."
+    }, 
+    "resolution": {
+      "self": "https://globus.atlassian.net/rest/api/2/resolution/6", 
+      "id": "6", 
+      "name": "Work Complete", 
+      "description": "The work for this JIRA has been completed as specified."
+    }, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/20075", 
+  "id": "20075", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

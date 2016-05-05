@@ -1,0 +1,265 @@
+{
+  "key": "GT-594", 
+  "fields": {
+    "comment": {
+      "total": 3, 
+      "startAt": 0, 
+      "comments": [
+        {
+          "body": "EGCF as a a support unit in GGUS gets reminders about providing feedback regarding this issue. Is there any information from the Globus developers about this issue?\r\n", 
+          "updateAuthor": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "created": "2015-08-26T08:23:24.270-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/27730/comment/32383", 
+          "author": {
+            "displayName": "Mattias Ellert", 
+            "name": "ellert", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=ellert", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mattias.ellert@fysast.uu.se", 
+            "key": "ellert", 
+            "active": true, 
+            "timeZone": "Europe/Stockholm"
+          }, 
+          "updated": "2015-08-26T08:23:24.270-0500", 
+          "id": "32383"
+        }, 
+        {
+          "body": "Thanks for the bug/feature report.  We'll try and get this added soon.", 
+          "updateAuthor": {
+            "displayName": "Stuart Martin", 
+            "name": "smartin", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=smartin", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "smartin@mcs.anl.gov", 
+            "key": "smartin", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2015-10-02T13:16:42.899-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/27730/comment/32886", 
+          "author": {
+            "displayName": "Stuart Martin", 
+            "name": "smartin", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=smartin", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "smartin@mcs.anl.gov", 
+            "key": "smartin", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2015-10-02T13:16:42.899-0500", 
+          "id": "32886"
+        }, 
+        {
+          "body": "globus-ftp-control-6.8 has been released and enables keepalives on the control channel.", 
+          "updateAuthor": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "created": "2015-10-26T11:15:45.838-0500", 
+          "self": "https://globus.atlassian.net/rest/api/2/issue/27730/comment/33184", 
+          "author": {
+            "displayName": "Mike Link", 
+            "name": "mlink", 
+            "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+            "avatarUrls": {
+              "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+              "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+              "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+              "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+            }, 
+            "emailAddress": "mlink@mcs.anl.gov", 
+            "key": "mlink", 
+            "active": true, 
+            "timeZone": "America/Chicago"
+          }, 
+          "updated": "2015-10-26T11:15:45.838-0500", 
+          "id": "33184"
+        }
+      ], 
+      "maxResults": 3
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": null, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [
+      "GridFTP", 
+      "IGE"
+    ], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|zq5tv6:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-594/watchers", 
+      "watchCount": 3, 
+      "isWatching": false
+    }, 
+    "assignee": {
+      "displayName": "Mike Link", 
+      "name": "mlink", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=mlink", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "mlink@mcs.anl.gov", 
+      "key": "mlink", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@8950a7", 
+    "summary": "Add keep-alive messages to GridFTP control channel", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-594/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/minor.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/4", 
+      "name": "Minor", 
+      "id": "4"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2015-10-26T11:15:45.838-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "See EGCF ticket\r\nhttps://rt.ige.psnc.pl/rt/Ticket/Display.html?id=381\r\n\r\nSee EGI ticket\r\nhttps://ggus.eu/index.php?mode=ticket_info&ticket_id=112473\r\n\r\nSummary: modern routing hardware drops inactive connections after a few minutes. This may block the control channel in GridFTP in case of long-running transfers. Then the transfer cannot complete properly. \r\n\r\nDetailed description:\r\nOur ICT department confirmed that they recover idle connections after 5 minutes. But keepalive settings should solve the issue. I went back to the keepalive settings (which I already tried before without success) and set very aggressive configurations, with keepalives being sent each 15s after 30s of idleness.\r\n\r\n$ sysctl net.ipv4.tcp_keepalive_time net.ipv4.tcp_keepalive_intvl net.ipv4.tcp_keepalive_probes\r\nnet.ipv4.tcp_keepalive_time = 30\r\nnet.ipv4.tcp_keepalive_intvl = 15\r\nnet.ipv4.tcp_keepalive_probes = 20\r\n\r\nThen, I made some tcpdumps, and realize that those keepalive packets were not being sent. Running 'netstat --timers' showed that timers were off for the gridftp connections while for other applications were on:\r\n\r\nShow quoted text\r\nProto Recv-Q Send-Q Local Address Foreign Address State PID/Program name Timer\r\n(...)\r\ntcp 0 0 Y.Y.Y.Y:22 X.X.X.X:41183 ESTABLISHED 3906/sshd keepalive (6948.79/0/0)\r\n(...)\r\ntcp 0 0 Z.Z.Z.Z:51079 K.K.K.K:23375 ESTABLISHED 3964/globus-url-cop off (0.00/0/0)\r\ntcp 0 0 Z.Z.Z.Z:45386 M.M.M.M:2811 ESTABLISHED 3964/globus-url-cop off (0.00/0/0)\r\n(...)\r\ntcp 0 0 Y.Y.Y.Y:22 X.X.X.X:41181 ESTABLISHED 3749/sshd keepalive (6940.96/0/0)\r\n\r\n\r\nThis means that the kernel is doing its job but the application seems it does not speak keepalive language...\r\n\r\nThen, I went to the keepalive project [1]. It is possible to add keepalive support to a binary simply by preloading a library. They make available a \"shared library that overrides the socket system call in most binaries, without the need to recompile or modify them. The technique is based on the preloading feature of the ld.so(8) loader included in Linux, which allows you to force the loading of shared libraries with higher priority than normal. Programs usually use the socket(2) function call located in the glibc shared library; with libkeepalive you can wrap it and inject the setsockopt (2) just after the socket creation, returning a socket with keepalive already set to the main program.\"\r\n\r\nI have downloaded it, compiled it and launched the globus-url-copy as\r\n\r\n$ LD_PRELOAD=/tmp/libkeepalive.so globus-url-copy -dbg gsiftp://<gridftp-server>:2811//my/domain/atlas/disk-only/atlasscratchdisk/rucio/panda/f8/62/panda.um.user.williams.5206161._001779.physics.root /dev/null\r\n\r\nAnd now, running 'netstat --timers' shows that keepalive is being used by the application:\r\n\r\nShow quoted text\r\ntcp 0 0 Z.Z.Z.Z:57632 K.K.K.K:20241 ESTABLISHED 11615/globus-url-co keepalive (28.74/0/0)\r\ntcp 0 0 Z.Z.Z.Z:39697 M.M.M.M:2811 ESTABLISHED 11615/globus-url-co keepalive (13.40/0/0)\r\n\r\nand finally, the dam transfer succeed:\r\n\r\ndebug: response from gsiftp://<gridftp-server>:2811//my/domain/atlas/disk-only/atlasscratchdisk/rucio/panda/f8/62/panda.um.user.williams.5206161._001779.physics.root:\r\n226 Transfer complete.\r\ndebug: data callback, no error, buffer 0x7fd4c51a6010, length 377513, offset=212860928, eof=true\r\ndebug: operation complete\r\n\r\nSo, the conclusion was that globus-url-copy is not prepared to deal with the keepalives, and we are seing it here because we have a very restrict firewall setting to recover idle connections.\r\n\r\nI am using the following version.\r\n\r\n$ which globus-url-copy\r\n/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase/x86_64/emi/3.14.0-1_v4.sl6/usr/bin/globus-url-copy\r\n\r\nThis makes me think (again) that the problem relies on the control channel, which is kept idle for too long (when we are using only one stream) while the transfer is happening on the data channel. Some routers and firewalls in between may want to recover the connection if nothing is going on there. When I saw this, I thought I was able to fix the issue playing with the TCP keepalive parameters, like Pablo suggested, but that did not solved the problem.\r\n\r\nIt certainly makes sense to add keep-alive (optional) to all Globus components working with connections\r\nthat can be idle for a long time but not able to handle timeouts and/or reconnects internally\r\n(Globus XIO layer already supports keepalive option and GASS uses it for http transfers). ", 
+    "reporter": null, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2015-04-27T03:17:26.252-0500", 
+    "versions": [], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [
+      {
+        "self": "https://globus.atlassian.net/rest/api/2/component/10325", 
+        "id": "10325", 
+        "name": "GridFTP"
+      }
+    ], 
+    "issuetype": {
+      "name": "Improvement", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/4", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/issuetypes/defect.png", 
+      "subtask": false, 
+      "id": "4", 
+      "description": "An improvement or enhancement to an existing feature or task."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/27730", 
+  "id": "27730", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}

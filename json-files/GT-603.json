@@ -1,0 +1,159 @@
+{
+  "key": "GT-603", 
+  "fields": {
+    "comment": {
+      "total": 0, 
+      "startAt": 0, 
+      "comments": [], 
+      "maxResults": 0
+    }, 
+    "customfield_10480": null, 
+    "customfield_10282": null, 
+    "creator": {
+      "displayName": "Dan Powers", 
+      "name": "dpowers", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=dpowers", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "dpowers@uchicago.edu", 
+      "key": "dpowers", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "customfield_10600": null, 
+    "customfield_10601": null, 
+    "customfield_10602": null, 
+    "labels": [], 
+    "customfield_10604": null, 
+    "customfield_10380": "0|zq5uey:", 
+    "watches": {
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-603/watchers", 
+      "watchCount": 1, 
+      "isWatching": false
+    }, 
+    "assignee": null, 
+    "lastViewed": null, 
+    "customfield_10287": null, 
+    "customfield_10280": "9223372036854775807", 
+    "issuelinks": [], 
+    "customfield_10283": null, 
+    "customfield_10780": "com.atlassian.servicedesk.plugins.approvals.internal.customfield.ApprovalsCFValue@1b30e60", 
+    "summary": "User reports problems with GUC from GT binary tarball", 
+    "customfield_10288": null, 
+    "aggregateprogress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "customfield_10024": null, 
+    "project": {
+      "name": "Globus Toolkit", 
+      "self": "https://globus.atlassian.net/rest/api/2/project/10363", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/projectavatar?size=small&pid=10363&avatarId=10011", 
+        "32x32": "https://globus.atlassian.net/secure/projectavatar?size=medium&pid=10363&avatarId=10011", 
+        "48x48": "https://globus.atlassian.net/secure/projectavatar?pid=10363&avatarId=10011", 
+        "16x16": "https://globus.atlassian.net/secure/projectavatar?size=xsmall&pid=10363&avatarId=10011"
+      }, 
+      "projectCategory": {
+        "self": "https://globus.atlassian.net/rest/api/2/projectCategory/10040", 
+        "id": "10040", 
+        "name": "Globus Toolkit", 
+        "description": "Globus Toolkit - all components"
+      }, 
+      "key": "GT", 
+      "id": "10363"
+    }, 
+    "votes": {
+      "hasVoted": false, 
+      "self": "https://globus.atlassian.net/rest/api/2/issue/GT-603/votes", 
+      "votes": 0
+    }, 
+    "customfield_10598": null, 
+    "customfield_10599": null, 
+    "customfield_10597": null, 
+    "fixVersions": [], 
+    "priority": {
+      "iconUrl": "https://globus.atlassian.net/images/icons/priorities/major.svg", 
+      "self": "https://globus.atlassian.net/rest/api/2/priority/3", 
+      "name": "Major", 
+      "id": "3"
+    }, 
+    "timespent": null, 
+    "attachment": [], 
+    "aggregatetimeestimate": null, 
+    "progress": {
+      "progress": 0, 
+      "total": 0
+    }, 
+    "status": {
+      "statusCategory": {
+        "name": "To Do", 
+        "self": "https://globus.atlassian.net/rest/api/2/statuscategory/2", 
+        "id": 2, 
+        "key": "new", 
+        "colorName": "blue-gray"
+      }, 
+      "description": "The issue is open and ready for the assignee to start work on it.", 
+      "self": "https://globus.atlassian.net/rest/api/2/status/1", 
+      "iconUrl": "https://globus.atlassian.net/images/icons/statuses/open.png", 
+      "id": "1", 
+      "name": "Open"
+    }, 
+    "updated": "2015-06-10T14:26:35.912-0500", 
+    "customfield_10603": null, 
+    "subtasks": [], 
+    "description": "see https://globusonline.zendesk.com/agent/tickets/303836\r\n\r\nUser reports errors when using 'globus-url-copy' installed via the \"http://toolkit.globus.org/ftppub/gt6/installers/linux/globus_toolkit-6.0.1433516164-x86_64-unknown-linux-gnu-Build-98.tar.gz\" binary tarball. User reports being able to properly use 'globus-url-copy' when it is installed via our repo. User sees output like the following when attempting to use the GUC from the binary tarball:\r\n\r\n$ globus-url-copy -s \"/C=US/O=Globus Consortium/OU=Globus Connect Service/CN=078a8996-fe46-11e4-ac5a-22000b92c6ec\" -list gsiftp://52.26.105.183/home/joseph/test/ -dbg\r\n\r\ngsiftp://52.26.105.183/home/joseph/test/ \r\ndebug: starting to feat gsiftp://52.26.105.183/home/joseph/test/ \r\ndebug: connecting to gsiftp://52.26.105.183/home/joseph/test/ \r\ndebug: response from gsiftp://52.26.105.183/home/joseph/test/: \r\n220 ip-172-31-34-188.us-west-2.compute.internal GridFTP Server 7.25 (gcc64, 1428435129-85) [Globus Toolkit 6.0.1428430525 GCS-4.0.16] ready.\r\n\r\ndebug: authenticating with gsiftp://52.26.105.183/home/joseph/test/ \r\ndebug: response from gsiftp://52.26.105.183/home/joseph/test/: \r\n230 User joseph logged in.\r\n\r\ndebug: sending command to gsiftp://52.26.105.183/home/joseph/test/: \r\nSITE HELP\r\n\r\n....\r\n\r\ndebug: sending command to gsiftp://52.26.105.183/home/joseph/test/: \r\nMLSD /home/joseph/test/\r\n\r\ndebug: response from gsiftp://52.26.105.183/home/joseph/test/: \r\n500-Command failed. : an end-of-file was reached \r\n500-globus_xio: The GSI XIO driver failed to establish a secure connection. The failure occured during a handshake read. \r\n500-globus_xio: An end of file occurred \r\n500 End.\r\n\r\ndebug: fault on connection to gsiftp://52.26.105.183/home/joseph/test/: globus_ftp_client: the server responded with an error\r\ndebug: data callback, error globus_ftp_client: the server responded with an error, buffer 0x7f1425a97010, length 0, offset=0, eof=true \r\ndebug: operation complete\r\n\r\nerror: globus_ftp_client: the server responded with an error \r\n500 500-Command failed. : an end-of-file was reached \r\n500-globus_xio: The GSI XIO driver failed to establish a secure connection. The failure occured during a handshake read. \r\n500-globus_xio: An end of file occurred \r\n500 End.\r\n\r\n", 
+    "reporter": {
+      "displayName": "Dan Powers", 
+      "name": "dpowers", 
+      "self": "https://globus.atlassian.net/rest/api/2/user?username=dpowers", 
+      "avatarUrls": {
+        "24x24": "https://globus.atlassian.net/secure/useravatar?size=small&avatarId=10162", 
+        "32x32": "https://globus.atlassian.net/secure/useravatar?size=medium&avatarId=10162", 
+        "48x48": "https://globus.atlassian.net/secure/useravatar?avatarId=10162", 
+        "16x16": "https://globus.atlassian.net/secure/useravatar?size=xsmall&avatarId=10162"
+      }, 
+      "emailAddress": "dpowers@uchicago.edu", 
+      "key": "dpowers", 
+      "active": true, 
+      "timeZone": "America/Chicago"
+    }, 
+    "worklog": {
+      "worklogs": [], 
+      "total": 0, 
+      "startAt": 0, 
+      "maxResults": 20
+    }, 
+    "customfield_10020": null, 
+    "timeoriginalestimate": null, 
+    "environment": null, 
+    "customfield_10680": null, 
+    "customfield_10681": null, 
+    "aggregatetimeoriginalestimate": null, 
+    "created": "2015-06-10T14:26:35.912-0500", 
+    "versions": [], 
+    "resolutiondate": null, 
+    "workratio": -1, 
+    "aggregatetimespent": null, 
+    "timetracking": {}, 
+    "components": [], 
+    "issuetype": {
+      "name": "Task", 
+      "self": "https://globus.atlassian.net/rest/api/2/issuetype/3", 
+      "iconUrl": "https://globus.atlassian.net/secure/viewavatar?size=xsmall&avatarId=11058&avatarType=issuetype", 
+      "subtask": false, 
+      "avatarId": 11058, 
+      "id": "3", 
+      "description": "A task that needs to be done."
+    }, 
+    "resolution": null, 
+    "timeestimate": null
+  }, 
+  "self": "https://globus.atlassian.net/rest/api/2/issue/28152", 
+  "id": "28152", 
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations"
+}
