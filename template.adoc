@@ -9,9 +9,9 @@ $summary
 *Status:* $status
 
 === Description
-__________________________
+----jira
 $description
-__________________________
+----jira
 
 === Comments
 $comments
